@@ -242,15 +242,48 @@
             </objects>
             <point key="canvasLocation" x="-807" y="428"/>
         </scene>
-        <!--View Controller-->
+        <!--Side Menu View Controller-->
         <scene sceneID="6JW-7Y-qTN">
             <objects>
-                <viewController id="kXe-35-oQC" sceneMemberID="viewController">
+                <viewController id="kXe-35-oQC" customClass="SideMenuViewController" customModule="IHMA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="24z-2Y-F7g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nav_bar" translatesAutoresizingMaskIntoConstraints="NO" id="5fv-wY-wup">
+                                <rect key="frame" x="0.0" y="88" width="414" height="55"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="0.19754071300000001" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="gtq-II-xIp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuTidingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uSu-eX-ycd">
+                                <rect key="frame" x="0.0" y="88" width="55" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="4Cm-QI-NXa"/>
+                                    <constraint firstAttribute="height" constant="55" id="FMn-UG-ziM"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2d-PG-drI">
+                                <rect key="frame" x="0.0" y="88" width="55" height="55"/>
+                                <connections>
+                                    <action selector="didTapMenu" destination="kXe-35-oQC" eventType="touchUpInside" id="J0t-uI-jDd"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DAz-Bq-fjF"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="y2d-PG-drI" firstAttribute="trailing" secondItem="uSu-eX-ycd" secondAttribute="trailing" id="Css-6B-4yp"/>
+                            <constraint firstItem="y2d-PG-drI" firstAttribute="top" secondItem="uSu-eX-ycd" secondAttribute="top" id="FF3-o5-PPD"/>
+                            <constraint firstItem="uSu-eX-ycd" firstAttribute="top" secondItem="DAz-Bq-fjF" secondAttribute="top" id="QvT-cy-ZfW"/>
+                            <constraint firstItem="uSu-eX-ycd" firstAttribute="leading" secondItem="DAz-Bq-fjF" secondAttribute="leading" id="RwW-i6-0ex"/>
+                            <constraint firstItem="5fv-wY-wup" firstAttribute="trailing" secondItem="DAz-Bq-fjF" secondAttribute="trailing" id="ZtT-vC-YrF"/>
+                            <constraint firstItem="y2d-PG-drI" firstAttribute="bottom" secondItem="uSu-eX-ycd" secondAttribute="bottom" id="nRG-Y1-YD6"/>
+                            <constraint firstItem="5fv-wY-wup" firstAttribute="top" secondItem="DAz-Bq-fjF" secondAttribute="top" id="s0u-qg-v2l"/>
+                            <constraint firstItem="5fv-wY-wup" firstAttribute="leading" secondItem="DAz-Bq-fjF" secondAttribute="leading" id="wg8-YV-96L"/>
+                            <constraint firstItem="y2d-PG-drI" firstAttribute="leading" secondItem="uSu-eX-ycd" secondAttribute="leading" id="ymN-Mr-Ui9"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eqo-1u-BBr"/>
                 </viewController>
@@ -261,6 +294,7 @@
     </scenes>
     <resources>
         <image name="Back" width="48" height="48"/>
+        <image name="MenuTidingsIcon" width="96" height="96"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="nav_bar" width="1080" height="168"/>
         <image name="person" catalog="system" width="128" height="117"/>

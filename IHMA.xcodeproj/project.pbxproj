@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		759A5BDCC6DADB263C92EEF1 /* Pods_IHMA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7936371CC97C66B7C8BEF159 /* Pods_IHMA.framework */; };
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* ViewController2.swift */; };
+		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
 		FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */; };
 		FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525E2595BE53004B23F9 /* ViewController.swift */; };
@@ -36,8 +38,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18B02C3848906860D167C001 /* Pods-IHMA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.release.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.release.xcconfig"; sourceTree = "<group>"; };
+		7936371CC97C66B7C8BEF159 /* Pods_IHMA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IHMA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2B52572595BE53004B23F9 /* IHMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2B525A2595BE53004B23F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,12 +77,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759A5BDCC6DADB263C92EEF1 /* Pods_IHMA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		167636B86521787412CB4C29 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */,
+				18B02C3848906860D167C001 /* Pods-IHMA.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		903E8CB52631508A00D0AADD /* Views-2nd page */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,11 +101,29 @@
 			path = "Views-2nd page";
 			sourceTree = "<group>";
 		};
+		903E8CBE2631A18B00D0AADD /* Views-Sidemenu */ = {
+			isa = PBXGroup;
+			children = (
+				903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */,
+			);
+			path = "Views-Sidemenu";
+			sourceTree = "<group>";
+		};
+		B0D87695C4E049AAB23577AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7936371CC97C66B7C8BEF159 /* Pods_IHMA.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FA2B524E2595BE53004B23F9 = {
 			isa = PBXGroup;
 			children = (
 				FA2B52592595BE53004B23F9 /* IHMA */,
 				FA2B52582595BE53004B23F9 /* Products */,
+				167636B86521787412CB4C29 /* Pods */,
+				B0D87695C4E049AAB23577AE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +138,7 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
+				903E8CBE2631A18B00D0AADD /* Views-Sidemenu */,
 				903E8CB52631508A00D0AADD /* Views-2nd page */,
 				FA5D747B2595F8BA00B53618 /* Views_home */,
 				FA2B525A2595BE53004B23F9 /* AppDelegate.swift */,
@@ -166,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FA2B526E2595BE55004B23F9 /* Build configuration list for PBXNativeTarget "IHMA" */;
 			buildPhases = (
+				335FB7A2218C3E95CA4BB5F1 /* [CP] Check Pods Manifest.lock */,
 				FA2B52532595BE53004B23F9 /* Sources */,
 				FA2B52542595BE53004B23F9 /* Frameworks */,
 				FA2B52552595BE53004B23F9 /* Resources */,
+				72295A5CD92B11935356C29E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -235,6 +272,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		335FB7A2218C3E95CA4BB5F1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IHMA-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72295A5CD92B11935356C29E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IHMA/Pods-IHMA-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IHMA/Pods-IHMA-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IHMA/Pods-IHMA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FA2B52532595BE53004B23F9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -243,6 +322,7 @@
 				FA2B52B72595D356004B23F9 /* CollectionViewCell.swift in Sources */,
 				FA2B528A2595C569004B23F9 /* Model.swift in Sources */,
 				FA2B527B2595BF41004B23F9 /* ViewModel.swift in Sources */,
+				903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */,
 				FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */,
 				FA2B52872595C4AA004B23F9 /* Parser.swift in Sources */,
 				903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */,
@@ -387,6 +467,7 @@
 		};
 		FA2B526F2595BE55004B23F9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -409,6 +490,7 @@
 		};
 		FA2B52702595BE55004B23F9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18B02C3848906860D167C001 /* Pods-IHMA.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
