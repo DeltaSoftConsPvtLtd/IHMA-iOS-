@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
+		903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* ViewController2.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
 		FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */; };
 		FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525E2595BE53004B23F9 /* ViewController.swift */; };
-		FA2B52622595BE53004B23F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2B52602595BE53004B23F9 /* Main.storyboard */; };
 		FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA2B52632595BE53004B23F9 /* IHMA.xcdatamodeld */; };
 		FA2B52672595BE55004B23F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA2B52662595BE55004B23F9 /* Assets.xcassets */; };
 		FA2B526A2595BE55004B23F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA2B52682595BE55004B23F9 /* LaunchScreen.storyboard */; };
@@ -35,11 +36,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		903E8CB6263150B800D0AADD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		FA2B52572595BE53004B23F9 /* IHMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2B525A2595BE53004B23F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FA2B525E2595BE53004B23F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FA2B52612595BE53004B23F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA2B52642595BE53004B23F9 /* Test.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Test.xcdatamodel; sourceTree = "<group>"; };
 		FA2B52662595BE55004B23F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA2B52692595BE55004B23F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		903E8CB52631508A00D0AADD /* Views-2nd page */ = {
+			isa = PBXGroup;
+			children = (
+				903E8CB6263150B800D0AADD /* ViewController2.swift */,
+			);
+			path = "Views-2nd page";
+			sourceTree = "<group>";
+		};
 		FA2B524E2595BE53004B23F9 = {
 			isa = PBXGroup;
 			children = (
@@ -94,14 +104,15 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
-				FA5D747B2595F8BA00B53618 /* Views */,
+				903E8CB52631508A00D0AADD /* Views-2nd page */,
+				FA5D747B2595F8BA00B53618 /* Views_home */,
 				FA2B525A2595BE53004B23F9 /* AppDelegate.swift */,
 				FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */,
+				903E8CB126314C6500D0AADD /* Main.storyboard */,
 				FA2B52B32595D2C1004B23F9 /* Constants.swift */,
 				FA2B52B92595D3BD004B23F9 /* Utils.swift */,
 				FA2B528C2595CBD5004B23F9 /* Fonts */,
 				FA5D747A2595F8A800B53618 /* Model+Parsing */,
-				FA2B52602595BE53004B23F9 /* Main.storyboard */,
 				FA2B52662595BE55004B23F9 /* Assets.xcassets */,
 				FA2B52682595BE55004B23F9 /* LaunchScreen.storyboard */,
 				FA2B526B2595BE55004B23F9 /* Info.plist */,
@@ -137,7 +148,7 @@
 			path = "Model+Parsing";
 			sourceTree = "<group>";
 		};
-		FA5D747B2595F8BA00B53618 /* Views */ = {
+		FA5D747B2595F8BA00B53618 /* Views_home */ = {
 			isa = PBXGroup;
 			children = (
 				FA2B52B62595D356004B23F9 /* CollectionViewCell.swift */,
@@ -145,7 +156,7 @@
 				FA2B527A2595BF41004B23F9 /* ViewModel.swift */,
 				FA2B52AF2595CD57004B23F9 /* ViewDataSource.swift */,
 			);
-			path = Views;
+			path = Views_home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,12 +223,12 @@
 				FA2B52672595BE55004B23F9 /* Assets.xcassets in Resources */,
 				FA2B529B2595CC2A004B23F9 /* TitilliumWeb-Bold.ttf in Resources */,
 				FA2B52AD2595CC42004B23F9 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
+				903E8CB226314C6500D0AADD /* Main.storyboard in Resources */,
 				FA2B52992595CC27004B23F9 /* TitilliumWeb-Black.ttf in Resources */,
 				FA2B529D2595CC2C004B23F9 /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				FA2B52A52595CC37004B23F9 /* TitilliumWeb-Light.ttf in Resources */,
 				FA2B52AB2595CC40004B23F9 /* TitilliumWeb-SemiBold.ttf in Resources */,
 				FA2B52A32595CC35004B23F9 /* TitilliumWeb-Italic.ttf in Resources */,
-				FA2B52622595BE53004B23F9 /* Main.storyboard in Resources */,
 				FA2B52A12595CC32004B23F9 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,6 +245,7 @@
 				FA2B527B2595BF41004B23F9 /* ViewModel.swift in Sources */,
 				FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */,
 				FA2B52872595C4AA004B23F9 /* Parser.swift in Sources */,
+				903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */,
 				FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */,
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
@@ -246,14 +258,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FA2B52602595BE53004B23F9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FA2B52612595BE53004B23F9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FA2B52682595BE55004B23F9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
