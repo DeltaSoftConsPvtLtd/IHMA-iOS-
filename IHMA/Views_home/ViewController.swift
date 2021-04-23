@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: BaseViewController {
     let viewModel = ViewModel()
     var viewDataSource : ViewDataSource?
     @IBOutlet var titileLabel: UILabel!{
