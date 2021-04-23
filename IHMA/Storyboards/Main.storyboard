@@ -264,7 +264,7 @@
                                     <constraint firstAttribute="height" constant="55" id="FMn-UG-ziM"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2d-PG-drI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y2d-PG-drI" userLabel="Sidemenu Button">
                                 <rect key="frame" x="0.0" y="88" width="55" height="55"/>
                                 <connections>
                                     <action selector="didTapMenu" destination="kXe-35-oQC" eventType="touchUpInside" id="YsM-PV-d58"/>

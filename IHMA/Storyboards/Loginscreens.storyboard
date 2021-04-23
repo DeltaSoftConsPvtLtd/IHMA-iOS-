@@ -30,7 +30,7 @@
                                     <constraint firstAttribute="width" constant="55" id="BOq-jY-g4z"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjj-d6-rdc">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjj-d6-rdc" userLabel="Sidemenu Button">
                                 <rect key="frame" x="0.0" y="44" width="55" height="55"/>
                                 <connections>
                                     <action selector="didTapMenu" destination="FH2-5o-s6L" eventType="touchUpInside" id="QQf-IO-Vbp"/>
@@ -43,13 +43,28 @@
                                     <constraint firstAttribute="height" constant="55" id="pbG-xO-gIL"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnM-7l-a0T">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvN-tN-Mgm" userLabel="Image picker">
+                                <rect key="frame" x="264" y="175.5" width="150" height="149"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" backgroundImage="infinity.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="imagePicker:" destination="FH2-5o-s6L" eventType="touchUpInside" id="HFF-a5-5N2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnM-7l-a0T" userLabel="Back button">
                                 <rect key="frame" x="359" y="44" width="55" height="55"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="FH2-5o-s6L" eventType="touchUpInside" id="E7a-6c-y0r"/>
                                     <action selector="didTapMenu" destination="FH2-5o-s6L" eventType="touchUpInside" id="fhk-t2-61g"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5U-Me-1GT">
+                                <rect key="frame" x="264" y="175" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="2Q9-3I-0Uq"/>
+                                    <constraint firstAttribute="width" constant="150" id="9n6-dt-eUt"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nsr-Yq-v6A"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,6 +72,7 @@
                             <constraint firstItem="cAM-p7-hWQ" firstAttribute="leading" secondItem="Nsr-Yq-v6A" secondAttribute="leading" id="2Fp-Ia-uip"/>
                             <constraint firstItem="qjj-d6-rdc" firstAttribute="top" secondItem="cAM-p7-hWQ" secondAttribute="top" id="5CZ-jg-AHL"/>
                             <constraint firstItem="afJ-0j-K1H" firstAttribute="top" secondItem="Nsr-Yq-v6A" secondAttribute="top" id="5wV-eF-21q"/>
+                            <constraint firstItem="X5U-Me-1GT" firstAttribute="trailing" secondItem="Nsr-Yq-v6A" secondAttribute="trailing" id="96u-Oh-0le"/>
                             <constraint firstItem="qjj-d6-rdc" firstAttribute="bottom" secondItem="cAM-p7-hWQ" secondAttribute="bottom" id="DdY-s3-msT"/>
                             <constraint firstItem="b6e-VW-Ken" firstAttribute="leading" secondItem="Nsr-Yq-v6A" secondAttribute="leading" id="F3x-m3-3zc"/>
                             <constraint firstItem="RnM-7l-a0T" firstAttribute="bottom" secondItem="afJ-0j-K1H" secondAttribute="bottom" id="Se5-4P-HLp"/>
@@ -64,23 +80,32 @@
                             <constraint firstItem="b6e-VW-Ken" firstAttribute="trailing" secondItem="Nsr-Yq-v6A" secondAttribute="trailing" id="WUe-LB-smf"/>
                             <constraint firstItem="RnM-7l-a0T" firstAttribute="leading" secondItem="afJ-0j-K1H" secondAttribute="leading" id="Xf8-2h-DJT"/>
                             <constraint firstItem="RnM-7l-a0T" firstAttribute="top" secondItem="afJ-0j-K1H" secondAttribute="top" id="afb-u1-811"/>
+                            <constraint firstItem="X5U-Me-1GT" firstAttribute="top" secondItem="b6e-VW-Ken" secondAttribute="bottom" constant="76" id="cXO-X3-4XS"/>
+                            <constraint firstItem="XvN-tN-Mgm" firstAttribute="top" secondItem="X5U-Me-1GT" secondAttribute="top" id="eQq-w5-Elc"/>
                             <constraint firstItem="RnM-7l-a0T" firstAttribute="trailing" secondItem="afJ-0j-K1H" secondAttribute="trailing" id="ebD-XI-T2a"/>
                             <constraint firstItem="qjj-d6-rdc" firstAttribute="leading" secondItem="cAM-p7-hWQ" secondAttribute="leading" id="hNX-l9-jMp"/>
                             <constraint firstItem="Nsr-Yq-v6A" firstAttribute="trailing" secondItem="afJ-0j-K1H" secondAttribute="trailing" id="j7Y-yS-ZGI"/>
+                            <constraint firstItem="XvN-tN-Mgm" firstAttribute="bottom" secondItem="X5U-Me-1GT" secondAttribute="bottom" id="o0j-s4-5oj"/>
+                            <constraint firstItem="XvN-tN-Mgm" firstAttribute="leading" secondItem="X5U-Me-1GT" secondAttribute="leading" id="oHF-Gg-qQI"/>
                             <constraint firstItem="b6e-VW-Ken" firstAttribute="top" secondItem="Nsr-Yq-v6A" secondAttribute="top" id="phA-DD-RMg"/>
                             <constraint firstItem="cAM-p7-hWQ" firstAttribute="top" secondItem="Nsr-Yq-v6A" secondAttribute="top" id="u6Y-ay-aa2"/>
+                            <constraint firstItem="XvN-tN-Mgm" firstAttribute="trailing" secondItem="X5U-Me-1GT" secondAttribute="trailing" id="yJz-Ja-OI2"/>
                             <constraint firstItem="qjj-d6-rdc" firstAttribute="trailing" secondItem="cAM-p7-hWQ" secondAttribute="trailing" id="z8B-hY-eSI"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pickedImage" destination="X5U-Me-1GT" id="7jX-7K-EJR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7J-wQ-a1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-594" y="64"/>
+            <point key="canvasLocation" x="-594.20289855072474" y="63.616071428571423"/>
         </scene>
     </scenes>
     <resources>
         <image name="hambergur" width="64" height="46"/>
         <image name="icons8-left-50" width="50" height="50"/>
+        <image name="infinity.circle.fill" catalog="system" width="128" height="121"/>
         <image name="nav_bar" width="1080" height="168"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
