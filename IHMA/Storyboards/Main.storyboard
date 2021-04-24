@@ -121,7 +121,10 @@
                                     <constraint firstAttribute="height" constant="20" id="UnU-Iq-3LA"/>
                                     <constraint firstAttribute="width" constant="20" id="Wri-bl-5Sn"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="Back"/>
+                                <state key="normal" title="Button" image="hambergur"/>
+                                <connections>
+                                    <action selector="didTapMenu" destination="BYZ-38-t0r" eventType="touchUpInside" id="7td-MH-6jZ"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="Qj3-rV-qez">
                                 <rect key="frame" x="369" y="89" width="25" height="25"/>
@@ -293,8 +296,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Back" width="48" height="48"/>
         <image name="MenuTidingsIcon" width="96" height="96"/>
+        <image name="hambergur" width="64" height="46"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="nav_bar" width="1080" height="168"/>
         <image name="person" catalog="system" width="128" height="117"/>
