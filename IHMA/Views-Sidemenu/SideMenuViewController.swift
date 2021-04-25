@@ -11,21 +11,73 @@ import UIKit
 class SideMenuViewController: BaseViewController {
 
     
+    let courses = [["Swift", "Java", "Python"],
+                 ["Objective C", "Android"],
+                 ["Photoshop"]]
     
+    @IBOutlet weak var coursesTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
        sideMenu()
         
+//        //MARK:- Delegate and Datasource for tableview
+        coursesTableView.delegate = self
+        coursesTableView.dataSource = self
         
-
-        // Do any additional setup after loading the view.
+        //MARK:- adding headers and footers for table view
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300))
+        let footer = UIView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: 300))
+        
+        header.backgroundColor = .orange
+        footer.backgroundColor = .green
+        
+        let label = UILabel(frame: header.bounds)
+        label.text = "Courses"
+        label.textAlignment = .center
+        header.addSubview(label)
+        
+        coursesTableView.tableHeaderView = header
+        coursesTableView.tableFooterView = footer
+        
     }
-    //MARK:- action for side menu button
+   
     
 
 
+}
+
+//Mark:- Delegate Methods
+extension SideMenuViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+//Mark:- Datasource methods
+extension SideMenuViewController: UITableViewDataSource {
+    
+    
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 20.0
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return courses.count
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return courses[section].count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = coursesTableView.dequeueReusableCell(withIdentifier: "items", for: indexPath)
+        cell.textLabel?.text = courses[indexPath.section][indexPath.row]
+        cell.backgroundColor = .red
+        return cell
+    }
 }
 
 

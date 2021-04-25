@@ -273,6 +273,20 @@
                                     <action selector="didTapMenu" destination="kXe-35-oQC" eventType="touchUpInside" id="YsM-PV-d58"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4pM-oT-Y97">
+                                <rect key="frame" x="0.0" y="143" width="414" height="670"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="items" id="Ji6-Bd-ypQ">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ji6-Bd-ypQ" id="cWZ-HK-gSQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DAz-Bq-fjF"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -281,14 +295,21 @@
                             <constraint firstItem="y2d-PG-drI" firstAttribute="top" secondItem="uSu-eX-ycd" secondAttribute="top" id="FF3-o5-PPD"/>
                             <constraint firstItem="uSu-eX-ycd" firstAttribute="top" secondItem="DAz-Bq-fjF" secondAttribute="top" id="QvT-cy-ZfW"/>
                             <constraint firstItem="uSu-eX-ycd" firstAttribute="leading" secondItem="DAz-Bq-fjF" secondAttribute="leading" id="RwW-i6-0ex"/>
+                            <constraint firstItem="4pM-oT-Y97" firstAttribute="top" secondItem="5fv-wY-wup" secondAttribute="bottom" id="YJT-by-Gu0"/>
                             <constraint firstItem="5fv-wY-wup" firstAttribute="trailing" secondItem="DAz-Bq-fjF" secondAttribute="trailing" id="ZtT-vC-YrF"/>
+                            <constraint firstItem="DAz-Bq-fjF" firstAttribute="trailing" secondItem="4pM-oT-Y97" secondAttribute="trailing" id="ha7-qN-V3k"/>
+                            <constraint firstItem="4pM-oT-Y97" firstAttribute="leading" secondItem="DAz-Bq-fjF" secondAttribute="leading" id="mKs-8V-O9s"/>
                             <constraint firstItem="y2d-PG-drI" firstAttribute="bottom" secondItem="uSu-eX-ycd" secondAttribute="bottom" id="nRG-Y1-YD6"/>
                             <constraint firstItem="5fv-wY-wup" firstAttribute="top" secondItem="DAz-Bq-fjF" secondAttribute="top" id="s0u-qg-v2l"/>
+                            <constraint firstItem="DAz-Bq-fjF" firstAttribute="bottom" secondItem="4pM-oT-Y97" secondAttribute="bottom" id="usL-oa-iSr"/>
                             <constraint firstItem="5fv-wY-wup" firstAttribute="leading" secondItem="DAz-Bq-fjF" secondAttribute="leading" id="wg8-YV-96L"/>
                             <constraint firstItem="y2d-PG-drI" firstAttribute="leading" secondItem="uSu-eX-ycd" secondAttribute="leading" id="ymN-Mr-Ui9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eqo-1u-BBr"/>
+                    <connections>
+                        <outlet property="coursesTableView" destination="4pM-oT-Y97" id="mqt-Yb-YRM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXo-AC-DCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -303,6 +324,9 @@
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="placeholder_for_missing_posters" width="321" height="481"/>
         <image name="search" width="54" height="54"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
