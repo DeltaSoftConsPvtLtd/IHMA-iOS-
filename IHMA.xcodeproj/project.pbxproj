@@ -17,6 +17,7 @@
 		90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */; };
 		90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */; };
 		90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C1C2632ACED0052FFAB /* BaseViewController.swift */; };
+		90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3144626358EC300EC7192 /* TableDataSource.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
 		FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */; };
 		FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525E2595BE53004B23F9 /* ViewController.swift */; };
@@ -55,6 +56,7 @@
 		90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifierHandlerType.swift; path = "Storyboard Helpers/StoryboardIdentifierHandlerType.swift"; sourceTree = SOURCE_ROOT; };
 		90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Helpers.swift"; path = "Storyboard Helpers/UIStoryboard+Helpers.swift"; sourceTree = SOURCE_ROOT; };
 		90759C1C2632ACED0052FFAB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		90C3144626358EC300EC7192 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2B52572595BE53004B23F9 /* IHMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2B525A2595BE53004B23F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */,
+				90C3144626358EC300EC7192 /* TableDataSource.swift */,
 			);
 			path = "Views-Sidemenu";
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */,
 				90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */,
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
+				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */,
 				FA2B52872595C4AA004B23F9 /* Parser.swift in Sources */,
