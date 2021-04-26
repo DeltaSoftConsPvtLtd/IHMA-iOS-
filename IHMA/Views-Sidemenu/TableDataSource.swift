@@ -29,6 +29,8 @@ class TableDataSource: NSObject {
         label.textAlignment = .center
         header.addSubview(label)
         
+    
+        
         self.parentView?.coursesTableView.tableHeaderView = header
         self.parentView?.coursesTableView.tableFooterView = footer
         
@@ -66,4 +68,6 @@ extension TableDataSource: UITableViewDataSource {
         cell?.backgroundColor = .red
         return cell!
     }
+    
+    
 }
