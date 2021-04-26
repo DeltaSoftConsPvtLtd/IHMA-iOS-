@@ -21,7 +21,7 @@ class TableDataSource: NSObject {
         let header = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 300))
         let footer = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 300))
         
-        header.backgroundColor = .orange
+        header.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")//.orange//hex color code :#176AB5
         footer.backgroundColor = .green
         
         let label = UILabel(frame: header.bounds)

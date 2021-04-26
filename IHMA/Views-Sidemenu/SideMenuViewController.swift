@@ -11,6 +11,16 @@ import UIKit
 class SideMenuViewController: BaseViewController {
 
     
+    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchImage: UIImageView!
+    @IBOutlet weak var searchView: UIView!
+    @IBOutlet weak var txtLabel: UILabel!{
+        didSet{
+            txtLabel.text = "Choose Your Courses"
+            txtLabel.font = setFontRegular(20.0)
+            txtLabel.textColor = UIColor.white
+        }
+    }
     let courses = [["Swift", "Java", "Python"],
                  ["Objective C", "Android"],
                  ["Photoshop"]]
@@ -18,23 +28,45 @@ class SideMenuViewController: BaseViewController {
     var tableDataSurce : TableDataSource?
     
     @IBOutlet weak var coursesTableView: UITableView!
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       sideMenu()
+        updateUI()
+        sideMenu()
         
         self.tableDataSurce = TableDataSource(attachView: self)
-        
-        
         
     }
    
     
+    func updateUI() {
+        searchView.layer.cornerRadius = searchView.bounds.height/2;
+        searchView.clipsToBounds  =  true
+        
+        searchTextField.borderStyle = .none
+        
+        
+    }
 
 
 }
 
+//MARK:- Change color of image
+extension UIImageView {
+    @IBInspectable
+    var changeColor: UIColor? {
+        get {
+            let color = UIColor(cgColor: layer.borderColor!);
+            return color
+        }
+        set {
+            let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
+            self.image = templateImage
+            self.tintColor = newValue
+        }
+    }
+}
 
 
 //MARK:-List items for side menu
@@ -60,10 +92,22 @@ class MenuListController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-//        let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-//        self.navigationController?.pushViewController(destinationController!, animated: true)
+        switch indexPath.row
+        {
+        case 0:
+            break
+        case 1:
+            let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+            self.navigationController?.pushViewController(destinationController!, animated: true)
+            
+        case 2:
+            let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+            self.navigationController?.pushViewController(destinationController!, animated: true)
+        default:
+            print("ll")
+        }
+//
         
-        let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-        self.navigationController?.pushViewController(destinationController!, animated: true)
+        
     }
 }

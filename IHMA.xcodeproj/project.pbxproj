@@ -11,6 +11,7 @@
 		9027C31526367E3A00937441 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31426367E3A00937441 /* LoginViewController.swift */; };
 		9027C319263685FE00937441 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C318263685FE00937441 /* User.swift */; };
 		9027C31D2636868D00937441 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31C2636868D00937441 /* Authentication.swift */; };
+		9027C3372636D29900937441 /* hexToUiColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C3362636D29900937441 /* hexToUiColor.swift */; };
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* ViewController2.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
@@ -53,6 +54,7 @@
 		9027C31426367E3A00937441 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9027C318263685FE00937441 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9027C31C2636868D00937441 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		9027C3362636D29900937441 /* hexToUiColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexToUiColor.swift; sourceTree = "<group>"; };
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 				9027C31C2636868D00937441 /* Authentication.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		9027C3352636D26A00937441 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9027C3362636D29900937441 /* hexToUiColor.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		903E8CB52631508A00D0AADD /* Views-2nd page */ = {
@@ -213,6 +223,7 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
+				9027C3352636D26A00937441 /* Helpers */,
 				90759C1B2632ACD50052FFAB /* Common */,
 				90759C13263294150052FFAB /* Storyboard Helpers */,
 				90759C0A26328C490052FFAB /* Account module */,
@@ -412,6 +423,7 @@
 				903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */,
 				FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */,
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,
+				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
 				90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */,

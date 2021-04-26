@@ -132,12 +132,13 @@
                                     <action selector="loginButton:" destination="bYR-qg-kxC" eventType="touchUpInside" id="BC3-8t-m4O"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmB-Jl-SKT" userLabel="Back button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NmB-Jl-SKT" userLabel="Back button">
                                 <rect key="frame" x="359" y="44" width="55" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="55" id="Znx-9M-UJI"/>
                                     <constraint firstAttribute="height" constant="55" id="kdF-U8-tsw"/>
                                 </constraints>
+                                <state key="normal" image="icons8-left-50"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="FH2-5o-s6L" eventType="touchUpInside" id="VT8-MX-JBV"/>
                                     <action selector="backButtonPressed:" destination="bYR-qg-kxC" eventType="touchUpInside" id="oLA-VG-bvf"/>
@@ -146,7 +147,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qJ0-2B-xcO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.53333333333333333" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DOZ-rd-f8o" firstAttribute="leading" secondItem="qJ0-2B-xcO" secondAttribute="leading" constant="20" id="0Ly-Ey-Dij"/>
                             <constraint firstItem="EwP-KI-4Be" firstAttribute="top" secondItem="DOZ-rd-f8o" secondAttribute="bottom" constant="26" id="4xa-fB-XwX"/>
