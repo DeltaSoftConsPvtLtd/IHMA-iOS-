@@ -63,11 +63,14 @@ extension TableDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = self.parentView?.coursesTableView.dequeueReusableCell(withIdentifier: "items", for: indexPath)
-        cell?.textLabel?.text = (self.parentView?.courses[indexPath.section][indexPath.row])!
+        let cell = (self.parentView?.coursesTableView.dequeueReusableCell(withIdentifier: "items", for: indexPath))! as? TableViewCell
+        cell?.lblCourse?.text = (self.parentView?.courses[indexPath.section][indexPath.row])!
         cell?.backgroundColor = .red
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
 }

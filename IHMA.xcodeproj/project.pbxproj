@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		759A5BDCC6DADB263C92EEF1 /* Pods_IHMA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7936371CC97C66B7C8BEF159 /* Pods_IHMA.framework */; };
+		9002F4DA2637E510006292C1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4D92637E510006292C1 /* TableViewCell.swift */; };
+		9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DC263819A8006292C1 /* UIImage+Extension.swift */; };
+		9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */; };
 		9027C31526367E3A00937441 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31426367E3A00937441 /* LoginViewController.swift */; };
 		9027C319263685FE00937441 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C318263685FE00937441 /* User.swift */; };
 		9027C31D2636868D00937441 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31C2636868D00937441 /* Authentication.swift */; };
@@ -51,6 +54,9 @@
 /* Begin PBXFileReference section */
 		18B02C3848906860D167C001 /* Pods-IHMA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.release.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.release.xcconfig"; sourceTree = "<group>"; };
 		7936371CC97C66B7C8BEF159 /* Pods_IHMA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IHMA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9002F4D92637E510006292C1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9002F4DC263819A8006292C1 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		9027C31426367E3A00937441 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9027C318263685FE00937441 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9027C31C2636868D00937441 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
@@ -135,6 +141,8 @@
 			isa = PBXGroup;
 			children = (
 				9027C3362636D29900937441 /* hexToUiColor.swift */,
+				9002F4DC263819A8006292C1 /* UIImage+Extension.swift */,
+				9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -152,6 +160,7 @@
 			children = (
 				903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */,
 				90C3144626358EC300EC7192 /* TableDataSource.swift */,
+				9002F4D92637E510006292C1 /* TableViewCell.swift */,
 			);
 			path = "Views-Sidemenu";
 			sourceTree = "<group>";
@@ -418,6 +427,7 @@
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
+				9002F4DA2637E510006292C1 /* TableViewCell.swift in Sources */,
 				FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */,
 				FA2B52872595C4AA004B23F9 /* Parser.swift in Sources */,
 				903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */,
@@ -425,6 +435,8 @@
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
+				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
+				9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */,
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
 				90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */,
 				FA2B52B02595CD57004B23F9 /* ViewDataSource.swift in Sources */,

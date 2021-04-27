@@ -9,33 +9,45 @@ import UIKit
 
 class LoginViewController: BaseViewController {
 
-    @IBOutlet weak var lblMessage: UILabel!
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var txtUsername: UITextField!
     
+    @IBOutlet weak var imgLogo: UIImageView!
     var authentication = Authentication()
     
     @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var passwordView: UIView!
     
+    @IBOutlet weak var usernameView: UIView!
+    
+    @IBOutlet weak var lblUsername: UILabel!
+    @IBOutlet weak var lblPassword: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
-        txtUsername.addUnderLine()
-        txtPassword.addUnderLine()
+        
 
         // Do any additional setup after loading the view.
     }
     
     
+   
     
     
     func updateUI() {
         loginView.layer.cornerRadius = loginView.bounds.height/2;
         loginView.clipsToBounds  =  true
         loginView.backgroundColor = UIColor.white
+        lblTitle.textColor = .white
+        txtUsername.addUnderLine()
+        txtPassword.addUnderLine()
        
+        imgLogo.makeRounded()
     }
 
+    @IBAction func btmForgotPassword(_ sender: Any) {
+    }
     
     @IBAction func loginButton(_ sender: Any) {
         guard let userName = self.txtUsername.text else {return}
@@ -46,11 +58,11 @@ class LoginViewController: BaseViewController {
             if status {
                 self.toastMessage(message: "Success")
 //                self.lblMessage.text = "Logged in with username == \(self.authentication.username) and email == \(self.authentication.email)"
-                self.lblMessage.isHidden = false
+                self.lblTitle.isHidden = false
             } else {
                 self.toastMessage(message: message)
 //                self.lblMessage.text = message
-                self.lblMessage.isHidden = false
+                self.lblTitle.isHidden = false
                 //message
             }
             
@@ -59,17 +71,5 @@ class LoginViewController: BaseViewController {
     
 }
 
-//MARK:- to add underline for text field
-extension UITextField {
 
-    func addUnderLine () {
-           let bottomLine = CALayer()
-           
-           bottomLine.frame = CGRect(x: 0.0, y: self.bounds.height + 3, width: self.bounds.width, height: 1.5)
-           bottomLine.backgroundColor = UIColor.lightGray.cgColor
-           
-           self.borderStyle = UITextField.BorderStyle.none
-           self.layer.addSublayer(bottomLine)
-       }
 
-}

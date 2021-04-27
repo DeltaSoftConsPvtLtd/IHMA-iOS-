@@ -14,6 +14,7 @@ class SideMenuViewController: BaseViewController {
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchImage: UIImageView!
     @IBOutlet weak var searchView: UIView!
+    
     @IBOutlet weak var txtLabel: UILabel!{
         didSet{
             txtLabel.text = "Choose Your Courses"
