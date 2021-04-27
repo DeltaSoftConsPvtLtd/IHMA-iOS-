@@ -30,7 +30,8 @@ class Authentication: NSObject {
     
     //MARK:- verifyUserWith
     fileprivate func verifyUserWith(_ username:String, andPassword password:String) {
-        if username == "test" && password == "123456" {
+        
+        if username == "test" && password == "nikivava12#" {
             user = User(userName: username, email: "\(username)@testmail.com")
             self.loginCallback?(true, "User is successfully authenticated")
         } else {

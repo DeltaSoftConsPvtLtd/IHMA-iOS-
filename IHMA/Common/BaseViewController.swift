@@ -70,4 +70,17 @@ class BaseViewController: UIViewController {
         })
         }
     }
+    
+    //MARK:- validation for password
+    func isPasswordValid(_ password : String) -> Bool{
+        let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
+        return passwordTest.evaluate(with: password)
+    }
+    
+    //MARK:- validation for username
+    func isValidInput(Input:String) -> Bool {
+        let RegEx = "\\w{7,18}"
+        let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
+        return Test.evaluate(with: Input)
+    }
 }

@@ -84,6 +84,7 @@ class MenuListController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"0E589D")
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -93,8 +94,9 @@ class MenuListController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row]
-//        cell.textLabel?.textColor = .white
-//        cell.backgroundColor = darkcolor
+        cell.textLabel?.textColor = .white
+        cell.textLabel?.font = cell.textLabel?.font.withSize(20)
+        cell.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"0E589D")
         return cell
     }
     

@@ -38,10 +38,10 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-left-50" translatesAutoresizingMaskIntoConstraints="NO" id="afJ-0j-K1H">
-                                <rect key="frame" x="359" y="44" width="55" height="55"/>
+                                <rect key="frame" x="381" y="44" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="1B7-Nc-qea"/>
-                                    <constraint firstAttribute="height" constant="55" id="pbG-xO-gIL"/>
+                                    <constraint firstAttribute="width" constant="25" id="1B7-Nc-qea"/>
+                                    <constraint firstAttribute="height" constant="25" id="pbG-xO-gIL"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvN-tN-Mgm" userLabel="Image picker">
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RnM-7l-a0T" userLabel="Back button">
-                                <rect key="frame" x="359" y="44" width="55" height="55"/>
+                                <rect key="frame" x="381" y="44" width="25" height="25"/>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="FH2-5o-s6L" eventType="touchUpInside" id="E7a-6c-y0r"/>
                                     <action selector="didTapMenu" destination="FH2-5o-s6L" eventType="touchUpInside" id="fhk-t2-61g"/>
@@ -85,7 +85,7 @@
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="top" secondItem="X5U-Me-1GT" secondAttribute="top" id="eQq-w5-Elc"/>
                             <constraint firstItem="RnM-7l-a0T" firstAttribute="trailing" secondItem="afJ-0j-K1H" secondAttribute="trailing" id="ebD-XI-T2a"/>
                             <constraint firstItem="qjj-d6-rdc" firstAttribute="leading" secondItem="cAM-p7-hWQ" secondAttribute="leading" id="hNX-l9-jMp"/>
-                            <constraint firstItem="Nsr-Yq-v6A" firstAttribute="trailing" secondItem="afJ-0j-K1H" secondAttribute="trailing" id="j7Y-yS-ZGI"/>
+                            <constraint firstItem="Nsr-Yq-v6A" firstAttribute="trailing" secondItem="afJ-0j-K1H" secondAttribute="trailing" constant="8" id="j7Y-yS-ZGI"/>
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="bottom" secondItem="X5U-Me-1GT" secondAttribute="bottom" id="o0j-s4-5oj"/>
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="leading" secondItem="X5U-Me-1GT" secondAttribute="leading" id="oHF-Gg-qQI"/>
                             <constraint firstItem="b6e-VW-Ken" firstAttribute="top" secondItem="Nsr-Yq-v6A" secondAttribute="top" id="phA-DD-RMg"/>

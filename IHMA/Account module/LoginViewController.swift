@@ -27,7 +27,6 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
         updateUI()
         
-
         // Do any additional setup after loading the view.
     }
     
@@ -56,20 +55,22 @@ class LoginViewController: BaseViewController {
         guard let userName = self.txtUsername.text else {return}
         guard let password = self.txtPassword.text else {return}
         authentication.authenticateUserWith(userName, andPassword: password)
-        authentication.loginCompletionHandler { [weak self](status, message) in
-            guard let self = self else {return}
-            if status {
-                self.toastMessage(message: "Success")
-//                self.lblMessage.text = "Logged in with username == \(self.authentication.username) and email == \(self.authentication.email)"
-                self.lblTitle.isHidden = false
-            } else {
-                self.toastMessage(message: message)
+        if (isPasswordValid(txtPassword.text!)==true) {
+            authentication.loginCompletionHandler { [weak self](status, message) in
+                guard let self = self else {return}
+                if status {
+                    self.toastMessage(message: "Success")
+//                    self.lblMessage.text = "Logged in with username == \(self.authentication.username) and email == \(self.authentication.email)"
+                    self.lblTitle.isHidden = false
+                } else {
+                    self.toastMessage(message: message)
 //                self.lblMessage.text = message
-                self.lblTitle.isHidden = false
+                    self.lblTitle.isHidden = false
                 //message
             }
             
         }//login completion handler
+        }
     }
     
 }
