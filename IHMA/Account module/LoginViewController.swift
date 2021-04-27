@@ -42,6 +42,9 @@ class LoginViewController: BaseViewController {
         lblTitle.textColor = .white
         txtUsername.addUnderLine()
         txtPassword.addUnderLine()
+        
+        lblUsername.textColor = .white
+        lblPassword.textColor = .white
        
         imgLogo.makeRounded()
     }
