@@ -38,6 +38,13 @@ class SideMenuViewController: BaseViewController {
         self.tableDataSurce = TableDataSource(attachView: self)
         
     }
+    
+    //MARK:- Search results
+    func getsearchResults() {
+      
+    }
+    
+        
    
     
     func updateUI() {

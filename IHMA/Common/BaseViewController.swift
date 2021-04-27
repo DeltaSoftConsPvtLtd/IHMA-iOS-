@@ -45,4 +45,29 @@ class BaseViewController: UIViewController {
         present(menu!, animated: true)
     }
 
+    //method for displaying toast msg
+    func toastMessage(message : String)
+    {
+        
+        DispatchQueue.main.async {
+
+        let toastLabel =
+            UILabel(frame:
+                CGRect(x: self.view.frame.size.width/2-130,
+                       y: self.view.frame.size.height - 100,
+                       width: 250,
+                       height: 35))
+        toastLabel.backgroundColor = UIColor.black
+        toastLabel.textColor = UIColor.white
+        toastLabel.textAlignment = NSTextAlignment.center
+        self.view.addSubview(toastLabel)
+        toastLabel.text = message
+        toastLabel.alpha = 1.0
+        toastLabel.layer.cornerRadius = 10;
+        toastLabel.clipsToBounds  =  true
+        UIView.animate(withDuration: 4.0, animations: {
+            toastLabel.alpha = 0.0
+        })
+        }
+    }
 }
