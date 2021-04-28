@@ -18,15 +18,17 @@ class TableDataSource: NSObject {
         attachView.coursesTableView.dataSource = self
         
         //MARK:- adding headers and footers for table view
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 300))
+        let header = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 100))
         let footer = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 300))
         
         header.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")//.orange//hex color code :#176AB5
-        footer.backgroundColor = .green
+        footer.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
         
         let label = UILabel(frame: header.bounds)
-        label.text = "Courses"
+        label.text = "COURSES"
+        label.textColor = .white
         label.textAlignment = .center
+        label.font = label.font.withSize(20)
         header.addSubview(label)
         
     
@@ -51,7 +53,7 @@ extension TableDataSource: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 20.0
+        return 0
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -65,12 +67,12 @@ extension TableDataSource: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (self.parentView?.coursesTableView.dequeueReusableCell(withIdentifier: "items", for: indexPath))! as? TableViewCell
         cell?.lblCourse?.text = (self.parentView?.courses[indexPath.section][indexPath.row])!
-        cell?.backgroundColor = .red
+        cell?.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
         return cell!
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 200
     }
     
 }

@@ -11,6 +11,7 @@ import UIKit
 class SideMenuViewController: BaseViewController {
 
     
+    @IBOutlet weak var viewTable: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchImage: UIImageView!
     @IBOutlet weak var searchView: UIView!
@@ -22,7 +23,7 @@ class SideMenuViewController: BaseViewController {
             txtLabel.textColor = UIColor.white
         }
     }
-    let courses = [["Swift", "Java", "Python"],
+    let courses = [["SoH", "CECP", "MOST"],
                  ["Objective C", "Android"],
                  ["Photoshop"]]
     
@@ -51,6 +52,8 @@ class SideMenuViewController: BaseViewController {
     func updateUI() {
         searchView.layer.cornerRadius = searchView.bounds.height/2;
         searchView.clipsToBounds  =  true
+        viewTable.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
+        viewTable.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
         
         searchTextField.borderStyle = .none
         
@@ -79,7 +82,7 @@ extension UIImageView {
 
 //MARK:-List items for side menu
 class MenuListController: UITableViewController {
-    var items = ["Profile","Login", "Register","Courses","Privacy policy"]
+    var items = ["Profile","Login", "Register","Payment","Privacy policy"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
     
     override func viewDidLoad() {
@@ -94,6 +97,7 @@ class MenuListController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row]
+          cell.imageView?.image = UIImage(named: "userwhiteimage")
         cell.textLabel?.textColor = .white
         cell.textLabel?.font = cell.textLabel?.font.withSize(20)
         cell.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"0E589D")
@@ -112,6 +116,9 @@ class MenuListController: UITableViewController {
             
         case 2:
             let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+            self.navigationController?.pushViewController(destinationController!, animated: true)
+        case 3:
+            let destinationController = PaymentViewController .instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
         default:
             print("ll")

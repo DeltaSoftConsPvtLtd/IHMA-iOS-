@@ -18,7 +18,7 @@ class RegistrationViewController: BaseViewController {
         super.viewDidLoad()
 
         sideMenu()
-        roundImage()
+        pickedImage.makeRounded()
         // Do any additional setup after loading the view.
         
     }
@@ -54,14 +54,5 @@ extension RegistrationViewController: UIImagePickerControllerDelegate,UINavigati
 
 }
 
-//MARK:- functions
-extension RegistrationViewController{
-    func roundImage(){
-        pickedImage.layer.borderWidth = 0
-        pickedImage.layer.masksToBounds = false
-        pickedImage.layer.borderColor = nil
-        pickedImage.layer.cornerRadius = pickedImage.frame.height/2
-        pickedImage.clipsToBounds = true
-    }
-}
+
 

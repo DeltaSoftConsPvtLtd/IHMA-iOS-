@@ -20,6 +20,7 @@ class ViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"0E589D")
         initView()
         sideMenu()
        

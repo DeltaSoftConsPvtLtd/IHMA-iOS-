@@ -15,9 +15,7 @@ class TableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        viewCourse.layer.cornerRadius = (viewCourse.bounds.height)/2;
-        viewCourse.clipsToBounds  =  true
-        
+        updateUI()
 //        viewCourse.borderStyle = .none
     }
 
@@ -26,5 +24,9 @@ class TableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+//MARK:- UI changes
+    func updateUI(){
+        viewCourse.layer.cornerRadius = 30
+        viewCourse.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"25A8E2")
+    }
 }

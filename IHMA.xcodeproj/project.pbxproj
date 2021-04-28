@@ -18,6 +18,9 @@
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* ViewController2.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
+		9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEEC26392FA200E29A37 /* UIView+Extension.swift */; };
+		9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */; };
+		9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEF3263940FE00E29A37 /* PaymentViewController.swift */; };
 		90759C0826328BE60052FFAB /* Loginscreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90759C0726328BE60052FFAB /* Loginscreens.storyboard */; };
 		90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C0B26328C780052FFAB /* RegistrationViewController.swift */; };
 		90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C142632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift */; };
@@ -64,11 +67,14 @@
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		9044AEEC26392FA200E29A37 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentScreens.storyboard; sourceTree = "<group>"; };
+		9044AEF3263940FE00E29A37 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		90759C0726328BE60052FFAB /* Loginscreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loginscreens.storyboard; sourceTree = "<group>"; };
 		90759C0B26328C780052FFAB /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		90759C142632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViewControllers+StoryboardIdentifiers.swift"; path = "Storyboard Helpers/ViewControllers+StoryboardIdentifiers.swift"; sourceTree = SOURCE_ROOT; };
-		90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifierHandlerType.swift; path = "Storyboard Helpers/StoryboardIdentifierHandlerType.swift"; sourceTree = SOURCE_ROOT; };
-		90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Helpers.swift"; path = "Storyboard Helpers/UIStoryboard+Helpers.swift"; sourceTree = SOURCE_ROOT; };
+		90759C142632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViewControllers+StoryboardIdentifiers.swift"; path = "IHMA/Storyboard Helpers/ViewControllers+StoryboardIdentifiers.swift"; sourceTree = SOURCE_ROOT; };
+		90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifierHandlerType.swift; path = "IHMA/Storyboard Helpers/StoryboardIdentifierHandlerType.swift"; sourceTree = SOURCE_ROOT; };
+		90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Helpers.swift"; path = "IHMA/Storyboard Helpers/UIStoryboard+Helpers.swift"; sourceTree = SOURCE_ROOT; };
 		90759C1C2632ACED0052FFAB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		90C3144626358EC300EC7192 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +149,7 @@
 				9027C3362636D29900937441 /* hexToUiColor.swift */,
 				9002F4DC263819A8006292C1 /* UIImage+Extension.swift */,
 				9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */,
+				9044AEEC26392FA200E29A37 /* UIView+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -165,11 +172,20 @@
 			path = "Views-Sidemenu";
 			sourceTree = "<group>";
 		};
+		9044AEF2263940D200E29A37 /* Payment Module */ = {
+			isa = PBXGroup;
+			children = (
+				9044AEF3263940FE00E29A37 /* PaymentViewController.swift */,
+			);
+			path = "Payment Module";
+			sourceTree = "<group>";
+		};
 		90759C0526328BBC0052FFAB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
 				903E8CB126314C6500D0AADD /* Main.storyboard */,
 				90759C0726328BE60052FFAB /* Loginscreens.storyboard */,
+				9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -232,6 +248,7 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
+				9044AEF2263940D200E29A37 /* Payment Module */,
 				9027C3352636D26A00937441 /* Helpers */,
 				90759C1B2632ACD50052FFAB /* Common */,
 				90759C13263294150052FFAB /* Storyboard Helpers */,
@@ -358,6 +375,7 @@
 				FA2B52672595BE55004B23F9 /* Assets.xcassets in Resources */,
 				FA2B529B2595CC2A004B23F9 /* TitilliumWeb-Bold.ttf in Resources */,
 				90759C0826328BE60052FFAB /* Loginscreens.storyboard in Resources */,
+				9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */,
 				FA2B52AD2595CC42004B23F9 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				903E8CB226314C6500D0AADD /* Main.storyboard in Resources */,
 				FA2B52992595CC27004B23F9 /* TitilliumWeb-Black.ttf in Resources */,
@@ -425,11 +443,13 @@
 				90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */,
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
+				9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
 				9002F4DA2637E510006292C1 /* TableViewCell.swift in Sources */,
 				FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */,
 				FA2B52872595C4AA004B23F9 /* Parser.swift in Sources */,
+				9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */,
 				903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */,
 				FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */,
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,

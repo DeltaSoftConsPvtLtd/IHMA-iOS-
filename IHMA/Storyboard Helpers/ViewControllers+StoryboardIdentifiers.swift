@@ -22,3 +22,11 @@ extension LoginViewController: StoryboardIdentifiable
         return "LoginViewController"
     }
 }
+
+//MARK:- Payment Page
+extension PaymentViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "PaymentViewController"
+    }
+}
