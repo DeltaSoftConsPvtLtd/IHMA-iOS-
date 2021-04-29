@@ -19,10 +19,10 @@ class TableDataSource: NSObject {
         
         //MARK:- adding headers and footers for table view
         let header = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 100))
-        let footer = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 300))
+//        let footer = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 0))
         
         header.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")//.orange//hex color code :#176AB5
-        footer.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
+//        footer.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
         
         let label = UILabel(frame: header.bounds)
         label.text = "COURSES"
@@ -34,7 +34,7 @@ class TableDataSource: NSObject {
     
         
         self.parentView?.coursesTableView.tableHeaderView = header
-        self.parentView?.coursesTableView.tableFooterView = footer
+//        self.parentView?.coursesTableView.tableFooterView = footer
         
     }
 }
@@ -47,6 +47,19 @@ extension TableDataSource: UITableViewDelegate {
     }
 }
 
+//Mark:-UIScrollView Delegate
+extension TableDataSource: UIScrollViewDelegate {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if (scrollView.contentOffset.y == 0)
+        {
+            parentView?.normalConstraints()
+        } else
+        {
+            parentView?.updateConstraints()
+        }
+       
+}
+}
 //Mark:- Datasource methods
 extension TableDataSource: UITableViewDataSource {
     
@@ -72,7 +85,11 @@ extension TableDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 200
+        return 175
+        
+        
     }
+    
+    
     
 }

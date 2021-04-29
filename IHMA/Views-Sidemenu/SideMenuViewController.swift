@@ -11,16 +11,25 @@ import UIKit
 class SideMenuViewController: BaseViewController {
 
     
+    //constraint outlets
+    @IBOutlet weak var searchTopViewConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var tableViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var viewTable: UIView!
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var searchImage: UIImageView!
     @IBOutlet weak var searchView: UIView!
     
+    @IBOutlet weak var imgMenu: UIImageView!
     @IBOutlet weak var txtLabel: UILabel!{
         didSet{
-            txtLabel.text = "Choose Your Courses"
-            txtLabel.font = setFontRegular(20.0)
+            txtLabel.numberOfLines = 2
+            txtLabel.lineBreakMode = .byWordWrapping
+            txtLabel.text = "Choose                        Your Course"
+            txtLabel.font = setFontRegular(30.0)
             txtLabel.textColor = UIColor.white
+            txtLabel.frame.size.width = 300
+            txtLabel.sizeToFit()
         }
     }
     let courses = [["SoH", "CECP", "MOST"],
@@ -50,7 +59,8 @@ class SideMenuViewController: BaseViewController {
    
     
     func updateUI() {
-        searchView.layer.cornerRadius = searchView.bounds.height/2;
+        imgMenu.isHidden = false
+        searchView.layer.cornerRadius = 30//searchView.bounds.height/2;
         searchView.clipsToBounds  =  true
         viewTable.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
         viewTable.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
@@ -58,6 +68,18 @@ class SideMenuViewController: BaseViewController {
         searchTextField.borderStyle = .none
         
         
+    }
+    
+    func updateConstraints()
+    {
+        imgMenu.isHidden = true
+        searchTopViewConstraint.constant = 0.0
+        tableViewBottomConstraint.constant = 0.0
+        
+    }
+    func normalConstraints() {
+        imgMenu.isHidden = false
+        searchTopViewConstraint.constant = 200.0
     }
 
 
@@ -78,6 +100,7 @@ extension UIImageView {
         }
     }
 }
+
 
 
 //MARK:-List items for side menu

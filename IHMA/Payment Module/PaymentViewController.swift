@@ -70,15 +70,15 @@ class PaymentViewController: BaseViewController {
 extension PaymentViewController
 {
     func constraintSettings() {
-        if UIScreen.main.bounds.height < 800
+        if UIScreen.main.bounds.height < 850
         {
             paymentViewTopConstraint.constant = 100
-            profileImageTopConstraint.constant = 60
+            profileImageTopConstraint.constant = 40
             payNowViewTopConstraint.constant = 20
         }
         else{
             paymentViewTopConstraint.constant = 200
-            profileImageTopConstraint.constant = 160
+            profileImageTopConstraint.constant = 140
             payNowViewTopConstraint.constant = 50
         }
     }

@@ -123,7 +123,7 @@
                                     <constraint firstAttribute="bottom" secondItem="zYN-e0-4bp" secondAttribute="bottom" constant="70" id="l0x-mf-yXf"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bill-gates-philanthropist1" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-rU-K1b">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bill-gates-philanthropist1" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-rU-K1b">
                                 <rect key="frame" x="132" y="194" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="KZO-iY-shU"/>

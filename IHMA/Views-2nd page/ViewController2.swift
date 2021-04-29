@@ -19,7 +19,7 @@ class ViewController2: BaseViewController {
     @IBOutlet weak var lbl: UILabel!
     
     override func viewDidLoad() {
-        
+        sideMenu()
         usageIndicator.isHidden = false
         usageIndicator.startAnimating()
         super.viewDidLoad()

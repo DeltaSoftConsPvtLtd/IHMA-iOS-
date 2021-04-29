@@ -83,4 +83,15 @@ class BaseViewController: UIViewController {
         let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
         return Test.evaluate(with: Input)
     }
+    
+    //MARK:- validation of email
+    func isValidEmail(testStr:String) -> Bool {
+        
+        print("validate emilId: \(testStr)")
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        let result = emailTest.evaluate(with: testStr)
+        return result
+        
+    }
 }
