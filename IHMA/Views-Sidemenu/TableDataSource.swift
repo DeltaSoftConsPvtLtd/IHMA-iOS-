@@ -18,22 +18,22 @@ class TableDataSource: NSObject {
         attachView.coursesTableView.dataSource = self
         
         //MARK:- adding headers and footers for table view
-        let header = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 100))
+//        let header = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 100))
 //        let footer = UIView(frame: CGRect(x: 0, y: 0, width: attachView.coursesTableView.frame.size.width, height: 0))
         
-        header.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")//.orange//hex color code :#176AB5
+//        header.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")//.orange//hex color code :#176AB5
 //        footer.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
         
-        let label = UILabel(frame: header.bounds)
-        label.text = "COURSES"
-        label.textColor = .white
-        label.textAlignment = .center
-        label.font = label.font.withSize(20)
-        header.addSubview(label)
-        
-    
-        
-        self.parentView?.coursesTableView.tableHeaderView = header
+//        let label = UILabel(frame: header.bounds)
+//        label.text = "COURSES"
+//        label.textColor = .white
+//        label.textAlignment = .center
+//        label.font = label.font.withSize(20)
+//        header.addSubview(label)
+//
+//
+//
+//        self.parentView?.coursesTableView.tableHeaderView = header
 //        self.parentView?.coursesTableView.tableFooterView = footer
         
     }
@@ -45,6 +45,7 @@ extension TableDataSource: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 }
 
 //Mark:-UIScrollView Delegate
@@ -61,7 +62,7 @@ extension TableDataSource: UIScrollViewDelegate {
 }
 }
 //Mark:- Datasource methods
-extension TableDataSource: UITableViewDataSource {
+extension TableDataSource: UITableViewDataSource{
     
     
     
@@ -86,10 +87,7 @@ extension TableDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 175
-        
-        
     }
-    
-    
+
     
 }

@@ -10,6 +10,10 @@ import UIKit
 
 class SideMenuViewController: BaseViewController {
 
+    //MARK:- Header for tableview outlet
+    @IBOutlet weak var HeaderView: UIView!
+    @IBOutlet weak var lblHeader: UILabel!
+    @IBOutlet weak var txtViewHeader: UITextView!
     
     //constraint outlets
     @IBOutlet weak var searchTopViewConstraint: NSLayoutConstraint!
@@ -32,7 +36,7 @@ class SideMenuViewController: BaseViewController {
             txtLabel.sizeToFit()
         }
     }
-    let courses = [["SoH", "CECP", "MOST"],
+    let courses = [["CECP", "MOST"],
                  ["Objective C", "Android"],
                  ["Photoshop"]]
     
@@ -67,7 +71,7 @@ class SideMenuViewController: BaseViewController {
         
         searchTextField.borderStyle = .none
         
-        
+        HeaderView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
     }
     
     func updateConstraints()
