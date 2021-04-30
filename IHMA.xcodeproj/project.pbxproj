@@ -27,6 +27,9 @@
 		90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */; };
 		90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */; };
 		90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C1C2632ACED0052FFAB /* BaseViewController.swift */; };
+		909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F34263BB4C300200EE2 /* NotificationViewController.swift */; };
+		909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F37263BC32100200EE2 /* NotificationDataSource.swift */; };
+		909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */; };
 		90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3144626358EC300EC7192 /* TableDataSource.swift */; };
 		90F0B9D4263AFBEC00141183 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0B9D3263AFBEC00141183 /* HeaderTableViewCell.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
@@ -77,6 +80,9 @@
 		90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifierHandlerType.swift; path = "IHMA/Storyboard Helpers/StoryboardIdentifierHandlerType.swift"; sourceTree = SOURCE_ROOT; };
 		90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Helpers.swift"; path = "IHMA/Storyboard Helpers/UIStoryboard+Helpers.swift"; sourceTree = SOURCE_ROOT; };
 		90759C1C2632ACED0052FFAB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		909F2F34263BB4C300200EE2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		909F2F37263BC32100200EE2 /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
+		909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		90C3144626358EC300EC7192 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		90F0B9D3263AFBEC00141183 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
@@ -222,6 +228,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		909F2F33263BB49700200EE2 /* Notification Module */ = {
+			isa = PBXGroup;
+			children = (
+				909F2F34263BB4C300200EE2 /* NotificationViewController.swift */,
+				909F2F37263BC32100200EE2 /* NotificationDataSource.swift */,
+				909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */,
+			);
+			path = "Notification Module";
+			sourceTree = "<group>";
+		};
 		B0D87695C4E049AAB23577AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -251,10 +267,11 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
-				9044AEF2263940D200E29A37 /* Payment Module */,
 				9027C3352636D26A00937441 /* Helpers */,
 				90759C1B2632ACD50052FFAB /* Common */,
 				90759C13263294150052FFAB /* Storyboard Helpers */,
+				909F2F33263BB49700200EE2 /* Notification Module */,
+				9044AEF2263940D200E29A37 /* Payment Module */,
 				90759C0A26328C490052FFAB /* Account module */,
 				90759C0526328BBC0052FFAB /* Storyboards */,
 				903E8CBE2631A18B00D0AADD /* Views-Sidemenu */,
@@ -443,6 +460,7 @@
 				FA2B528A2595C569004B23F9 /* Model.swift in Sources */,
 				FA2B527B2595BF41004B23F9 /* ViewModel.swift in Sources */,
 				903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */,
+				909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */,
 				90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */,
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
@@ -459,11 +477,13 @@
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
 				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
+				909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */,
 				9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */,
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
 				90F0B9D4263AFBEC00141183 /* HeaderTableViewCell.swift in Sources */,
 				90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */,
 				FA2B52B02595CD57004B23F9 /* ViewDataSource.swift in Sources */,
+				909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */,
 				FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */,
 				FA2B52B42595D2C1004B23F9 /* Constants.swift in Sources */,
 				9027C319263685FE00937441 /* User.swift in Sources */,

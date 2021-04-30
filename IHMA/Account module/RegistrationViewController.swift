@@ -14,15 +14,18 @@ class RegistrationViewController: BaseViewController {
     
     @IBOutlet weak var pickedImage: UIImageView!
     
+    @IBOutlet var registrationView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         sideMenu()
         pickedImage.makeRounded()
+        registrationView.layerGradient()
         // Do any additional setup after loading the view.
         
     }
     
+  
     
 }
 

@@ -96,6 +96,7 @@
                     </view>
                     <connections>
                         <outlet property="pickedImage" destination="X5U-Me-1GT" id="7jX-7K-EJR"/>
+                        <outlet property="registrationView" destination="FXA-h0-9aU" id="3Px-lZ-3Lg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7J-wQ-a1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
