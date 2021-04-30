@@ -256,13 +256,45 @@
                                     <constraint firstItem="2ar-CS-8NP" firstAttribute="leading" secondItem="4tU-lx-iwP" secondAttribute="leading" id="tGw-Sy-QUk"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-wX-NIW" userLabel="Navbar">
+                                <rect key="frame" x="0.0" y="88" width="414" height="65"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuTidingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Vaa-4v-7xG">
+                                        <rect key="frame" x="24" y="20" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="1On-Rs-hxt"/>
+                                            <constraint firstAttribute="height" constant="25" id="3bj-EZ-RB0"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ukT-mZ-zKC" userLabel="Sidemenu Button">
+                                        <rect key="frame" x="24" y="20" width="25" height="25"/>
+                                        <connections>
+                                            <action selector="didTapMenu" destination="kXe-35-oQC" eventType="touchUpInside" id="8qg-gm-sh1"/>
+                                            <action selector="didTapMenu" destination="OUo-0s-Kba" eventType="touchUpInside" id="XYu-9C-Gsc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="0Jt-0v-OJN"/>
+                                    <constraint firstItem="Vaa-4v-7xG" firstAttribute="leading" secondItem="hpx-wX-NIW" secondAttribute="leading" constant="24" id="0m3-Qd-mlh"/>
+                                    <constraint firstItem="ukT-mZ-zKC" firstAttribute="leading" secondItem="Vaa-4v-7xG" secondAttribute="leading" id="4ro-uT-0Wk"/>
+                                    <constraint firstItem="ukT-mZ-zKC" firstAttribute="top" secondItem="Vaa-4v-7xG" secondAttribute="top" id="Qtk-qL-Osu"/>
+                                    <constraint firstItem="ukT-mZ-zKC" firstAttribute="bottom" secondItem="Vaa-4v-7xG" secondAttribute="bottom" id="VGT-Y3-ihV"/>
+                                    <constraint firstItem="ukT-mZ-zKC" firstAttribute="trailing" secondItem="Vaa-4v-7xG" secondAttribute="trailing" id="VH2-2O-OeR"/>
+                                    <constraint firstItem="Vaa-4v-7xG" firstAttribute="centerY" secondItem="hpx-wX-NIW" secondAttribute="centerY" id="qCn-eN-5I3"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oJl-HB-EWk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oJl-HB-EWk" firstAttribute="trailing" secondItem="4tU-lx-iwP" secondAttribute="trailing" id="008-Tj-o3z"/>
+                            <constraint firstAttribute="trailing" secondItem="hpx-wX-NIW" secondAttribute="trailing" id="KVk-hf-mqm"/>
                             <constraint firstItem="4tU-lx-iwP" firstAttribute="leading" secondItem="oJl-HB-EWk" secondAttribute="leading" id="Urf-mY-i5z"/>
+                            <constraint firstItem="hpx-wX-NIW" firstAttribute="leading" secondItem="oJl-HB-EWk" secondAttribute="leading" id="dzS-Bo-kvA"/>
                             <constraint firstItem="4tU-lx-iwP" firstAttribute="bottom" secondItem="oJl-HB-EWk" secondAttribute="bottom" id="rc0-Nq-hfR"/>
+                            <constraint firstItem="hpx-wX-NIW" firstAttribute="top" secondItem="oJl-HB-EWk" secondAttribute="top" id="rkQ-yX-yHG"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="spP-UM-QRp"/>

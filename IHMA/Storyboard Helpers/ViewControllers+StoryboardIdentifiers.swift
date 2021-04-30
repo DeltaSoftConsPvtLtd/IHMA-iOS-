@@ -30,3 +30,11 @@ extension PaymentViewController: StoryboardIdentifiable
         return "PaymentViewController"
     }
 }
+    
+//MARK:- Profile page
+extension ProfileViewController: StoryboardIdentifiable
+    {
+        static func storyboardIdentifier() -> String {
+            return "ProfileViewController"
+        }
+}

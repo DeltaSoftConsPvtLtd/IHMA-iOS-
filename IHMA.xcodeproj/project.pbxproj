@@ -30,6 +30,8 @@
 		909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F34263BB4C300200EE2 /* NotificationViewController.swift */; };
 		909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F37263BC32100200EE2 /* NotificationDataSource.swift */; };
 		909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */; };
+		909F2F3F263BEAAF00200EE2 /* ProfileScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 909F2F3E263BEAAF00200EE2 /* ProfileScreens.storyboard */; };
+		909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F42263BF15600200EE2 /* ProfileViewController.swift */; };
 		90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3144626358EC300EC7192 /* TableDataSource.swift */; };
 		90F0B9D4263AFBEC00141183 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90F0B9D3263AFBEC00141183 /* HeaderTableViewCell.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
@@ -83,6 +85,8 @@
 		909F2F34263BB4C300200EE2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		909F2F37263BC32100200EE2 /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
 		909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
+		909F2F3E263BEAAF00200EE2 /* ProfileScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ProfileScreens.storyboard; sourceTree = "<group>"; };
+		909F2F42263BF15600200EE2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		90C3144626358EC300EC7192 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		90F0B9D3263AFBEC00141183 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
@@ -195,6 +199,7 @@
 				903E8CB126314C6500D0AADD /* Main.storyboard */,
 				90759C0726328BE60052FFAB /* Loginscreens.storyboard */,
 				9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */,
+				909F2F3E263BEAAF00200EE2 /* ProfileScreens.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -238,6 +243,14 @@
 			path = "Notification Module";
 			sourceTree = "<group>";
 		};
+		909F2F41263BF0F900200EE2 /* Profile Module */ = {
+			isa = PBXGroup;
+			children = (
+				909F2F42263BF15600200EE2 /* ProfileViewController.swift */,
+			);
+			path = "Profile Module";
+			sourceTree = "<group>";
+		};
 		B0D87695C4E049AAB23577AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +285,7 @@
 				90759C13263294150052FFAB /* Storyboard Helpers */,
 				909F2F33263BB49700200EE2 /* Notification Module */,
 				9044AEF2263940D200E29A37 /* Payment Module */,
+				909F2F41263BF0F900200EE2 /* Profile Module */,
 				90759C0A26328C490052FFAB /* Account module */,
 				90759C0526328BBC0052FFAB /* Storyboards */,
 				903E8CBE2631A18B00D0AADD /* Views-Sidemenu */,
@@ -399,6 +413,7 @@
 				FA2B52AD2595CC42004B23F9 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				903E8CB226314C6500D0AADD /* Main.storyboard in Resources */,
 				FA2B52992595CC27004B23F9 /* TitilliumWeb-Black.ttf in Resources */,
+				909F2F3F263BEAAF00200EE2 /* ProfileScreens.storyboard in Resources */,
 				FA2B529D2595CC2C004B23F9 /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				FA2B52A52595CC37004B23F9 /* TitilliumWeb-Light.ttf in Resources */,
 				FA2B52AB2595CC40004B23F9 /* TitilliumWeb-SemiBold.ttf in Resources */,
@@ -462,6 +477,7 @@
 				903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */,
 				909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */,
 				90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */,
+				909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */,
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */,

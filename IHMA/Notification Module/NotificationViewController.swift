@@ -19,7 +19,7 @@ class NotificationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-
+        sideMenu()
         self.notificationDataSource = NotificationDataSource(attachView: self)
         // Do any additional setup after loading the view.
     }
