@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: BaseViewController {
 
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileView: UIView!
@@ -16,13 +16,21 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var lblAboutPayment: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    @IBOutlet weak var lblFeeDescrption: UILabel!
     @IBOutlet weak var lblFee: UILabel!
-    @IBOutlet weak var separationView: UIView!
+   
+    
+    @IBOutlet weak var addressView: UIView!
+    @IBOutlet weak var lblAddress1: UILabel!
+    @IBOutlet weak var lblAddress2: UILabel!
+    @IBOutlet weak var contactDetailsView: UIView!
+    @IBOutlet weak var lblPhoneno: UILabel!
+    @IBOutlet weak var lblEmail: UILabel!
+    
     @IBOutlet weak var buttonView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        sideMenu()
 
         // Do any additional setup after loading the view.
     }
@@ -30,6 +38,10 @@ class ProfileViewController: UIViewController {
     func setupUI(){
         profileView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
         profileImage.makeRounded()
+        
+        buttonView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1B8AF4")
+        buttonView.layer.cornerRadius = buttonView.bounds.height/2;
+        buttonView.clipsToBounds  =  true
     }
     /*
     // MARK: - Navigation

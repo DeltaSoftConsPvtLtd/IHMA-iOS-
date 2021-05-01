@@ -44,7 +44,8 @@ class BaseViewController: UIViewController {
     @IBAction func didTapMenu() {
         present(menu!, animated: true)
     }
-
+   
+    
     //method for displaying toast msg
     func toastMessage(message : String)
     {
