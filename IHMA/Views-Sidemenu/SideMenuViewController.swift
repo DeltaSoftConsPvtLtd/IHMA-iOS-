@@ -76,14 +76,29 @@ class SideMenuViewController: BaseViewController {
     
     func updateConstraints()
     {
-        imgMenu.isHidden = true
-        searchTopViewConstraint.constant = 0.0
-        tableViewBottomConstraint.constant = 0.0
+       
+               
+        UIView.animate(withDuration: 0.3, animations: {() -> Void in
+
+            self.imgMenu.isHidden = true
+            self.searchTopViewConstraint.constant = 0.0
+//            self.tableViewBottomConstraint.constant = 0.0
+//            self.searchView.layoutIfNeeded()
+
+            self.view.layoutIfNeeded()
+        })
+        
         
     }
     func normalConstraints() {
-        imgMenu.isHidden = false
-        searchTopViewConstraint.constant = 200.0
+        UIView.animate(withDuration: 0.3, animations: {() -> Void in
+
+            self.imgMenu.isHidden = false
+            self.searchTopViewConstraint.constant = 200.0
+//            self.searchView.layoutIfNeeded()
+            self.view.layoutIfNeeded()
+        })
+    
     }
 
 
@@ -109,7 +124,8 @@ extension UIImageView {
 
 //MARK:-List items for side menu
 class MenuListController: UITableViewController {
-    var items = ["Profile","Login", "Register","Payment","Privacy policy"]
+    var items = ["Profile","Login", "Register","Payment","Logout"]
+    var images = ["userwhiteimage","userwhiteimage","userwhiteimage","userwhiteimage","logout"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
     
     override func viewDidLoad() {
@@ -124,7 +140,10 @@ class MenuListController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = items[indexPath.row]
-          cell.imageView?.image = UIImage(named: "userwhiteimage")
+          cell.imageView?.image = UIImage(named: images[indexPath.row])
+        //MARK:- to change image tint color
+        cell.imageView?.image = cell.imageView?.image?.withRenderingMode(.alwaysTemplate)
+        cell.imageView?.tintColor = UIColor.white
         cell.textLabel?.textColor = .white
         cell.textLabel?.font = cell.textLabel?.font.withSize(20)
         cell.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"0E589D")

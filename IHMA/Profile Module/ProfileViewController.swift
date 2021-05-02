@@ -8,7 +8,10 @@
 import UIKit
 
 class ProfileViewController: BaseViewController {
-
+//MARK:- Constraints
+    @IBOutlet weak var profileViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var contactDetailsViewTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var buttonViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var lblStatus: UILabel!
@@ -31,6 +34,7 @@ class ProfileViewController: BaseViewController {
         super.viewDidLoad()
         setupUI()
         sideMenu()
+        constraintSettings()
 
         // Do any additional setup after loading the view.
     }
@@ -55,4 +59,22 @@ class ProfileViewController: BaseViewController {
     @IBAction func btnAction(_ sender: Any) {
     }
     
+}
+
+//MARK:- autolayout setups
+extension ProfileViewController
+{
+    func constraintSettings() {
+        if UIScreen.main.bounds.height < 850
+        {
+            profileViewTopConstraint.constant = 100
+            buttonViewTopConstraint.constant = 25.0
+            contactDetailsViewTopConstraint.constant = 20
+        }
+        else{
+            profileViewTopConstraint.constant = 150
+            buttonViewTopConstraint.constant = 50.0
+            contactDetailsViewTopConstraint.constant = 50
+        }
+    }
 }

@@ -45,6 +45,10 @@ class BaseViewController: UIViewController {
         present(menu!, animated: true)
     }
    
+    //MARK:- hide status bar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     //method for displaying toast msg
     func toastMessage(message : String)

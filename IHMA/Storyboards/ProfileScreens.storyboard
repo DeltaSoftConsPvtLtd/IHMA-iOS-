@@ -19,8 +19,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3p-XG-GJ2">
                                 <rect key="frame" x="0.0" y="244" width="414" height="618"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTu-4B-jyK">
-                                        <rect key="frame" x="83.5" y="50" width="247" height="41"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nancy Salmoren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTu-4B-jyK">
+                                        <rect key="frame" x="57.5" y="50" width="299" height="41"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -47,13 +47,13 @@
                                         <color key="selectedSegmentTintColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28362" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnh-cq-XT4">
-                                        <rect key="frame" x="175" y="243" width="64" height="24"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <rect key="frame" x="167" y="243" width="80" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bTz-P2-MV1">
-                                        <rect key="frame" x="25" y="282" width="364" height="56"/>
+                                        <rect key="frame" x="25" y="288" width="364" height="56"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kottayam,Kerala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul1-PI-bm2">
                                                 <rect key="frame" x="114.5" y="0.0" width="135" height="21"/>
@@ -78,7 +78,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8CR-YJ-tqt">
-                                        <rect key="frame" x="25" y="398" width="364" height="57"/>
+                                        <rect key="frame" x="25" y="404" width="364" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91 7736785236" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mEO-hK-UY5">
                                                 <rect key="frame" x="123" y="0.0" width="118.5" height="18"/>
@@ -102,7 +102,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jQ6-2q-au6">
-                                        <rect key="frame" x="25" y="505" width="364" height="50"/>
+                                        <rect key="frame" x="25" y="511" width="364" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="46t-hj-aLi">
                                                 <rect key="frame" x="0.0" y="3" width="364" height="50"/>
@@ -151,7 +151,7 @@
                                     <constraint firstItem="5oQ-5e-mUT" firstAttribute="centerX" secondItem="Ur3-YX-gZl" secondAttribute="centerX" id="uGn-Ke-4mn"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bill-gates-philanthropist1" translatesAutoresizingMaskIntoConstraints="NO" id="W4c-Nt-I2p">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy profile picture" translatesAutoresizingMaskIntoConstraints="NO" id="W4c-Nt-I2p">
                                 <rect key="frame" x="132" y="144" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="7Mg-Cb-HZW"/>
@@ -204,7 +204,9 @@
                     <connections>
                         <outlet property="addressView" destination="bTz-P2-MV1" id="IXk-1l-nMo"/>
                         <outlet property="buttonView" destination="jQ6-2q-au6" id="h61-t7-Odq"/>
+                        <outlet property="buttonViewTopConstraint" destination="ehn-4D-BjM" id="ebT-RL-iZd"/>
                         <outlet property="contactDetailsView" destination="8CR-YJ-tqt" id="yg8-Lv-WlM"/>
+                        <outlet property="contactDetailsViewTopConstraint" destination="fcc-xe-E5v" id="v2l-Or-LdS"/>
                         <outlet property="lblAboutPayment" destination="5oQ-5e-mUT" id="Med-QV-Z0X"/>
                         <outlet property="lblAddress1" destination="ul1-PI-bm2" id="c2a-u6-en9"/>
                         <outlet property="lblAddress2" destination="ul1-PI-bm2" id="AD1-QB-iAW"/>
@@ -215,6 +217,7 @@
                         <outlet property="lblStatus" destination="CTu-4B-jyK" id="vO9-T1-9Vi"/>
                         <outlet property="profileImage" destination="W4c-Nt-I2p" id="FpD-rD-Tld"/>
                         <outlet property="profileView" destination="T3p-XG-GJ2" id="pWi-cM-pIa"/>
+                        <outlet property="profileViewTopConstraint" destination="Gxs-Eq-nS7" id="RgE-N5-Zch"/>
                         <outlet property="segmentedControl" destination="Ur3-YX-gZl" id="O7A-mh-w5C"/>
                     </connections>
                 </viewController>
@@ -225,7 +228,7 @@
     </scenes>
     <resources>
         <image name="MenuTidingsIcon" width="96" height="96"/>
-        <image name="bill-gates-philanthropist1" width="550" height="368"/>
+        <image name="dummy profile picture" width="840" height="420"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
