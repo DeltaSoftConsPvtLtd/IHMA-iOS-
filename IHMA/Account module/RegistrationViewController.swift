@@ -13,26 +13,38 @@ class RegistrationViewController: BaseViewController {
     var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var pickedImage: UIImageView!
+    @IBOutlet weak var registrationView: UIView!
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var formView: UIView!
+   
+    @IBOutlet weak var formTableView: UITableView!
     
-    @IBOutlet var registrationView: UIView!
-//    let colors = Colors()
+    var registrationTableDataSource: RegistrationTableDataSource?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUI()
         sideMenu()
         pickedImage.makeRounded()
         gradientColors()
+        
+        self.registrationTableDataSource = RegistrationTableDataSource(attachView: self)
         // Do any additional setup after loading the view.
         
     }
     
-
-//      func refresh() {
-//        view.backgroundColor = UIColor.clear
-//        let backgroundLayer = colors.gl
-//        backgroundLayer!.frame = view.frame
-//        view.layer.insertSublayer(backgroundLayer!, at: 0)
-//          }
+    func setupUI()
+    {
+        //MARK:- to change text color of selected text in uisegmented Control
+        UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white as Any], for: .selected)
+        
+        
+        formView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
+    }
+    
+    
+    @IBAction func segmentedControl(_ sender: Any) {
+    }
 }
     
   

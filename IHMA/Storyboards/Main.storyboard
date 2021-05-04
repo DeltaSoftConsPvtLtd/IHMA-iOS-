@@ -554,9 +554,9 @@
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
-                                                    <outlet property="lblCourse" destination="EmD-DR-Cjl" id="2B4-tI-xuC"/>
+                                                    <outlet property="lblCourse" destination="EmD-DR-Cjl" id="hgR-BG-UZn"/>
                                                     <outlet property="textLabel" destination="EmD-DR-Cjl" id="vYh-U4-xwb"/>
-                                                    <outlet property="viewCourse" destination="jg1-ta-bOv" id="kFy-Xc-J9E"/>
+                                                    <outlet property="viewCourse" destination="jg1-ta-bOv" id="8JB-BA-ecH"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
