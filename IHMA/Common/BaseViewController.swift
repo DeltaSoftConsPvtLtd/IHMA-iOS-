@@ -11,6 +11,7 @@ import SideMenu
 class BaseViewController: UIViewController {
 
     var menu:SideMenuNavigationController?
+    let colors = Colors()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +19,14 @@ class BaseViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    //MARK:- Function to specify gradient color for view
+    func gradientColors() {
+      view.backgroundColor = UIColor.clear
+      let backgroundLayer = colors.gl
+      backgroundLayer!.frame = view.frame
+      view.layer.insertSublayer(backgroundLayer!, at: 0)
+        }
     
     //MARK:- to implement side menu
     func sideMenu() {

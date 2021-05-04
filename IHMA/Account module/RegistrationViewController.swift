@@ -15,19 +15,29 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var pickedImage: UIImageView!
     
     @IBOutlet var registrationView: UIView!
+//    let colors = Colors()
     override func viewDidLoad() {
         super.viewDidLoad()
 
         sideMenu()
         pickedImage.makeRounded()
-        registrationView.layerGradient()
+        gradientColors()
         // Do any additional setup after loading the view.
         
     }
     
+
+//      func refresh() {
+//        view.backgroundColor = UIColor.clear
+//        let backgroundLayer = colors.gl
+//        backgroundLayer!.frame = view.frame
+//        view.layer.insertSublayer(backgroundLayer!, at: 0)
+//          }
+}
+    
   
     
-}
+
 
 //MARK:- Actions and delegates for image picker
 extension RegistrationViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate {
