@@ -39,14 +39,24 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.parentView?.fieldNames.count)!
+        return (self.parentView?.fieldNames.count)! + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if (indexPath.row == 4)
+        {
+            let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "OTP", for: indexPath))! as? OTPTableViewCell)!
+            
+            return cell
+        }
+        else{
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
         cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
         cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
         cell.fieldTxt.addUnderLine()
+        return cell
+        }
+        let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
         return cell
     }
     

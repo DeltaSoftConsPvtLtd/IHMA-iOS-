@@ -18,6 +18,7 @@
 		9027C3372636D29900937441 /* hexToUiColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C3362636D29900937441 /* hexToUiColor.swift */; };
 		902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA58C2641031500411097 /* RegistrationTableDataSource.swift */; };
 		902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A02641147600411097 /* FormTableViewCell.swift */; };
+		902BA5AA26418FFE00411097 /* OTPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A926418FFE00411097 /* OTPTableViewCell.swift */; };
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* ViewController2.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
@@ -75,6 +76,7 @@
 		9027C3362636D29900937441 /* hexToUiColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexToUiColor.swift; sourceTree = "<group>"; };
 		902BA58C2641031500411097 /* RegistrationTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableDataSource.swift; sourceTree = "<group>"; };
 		902BA5A02641147600411097 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
+		902BA5A926418FFE00411097 /* OTPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTableViewCell.swift; sourceTree = "<group>"; };
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				9027C31426367E3A00937441 /* LoginViewController.swift */,
 				902BA58C2641031500411097 /* RegistrationTableDataSource.swift */,
 				902BA5A02641147600411097 /* FormTableViewCell.swift */,
+				902BA5A926418FFE00411097 /* OTPTableViewCell.swift */,
 			);
 			path = "Account module";
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */,
+				902BA5AA26418FFE00411097 /* OTPTableViewCell.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
 				902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */,
