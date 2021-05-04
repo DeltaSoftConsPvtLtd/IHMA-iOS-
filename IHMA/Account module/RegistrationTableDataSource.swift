@@ -39,13 +39,14 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return (self.parentView?.fieldNames.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = (self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! //as? RegistrationTableViewCell
-//        cell?.lblCourse?.text = (self.parentView?.courses[indexPath.section][indexPath.row])!
-//        cell?.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
+        let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
+        cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
+        cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
+        cell.fieldTxt.addUnderLine()
         return cell
     }
     

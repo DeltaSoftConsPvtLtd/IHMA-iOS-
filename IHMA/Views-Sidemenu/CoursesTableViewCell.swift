@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableViewCell: UITableViewCell {
+class CoursesTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var viewCourse: UIView!

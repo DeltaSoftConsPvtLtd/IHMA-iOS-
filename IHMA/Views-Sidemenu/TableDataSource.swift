@@ -79,7 +79,7 @@ extension TableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = (self.parentView?.coursesTableView.dequeueReusableCell(withIdentifier: "items", for: indexPath))! as? TableViewCell
+        let cell = (self.parentView?.coursesTableView.dequeueReusableCell(withIdentifier: "items", for: indexPath))! as? CoursesTableViewCell
         cell?.lblCourse?.text = (self.parentView?.courses[indexPath.section][indexPath.row])!
         cell?.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
         return cell!
