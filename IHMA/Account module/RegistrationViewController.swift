@@ -10,8 +10,8 @@ import UIKit
 
 class RegistrationViewController: BaseViewController {
     
-    let fieldNames = ["First Name", "Last Name", "Registration Number", "Mobile"]
-    let textFieldNames = ["Nancy", "Salmoren", "28362", "+91 7736785236"]
+    let fieldNames = ["First Name", "Last Name", "Registration Number", "Mobile","","Email","Address Home","Address Clinic"]
+    let textFieldNames = ["Nancy", "Salmoren", "28362", "+91 7736785236","","","",""]
     var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var pickedImage: UIImageView!

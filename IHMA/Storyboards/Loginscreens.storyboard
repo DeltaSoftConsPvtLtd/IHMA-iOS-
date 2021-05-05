@@ -12,7 +12,7 @@
         <!--Registration View Controller-->
         <scene sceneID="Eoc-D4-Pc4">
             <objects>
-                <viewController storyboardIdentifier="RegistrationViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FH2-5o-s6L" customClass="RegistrationViewController" customModule="IHMA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FH2-5o-s6L" customClass="RegistrationViewController" customModule="IHMA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FXA-h0-9aU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -126,13 +126,13 @@
                                                             <rect key="frame" x="52" y="-5.5" width="310.5" height="55"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Mu-OuQ">
-                                                                    <rect key="frame" x="0.0" y="19.5" width="27" height="16"/>
-                                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                                                                    <rect key="frame" x="20" y="18.5" width="31" height="18"/>
+                                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <color key="textColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sancy" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99q-He-3mL">
-                                                                    <rect key="frame" x="57" y="10.5" width="233.5" height="34"/>
+                                                                    <rect key="frame" x="81" y="15" width="209.5" height="25"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -147,7 +147,8 @@
                                                                 <constraint firstItem="99q-He-3mL" firstAttribute="centerY" secondItem="l3q-Mu-OuQ" secondAttribute="centerY" id="Ffa-5j-IhY"/>
                                                                 <constraint firstItem="99q-He-3mL" firstAttribute="leading" secondItem="l3q-Mu-OuQ" secondAttribute="trailing" constant="30" id="YEG-MR-LLC"/>
                                                                 <constraint firstItem="l3q-Mu-OuQ" firstAttribute="centerY" secondItem="AFE-kH-vZG" secondAttribute="centerY" id="ehE-pU-U1A"/>
-                                                                <constraint firstItem="l3q-Mu-OuQ" firstAttribute="leading" secondItem="AFE-kH-vZG" secondAttribute="leading" id="xRI-15-PaY"/>
+                                                                <constraint firstAttribute="bottom" secondItem="99q-He-3mL" secondAttribute="bottom" constant="15" id="wmp-sm-18i"/>
+                                                                <constraint firstItem="l3q-Mu-OuQ" firstAttribute="leading" secondItem="AFE-kH-vZG" secondAttribute="leading" constant="20" id="xRI-15-PaY"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>

@@ -39,14 +39,14 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.parentView?.fieldNames.count)! + 1
+        return (self.parentView?.fieldNames.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if (indexPath.row == 4)
         {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "OTP", for: indexPath))! as? OTPTableViewCell)!
-            
+            cell.lblOTP.textColor = hexToUiColor().hexStringToUIColor(hex:"1B8AF4")
             return cell
         }
         else{
@@ -61,7 +61,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 175
+        return 100
     }
 
     
