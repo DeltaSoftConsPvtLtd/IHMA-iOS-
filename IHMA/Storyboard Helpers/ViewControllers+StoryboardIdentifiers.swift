@@ -38,3 +38,12 @@ extension ProfileViewController: StoryboardIdentifiable
             return "ProfileViewController"
         }
 }
+
+
+//MARK:- OTP page
+extension OTPViewController: StoryboardIdentifiable
+    {
+        static func storyboardIdentifier() -> String {
+            return "OTPViewController"
+        }
+}

@@ -8,7 +8,7 @@
 import Foundation
 
 class Authentication: NSObject {
-    var user: User!
+    var user: User1!
     var username: String {return user.userName}
     var email: String {return user.email}
     
@@ -32,7 +32,7 @@ class Authentication: NSObject {
     fileprivate func verifyUserWith(_ username:String, andPassword password:String) {
         
         if username == "test@testmail.com" && password == "nikivava12#" {
-            user = User(userName: username, email: "\(username)@testmail.com")
+            user = User1(userName: username, email: "\(username)@testmail.com")
             self.loginCallback?(true, "User is successfully authenticated")
         } else {
             // invalid credentials

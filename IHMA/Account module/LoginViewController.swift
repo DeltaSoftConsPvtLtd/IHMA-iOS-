@@ -65,6 +65,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     @IBAction func loginButton(_ sender: Any) {
         guard let userName = self.txtUsername.text else {return}
         guard let password = self.txtPassword.text else {return}
+//        downloadJson()
         authentication.authenticateUserWith(userName, andPassword: password)
         if(isValidEmail(testStr:txtUsername.text!) == true)
         {
@@ -81,7 +82,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
                         self.lblTitle.isHidden = false
                 //message
                     }
-            
+
                 }//login completion handler
             } else
             {
@@ -96,6 +97,55 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         }
     }
     
+    func downloadJson() {
+
+        let url = URL(string: "13.232.14.192:81/api/login/")
+           guard let downloadURL = url else { return }
+           //POST Req
+
+
+           var request = URLRequest(url: downloadURL)
+           request.httpMethod = "POST"
+           request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+           request.addValue("application/json", forHTTPHeaderField: "Accept")
+           let newpost = loginPost(email: "test2", password: "arjunnair")
+
+           do {
+               let jsonBody = try JSONEncoder().encode(newpost)
+
+               request.httpBody = jsonBody
+               print(jsonBody)
+           }catch{
+               print("some error")
+           }
+
+           URLSession.shared.dataTask(with: request) { data, urlResponse, error in
+               guard let data = data, error == nil, urlResponse != nil else {
+                   print("something is wrong with url")
+                   return
+               }
+
+               print("downloaded..")
+               do
+               {
+                   let decoder = JSONDecoder()
+                   let downloaduser = try decoder.decode(User.self, from: data)
+
+   //                self.logmessage = downloaduser.message!
+
+   //                print(self.logmessage)
+
+
+                   DispatchQueue.main.async {
+
+                       // self.tableView.reloadData()
+                   }
+               } catch {
+                   print("something wrong with decode")
+
+               }
+               }.resume()
+       }
 }
 
 

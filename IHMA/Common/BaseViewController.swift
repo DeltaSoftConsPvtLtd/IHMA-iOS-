@@ -28,6 +28,12 @@ class BaseViewController: UIViewController {
       view.layer.insertSublayer(backgroundLayer!, at: 0)
         }
     
+    func gradientTwoColors() {
+      view.backgroundColor = UIColor.clear
+      let backgroundLayer = colors.gradient
+      backgroundLayer!.frame = view.frame
+      view.layer.insertSublayer(backgroundLayer!, at: 0)
+        }
     //MARK:- to implement side menu
     func sideMenu() {
         
