@@ -44,19 +44,11 @@ class OTPViewController: BaseViewController {
     
     func addBottomBorder(textfield:UITextField) {
         let layer = CALayer()
-        layer.backgroundColor = UIColor.gray.cgColor
+        layer.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"CBCBCB").cgColor//#CBCBCB
         layer.frame = CGRect(x: 0.0, y: textfield.frame.size.height - 2.0, width: textfield.frame.size.width, height: 2.0)
         textfield.layer.addSublayer(layer)
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+   
 
 }

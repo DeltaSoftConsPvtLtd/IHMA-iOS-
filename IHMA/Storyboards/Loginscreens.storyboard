@@ -164,6 +164,47 @@
                                                     <outlet property="txtOTP" destination="99q-He-3mL" id="G9b-VH-CNL"/>
                                                 </connections>
                                             </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Button" rowHeight="148" id="W1t-Da-GfN" customClass="SubmitTableViewCell" customModule="IHMA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="116" width="414" height="148"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W1t-Da-GfN" id="lWH-AL-8Na">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="148"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wni-EM-yjp">
+                                                            <rect key="frame" x="52" y="46.5" width="310.5" height="55"/>
+                                                            <subviews>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jtc-fb-l5O">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="310.5" height="55"/>
+                                                                    <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <state key="normal" title="Submit">
+                                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </state>
+                                                                </button>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="Jtc-fb-l5O" secondAttribute="trailing" id="EgY-EN-LZS"/>
+                                                                <constraint firstItem="Jtc-fb-l5O" firstAttribute="top" secondItem="wni-EM-yjp" secondAttribute="top" id="KCe-Rd-bea"/>
+                                                                <constraint firstAttribute="height" constant="55" id="NTA-4w-V8Z"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Jtc-fb-l5O" secondAttribute="bottom" id="fXe-Ku-pAa"/>
+                                                                <constraint firstItem="Jtc-fb-l5O" firstAttribute="leading" secondItem="wni-EM-yjp" secondAttribute="leading" id="ypS-W7-4hI"/>
+                                                            </constraints>
+                                                        </view>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="wni-EM-yjp" firstAttribute="width" secondItem="lWH-AL-8Na" secondAttribute="width" multiplier="1.5:2" id="0dB-vr-fEr"/>
+                                                        <constraint firstItem="wni-EM-yjp" firstAttribute="centerY" secondItem="lWH-AL-8Na" secondAttribute="centerY" id="52W-25-NW2"/>
+                                                        <constraint firstItem="wni-EM-yjp" firstAttribute="centerX" secondItem="lWH-AL-8Na" secondAttribute="centerX" id="ELr-wm-hgY"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="btnSubmit" destination="Jtc-fb-l5O" id="f37-2F-UGg"/>
+                                                    <outlet property="btnView" destination="wni-EM-yjp" id="w4J-Db-Ead"/>
+                                                </connections>
+                                            </tableViewCell>
                                         </prototypes>
                                     </tableView>
                                 </subviews>
@@ -391,7 +432,7 @@
         <!--View Controller-->
         <scene sceneID="4nf-V8-XQ3">
             <objects>
-                <viewController storyboardIdentifier="OTPViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JtI-Sw-Xg4" customClass="OTPViewController" customModule="IHMA" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OTPViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="JtI-Sw-Xg4" customClass="OTPViewController" customModule="IHMA" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BSB-A3-1RF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -466,6 +507,20 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuL-bp-ggC" userLabel="Back button">
+                                <rect key="frame" x="373" y="44" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="ZEe-Gd-Nob"/>
+                                    <constraint firstAttribute="height" constant="25" id="puq-I7-cqB"/>
+                                </constraints>
+                                <state key="normal" image="icons8-left-50"/>
+                                <connections>
+                                    <action selector="backButtonPressed:" destination="FH2-5o-s6L" eventType="touchUpInside" id="TqJ-EV-4T2"/>
+                                    <action selector="backButtonPressed:" destination="JtI-Sw-Xg4" eventType="touchUpInside" id="WwH-mJ-Cll"/>
+                                    <action selector="backButtonPressed:" destination="bYR-qg-kxC" eventType="touchUpInside" id="rCE-Tg-GQ1"/>
+                                    <action selector="didTapMenu" destination="FH2-5o-s6L" eventType="touchUpInside" id="YEP-LM-HTS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wgX-Wu-uu7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -477,8 +532,10 @@
                             <constraint firstItem="hWz-z8-2zM" firstAttribute="top" secondItem="vzu-Ip-01l" secondAttribute="bottom" constant="82" id="gY4-Ko-qtf"/>
                             <constraint firstItem="ehq-yp-27k" firstAttribute="leading" secondItem="wgX-Wu-uu7" secondAttribute="leading" constant="40" id="glf-Em-0qh"/>
                             <constraint firstItem="hWz-z8-2zM" firstAttribute="leading" secondItem="wgX-Wu-uu7" secondAttribute="leading" constant="40" id="iCq-Gx-qGh"/>
+                            <constraint firstItem="wgX-Wu-uu7" firstAttribute="trailing" secondItem="nuL-bp-ggC" secondAttribute="trailing" constant="16" id="nsz-cs-BJ7"/>
                             <constraint firstItem="vzu-Ip-01l" firstAttribute="leading" secondItem="wgX-Wu-uu7" secondAttribute="leading" constant="40" id="oNF-gW-csx"/>
                             <constraint firstItem="ehq-yp-27k" firstAttribute="top" secondItem="wgX-Wu-uu7" secondAttribute="top" constant="200" id="pOw-TP-svE"/>
+                            <constraint firstItem="nuL-bp-ggC" firstAttribute="top" secondItem="wgX-Wu-uu7" secondAttribute="top" id="rLn-cS-bRn"/>
                             <constraint firstItem="wgX-Wu-uu7" firstAttribute="trailing" secondItem="vzu-Ip-01l" secondAttribute="trailing" constant="40" id="tPd-Xv-wPd"/>
                         </constraints>
                     </view>

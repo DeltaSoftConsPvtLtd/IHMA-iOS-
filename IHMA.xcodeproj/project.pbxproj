@@ -41,6 +41,7 @@
 		90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3144626358EC300EC7192 /* TableDataSource.swift */; };
 		90D4005D2643880900DC82B9 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4005C2643880900DC82B9 /* OTPViewController.swift */; };
 		90D4006026439DF500DC82B9 /* OTPDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4005F26439DF500DC82B9 /* OTPDataSource.swift */; };
+		90D400632643B8CC00DC82B9 /* SubmitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
 		FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */; };
 		FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525E2595BE53004B23F9 /* ViewController.swift */; };
@@ -103,6 +104,7 @@
 		90C3144626358EC300EC7192 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		90D4005C2643880900DC82B9 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		90D4005F26439DF500DC82B9 /* OTPDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPDataSource.swift; sourceTree = "<group>"; };
+		90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitTableViewCell.swift; sourceTree = "<group>"; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2B52572595BE53004B23F9 /* IHMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2B525A2595BE53004B23F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				902BA58C2641031500411097 /* RegistrationTableDataSource.swift */,
 				902BA5A02641147600411097 /* FormTableViewCell.swift */,
 				902BA5A926418FFE00411097 /* OTPTableViewCell.swift */,
+				90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */,
 			);
 			path = "Account module";
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90D400632643B8CC00DC82B9 /* SubmitTableViewCell.swift in Sources */,
 				FA2B52B72595D356004B23F9 /* CollectionViewCell.swift in Sources */,
 				FA2B528A2595C569004B23F9 /* Model.swift in Sources */,
 				FA2B527B2595BF41004B23F9 /* ViewModel.swift in Sources */,

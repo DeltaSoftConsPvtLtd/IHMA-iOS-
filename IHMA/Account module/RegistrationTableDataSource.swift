@@ -15,6 +15,11 @@ class RegistrationTableDataSource: NSObject {
         attachView.formTableView.delegate = self
         attachView.formTableView.dataSource = self
     }
+    @objc func submitBtnTapped(sender: UIButton) {
+        let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+        self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        
+    }
 }
 
 //Mark:- Delegate Methods
@@ -43,10 +48,11 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row == 4)
+        if (indexPath.row == 7)
         {
-            let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "OTP", for: indexPath))! as? OTPTableViewCell)!
-            cell.lblOTP.textColor = hexToUiColor().hexStringToUIColor(hex:"1B8AF4")
+            let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Button", for: indexPath))!  as? SubmitTableViewCell)!
+            cell.btnSubmit.layer.cornerRadius = 30
+            cell.btnSubmit.addTarget(self,action:#selector(submitBtnTapped(sender:)), for: .touchUpInside)
             return cell
         }
         else{
