@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PQV-tW-2gb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FsX-f4-M8j">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="1O3-ou-9dn">
+            <objects>
+                <navigationController id="FsX-f4-M8j" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yB7-I9-CaM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cfM-TI-EhH" kind="relationship" relationship="rootViewController" id="5uH-ch-cRv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4q-3B-a6x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4625" y="-366"/>
+        </scene>
         <!--Splash View Controller-->
         <scene sceneID="9G4-3L-Tpu">
             <objects>
@@ -16,9 +32,47 @@
                     <view key="view" contentMode="scaleToFill" id="NCW-Xb-2va">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzA-2W-0O7">
+                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IHMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAg-8f-wWc">
+                                        <rect key="frame" x="57" y="150.5" width="86" height="39.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ihma" translatesAutoresizingMaskIntoConstraints="NO" id="twe-xl-L4W">
+                                        <rect key="frame" x="25" y="0.0" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="JgO-q8-fm7"/>
+                                            <constraint firstAttribute="height" constant="150" id="XEu-1q-ZRo"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="3k0-tt-JiU"/>
+                                    <constraint firstItem="SAg-8f-wWc" firstAttribute="centerX" secondItem="CzA-2W-0O7" secondAttribute="centerX" id="DeB-Zg-HnM"/>
+                                    <constraint firstItem="twe-xl-L4W" firstAttribute="centerX" secondItem="CzA-2W-0O7" secondAttribute="centerX" id="GCT-hW-6vZ"/>
+                                    <constraint firstItem="twe-xl-L4W" firstAttribute="top" secondItem="CzA-2W-0O7" secondAttribute="top" id="IHj-LY-JdA"/>
+                                    <constraint firstAttribute="height" constant="200" id="VGH-lC-Aso"/>
+                                    <constraint firstAttribute="bottom" secondItem="SAg-8f-wWc" secondAttribute="bottom" constant="10" id="r0U-Ed-Gxw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vGm-YM-fnA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="CzA-2W-0O7" firstAttribute="centerY" secondItem="NCW-Xb-2va" secondAttribute="centerY" id="ah9-if-2YY"/>
+                            <constraint firstItem="CzA-2W-0O7" firstAttribute="centerX" secondItem="NCW-Xb-2va" secondAttribute="centerX" id="o51-Ni-VPk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="L3X-bz-QQh"/>
+                    <connections>
+                        <outlet property="imgLogo" destination="twe-xl-L4W" id="h73-qV-Lj2"/>
+                        <outlet property="lblTitle" destination="SAg-8f-wWc" id="Fij-XK-8JX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blG-vb-QKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -823,6 +877,7 @@
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="icons8-magazine-25" width="25" height="25"/>
         <image name="icons8-notification-25" width="25" height="25"/>
+        <image name="ihma" width="225" height="225"/>
         <image name="placeholder_for_missing_posters" width="321" height="481"/>
         <image name="search" width="54" height="54"/>
         <image name="seasonsofthanks" width="500" height="275"/>

@@ -9,16 +9,23 @@ import UIKit
 
 class SplashViewController: BaseViewController {
 
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var imgLogo: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientTwoColors()
+        setupUI()
         
-        let destinationController = ViewController2 .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
-        self.navigationController?.pushViewController(destinationController!, animated: true)
+//        let destinationController = ViewController2 .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+//        self.navigationController?.pushViewController(destinationController!, animated: true)
         
-//        var storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//        var tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-//        navigationController?.pushViewController(tabbar!, animated: true)
+        
+        let seconds = 4.0
+        DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+            self.navigationController?.pushViewController(tabbar!, animated: true)
+        }
 
 //        let destinationController = MainTabPage.instantiateViewControllerFromStoryboard(storyBoardName: "MainTabPage")
 //        self.navigationController?.pushViewController(destinationController!, animated: true)
@@ -27,15 +34,8 @@ class SplashViewController: BaseViewController {
 //        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupUI() {
+        imgLogo.makeRounded()
     }
-    */
 
 }
