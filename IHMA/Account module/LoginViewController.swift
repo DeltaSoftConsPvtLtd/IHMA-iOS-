@@ -109,11 +109,17 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
 //            txtUsername.text = ""
 //            txtUsername.becomeFirstResponder()
 //        }
+        if(UserDefaults.standard.value(forKey: "session") != nil)
+        {
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+            self.navigationController?.pushViewController(tabbar!, animated: true)
+        }
     }
     
     func doLogin(_ user: String, _ psw :String)
     {
-        let url = URL(string: "13.232.14.192:81/api/login/")
+        let url = URL(string: "http://13.232.14.192:81/api/login/")
         let session = URLSession.shared
         
         var request = URLRequest(url: url!)
@@ -144,17 +150,17 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
                 return
             }
             
-            if let data_block = server_response["data"] as? NSDictionary
+            if let data_block = server_response["token"] //as? NSDictionary
             {
-                if let session_data = data_block["session"] as? String
-                {
+//                if let session_data = data_block["session"] as? String
+//                {
                     let preferences = UserDefaults.standard
-                    preferences.set(session_data, forKey: "session")
+                    preferences.set(data_block, forKey: "session")
                     
-                    DispatchQueue.main.async {
+//                    DispatchQueue.main.async {
 //                        execute : self.LoginDone()
-                    }
-                }
+//                    }
+//                }
             }
         })
         task.resume()
