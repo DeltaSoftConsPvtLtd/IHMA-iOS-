@@ -12,8 +12,19 @@ class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientTwoColors()
+        
+        let destinationController = ViewController2 .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
+        
+//        var storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        var tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+//        navigationController?.pushViewController(tabbar!, animated: true)
 
-        // Do any additional setup after loading the view.
+//        let destinationController = MainTabPage.instantiateViewControllerFromStoryboard(storyBoardName: "MainTabPage")
+//        self.navigationController?.pushViewController(destinationController!, animated: true)
+//        if let tabViewController = storyboard!.instantiateViewController(withIdentifier: "MainTabPage") as? MainTabPage {
+//            present(tabViewController, animated: true, completion: nil)
+//        }
     }
     
 

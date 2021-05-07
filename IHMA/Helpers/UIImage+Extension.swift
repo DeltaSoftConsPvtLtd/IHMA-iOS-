@@ -15,4 +15,11 @@ extension UIImageView {
         self.layer.masksToBounds = true
     }
     
+    
+    //MARK:- to change image tint color
+    func setImageColor(color: UIColor) {
+        let templateImage = self.image?.withRenderingMode(.alwaysTemplate)
+        self.image = templateImage
+        self.tintColor = color
+      }
  }

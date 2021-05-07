@@ -42,6 +42,10 @@
 		90D4005D2643880900DC82B9 /* OTPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4005C2643880900DC82B9 /* OTPViewController.swift */; };
 		90D4006026439DF500DC82B9 /* OTPDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4005F26439DF500DC82B9 /* OTPDataSource.swift */; };
 		90D400632643B8CC00DC82B9 /* SubmitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */; };
+		90D400662643D39600DC82B9 /* MainTabPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D400652643D39600DC82B9 /* MainTabPage.swift */; };
+		90D40072264457EF00DC82B9 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D40071264457EF00DC82B9 /* ResponseParser.swift */; };
+		90D4007926445CBB00DC82B9 /* WebServiceConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */; };
+		90D4007C26445DFD00DC82B9 /* WebServiceManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4007B26445DFD00DC82B9 /* WebServiceManeger.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
 		FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */; };
 		FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525E2595BE53004B23F9 /* ViewController.swift */; };
@@ -105,6 +109,10 @@
 		90D4005C2643880900DC82B9 /* OTPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPViewController.swift; sourceTree = "<group>"; };
 		90D4005F26439DF500DC82B9 /* OTPDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPDataSource.swift; sourceTree = "<group>"; };
 		90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitTableViewCell.swift; sourceTree = "<group>"; };
+		90D400652643D39600DC82B9 /* MainTabPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPage.swift; sourceTree = "<group>"; };
+		90D40071264457EF00DC82B9 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
+		90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConstant.swift; sourceTree = "<group>"; };
+		90D4007B26445DFD00DC82B9 /* WebServiceManeger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WebServiceManeger.swift; path = "web service files/WebServiceManeger.swift"; sourceTree = SOURCE_ROOT; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2B52572595BE53004B23F9 /* IHMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2B525A2595BE53004B23F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -252,6 +260,7 @@
 			children = (
 				90759C1C2632ACED0052FFAB /* BaseViewController.swift */,
 				909BF98A2642E39D001B73D1 /* SplashViewController.swift */,
+				90D400652643D39600DC82B9 /* MainTabPage.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -283,6 +292,16 @@
 			path = "OTP Module";
 			sourceTree = "<group>";
 		};
+		90D400682644564400DC82B9 /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				90D4007B26445DFD00DC82B9 /* WebServiceManeger.swift */,
+				90D40071264457EF00DC82B9 /* ResponseParser.swift */,
+				90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */,
+			);
+			path = Webservice;
+			sourceTree = "<group>";
+		};
 		B0D87695C4E049AAB23577AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -312,6 +331,7 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
+				90D400682644564400DC82B9 /* Webservice */,
 				9027C3352636D26A00937441 /* Helpers */,
 				90759C1B2632ACD50052FFAB /* Common */,
 				90759C13263294150052FFAB /* Storyboard Helpers */,
@@ -510,6 +530,7 @@
 				90209D23263FB99C00EC8588 /* UIColor+Extension.swift in Sources */,
 				903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */,
 				909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */,
+				90D4007C26445DFD00DC82B9 /* WebServiceManeger.swift in Sources */,
 				90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */,
 				909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */,
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
@@ -522,8 +543,10 @@
 				902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */,
 				90D4005D2643880900DC82B9 /* OTPViewController.swift in Sources */,
 				9002F4DA2637E510006292C1 /* CoursesTableViewCell.swift in Sources */,
+				90D4007926445CBB00DC82B9 /* WebServiceConstant.swift in Sources */,
 				FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */,
 				FA2B52872595C4AA004B23F9 /* Parser.swift in Sources */,
+				90D400662643D39600DC82B9 /* MainTabPage.swift in Sources */,
 				9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */,
 				903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */,
 				902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */,
@@ -532,6 +555,7 @@
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
 				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
+				90D40072264457EF00DC82B9 /* ResponseParser.swift in Sources */,
 				909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */,
 				9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */,
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,

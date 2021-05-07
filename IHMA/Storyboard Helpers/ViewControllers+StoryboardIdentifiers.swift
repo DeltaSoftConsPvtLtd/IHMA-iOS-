@@ -47,3 +47,38 @@ extension OTPViewController: StoryboardIdentifiable
             return "OTPViewController"
         }
 }
+
+//MARK:- Tab page
+extension MainTabPage: StoryboardIdentifiable
+    {
+        static func storyboardIdentifier() -> String {
+            return "MainTabPage"
+        }
+}
+
+
+//MARK:- Courses page
+extension SideMenuViewController: StoryboardIdentifiable
+    {
+        static func storyboardIdentifier() -> String {
+            return "SideMenuViewController"
+        }
+}
+
+
+//MARK:- Notification page
+extension NotificationViewController: StoryboardIdentifiable
+    {
+        static func storyboardIdentifier() -> String {
+            return "NotificationViewController"
+        }
+}
+
+
+//MARK:- Webview page
+extension ViewController2: StoryboardIdentifiable
+    {
+        static func storyboardIdentifier() -> String {
+            return "ViewController2"
+        }
+}

@@ -8,14 +8,33 @@
 import UIKit
 import SideMenu
 
+
 class BaseViewController: UIViewController {
 
+    //MARK:- Outlets of bottom tabbar
+    @IBOutlet weak var TabbarView: UIView!
+    @IBOutlet weak var tab1View: UIView!
+    @IBOutlet weak var imgTab1: UIImageView!
+    @IBOutlet weak var lblTab1: UILabel!
+    @IBOutlet weak var btnTab1: UIButton!
+    
+    @IBOutlet weak var tab2View: UIView!
+    @IBOutlet weak var imgtab2: UIImageView!
+    @IBOutlet weak var btnTab2: UIButton!
+    @IBOutlet weak var lblTab2: UILabel!
+    
+    @IBOutlet weak var tab3View: UIView!
+    @IBOutlet weak var imgTab3: UIImageView!
+    @IBOutlet weak var lblTab3: UILabel!
+    @IBOutlet weak var btnTab3: UIButton!
+    
     var menu:SideMenuNavigationController?
     let colors = Colors()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
 
         // Do any additional setup after loading the view.
     }
@@ -113,5 +132,50 @@ class BaseViewController: UIViewController {
         let result = emailTest.evaluate(with: testStr)
         return result
         
+    }
+    
+  
+    @IBAction func tab1Tap(_ sender: Any) {
+        lblTab1.textColor = UIColor.blue
+        imgTab1.setImageColor(color: UIColor.blue)
+        
+        //tab2
+        lblTab2.textColor = UIColor.black
+        imgtab2.setImageColor(color: UIColor.white)
+        
+        //tab3
+        lblTab3.textColor = UIColor.black
+        imgTab3.setImageColor(color: UIColor.white)
+    }
+    
+    @IBAction func tab2Tap(_ sender: Any) {
+        //tab1
+        lblTab1.textColor = UIColor.black
+        imgTab1.setImageColor(color: UIColor.white)
+        
+        //tab2
+        lblTab2.textColor = UIColor.blue
+        imgtab2.setImageColor(color: UIColor.blue)
+        
+        //tab3
+        lblTab3.textColor = UIColor.black
+        imgTab3.setImageColor(color: UIColor.white)
+        
+        let destinationController = SideMenuViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
+    }
+    
+    @IBAction func tab3Tap(_ sender: Any) {
+        //tab1
+        lblTab1.textColor = UIColor.black
+        imgTab1.setImageColor(color: UIColor.white)
+        
+        //tab2
+        lblTab2.textColor = UIColor.black
+        imgtab2.setImageColor(color: UIColor.white)
+        
+        //tab3
+        lblTab3.textColor = UIColor.blue
+        imgTab3.setImageColor(color: UIColor.blue)
     }
 }

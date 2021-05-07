@@ -66,35 +66,103 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         guard let userName = self.txtUsername.text else {return}
         guard let password = self.txtPassword.text else {return}
 //        downloadJson()
-        authentication.authenticateUserWith(userName, andPassword: password)
-        if(isValidEmail(testStr:txtUsername.text!) == true)
-        {
-            if (isPasswordValid(txtPassword.text!)==true) {
-                authentication.loginCompletionHandler { [weak self](status, message) in
-                    guard let self = self else {return}
-                    if status {
-                        self.toastMessage(message: "Success")
-//                     self.lblMessage.text = "Logged in with username == \(self.authentication.username) and email == \(self.authentication.email)"
-                        self.lblTitle.isHidden = false
-                    } else {
-                        self.toastMessage(message: message)
-//                self.lblMessage.text = message
-                        self.lblTitle.isHidden = false
-                //message
-                    }
-
-                }//login completion handler
-            } else
-            {
-                self.toastMessage(message: "invalid password")
-                txtPassword.text = ""
-                txtPassword.becomeFirstResponder()
+//        authentication.authenticateUserWith(userName, andPassword: password)
+        if userName.count != 0 {
+            if password.count != 0 {
+                
+                doLogin(userName, password)
+            } else {
+                //Password empty
+                self.toastMessage(message: "Password should not be empty")
             }
         } else {
-            self.toastMessage(message: "invalid username")
-            txtUsername.text = ""
-            txtUsername.becomeFirstResponder()
+            //username empty
+            self.toastMessage(message: "Username should not be empty")
         }
+        
+        
+//        if(isValidEmail(testStr:txtUsername.text!) == true)
+//        {
+//            if (isPasswordValid(txtPassword.text!)==true) {
+//                authentication.loginCompletionHandler { [weak self](status, message) in
+//                    guard let self = self else {return}
+//                    if status {
+//                        self.toastMessage(message: "Success")
+////                     self.lblMessage.text = "Logged in with username == \(self.authentication.username) and email == \(self.authentication.email)"
+//                        self.lblTitle.isHidden = false
+//                    } else {
+//                        self.toastMessage(message: message)
+////                self.lblMessage.text = message
+//                        self.lblTitle.isHidden = false
+//                //message
+//                    }
+//
+//                }//login completion handler
+//            } else
+//            {
+//                self.toastMessage(message: "invalid password")
+//                txtPassword.text = ""
+//                txtPassword.becomeFirstResponder()
+//            }
+//        } else {
+//            self.toastMessage(message: "invalid username")
+//            txtUsername.text = ""
+//            txtUsername.becomeFirstResponder()
+//        }
+    }
+    
+    func doLogin(_ user: String, _ psw :String)
+    {
+        let url = URL(string: "13.232.14.192:81/api/login/")
+        let session = URLSession.shared
+        
+        var request = URLRequest(url: url!)
+        request.httpMethod = "POST"
+        
+        let paramToSend = "username=" + user + "&password=" + psw
+        
+        request.httpBody = paramToSend.data(using: String.Encoding.utf8)
+        
+        let task = session.dataTask(with: request as URLRequest, completionHandler: {
+            (data, response, error) in
+            guard let _: Data = data else
+            {
+                return
+            }
+            
+            let json:Any?
+            
+            do{
+                json = try JSONSerialization.jsonObject(with: data!, options: [])
+            }
+            catch{
+                return
+            }
+            
+            guard let server_response = json as? NSDictionary else
+            {
+                return
+            }
+            
+            if let data_block = server_response["data"] as? NSDictionary
+            {
+                if let session_data = data_block["session"] as? String
+                {
+                    let preferences = UserDefaults.standard
+                    preferences.set(session_data, forKey: "session")
+                    
+                    DispatchQueue.main.async {
+//                        execute : self.LoginDone()
+                    }
+                }
+            }
+        })
+        task.resume()
+        
+    }
+    
+    func LoginDone() {
+        
     }
     
     func downloadJson() {
