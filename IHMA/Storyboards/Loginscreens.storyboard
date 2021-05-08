@@ -115,39 +115,41 @@
                                                     <outlet property="lblField" destination="MU1-yt-O3Y" id="FeY-aV-Ax5"/>
                                                 </connections>
                                             </tableViewCell>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OTP" id="PKz-yb-xVF" customClass="OTPTableViewCell" customModule="IHMA" customModuleProvider="target">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dropdown" id="PKz-yb-xVF" customClass="DropdownTableViewCell" customModule="IHMA" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PKz-yb-xVF" id="swr-2K-jQm">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFE-kH-vZG">
+                                                        <view tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AFE-kH-vZG">
                                                             <rect key="frame" x="52" y="-5.5" width="310.5" height="55"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OTP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Mu-OuQ">
-                                                                    <rect key="frame" x="20" y="18.5" width="31" height="18"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3q-Mu-OuQ">
+                                                                    <rect key="frame" x="20" y="0.0" width="290.5" height="55"/>
                                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                                     <color key="textColor" red="0.70196078429999997" green="0.70196078429999997" blue="0.70196078429999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sancy" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99q-He-3mL">
-                                                                    <rect key="frame" x="81" y="15" width="209.5" height="25"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                                    <textInputTraits key="textInputTraits"/>
-                                                                </textField>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u7O-kd-QNQ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="310.5" height="55"/>
+                                                                    <connections>
+                                                                        <action selector="dropDownTap:" destination="PKz-yb-xVF" eventType="touchUpInside" id="6pB-Qc-Qvp"/>
+                                                                    </connections>
+                                                                </button>
                                                             </subviews>
-                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="backgroundColor" systemColor="systemRedColor"/>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="55" id="5j0-pH-fSx"/>
-                                                                <constraint firstAttribute="trailing" secondItem="99q-He-3mL" secondAttribute="trailing" constant="20" id="Ea7-08-GJ8"/>
-                                                                <constraint firstItem="99q-He-3mL" firstAttribute="centerY" secondItem="l3q-Mu-OuQ" secondAttribute="centerY" id="Ffa-5j-IhY"/>
-                                                                <constraint firstItem="99q-He-3mL" firstAttribute="leading" secondItem="l3q-Mu-OuQ" secondAttribute="trailing" constant="30" id="YEG-MR-LLC"/>
+                                                                <constraint firstItem="u7O-kd-QNQ" firstAttribute="top" secondItem="AFE-kH-vZG" secondAttribute="top" id="78c-gp-bJd"/>
+                                                                <constraint firstAttribute="trailing" secondItem="l3q-Mu-OuQ" secondAttribute="trailing" id="7Dt-Tc-xvD"/>
+                                                                <constraint firstItem="u7O-kd-QNQ" firstAttribute="leading" secondItem="AFE-kH-vZG" secondAttribute="leading" id="ECd-Ju-gll"/>
+                                                                <constraint firstAttribute="trailing" secondItem="u7O-kd-QNQ" secondAttribute="trailing" id="Ide-Vw-qUb"/>
+                                                                <constraint firstAttribute="bottom" secondItem="l3q-Mu-OuQ" secondAttribute="bottom" id="Nj3-MW-ime"/>
                                                                 <constraint firstItem="l3q-Mu-OuQ" firstAttribute="centerY" secondItem="AFE-kH-vZG" secondAttribute="centerY" id="ehE-pU-U1A"/>
-                                                                <constraint firstAttribute="bottom" secondItem="99q-He-3mL" secondAttribute="bottom" constant="15" id="wmp-sm-18i"/>
+                                                                <constraint firstItem="l3q-Mu-OuQ" firstAttribute="top" secondItem="AFE-kH-vZG" secondAttribute="top" id="n7A-Vj-qYW"/>
+                                                                <constraint firstAttribute="bottom" secondItem="u7O-kd-QNQ" secondAttribute="bottom" id="nVc-FE-zRi"/>
                                                                 <constraint firstItem="l3q-Mu-OuQ" firstAttribute="leading" secondItem="AFE-kH-vZG" secondAttribute="leading" constant="20" id="xRI-15-PaY"/>
                                                             </constraints>
                                                         </view>
@@ -159,9 +161,8 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="OTPView" destination="AFE-kH-vZG" id="xyM-Z3-4RN"/>
-                                                    <outlet property="lblOTP" destination="l3q-Mu-OuQ" id="MhS-7t-BZ4"/>
-                                                    <outlet property="txtOTP" destination="99q-He-3mL" id="G9b-VH-CNL"/>
+                                                    <outlet property="dropdownView" destination="AFE-kH-vZG" id="xyM-Z3-4RN"/>
+                                                    <outlet property="lblTitle" destination="l3q-Mu-OuQ" id="MhS-7t-BZ4"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Button" rowHeight="148" id="W1t-Da-GfN" customClass="SubmitTableViewCell" customModule="IHMA" customModuleProvider="target">

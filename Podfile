@@ -8,5 +8,6 @@ target 'IHMA' do
   pod 'SideMenu'
   pod 'Alamofire', '~> 4.4'
   pod 'SwiftyJSON'
+  pod 'DropDown'
 
 end

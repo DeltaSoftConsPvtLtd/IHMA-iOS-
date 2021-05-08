@@ -7,9 +7,10 @@
 
 import UIKit
 
-//MARK:- to add underline for text field
+
 extension UITextField {
 
+    //MARK:- to add underline for text field
     func addUnderLine () {
            let bottomLine = CALayer()
            

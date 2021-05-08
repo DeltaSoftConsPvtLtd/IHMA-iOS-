@@ -44,23 +44,27 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.parentView?.fieldNames.count)!
+        return (self.parentView?.fieldNames.count)! + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row == 7)
+        if (indexPath.row == 8)
         {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Button", for: indexPath))!  as? SubmitTableViewCell)!
             cell.btnSubmit.layer.cornerRadius = 30
             cell.btnSubmit.addTarget(self,action:#selector(submitBtnTapped(sender:)), for: .touchUpInside)
             return cell
         }
-        else{
+        else if (indexPath.row < 7){
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
         cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
         cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
         cell.fieldTxt.addUnderLine()
         return cell
+        } else {
+            let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath))!  as? DropdownTableViewCell)!
+            
+            return cell
         }
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
         return cell

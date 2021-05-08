@@ -18,10 +18,11 @@
 		9027C3372636D29900937441 /* hexToUiColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C3362636D29900937441 /* hexToUiColor.swift */; };
 		902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA58C2641031500411097 /* RegistrationTableDataSource.swift */; };
 		902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A02641147600411097 /* FormTableViewCell.swift */; };
-		902BA5AA26418FFE00411097 /* OTPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A926418FFE00411097 /* OTPTableViewCell.swift */; };
+		902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */; };
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* ViewController2.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
+		90446A532645A2450086AB42 /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90446A522645A2450086AB42 /* UIString+Extension.swift */; };
 		9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEEC26392FA200E29A37 /* UIView+Extension.swift */; };
 		9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */; };
 		9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEF3263940FE00E29A37 /* PaymentViewController.swift */; };
@@ -85,10 +86,11 @@
 		9027C3362636D29900937441 /* hexToUiColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexToUiColor.swift; sourceTree = "<group>"; };
 		902BA58C2641031500411097 /* RegistrationTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableDataSource.swift; sourceTree = "<group>"; };
 		902BA5A02641147600411097 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
-		902BA5A926418FFE00411097 /* OTPTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPTableViewCell.swift; sourceTree = "<group>"; };
+		902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableViewCell.swift; sourceTree = "<group>"; };
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		90446A522645A2450086AB42 /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEC26392FA200E29A37 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentScreens.storyboard; sourceTree = "<group>"; };
 		9044AEF3263940FE00E29A37 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */,
 				9044AEEC26392FA200E29A37 /* UIView+Extension.swift */,
 				90209D22263FB99C00EC8588 /* UIColor+Extension.swift */,
+				90446A522645A2450086AB42 /* UIString+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -239,7 +242,7 @@
 				9027C31426367E3A00937441 /* LoginViewController.swift */,
 				902BA58C2641031500411097 /* RegistrationTableDataSource.swift */,
 				902BA5A02641147600411097 /* FormTableViewCell.swift */,
-				902BA5A926418FFE00411097 /* OTPTableViewCell.swift */,
+				902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */,
 				90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */,
 			);
 			path = "Account module";
@@ -536,7 +539,7 @@
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */,
-				902BA5AA26418FFE00411097 /* OTPTableViewCell.swift in Sources */,
+				902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */,
 				90D4006026439DF500DC82B9 /* OTPDataSource.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
@@ -545,6 +548,7 @@
 				9002F4DA2637E510006292C1 /* CoursesTableViewCell.swift in Sources */,
 				90D4007926445CBB00DC82B9 /* WebServiceConstant.swift in Sources */,
 				FA2B525F2595BE53004B23F9 /* ViewController.swift in Sources */,
+				90446A532645A2450086AB42 /* UIString+Extension.swift in Sources */,
 				FA2B52872595C4AA004B23F9 /* Parser.swift in Sources */,
 				90D400662643D39600DC82B9 /* MainTabPage.swift in Sources */,
 				9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */,
