@@ -24,6 +24,8 @@ class SplashViewController: BaseViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
             let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+            //MARK:- to change the color of tabbar
+            tabbar?.tabBar.barTintColor = UIColor.white
             self.navigationController?.pushViewController(tabbar!, animated: true)
         }
 

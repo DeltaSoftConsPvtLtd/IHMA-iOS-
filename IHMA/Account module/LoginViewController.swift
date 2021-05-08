@@ -70,6 +70,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         if userName.count != 0 {
             if password.count != 0 {
                 
+//                loginAPI(userName, password)
                 doLogin(userName, password)
             } else {
                 //Password empty
@@ -165,6 +166,13 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         })
         task.resume()
         
+    }
+    func loginAPI(_ user: String, _ psw :String) {
+        WebServiceManager.sharedInstance.signInUser(username: user, password: psw) { (status, msg, resp, err) in
+                    if status{
+                        
+                    }
+                }
     }
     
     func LoginDone() {

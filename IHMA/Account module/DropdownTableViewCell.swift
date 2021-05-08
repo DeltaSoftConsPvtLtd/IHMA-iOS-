@@ -12,9 +12,11 @@ class DropdownTableViewCell: UITableViewCell {
 
     @IBOutlet weak var dropdownView: UIView!
     @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblField: UILabel!
     
     let dropDown = DropDown()
-    let fruitsArray = ["Mango","Banana","Apple"]
+    
+    let fruitsArray = ["Karnataka","Kerala","Maharashtra"]
     override func awakeFromNib() {
         super.awakeFromNib()
         updateUI()
@@ -29,15 +31,22 @@ class DropdownTableViewCell: UITableViewCell {
     }
     
     func listDown() {
+        
         dropDown.anchorView = dropdownView
         dropDown.dataSource = fruitsArray
         dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.topOffset = CGPoint(x: 0, y: -(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.direction = .bottom
+        // Action triggered on selection
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+          print("Selected item: \(item) at index: \(index)")
+            self.lblTitle.text = fruitsArray[index]
+        }
     }
     func updateUI(){
         dropdownView.backgroundColor = UIColor.white
-        lblTitle.textColor = hexToUiColor().hexStringToUIColor(hex:"1B8AF4")
+        lblTitle.textColor = hexToUiColor().hexStringToUIColor(hex:"333333")
+        lblTitle.text = "Select"
     }
 
     //MARK:- add top and bottom border

@@ -74,6 +74,7 @@ class SideMenuViewController: BaseViewController {
         HeaderView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
     }
     
+    
     func updateConstraints()
     {
        
