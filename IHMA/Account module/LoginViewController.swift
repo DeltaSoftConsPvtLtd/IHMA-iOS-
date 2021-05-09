@@ -110,17 +110,17 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
 //            txtUsername.text = ""
 //            txtUsername.becomeFirstResponder()
 //        }
-        if(UserDefaults.standard.value(forKey: "session") != nil)
-        {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-            self.navigationController?.pushViewController(tabbar!, animated: true)
-        }
+//        if(UserDefaults.standard.value(forKey: "session") != nil)
+//        {
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+//            self.navigationController?.pushViewController(tabbar!, animated: true)
+//        }
     }
     
     func doLogin(_ user: String, _ psw :String)
     {
-        let url = URL(string: "http://13.232.14.192:81/api/login/")
+        let url = URL(string: "http://Lmsihma.co.in:81/api/login/")
         let session = URLSession.shared
         
         var request = URLRequest(url: url!)

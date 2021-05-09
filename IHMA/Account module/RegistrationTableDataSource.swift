@@ -63,7 +63,32 @@ extension RegistrationTableDataSource: UITableViewDataSource{
         return cell
         } else {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath))!  as? DropdownTableViewCell)!
+            
+            //MARK:- to populate dropdown lists
+            switch indexPath.row {
+            case 7:
+                cell.dropDown.dataSource = cell.statesArray
+                cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                  print("Selected item: \(item) at index: \(index)")
+                    cell.lblTitle.text = cell.statesArray[index]
+                }
+            case 8:
+                cell.dropDown.dataSource = cell.districtsArray
+                cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                  print("Selected item: \(item) at index: \(index)")
+                    cell.lblTitle.text = cell.districtsArray[index]
+                }
+            case 9:
+                cell.dropDown.dataSource = cell.chapterArray
+                cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                  print("Selected item: \(item) at index: \(index)")
+                    cell.lblTitle.text = cell.chapterArray[index]
+                }
+            default:
+                cell.dropDown.dataSource = cell.districtsArray
+            }
             cell.lblField.text = (self.parentView?.fieldArray[indexPath.row])!
+           
             return cell
         }
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!

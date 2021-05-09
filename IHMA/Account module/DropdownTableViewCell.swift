@@ -16,7 +16,9 @@ class DropdownTableViewCell: UITableViewCell {
     
     let dropDown = DropDown()
     
-    let fruitsArray = ["Karnataka","Kerala","Maharashtra"]
+    let statesArray = ["Karnataka","Kerala","Maharashtra"]
+    let districtsArray = ["Trivandrum", "Ernakulam","Thrissur"]
+    let chapterArray = ["Aloor","Vellangallur","Mukundapuram","Perambra"]
     override func awakeFromNib() {
         super.awakeFromNib()
         updateUI()
@@ -33,15 +35,15 @@ class DropdownTableViewCell: UITableViewCell {
     func listDown() {
         
         dropDown.anchorView = dropdownView
-        dropDown.dataSource = fruitsArray
+//        dropDown.dataSource = fruitsArray
         dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.topOffset = CGPoint(x: 0, y: -(dropDown.anchorView?.plainView.bounds.height)!)
         dropDown.direction = .bottom
         // Action triggered on selection
-        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-          print("Selected item: \(item) at index: \(index)")
-            self.lblTitle.text = fruitsArray[index]
-        }
+//        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+//          print("Selected item: \(item) at index: \(index)")
+//            self.lblTitle.text = fruitsArray[index]
+//        }
     }
     func updateUI(){
         dropdownView.backgroundColor = UIColor.white
