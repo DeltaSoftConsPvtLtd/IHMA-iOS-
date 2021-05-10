@@ -13,6 +13,7 @@ class BaseViewController: UIViewController {
 
     //MARK:- Outlets of bottom tabbar
     @IBOutlet weak var TabbarView: UIView!
+    @IBOutlet weak var separatorView: UIView!
     @IBOutlet weak var tab1View: UIView!
     @IBOutlet weak var imgTab1: UIImageView!
     @IBOutlet weak var lblTab1: UILabel!
@@ -122,17 +123,20 @@ class BaseViewController: UIViewController {
         
         //tab2
         lblTab2.textColor = UIColor.black
-        imgtab2.setImageColor(color: UIColor.white)
+        imgtab2.setImageColor(color: UIColor.black)
         
         //tab3
         lblTab3.textColor = UIColor.black
-        imgTab3.setImageColor(color: UIColor.white)
+        imgTab3.setImageColor(color: UIColor.black)
+        
+        let destinationController = ViewController2 .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
     }
     
     @IBAction func tab2Tap(_ sender: Any) {
         //tab1
         lblTab1.textColor = UIColor.black
-        imgTab1.setImageColor(color: UIColor.white)
+        imgTab1.setImageColor(color: UIColor.black)
         
         //tab2
         lblTab2.textColor = UIColor.blue
@@ -140,7 +144,7 @@ class BaseViewController: UIViewController {
         
         //tab3
         lblTab3.textColor = UIColor.black
-        imgTab3.setImageColor(color: UIColor.white)
+        imgTab3.setImageColor(color: UIColor.black)
         
         let destinationController = SideMenuViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
         self.navigationController?.pushViewController(destinationController!, animated: true)
@@ -149,14 +153,17 @@ class BaseViewController: UIViewController {
     @IBAction func tab3Tap(_ sender: Any) {
         //tab1
         lblTab1.textColor = UIColor.black
-        imgTab1.setImageColor(color: UIColor.white)
+        imgTab1.setImageColor(color: UIColor.black)
         
         //tab2
         lblTab2.textColor = UIColor.black
-        imgtab2.setImageColor(color: UIColor.white)
+        imgtab2.setImageColor(color: UIColor.black)
         
         //tab3
         lblTab3.textColor = UIColor.blue
         imgTab3.setImageColor(color: UIColor.blue)
+        
+        let destinationController = NotificationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
     }
 }
