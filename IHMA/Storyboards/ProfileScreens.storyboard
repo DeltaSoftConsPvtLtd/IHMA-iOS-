@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T3p-XG-GJ2">
-                                <rect key="frame" x="0.0" y="244" width="414" height="652"/>
+                                <rect key="frame" x="0.0" y="244" width="414" height="672"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nancy Salmoren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTu-4B-jyK">
                                         <rect key="frame" x="57.5" y="50" width="299" height="41"/>
@@ -152,10 +152,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xlI-ra-HT8" userLabel="Tabbar">
-                                <rect key="frame" x="0.0" y="796" width="414" height="100"/>
+                                <rect key="frame" x="0.0" y="816" width="414" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kFu-bL-Wqe" userLabel="Tab1">
-                                        <rect key="frame" x="0.0" y="0.0" width="138" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="138" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homekit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Vse-Yh-Md7">
                                                 <rect key="frame" x="56.5" y="10" width="25" height="25"/>
@@ -165,18 +165,18 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="changeColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="value" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gkq-f8-kpi">
-                                                <rect key="frame" x="46.5" y="36" width="45.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="51" y="36" width="36" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ZN-bP-Xa4">
-                                                <rect key="frame" x="46.5" y="10" width="46" height="47"/>
+                                                <rect key="frame" x="51" y="10" width="36.5" height="42"/>
                                                 <connections>
                                                     <action selector="tab1Tap:" destination="Vw8-0x-rjb" eventType="touchUpInside" id="11S-GY-xgD"/>
                                                 </connections>
@@ -195,16 +195,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zC8-EV-YfP" userLabel="Tab2">
-                                        <rect key="frame" x="138" y="0.0" width="138" height="100"/>
+                                        <rect key="frame" x="138" y="0.0" width="138" height="80"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A6t-0V-5Qb">
-                                                <rect key="frame" x="37.5" y="36" width="63" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="44" y="36" width="50" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="br9-pR-yfw">
-                                                <rect key="frame" x="37.5" y="10" width="63.5" height="47"/>
+                                                <rect key="frame" x="44" y="10" width="50.5" height="42"/>
                                                 <connections>
                                                     <action selector="tab2Tap:" destination="Vw8-0x-rjb" eventType="touchUpInside" id="HsP-HL-H9P"/>
                                                 </connections>
@@ -217,7 +217,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="changeColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="value" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
@@ -233,7 +233,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GQA-xg-Kfd" userLabel="Tab3">
-                                        <rect key="frame" x="276" y="0.0" width="138" height="100"/>
+                                        <rect key="frame" x="276" y="0.0" width="138" height="80"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-notification-25" translatesAutoresizingMaskIntoConstraints="NO" id="kHx-RQ-dbl">
                                                 <rect key="frame" x="56.5" y="10" width="25" height="25"/>
@@ -243,18 +243,18 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="changeColor">
-                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="value" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lFV-xr-n5W">
-                                                <rect key="frame" x="25.5" y="36" width="87.5" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <rect key="frame" x="34" y="36" width="70" height="16"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="piH-EI-cy7">
-                                                <rect key="frame" x="25.5" y="10" width="87.5" height="47"/>
+                                                <rect key="frame" x="34" y="10" width="70" height="42"/>
                                                 <connections>
                                                     <action selector="tab3Tap:" destination="Vw8-0x-rjb" eventType="touchUpInside" id="Yvd-kP-OMs"/>
                                                 </connections>
@@ -280,7 +280,7 @@
                                     <constraint firstItem="GQA-xg-Kfd" firstAttribute="top" secondItem="xlI-ra-HT8" secondAttribute="top" id="ET8-4o-A4J"/>
                                     <constraint firstItem="zC8-EV-YfP" firstAttribute="top" secondItem="xlI-ra-HT8" secondAttribute="top" id="Hsn-C7-mZi"/>
                                     <constraint firstItem="lFV-xr-n5W" firstAttribute="top" secondItem="A6t-0V-5Qb" secondAttribute="top" id="RbY-ud-PNN"/>
-                                    <constraint firstAttribute="height" constant="100" id="T8T-dZ-Lrb"/>
+                                    <constraint firstAttribute="height" constant="80" id="T8T-dZ-Lrb"/>
                                     <constraint firstItem="kFu-bL-Wqe" firstAttribute="width" secondItem="xlI-ra-HT8" secondAttribute="width" multiplier="1:3" id="VGb-Y0-tTH"/>
                                     <constraint firstItem="GQA-xg-Kfd" firstAttribute="leading" secondItem="zC8-EV-YfP" secondAttribute="trailing" id="X6n-rK-7PE"/>
                                     <constraint firstItem="kFu-bL-Wqe" firstAttribute="top" secondItem="xlI-ra-HT8" secondAttribute="top" id="d5J-lb-S1Q"/>

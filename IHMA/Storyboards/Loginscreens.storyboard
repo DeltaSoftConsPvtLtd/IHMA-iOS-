@@ -64,7 +64,7 @@
                                 <rect key="frame" x="0.0" y="253" width="414" height="643"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IFM-1M-no1">
-                                        <rect key="frame" x="0.0" y="10" width="414" height="533"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="553"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Registration" id="mL8-n1-7IJ" customClass="FormTableViewCell" customModule="IHMA" customModuleProvider="target">
@@ -241,10 +241,10 @@
                                         </prototypes>
                                     </tableView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKG-zm-Qyo" userLabel="Tabbar">
-                                        <rect key="frame" x="0.0" y="543" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="563" width="414" height="80"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYH-BC-uDg" userLabel="Tab1">
-                                                <rect key="frame" x="0.0" y="0.0" width="138" height="100"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="138" height="80"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homekit" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ixi-2W-khN">
                                                         <rect key="frame" x="56.5" y="10" width="25" height="25"/>
@@ -259,13 +259,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNH-bI-HJs">
-                                                        <rect key="frame" x="46.5" y="36" width="45.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="51" y="36" width="36" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNx-OO-1JA">
-                                                        <rect key="frame" x="46.5" y="10" width="46" height="47"/>
+                                                        <rect key="frame" x="51" y="10" width="36.5" height="42"/>
                                                         <connections>
                                                             <action selector="tab1Tap:" destination="FH2-5o-s6L" eventType="touchUpInside" id="egD-lH-F8i"/>
                                                         </connections>
@@ -284,16 +284,16 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAD-GS-raF" userLabel="Tab2">
-                                                <rect key="frame" x="138" y="0.0" width="138" height="100"/>
+                                                <rect key="frame" x="138" y="0.0" width="138" height="80"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Courses" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvp-v2-b91">
-                                                        <rect key="frame" x="37.5" y="36" width="63" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="44" y="36" width="50" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQS-lh-TbZ">
-                                                        <rect key="frame" x="37.5" y="10" width="63.5" height="47"/>
+                                                        <rect key="frame" x="44" y="10" width="50.5" height="42"/>
                                                         <connections>
                                                             <action selector="tab2Tap:" destination="FH2-5o-s6L" eventType="touchUpInside" id="8Tu-kr-eyP"/>
                                                         </connections>
@@ -322,7 +322,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nZT-Lg-pM2" userLabel="Tab3">
-                                                <rect key="frame" x="276" y="0.0" width="138" height="100"/>
+                                                <rect key="frame" x="276" y="0.0" width="138" height="80"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icons8-notification-25" translatesAutoresizingMaskIntoConstraints="NO" id="0eB-PB-Z4Y">
                                                         <rect key="frame" x="56.5" y="10" width="25" height="25"/>
@@ -337,13 +337,13 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notification" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bp-Ca-BGK">
-                                                        <rect key="frame" x="25.5" y="36" width="87.5" height="21"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <rect key="frame" x="34" y="36" width="70" height="16"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ST6-7m-fvD">
-                                                        <rect key="frame" x="25.5" y="10" width="87.5" height="47"/>
+                                                        <rect key="frame" x="34" y="10" width="70" height="42"/>
                                                         <connections>
                                                             <action selector="tab3Tap:" destination="FH2-5o-s6L" eventType="touchUpInside" id="kNr-pR-8xR"/>
                                                         </connections>
@@ -371,7 +371,7 @@
                                             <constraint firstItem="yYH-BC-uDg" firstAttribute="width" secondItem="iKG-zm-Qyo" secondAttribute="width" multiplier="1:3" id="Iba-JW-tjN"/>
                                             <constraint firstItem="uvp-v2-b91" firstAttribute="top" secondItem="dNH-bI-HJs" secondAttribute="top" id="LFR-3W-JN4"/>
                                             <constraint firstItem="0eB-PB-Z4Y" firstAttribute="top" secondItem="CDQ-rI-zbb" secondAttribute="top" id="O7P-9z-X3L"/>
-                                            <constraint firstAttribute="height" constant="100" id="TpY-9R-uBw"/>
+                                            <constraint firstAttribute="height" constant="80" id="TpY-9R-uBw"/>
                                             <constraint firstItem="yYH-BC-uDg" firstAttribute="top" secondItem="iKG-zm-Qyo" secondAttribute="top" id="Vwo-0y-toj"/>
                                             <constraint firstItem="nZT-Lg-pM2" firstAttribute="top" secondItem="iKG-zm-Qyo" secondAttribute="top" id="ddf-md-Sz4"/>
                                             <constraint firstAttribute="bottom" secondItem="yYH-BC-uDg" secondAttribute="bottom" id="f4N-Se-Qdz"/>

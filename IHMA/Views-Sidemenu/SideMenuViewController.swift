@@ -168,9 +168,6 @@ class MenuListController: UITableViewController {
         case 3:
             let destinationController = PaymentViewController .instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
-        case 4:
-            let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-            self.navigationController?.pushViewController(destinationController!, animated: true)
         default:
             print("ll")
         }
