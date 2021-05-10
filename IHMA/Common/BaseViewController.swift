@@ -128,8 +128,12 @@ class BaseViewController: UIViewController {
         lblTab3.textColor = hexToUiColor().hexStringToUIColor(hex:"6E6E6E")
         imgTab3.setImageColor(color: hexToUiColor().hexStringToUIColor(hex:"6E6E6E"))
         
-        let destinationController = ViewController2 .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
-        self.navigationController?.pushViewController(destinationController!, animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+        tabbar?.selectedIndex = 0
+        //MARK:- to change the color of tabbar
+        tabbar?.tabBar.barTintColor = UIColor.white
+        self.navigationController?.pushViewController(tabbar!, animated: true)
     }
     
     @IBAction func tab2Tap(_ sender: Any) {
@@ -145,8 +149,13 @@ class BaseViewController: UIViewController {
         lblTab3.textColor = hexToUiColor().hexStringToUIColor(hex:"6E6E6E")
         imgTab3.setImageColor(color: hexToUiColor().hexStringToUIColor(hex:"6E6E6E"))
         
-        let destinationController = SideMenuViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
-        self.navigationController?.pushViewController(destinationController!, animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+        tabbar?.selectedIndex = 1
+        //MARK:- to change the color of tabbar
+        tabbar?.tabBar.barTintColor = UIColor.white
+        self.navigationController?.pushViewController(tabbar!, animated: true)
+        
     }
     
     @IBAction func tab3Tap(_ sender: Any) {
@@ -162,7 +171,11 @@ class BaseViewController: UIViewController {
         lblTab3.textColor = UIColor.blue
         imgTab3.setImageColor(color: UIColor.blue)
         
-        let destinationController = NotificationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
-        self.navigationController?.pushViewController(destinationController!, animated: true)
+        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+        let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+        tabbar?.selectedIndex = 2
+        //MARK:- to change the color of tabbar
+        tabbar?.tabBar.barTintColor = UIColor.white
+        self.navigationController?.pushViewController(tabbar!, animated: true)
     }
 }
