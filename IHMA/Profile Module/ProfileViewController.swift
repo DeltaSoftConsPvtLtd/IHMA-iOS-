@@ -46,6 +46,7 @@ class ProfileViewController: BaseViewController {
         buttonView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1B8AF4")
         buttonView.layer.cornerRadius = buttonView.bounds.height/2;
         buttonView.clipsToBounds  =  true
+        separatorView.dropShadow()
     }
     /*
     // MARK: - Navigation
