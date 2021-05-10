@@ -49,6 +49,8 @@ class PaymentViewController: BaseViewController {
         segmentedControl.layer.cornerRadius = segmentedControl.bounds.height / 2
         segmentedControl.layer.masksToBounds = true
         segmentedControl.apportionsSegmentWidthsByContent = true
+        
+        TabbarView.addShadow(location: .top)
     }
 
     @IBAction func segmentAction(_ sender: Any) {

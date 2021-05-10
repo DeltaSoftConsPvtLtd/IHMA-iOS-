@@ -43,6 +43,10 @@ class RegistrationViewController: BaseViewController {
         
         
         formView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
+//        separatorView.dropShadow()
+        TabbarView.addShadow(location: .top)
+        
+//        separatorView.addShadow(location: .bottom)
     }
     
     

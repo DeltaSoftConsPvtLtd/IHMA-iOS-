@@ -270,25 +270,15 @@
                                             <constraint firstItem="piH-EI-cy7" firstAttribute="leading" secondItem="lFV-xr-n5W" secondAttribute="leading" id="Xuo-q7-GWE"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gh0-yR-Lps">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="i3F-SW-Jx4"/>
-                                        </constraints>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="Gh0-yR-Lps" firstAttribute="top" secondItem="xlI-ra-HT8" secondAttribute="top" id="0lV-8V-2IG"/>
                                     <constraint firstItem="A6t-0V-5Qb" firstAttribute="top" secondItem="Gkq-f8-kpi" secondAttribute="top" id="3Lc-A0-HBV"/>
                                     <constraint firstAttribute="bottom" secondItem="kFu-bL-Wqe" secondAttribute="bottom" id="9BL-C4-D4a"/>
                                     <constraint firstItem="kFu-bL-Wqe" firstAttribute="leading" secondItem="xlI-ra-HT8" secondAttribute="leading" id="AMy-Va-JR8"/>
                                     <constraint firstItem="R7o-nw-Ah0" firstAttribute="top" secondItem="Vse-Yh-Md7" secondAttribute="top" id="Afw-Fj-bze"/>
                                     <constraint firstItem="GQA-xg-Kfd" firstAttribute="top" secondItem="xlI-ra-HT8" secondAttribute="top" id="ET8-4o-A4J"/>
-                                    <constraint firstItem="Gh0-yR-Lps" firstAttribute="leading" secondItem="xlI-ra-HT8" secondAttribute="leading" id="EqN-uA-z9D"/>
                                     <constraint firstItem="zC8-EV-YfP" firstAttribute="top" secondItem="xlI-ra-HT8" secondAttribute="top" id="Hsn-C7-mZi"/>
-                                    <constraint firstAttribute="trailing" secondItem="Gh0-yR-Lps" secondAttribute="trailing" id="Obb-Or-Bu9"/>
                                     <constraint firstItem="lFV-xr-n5W" firstAttribute="top" secondItem="A6t-0V-5Qb" secondAttribute="top" id="RbY-ud-PNN"/>
                                     <constraint firstAttribute="height" constant="100" id="T8T-dZ-Lrb"/>
                                     <constraint firstItem="kFu-bL-Wqe" firstAttribute="width" secondItem="xlI-ra-HT8" secondAttribute="width" multiplier="1:3" id="VGb-Y0-tTH"/>
@@ -383,7 +373,6 @@
                         <outlet property="profileView" destination="T3p-XG-GJ2" id="pWi-cM-pIa"/>
                         <outlet property="profileViewTopConstraint" destination="Gxs-Eq-nS7" id="RgE-N5-Zch"/>
                         <outlet property="segmentedControl" destination="Ur3-YX-gZl" id="O7A-mh-w5C"/>
-                        <outlet property="separatorView" destination="Gh0-yR-Lps" id="Klo-2g-ff5"/>
                         <outlet property="tab1View" destination="kFu-bL-Wqe" id="SXH-7x-abo"/>
                         <outlet property="tab2View" destination="zC8-EV-YfP" id="Vqf-bu-o1H"/>
                         <outlet property="tab3View" destination="GQA-xg-Kfd" id="LHm-ri-HTw"/>
