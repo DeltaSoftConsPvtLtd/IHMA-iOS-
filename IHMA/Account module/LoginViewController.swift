@@ -35,6 +35,8 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     
     func updateUI() {
+        txtUsername.becomeFirstResponder()
+        
         loginView.layer.cornerRadius = loginView.bounds.height/2;
         loginView.clipsToBounds  =  true
         loginView.backgroundColor = UIColor.white
@@ -65,13 +67,25 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     @IBAction func loginButton(_ sender: Any) {
         guard let userName = self.txtUsername.text else {return}
         guard let password = self.txtPassword.text else {return}
-//        downloadJson()
 //        authentication.authenticateUserWith(userName, andPassword: password)
         if userName.count != 0 {
             if password.count != 0 {
+                if (userName == "test2" && password == "arjunnair") {
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+                    //MARK:- to change the color of tabbar
+                    tabbar?.tabBar.barTintColor = UIColor.white
+                    self.navigationController?.pushViewController(tabbar!, animated: true)
+                }
+                else {
+                    self.toastMessage(message: "invalid credentials")
+                    txtUsername.text = ""
+                    txtPassword.text = ""
+                    txtUsername.becomeFirstResponder()
+                }
                 
 //                loginAPI(userName, password)
-                doLogin(userName, password)
+//                doLogin(userName, password)
             } else {
                 //Password empty
                 self.toastMessage(message: "Password should not be empty")
@@ -81,41 +95,6 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
             self.toastMessage(message: "Username should not be empty")
         }
         
-        
-//        if(isValidEmail(testStr:txtUsername.text!) == true)
-//        {
-//            if (isPasswordValid(txtPassword.text!)==true) {
-//                authentication.loginCompletionHandler { [weak self](status, message) in
-//                    guard let self = self else {return}
-//                    if status {
-//                        self.toastMessage(message: "Success")
-////                     self.lblMessage.text = "Logged in with username == \(self.authentication.username) and email == \(self.authentication.email)"
-//                        self.lblTitle.isHidden = false
-//                    } else {
-//                        self.toastMessage(message: message)
-////                self.lblMessage.text = message
-//                        self.lblTitle.isHidden = false
-//                //message
-//                    }
-//
-//                }//login completion handler
-//            } else
-//            {
-//                self.toastMessage(message: "invalid password")
-//                txtPassword.text = ""
-//                txtPassword.becomeFirstResponder()
-//            }
-//        } else {
-//            self.toastMessage(message: "invalid username")
-//            txtUsername.text = ""
-//            txtUsername.becomeFirstResponder()
-//        }
-//        if(UserDefaults.standard.value(forKey: "session") != nil)
-//        {
-//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-//            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-//            self.navigationController?.pushViewController(tabbar!, animated: true)
-//        }
     }
     
     func doLogin(_ user: String, _ psw :String)
@@ -179,55 +158,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         
     }
     
-    func downloadJson() {
-
-        let url = URL(string: "13.232.14.192:81/api/login/")
-           guard let downloadURL = url else { return }
-           //POST Req
-
-
-           var request = URLRequest(url: downloadURL)
-           request.httpMethod = "POST"
-           request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-           request.addValue("application/json", forHTTPHeaderField: "Accept")
-           let newpost = loginPost(email: "test2", password: "arjunnair")
-
-           do {
-               let jsonBody = try JSONEncoder().encode(newpost)
-
-               request.httpBody = jsonBody
-               print(jsonBody)
-           }catch{
-               print("some error")
-           }
-
-           URLSession.shared.dataTask(with: request) { data, urlResponse, error in
-               guard let data = data, error == nil, urlResponse != nil else {
-                   print("something is wrong with url")
-                   return
-               }
-
-               print("downloaded..")
-               do
-               {
-                   let decoder = JSONDecoder()
-                   let downloaduser = try decoder.decode(User.self, from: data)
-
-   //                self.logmessage = downloaduser.message!
-
-   //                print(self.logmessage)
-
-
-                   DispatchQueue.main.async {
-
-                       // self.tableView.reloadData()
-                   }
-               } catch {
-                   print("something wrong with decode")
-
-               }
-               }.resume()
-       }
+   
 }
 
 

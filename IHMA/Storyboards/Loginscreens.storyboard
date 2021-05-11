@@ -697,20 +697,6 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuL-bp-ggC" userLabel="Back button">
-                                <rect key="frame" x="373" y="44" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="ZEe-Gd-Nob"/>
-                                    <constraint firstAttribute="height" constant="25" id="puq-I7-cqB"/>
-                                </constraints>
-                                <state key="normal" image="icons8-left-50"/>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="FH2-5o-s6L" eventType="touchUpInside" id="TqJ-EV-4T2"/>
-                                    <action selector="backButtonPressed:" destination="JtI-Sw-Xg4" eventType="touchUpInside" id="WwH-mJ-Cll"/>
-                                    <action selector="backButtonPressed:" destination="bYR-qg-kxC" eventType="touchUpInside" id="rCE-Tg-GQ1"/>
-                                    <action selector="didTapMenu" destination="FH2-5o-s6L" eventType="touchUpInside" id="YEP-LM-HTS"/>
-                                </connections>
-                            </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="40Z-9u-9vM" userLabel="Tabbar">
                                 <rect key="frame" x="0.0" y="797" width="414" height="65"/>
                                 <subviews>
@@ -864,10 +850,8 @@
                             <constraint firstItem="hWz-z8-2zM" firstAttribute="top" secondItem="vzu-Ip-01l" secondAttribute="bottom" constant="82" id="gY4-Ko-qtf"/>
                             <constraint firstItem="ehq-yp-27k" firstAttribute="leading" secondItem="wgX-Wu-uu7" secondAttribute="leading" constant="40" id="glf-Em-0qh"/>
                             <constraint firstItem="hWz-z8-2zM" firstAttribute="leading" secondItem="wgX-Wu-uu7" secondAttribute="leading" constant="40" id="iCq-Gx-qGh"/>
-                            <constraint firstItem="wgX-Wu-uu7" firstAttribute="trailing" secondItem="nuL-bp-ggC" secondAttribute="trailing" constant="16" id="nsz-cs-BJ7"/>
                             <constraint firstItem="vzu-Ip-01l" firstAttribute="leading" secondItem="wgX-Wu-uu7" secondAttribute="leading" constant="40" id="oNF-gW-csx"/>
                             <constraint firstItem="ehq-yp-27k" firstAttribute="top" secondItem="wgX-Wu-uu7" secondAttribute="top" constant="200" id="pOw-TP-svE"/>
-                            <constraint firstItem="nuL-bp-ggC" firstAttribute="top" secondItem="wgX-Wu-uu7" secondAttribute="top" id="rLn-cS-bRn"/>
                             <constraint firstItem="wgX-Wu-uu7" firstAttribute="bottom" secondItem="40Z-9u-9vM" secondAttribute="bottom" id="rRa-aR-1LC"/>
                             <constraint firstItem="wgX-Wu-uu7" firstAttribute="trailing" secondItem="vzu-Ip-01l" secondAttribute="trailing" constant="40" id="tPd-Xv-wPd"/>
                             <constraint firstItem="wgX-Wu-uu7" firstAttribute="trailing" secondItem="40Z-9u-9vM" secondAttribute="trailing" id="u6b-JY-S6K"/>
