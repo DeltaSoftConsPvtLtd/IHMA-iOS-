@@ -29,6 +29,7 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var lblPhoneno: UILabel!
     @IBOutlet weak var lblEmail: UILabel!
     
+    @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var buttonView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,11 +72,13 @@ extension ProfileViewController
             profileViewTopConstraint.constant = 100
             buttonViewTopConstraint.constant = 25.0
             contactDetailsViewTopConstraint.constant = 20
+            tabbarHeightConstraint.constant = 60.0
         }
         else{
             profileViewTopConstraint.constant = 150
             buttonViewTopConstraint.constant = 50.0
             contactDetailsViewTopConstraint.constant = 50
+            tabbarHeightConstraint.constant = 80.0
         }
     }
 }

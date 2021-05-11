@@ -59,7 +59,8 @@ extension RegistrationTableDataSource: UITableViewDataSource{
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
         cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
         cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
-        cell.fieldTxt.addUnderLine()
+//            cell.fieldView.addShadow(location: .bottom)
+//        cell.fieldTxt.addUnderLine()
         return cell
         } else {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath))!  as? DropdownTableViewCell)!

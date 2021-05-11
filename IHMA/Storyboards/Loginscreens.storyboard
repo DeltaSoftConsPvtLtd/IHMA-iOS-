@@ -83,8 +83,15 @@
                                                                     <color key="textColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sancy" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vky-6p-fz1">
-                                                                    <rect key="frame" x="0.0" y="16" width="310.5" height="34"/>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKt-EQ-wuw">
+                                                                    <rect key="frame" x="0.0" y="54" width="310.5" height="1"/>
+                                                                    <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="1" id="uyP-bd-PdS"/>
+                                                                    </constraints>
+                                                                </view>
+                                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sancy" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vky-6p-fz1">
+                                                                    <rect key="frame" x="0.0" y="16" width="310.5" height="23"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -96,10 +103,13 @@
                                                             <constraints>
                                                                 <constraint firstItem="vky-6p-fz1" firstAttribute="leading" secondItem="MU1-yt-O3Y" secondAttribute="leading" id="DZw-CT-l8Y"/>
                                                                 <constraint firstItem="MU1-yt-O3Y" firstAttribute="leading" secondItem="cbO-Hd-5ON" secondAttribute="leading" id="Ega-8V-DB2"/>
+                                                                <constraint firstAttribute="bottom" secondItem="VKt-EQ-wuw" secondAttribute="bottom" id="SVg-CG-A20"/>
                                                                 <constraint firstAttribute="height" constant="55" id="ZLk-1n-4Ax"/>
                                                                 <constraint firstItem="MU1-yt-O3Y" firstAttribute="top" secondItem="cbO-Hd-5ON" secondAttribute="top" id="a22-bo-duk"/>
                                                                 <constraint firstAttribute="trailing" secondItem="vky-6p-fz1" secondAttribute="trailing" id="dJe-hI-GnM"/>
+                                                                <constraint firstAttribute="trailing" secondItem="VKt-EQ-wuw" secondAttribute="trailing" id="lQT-f5-WRx"/>
                                                                 <constraint firstItem="vky-6p-fz1" firstAttribute="top" secondItem="MU1-yt-O3Y" secondAttribute="bottom" id="ojl-Ny-YqS"/>
+                                                                <constraint firstItem="VKt-EQ-wuw" firstAttribute="leading" secondItem="cbO-Hd-5ON" secondAttribute="leading" id="zlF-Ve-ohG"/>
                                                             </constraints>
                                                         </view>
                                                     </subviews>
@@ -151,7 +161,7 @@
                                                                 </button>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Tz-T7-s3e">
                                                                     <rect key="frame" x="0.0" y="54" width="310.5" height="1"/>
-                                                                    <color key="backgroundColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.54117647058823526" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="1" id="MvP-GG-p2r"/>
                                                                     </constraints>
@@ -455,6 +465,7 @@
                         <outlet property="tab1View" destination="yYH-BC-uDg" id="7St-4r-qv9"/>
                         <outlet property="tab2View" destination="hAD-GS-raF" id="AuO-d8-9l4"/>
                         <outlet property="tab3View" destination="nZT-Lg-pM2" id="9pb-4w-Cbp"/>
+                        <outlet property="tabbarHeightConstraint" destination="TpY-9R-uBw" id="yi1-xw-LBj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7J-wQ-a1a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

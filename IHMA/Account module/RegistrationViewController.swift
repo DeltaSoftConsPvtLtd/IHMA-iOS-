@@ -13,6 +13,7 @@ class RegistrationViewController: BaseViewController {
     let fieldNames = ["First Name", "Last Name", "Registration Number", "Mobile","Email","Address Home","Address Clinic","","","",""]
     let textFieldNames = ["Nancy", "Salmoren", "28362", "+91 7736785236","","","","","","",""]
     let fieldArray = ["","","","","","","","State", "District", "Chapter"]
+    @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
     var imagePicker = UIImagePickerController()
     
     @IBOutlet weak var pickedImage: UIImageView!
@@ -30,6 +31,7 @@ class RegistrationViewController: BaseViewController {
         sideMenu()
         pickedImage.makeRounded()
         gradientColors()
+        constraintSettings()
         
         self.registrationTableDataSource = RegistrationTableDataSource(attachView: self)
         // Do any additional setup after loading the view.
@@ -51,6 +53,16 @@ class RegistrationViewController: BaseViewController {
     
     
     @IBAction func segmentedControl(_ sender: Any) {
+    }
+    //MARK:- Screen size changes
+    func constraintSettings() {
+        
+       if UIScreen.main.bounds.height < 850 {
+        tabbarHeightConstraint.constant = 60
+       } else {
+        tabbarHeightConstraint.constant = 80
+       }
+        
     }
 }
     

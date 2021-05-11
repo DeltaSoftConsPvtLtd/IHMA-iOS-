@@ -83,7 +83,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
                     txtPassword.text = ""
                     txtUsername.becomeFirstResponder()
                 }
-                
+//
 //                loginAPI(userName, password)
 //                doLogin(userName, password)
             } else {
@@ -148,6 +148,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     }
     func loginAPI(_ user: String, _ psw :String) {
         WebServiceManager.sharedInstance.signInUser(username: user, password: psw) { (status, msg, resp, err) in
+            print("new status \(msg)")
                     if status{
                         
                     }

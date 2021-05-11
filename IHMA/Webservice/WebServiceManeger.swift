@@ -71,8 +71,8 @@
                
                self.webMethodType = ServiceMethodType.signIn
                self.completionHandler = fgHandler
-               
-               parameters = [ "username":username,"password":password] as [String : Any]
+//            parameters = {"username": "\(username)","password":"\(password)"} as [String : Any]
+            parameters = [ "username":username,"password":password] as [String : Any]
                sendWebServiceRequest(requestJsonDict: parameters as [String : AnyObject]?, webServiceMethod: userSignIn, httpMethodType: .post, headers: nil)
                
                
@@ -288,11 +288,11 @@
                        url = "\(baseUrl)\(sMethod)"
 
                    }
-   //                else if sMethod == userSignIn
-   //                {
-   //                    url = "\(demoBaseUrl)\(sMethod)"
-   //
-   //                }
+                   else if sMethod == userSignIn
+                   {
+                       url = "\(baseUrl)\(sMethod)"
+   
+                   }
                    else if sMethod == editorial
                    {
                        url = "\(baseUrl)\(sMethod)"

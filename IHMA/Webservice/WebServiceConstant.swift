@@ -60,8 +60,8 @@ enum ServiceMethodType
 
 
 var demoBaseUrl = "http://demo.webandcrafts.com/tidings/wp-json/"
-var baseUrl = "http://shalomtidings.org/wp-json/"//"http://demo.webandcrafts.com/tidings/wp-json/"//Demo url
-var baseUrl1 = "http:shalomtidings.org/wp-json/"//http://demo.webandcrafts.com/tidings/wp-json/"
+var baseUrl = "http://Lmsihma.co.in:81"
+var baseUrl1 = ""
 
 var newVideo = "v1/live/stream"
 var newvideoUrl = "5a79980b2e000048009a5b43"
@@ -76,7 +76,7 @@ let thirdcolor = "#f52e1e"
 let category = "v1/category"
 
 let userSignUp = "v1/register"
-let userSignIn = "jwt-auth/v1/token"
+let userSignIn = "/api/login/"
 let userForgotPassword = "v1/forget_password"
 let userResetPassword = "v1/resetpassword"
 let feedbackUrl = "v1/feedback"

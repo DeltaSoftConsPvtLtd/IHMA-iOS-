@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rku-Jd-CPp">
-                                <rect key="frame" x="0.0" y="272" width="414" height="544"/>
+                                <rect key="frame" x="0.0" y="288" width="414" height="528"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYN-e0-4bp">
-                                        <rect key="frame" x="60" y="70" width="294" height="404"/>
+                                        <rect key="frame" x="60" y="70" width="294" height="388"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeJ-q5-9B3">
                                                 <rect key="frame" x="23.5" y="38" width="247" height="41"/>
@@ -273,7 +273,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="688-Ir-Go8">
-                                <rect key="frame" x="8" y="44" width="25" height="25"/>
+                                <rect key="frame" x="16" y="60" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="ONk-Ug-x0e"/>
                                     <constraint firstAttribute="width" constant="25" id="ryd-CN-NBA"/>
@@ -287,9 +287,9 @@
                         <viewLayoutGuide key="safeArea" id="Q8v-eH-9en"/>
                         <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="688-Ir-Go8" firstAttribute="leading" secondItem="Q8v-eH-9en" secondAttribute="leading" constant="8" id="30T-RH-NIM"/>
+                            <constraint firstItem="688-Ir-Go8" firstAttribute="leading" secondItem="Q8v-eH-9en" secondAttribute="leading" constant="16" id="30T-RH-NIM"/>
                             <constraint firstItem="wP9-rU-K1b" firstAttribute="centerX" secondItem="Qfo-l9-ES8" secondAttribute="centerX" id="3tz-Cr-61w"/>
-                            <constraint firstItem="688-Ir-Go8" firstAttribute="top" secondItem="Q8v-eH-9en" secondAttribute="top" id="A25-mw-L69"/>
+                            <constraint firstItem="688-Ir-Go8" firstAttribute="top" secondItem="Q8v-eH-9en" secondAttribute="top" constant="16" id="A25-mw-L69"/>
                             <constraint firstAttribute="bottom" secondItem="g0c-zP-yC2" secondAttribute="bottom" id="KTJ-9h-HzB"/>
                             <constraint firstItem="rku-Jd-CPp" firstAttribute="top" secondItem="688-Ir-Go8" secondAttribute="bottom" constant="203" id="NP6-5O-VYC"/>
                             <constraint firstItem="rku-Jd-CPp" firstAttribute="trailing" secondItem="Q8v-eH-9en" secondAttribute="trailing" id="Ok1-ar-7pf"/>
@@ -327,6 +327,7 @@
                         <outlet property="tab1View" destination="hqA-3j-Pjd" id="6Ej-FS-8Ey"/>
                         <outlet property="tab2View" destination="vte-s0-GPc" id="50S-eW-108"/>
                         <outlet property="tab3View" destination="7cx-el-vzt" id="Y4m-Zj-dNU"/>
+                        <outlet property="tabbarHeightConstraint" destination="hWE-5D-nAc" id="xT8-Sh-Kdv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xoQ-uW-uZm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -376,6 +376,7 @@
                         <outlet property="tab1View" destination="kFu-bL-Wqe" id="SXH-7x-abo"/>
                         <outlet property="tab2View" destination="zC8-EV-YfP" id="Vqf-bu-o1H"/>
                         <outlet property="tab3View" destination="GQA-xg-Kfd" id="LHm-ri-HTw"/>
+                        <outlet property="tabbarHeightConstraint" destination="T8T-dZ-Lrb" id="b75-Zq-bUG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wus-EM-k94" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

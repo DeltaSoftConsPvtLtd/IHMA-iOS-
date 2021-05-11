@@ -13,6 +13,7 @@ class PaymentViewController: BaseViewController {
     @IBOutlet weak var paymentViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var profileImageTopConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var payNowViewTopConstraint: NSLayoutConstraint!
     //Object outlets
     @IBOutlet weak var paymentView: UIView!
@@ -77,11 +78,13 @@ extension PaymentViewController
             paymentViewTopConstraint.constant = 100
             profileImageTopConstraint.constant = 40
             payNowViewTopConstraint.constant = 20
+            tabbarHeightConstraint.constant = 60
         }
         else{
             paymentViewTopConstraint.constant = 200
             profileImageTopConstraint.constant = 140
             payNowViewTopConstraint.constant = 50
+            tabbarHeightConstraint.constant = 80
         }
     }
 }
