@@ -59,56 +59,10 @@ enum ServiceMethodType
 }
 
 
-var demoBaseUrl = "http://demo.webandcrafts.com/tidings/wp-json/"
+
 var baseUrl = "http://lmsihma.co.in/"
-var baseUrl1 = ""
 
-var newVideo = "v1/live/stream"
-var newvideoUrl = "5a79980b2e000048009a5b43"
-
-var tokenRefreshurl = "v1/live/token"
-
-let tabview_colorHex = "#e97900"
-let firstcolor = "#e97900"
-let secondcolor = "#fae75c"
-let thirdcolor = "#f52e1e"
-
-let category = "v1/category"
-
-let userSignUp = "v1/register"
-let userSignIn = "/api/login/"
-let userForgotPassword = "v1/forget_password"
-let userResetPassword = "v1/resetpassword"
-let feedbackUrl = "v1/feedback"
-let verifyUserUrl = "v1/email_varification"
-let resendEmailVerificationUrl = "v1/resend_email_varification"
-let magazinesUrl = "v1/magazines"
-let singleMagazineUrl = "v1/magazine"
-let singleArticleRelatedPostUrl = "v1/article"
-
-let media_scan =  "v1/media_scan"
-let media_scandetail = "v1/media_scan/detail"
-let editorial = "v1/editorial"
-let editorialdetail = "v1/editorial/detail"
-let events = "v1/events"
-let token = "v1/live/token"
-let postCommenturl = "wp/v2/comments"
-let likeArticleUrl = "v1/favorite"
-let savedArticleUrl = "v1/favorite"
-let searchArticleUrl = "v1/search"
-
-let getAdvertisementUrl = "v1/adv"
-
-//"jwt-auth/v1/token"
-//"v2/comments"
-
-
-let ariticleListUrl = "v1/article/list"
-
-let prayerUrl = "v1/prayer/categories"
-let prayerListUrl = "v1/prayer/list"
-let prayerFavouriteUrl = "v1/prayer/favorite"
-
+let userSignIn = "api/login/"
 
 
 //MARK:- Web service completion handler closures

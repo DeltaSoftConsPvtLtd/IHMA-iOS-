@@ -6,7 +6,10 @@
 //
 
 import UIKit
+import SwiftyJSON
+
 
 class ResponseParser: NSObject {
-
+    
+   
 }

@@ -26,6 +26,7 @@
 		9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEEC26392FA200E29A37 /* UIView+Extension.swift */; };
 		9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */; };
 		9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEF3263940FE00E29A37 /* PaymentViewController.swift */; };
+		906C8B27264BC56D00AED3D8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C8B26264BC56D00AED3D8 /* LoginModel.swift */; };
 		90759C0826328BE60052FFAB /* Loginscreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90759C0726328BE60052FFAB /* Loginscreens.storyboard */; };
 		90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C0B26328C780052FFAB /* RegistrationViewController.swift */; };
 		90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C142632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift */; };
@@ -92,6 +93,7 @@
 		9044AEEC26392FA200E29A37 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentScreens.storyboard; sourceTree = "<group>"; };
 		9044AEF3263940FE00E29A37 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		906C8B26264BC56D00AED3D8 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		90759C0726328BE60052FFAB /* Loginscreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loginscreens.storyboard; sourceTree = "<group>"; };
 		90759C0B26328C780052FFAB /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		90759C142632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViewControllers+StoryboardIdentifiers.swift"; path = "IHMA/Storyboard Helpers/ViewControllers+StoryboardIdentifiers.swift"; sourceTree = SOURCE_ROOT; };
@@ -164,6 +166,7 @@
 		9027C317263685ED00937441 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				906C8B26264BC56D00AED3D8 /* LoginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -533,6 +536,7 @@
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */,
 				902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */,
+				906C8B27264BC56D00AED3D8 /* LoginModel.swift in Sources */,
 				90D4006026439DF500DC82B9 /* OTPDataSource.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,

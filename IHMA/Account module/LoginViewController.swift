@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class LoginViewController: BaseViewController, UITextFieldDelegate {
 
@@ -26,6 +27,10 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     @IBOutlet weak var lblUsername: UILabel!
     @IBOutlet weak var lblPassword: UILabel!
+    
+    var url:String?
+    var parameters : [String : Any]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         updateUI()
@@ -96,64 +101,44 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         }
         
     }
-    
-    func doLogin(_ user: String, _ psw :String)
-    {
-        let url = URL(string: "http://lmsihma.co.in/api/login/")
-        let session = URLSession.shared
-        
-        var request = URLRequest(url: url!)
-        request.httpMethod = "POST"
-        
-        let paramToSend = "username=" + user + "&password=" + psw
-        
-        request.httpBody = paramToSend.data(using: String.Encoding.utf8)
-        
-        let task = session.dataTask(with: request as URLRequest, completionHandler: {
-            (data, response, error) in
-            guard let _: Data = data else
-            {
-                return
-            }
-            
-            let json:Any?
-            
-            do{
-                json = try JSONSerialization.jsonObject(with: data!, options: [])
-            }
-            catch{
-                return
-            }
-            
-            guard let server_response = json as? NSDictionary else
-            {
-                return
-            }
-            
-            if let data_block = server_response["token"] //as? NSDictionary
-            {
-//                if let session_data = data_block["session"] as? String
-//                {
-                    let preferences = UserDefaults.standard
-                    preferences.set(data_block, forKey: "session")
-                    
-//                    DispatchQueue.main.async {
-//                        execute : self.LoginDone()
-//                    }
-//                }
-            }
-        })
-        task.resume()
-        
-    }
+//    func successHandler((json as! [String:AnyObject])) {
+//        let response = JSON as! NSDictionary
+//    }
+   
     func loginAPI(_ user: String, _ psw :String) {
 
-        WebServiceManager.sharedInstance.signInUser(username: user, password: psw) { (status, msg, resp, err) in
-            print("new status \(msg)")
-                    if status{
+        url = "\(baseUrl)\(userSignIn)"
+         parameters = [ "username":user,"password":psw] as [String : Any]
+        Alamofire.request(URL.init(string: url!) as! URLConvertible, method: .post, parameters: parameters, encoding: JSONEncoding.default, headers: nil).responseJSON { [self] (response) in
+                 print(response.result)
 
-                    }
-                }
+                 switch response.result {
+
+                 case .success(_):
+                    var response:NSDictionary = response.value as! NSDictionary
+                    print(response)
+                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                    let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+                    //MARK:- to change the color of tabbar
+                    tabbar?.tabBar.barTintColor = UIColor.white
+                    self.navigationController?.pushViewController(tabbar!, animated: true)
+                     break
+                 case .failure(let error):
+//                     failureHandler([error as Error])
+                    print ("hi")
+                    self.toastMessage(message: "invalid credentials")
+                    self.txtUsername.text = ""
+                    self.txtPassword.text = ""
+                    self.txtUsername.becomeFirstResponder()
+                     break
+                 }
+             }
+//        WebServiceManager.sharedInstance.signInUser(username: user, password: psw) { (status, msg, resp, err) in
+//            print("new status \(msg)")
+//                    if status{
+//
+//                    }
+//                }
     }
     
     func LoginDone() {
