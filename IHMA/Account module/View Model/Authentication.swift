@@ -8,9 +8,9 @@
 import Foundation
 
 class Authentication: NSObject {
-    var user: User1!
-    var username: String {return user.userName}
-    var email: String {return user.email}
+//    var user: postModel!
+//    var username: String {return postModel.username}
+//    var password: String {return postModel.password}
     
     typealias  authenticationLoginCallBack = (_ status:Bool, _ message:String) -> Void
     var loginCallback:authenticationLoginCallBack?
@@ -32,7 +32,7 @@ class Authentication: NSObject {
     fileprivate func verifyUserWith(_ username:String, andPassword password:String) {
         
         if username == "test@testmail.com" && password == "nikivava12#" {
-            user = User1(userName: username, email: "\(username)@testmail.com")
+//            user = User1(userName: username, email: "\(username)@testmail.com")
             self.loginCallback?(true, "User is successfully authenticated")
         } else {
             // invalid credentials

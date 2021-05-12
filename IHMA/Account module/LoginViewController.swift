@@ -17,7 +17,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     @IBOutlet weak var txtUsername: UITextField!
     
     @IBOutlet weak var imgLogo: UIImageView!
-    var authentication = Authentication()
+//    var authentication = Authentication()
     
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var passwordView: UIView!
@@ -70,21 +70,21 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
 //        authentication.authenticateUserWith(userName, andPassword: password)
         if userName.count != 0 {
             if password.count != 0 {
-                if (userName == "test2" && password == "arjunnair") {
-                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                    let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-                    //MARK:- to change the color of tabbar
-                    tabbar?.tabBar.barTintColor = UIColor.white
-                    self.navigationController?.pushViewController(tabbar!, animated: true)
-                }
-                else {
-                    self.toastMessage(message: "invalid credentials")
-                    txtUsername.text = ""
-                    txtPassword.text = ""
-                    txtUsername.becomeFirstResponder()
-                }
+//                if (userName == "test2" && password == "arjunnair") {
+//                    let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                    let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+//                    //MARK:- to change the color of tabbar
+//                    tabbar?.tabBar.barTintColor = UIColor.white
+//                    self.navigationController?.pushViewController(tabbar!, animated: true)
+//                }
+//                else {
+//                    self.toastMessage(message: "invalid credentials")
+//                    txtUsername.text = ""
+//                    txtPassword.text = ""
+//                    txtUsername.becomeFirstResponder()
+//                }
 //
-//                loginAPI(userName, password)
+                loginAPI(userName, password)
 //                doLogin(userName, password)
             } else {
                 //Password empty
@@ -99,7 +99,7 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
     
     func doLogin(_ user: String, _ psw :String)
     {
-        let url = URL(string: "http://Lmsihma.co.in:81/api/login/")
+        let url = URL(string: "http://lmsihma.co.in/api/login/")
         let session = URLSession.shared
         
         var request = URLRequest(url: url!)
@@ -147,10 +147,11 @@ class LoginViewController: BaseViewController, UITextFieldDelegate {
         
     }
     func loginAPI(_ user: String, _ psw :String) {
+
         WebServiceManager.sharedInstance.signInUser(username: user, password: psw) { (status, msg, resp, err) in
             print("new status \(msg)")
                     if status{
-                        
+
                     }
                 }
     }

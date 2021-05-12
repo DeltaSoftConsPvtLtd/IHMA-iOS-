@@ -13,7 +13,6 @@
 		9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */; };
 		90209D23263FB99C00EC8588 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90209D22263FB99C00EC8588 /* UIColor+Extension.swift */; };
 		9027C31526367E3A00937441 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31426367E3A00937441 /* LoginViewController.swift */; };
-		9027C319263685FE00937441 /* User1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C318263685FE00937441 /* User1.swift */; };
 		9027C31D2636868D00937441 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31C2636868D00937441 /* Authentication.swift */; };
 		9027C3372636D29900937441 /* hexToUiColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C3362636D29900937441 /* hexToUiColor.swift */; };
 		902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA58C2641031500411097 /* RegistrationTableDataSource.swift */; };
@@ -33,7 +32,6 @@
 		90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */; };
 		90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */; };
 		90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C1C2632ACED0052FFAB /* BaseViewController.swift */; };
-		909BF9872642DA3E001B73D1 /* loginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BF9862642DA3E001B73D1 /* loginModel.swift */; };
 		909BF98B2642E39D001B73D1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BF98A2642E39D001B73D1 /* SplashViewController.swift */; };
 		909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F34263BB4C300200EE2 /* NotificationViewController.swift */; };
 		909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F37263BC32100200EE2 /* NotificationDataSource.swift */; };
@@ -81,7 +79,6 @@
 		9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		90209D22263FB99C00EC8588 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9027C31426367E3A00937441 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		9027C318263685FE00937441 /* User1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User1.swift; sourceTree = "<group>"; };
 		9027C31C2636868D00937441 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		9027C3362636D29900937441 /* hexToUiColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexToUiColor.swift; sourceTree = "<group>"; };
 		902BA58C2641031500411097 /* RegistrationTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableDataSource.swift; sourceTree = "<group>"; };
@@ -101,7 +98,6 @@
 		90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifierHandlerType.swift; path = "IHMA/Storyboard Helpers/StoryboardIdentifierHandlerType.swift"; sourceTree = SOURCE_ROOT; };
 		90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Helpers.swift"; path = "IHMA/Storyboard Helpers/UIStoryboard+Helpers.swift"; sourceTree = SOURCE_ROOT; };
 		90759C1C2632ACED0052FFAB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		909BF9862642DA3E001B73D1 /* loginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginModel.swift; sourceTree = "<group>"; };
 		909BF98A2642E39D001B73D1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		909F2F34263BB4C300200EE2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		909F2F37263BC32100200EE2 /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
@@ -168,8 +164,6 @@
 		9027C317263685ED00937441 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9027C318263685FE00937441 /* User1.swift */,
-				909BF9862642DA3E001B73D1 /* loginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -563,14 +557,12 @@
 				9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */,
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
 				90403289264A35CB00E2E9CB /* WebServiceManeger.swift in Sources */,
-				909BF9872642DA3E001B73D1 /* loginModel.swift in Sources */,
 				90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */,
 				FA2B52B02595CD57004B23F9 /* ViewDataSource.swift in Sources */,
 				909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */,
 				909BF98B2642E39D001B73D1 /* SplashViewController.swift in Sources */,
 				FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */,
 				FA2B52B42595D2C1004B23F9 /* Constants.swift in Sources */,
-				9027C319263685FE00937441 /* User1.swift in Sources */,
 				9027C31D2636868D00937441 /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

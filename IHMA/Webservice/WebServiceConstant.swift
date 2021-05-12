@@ -60,7 +60,7 @@ enum ServiceMethodType
 
 
 var demoBaseUrl = "http://demo.webandcrafts.com/tidings/wp-json/"
-var baseUrl = "http://Lmsihma.co.in:81"
+var baseUrl = "http://lmsihma.co.in/"
 var baseUrl1 = ""
 
 var newVideo = "v1/live/stream"

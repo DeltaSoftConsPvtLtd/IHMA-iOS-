@@ -6,7 +6,7 @@ target 'IHMA' do
   use_frameworks!
 
   pod 'SideMenu'
-  pod 'Alamofire', '~> 4.4'
+  pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'DropDown'
 
