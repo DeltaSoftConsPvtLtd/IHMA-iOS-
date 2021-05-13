@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 
+var profileName:String?
+
 class Authentication: NSObject {
     weak var parentView: LoginViewController?
     init(attachView: LoginViewController) {
@@ -41,7 +43,13 @@ class Authentication: NSObject {
                         let response = resp as! LoginModel
                         print(response.data![0].session_token!)
                         print(response.data![0].status!)
+                        print(response.data![0].user?.username)
+                        profileName = response.data![0].user?.username!
                         
+                        //MARK:- save session token in userdefaults
+                        UserDefaults.standard.set(response.data![0].session_token!, forKey: "sessionToken") //setObject
+                        
+                       
                         
                         if (response.data![0].status! == "Authenticated") {
                             let storyBoard = UIStoryboard(name: "Main", bundle: nil)

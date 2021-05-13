@@ -365,10 +365,10 @@
                         <outlet property="lblEmail" destination="kr8-JB-Zw6" id="2QY-8c-U0u"/>
                         <outlet property="lblFee" destination="lnh-cq-XT4" id="VNT-iS-tgg"/>
                         <outlet property="lblPhoneno" destination="mEO-hK-UY5" id="rnD-P0-zAu"/>
-                        <outlet property="lblStatus" destination="CTu-4B-jyK" id="vO9-T1-9Vi"/>
                         <outlet property="lblTab1" destination="Gkq-f8-kpi" id="Opf-Aq-Ci5"/>
                         <outlet property="lblTab2" destination="A6t-0V-5Qb" id="4By-ph-U4h"/>
                         <outlet property="lblTab3" destination="lFV-xr-n5W" id="eeL-xE-0MW"/>
+                        <outlet property="lblprofileName" destination="CTu-4B-jyK" id="vO9-T1-9Vi"/>
                         <outlet property="profileImage" destination="W4c-Nt-I2p" id="FpD-rD-Tld"/>
                         <outlet property="profileView" destination="T3p-XG-GJ2" id="pWi-cM-pIa"/>
                         <outlet property="profileViewTopConstraint" destination="Gxs-Eq-nS7" id="RgE-N5-Zch"/>

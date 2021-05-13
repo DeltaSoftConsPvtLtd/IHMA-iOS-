@@ -14,7 +14,7 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var buttonViewTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileView: UIView!
-    @IBOutlet weak var lblStatus: UILabel!
+    @IBOutlet weak var lblprofileName: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var lblAboutPayment: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
@@ -36,6 +36,7 @@ class ProfileViewController: BaseViewController {
         setupUI()
         sideMenu()
         constraintSettings()
+        print(profileName)
 
         // Do any additional setup after loading the view.
     }
@@ -48,6 +49,7 @@ class ProfileViewController: BaseViewController {
         buttonView.layer.cornerRadius = buttonView.bounds.height/2;
         buttonView.clipsToBounds  =  true
         TabbarView.addShadow(location: .top)
+        lblprofileName.text = profileName!
     }
     /*
     // MARK: - Navigation

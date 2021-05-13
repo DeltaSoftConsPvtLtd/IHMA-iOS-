@@ -57,13 +57,6 @@ class ApiClient{
                    print("Err  ", err)
                 }
             case .failure( let error):
-//                do {
-//                    let decoder = JSONDecoder()
-//                    let responseOBJ = try decoder.decode(U.self, from: response.data!)
-//                    completion(true, (responseOBJ as Any),"failure")
-//                } catch let err {
-//                   print("Err  ", err)
-//                }
                 break
             }
         }

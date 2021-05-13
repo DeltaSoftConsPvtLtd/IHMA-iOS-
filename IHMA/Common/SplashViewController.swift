@@ -15,10 +15,7 @@ class SplashViewController: BaseViewController {
         super.viewDidLoad()
         gradientTwoColors()
         setupUI()
-        
-//        let destinationController = ViewController2 .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
-//        self.navigationController?.pushViewController(destinationController!, animated: true)
-        
+
         
         let seconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
@@ -28,16 +25,12 @@ class SplashViewController: BaseViewController {
             tabbar?.tabBar.barTintColor = UIColor.white
             self.navigationController?.pushViewController(tabbar!, animated: true)
         }
-
-//        let destinationController = MainTabPage.instantiateViewControllerFromStoryboard(storyBoardName: "MainTabPage")
-//        self.navigationController?.pushViewController(destinationController!, animated: true)
-//        if let tabViewController = storyboard!.instantiateViewController(withIdentifier: "MainTabPage") as? MainTabPage {
-//            present(tabViewController, animated: true, completion: nil)
-//        }
+      
     }
     
     func setupUI() {
         imgLogo.makeRounded()
+        profileName = "Dr. Nancy Salmoren"
     }
 
 }
