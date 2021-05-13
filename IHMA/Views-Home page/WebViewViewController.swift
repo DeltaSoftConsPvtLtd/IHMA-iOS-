@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 
-class ViewController2: BaseViewController {
+class WebViewViewController: BaseViewController {
     
     @IBOutlet weak var usageIndicator: UIActivityIndicatorView!
     

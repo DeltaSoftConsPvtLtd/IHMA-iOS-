@@ -21,7 +21,7 @@
 		902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A02641147600411097 /* FormTableViewCell.swift */; };
 		902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */; };
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
-		903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* ViewController2.swift */; };
+		903E8CB7263150B800D0AADD /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* WebViewViewController.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
 		90446A532645A2450086AB42 /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90446A522645A2450086AB42 /* UIString+Extension.swift */; };
 		9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEEC26392FA200E29A37 /* UIView+Extension.swift */; };
@@ -82,7 +82,7 @@
 		902BA5A02641147600411097 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableViewCell.swift; sourceTree = "<group>"; };
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		903E8CB6263150B800D0AADD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		903E8CB6263150B800D0AADD /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
 		90446A522645A2450086AB42 /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEC26392FA200E29A37 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
@@ -163,6 +163,7 @@
 		9027C31B2636867600937441 /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				902BA58C2641031500411097 /* RegistrationTableDataSource.swift */,
 				9027C31C2636868D00937441 /* Authentication.swift */,
 			);
 			path = "View Model";
@@ -181,22 +182,22 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		903E8CB52631508A00D0AADD /* Views-2nd page */ = {
+		903E8CB52631508A00D0AADD /* Views-Home page */ = {
 			isa = PBXGroup;
 			children = (
-				903E8CB6263150B800D0AADD /* ViewController2.swift */,
+				903E8CB6263150B800D0AADD /* WebViewViewController.swift */,
 			);
-			path = "Views-2nd page";
+			path = "Views-Home page";
 			sourceTree = "<group>";
 		};
-		903E8CBE2631A18B00D0AADD /* Views-Sidemenu */ = {
+		903E8CBE2631A18B00D0AADD /* Views-Sidemenu & courses */ = {
 			isa = PBXGroup;
 			children = (
 				903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */,
 				90C3144626358EC300EC7192 /* TableDataSource.swift */,
 				9002F4D92637E510006292C1 /* CoursesTableViewCell.swift */,
 			);
-			path = "Views-Sidemenu";
+			path = "Views-Sidemenu & courses";
 			sourceTree = "<group>";
 		};
 		9044AEF2263940D200E29A37 /* Payment Module */ = {
@@ -226,7 +227,6 @@
 				9027C317263685ED00937441 /* Model */,
 				90759C0B26328C780052FFAB /* RegistrationViewController.swift */,
 				9027C31426367E3A00937441 /* LoginViewController.swift */,
-				902BA58C2641031500411097 /* RegistrationTableDataSource.swift */,
 				902BA5A02641147600411097 /* FormTableViewCell.swift */,
 				902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */,
 				90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */,
@@ -327,8 +327,8 @@
 				9044AEF2263940D200E29A37 /* Payment Module */,
 				909F2F41263BF0F900200EE2 /* Profile Module */,
 				90759C0A26328C490052FFAB /* Account module */,
-				903E8CBE2631A18B00D0AADD /* Views-Sidemenu */,
-				903E8CB52631508A00D0AADD /* Views-2nd page */,
+				903E8CBE2631A18B00D0AADD /* Views-Sidemenu & courses */,
+				903E8CB52631508A00D0AADD /* Views-Home page */,
 				FA2B528C2595CBD5004B23F9 /* Fonts */,
 				90759C0526328BBC0052FFAB /* Storyboards */,
 				FA2B525A2595BE53004B23F9 /* AppDelegate.swift */,
@@ -510,7 +510,7 @@
 				90446A532645A2450086AB42 /* UIString+Extension.swift in Sources */,
 				90D400662643D39600DC82B9 /* MainTabPage.swift in Sources */,
 				9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */,
-				903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */,
+				903E8CB7263150B800D0AADD /* WebViewViewController.swift in Sources */,
 				9026E993264CC05200381E44 /* ApiClient.swift in Sources */,
 				902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */,
 				FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */,
