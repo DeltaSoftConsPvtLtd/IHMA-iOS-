@@ -41,13 +41,9 @@ class Authentication: NSObject {
                     if sucess{
                         print(resp)
                         let response = resp as! LoginModel
-                        print(response.data![0].session_token!)
-                        print(response.data![0].status!)
-                        print(response.data![0].user?.username)
-                        profileName = response.data![0].user?.username!
+//                        print(response.data![0].session_token!)
+                       
                         
-                        //MARK:- save session token in userdefaults
-                        UserDefaults.standard.set(response.data![0].session_token!, forKey: "sessionToken") //setObject
                         
                        
                         
@@ -57,6 +53,11 @@ class Authentication: NSObject {
                             //MARK:- to change the color of tabbar
                             tabbar?.tabBar.barTintColor = UIColor.white
                             self.parentView?.navigationController?.pushViewController(tabbar!, animated: true)
+                            //MARK:- set profile name
+                            profileName = response.data![0].user?.username!
+                            
+                            //MARK:- save session token in userdefaults
+                            UserDefaults.standard.set(response.data![0].session_token!, forKey: "sessionToken") //setObject
                         } else {
                             self.parentView?.toastMessage(message: "invalid credentials")
                             self.parentView?.txtUsername.text = ""
