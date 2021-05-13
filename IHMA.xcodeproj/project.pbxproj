@@ -12,6 +12,8 @@
 		9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DC263819A8006292C1 /* UIImage+Extension.swift */; };
 		9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */; };
 		90209D23263FB99C00EC8588 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90209D22263FB99C00EC8588 /* UIColor+Extension.swift */; };
+		9026E993264CC05200381E44 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026E992264CC05200381E44 /* ApiClient.swift */; };
+		9026E996264CCC8900381E44 /* Post_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026E995264CCC8900381E44 /* Post_Model.swift */; };
 		9027C31526367E3A00937441 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31426367E3A00937441 /* LoginViewController.swift */; };
 		9027C31D2636868D00937441 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31C2636868D00937441 /* Authentication.swift */; };
 		9027C3372636D29900937441 /* hexToUiColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C3362636D29900937441 /* hexToUiColor.swift */; };
@@ -21,7 +23,6 @@
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* ViewController2.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
-		90403289264A35CB00E2E9CB /* WebServiceManeger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90403288264A35CB00E2E9CB /* WebServiceManeger.swift */; };
 		90446A532645A2450086AB42 /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90446A522645A2450086AB42 /* UIString+Extension.swift */; };
 		9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEEC26392FA200E29A37 /* UIView+Extension.swift */; };
 		9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */; };
@@ -44,7 +45,6 @@
 		90D4006026439DF500DC82B9 /* OTPDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4005F26439DF500DC82B9 /* OTPDataSource.swift */; };
 		90D400632643B8CC00DC82B9 /* SubmitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */; };
 		90D400662643D39600DC82B9 /* MainTabPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D400652643D39600DC82B9 /* MainTabPage.swift */; };
-		90D40072264457EF00DC82B9 /* ResponseParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D40071264457EF00DC82B9 /* ResponseParser.swift */; };
 		90D4007926445CBB00DC82B9 /* WebServiceConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
 		FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */; };
@@ -79,6 +79,8 @@
 		9002F4DC263819A8006292C1 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		90209D22263FB99C00EC8588 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		9026E992264CC05200381E44 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		9026E995264CCC8900381E44 /* Post_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_Model.swift; sourceTree = "<group>"; };
 		9027C31426367E3A00937441 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9027C31C2636868D00937441 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		9027C3362636D29900937441 /* hexToUiColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexToUiColor.swift; sourceTree = "<group>"; };
@@ -88,7 +90,6 @@
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
-		90403288264A35CB00E2E9CB /* WebServiceManeger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceManeger.swift; sourceTree = "<group>"; };
 		90446A522645A2450086AB42 /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEC26392FA200E29A37 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentScreens.storyboard; sourceTree = "<group>"; };
@@ -111,7 +112,6 @@
 		90D4005F26439DF500DC82B9 /* OTPDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPDataSource.swift; sourceTree = "<group>"; };
 		90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitTableViewCell.swift; sourceTree = "<group>"; };
 		90D400652643D39600DC82B9 /* MainTabPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPage.swift; sourceTree = "<group>"; };
-		90D40071264457EF00DC82B9 /* ResponseParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseParser.swift; sourceTree = "<group>"; };
 		90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConstant.swift; sourceTree = "<group>"; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2B52572595BE53004B23F9 /* IHMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				906C8B26264BC56D00AED3D8 /* LoginModel.swift */,
+				9026E995264CCC8900381E44 /* Post_Model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -295,8 +296,7 @@
 		90D400682644564400DC82B9 /* Webservice */ = {
 			isa = PBXGroup;
 			children = (
-				90403288264A35CB00E2E9CB /* WebServiceManeger.swift */,
-				90D40071264457EF00DC82B9 /* ResponseParser.swift */,
+				9026E992264CC05200381E44 /* ApiClient.swift */,
 				90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */,
 			);
 			path = Webservice;
@@ -550,17 +550,17 @@
 				90D400662643D39600DC82B9 /* MainTabPage.swift in Sources */,
 				9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */,
 				903E8CB7263150B800D0AADD /* ViewController2.swift in Sources */,
+				9026E993264CC05200381E44 /* ApiClient.swift in Sources */,
 				902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */,
 				FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */,
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
 				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
-				90D40072264457EF00DC82B9 /* ResponseParser.swift in Sources */,
+				9026E996264CCC8900381E44 /* Post_Model.swift in Sources */,
 				909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */,
 				9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */,
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
-				90403289264A35CB00E2E9CB /* WebServiceManeger.swift in Sources */,
 				90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */,
 				FA2B52B02595CD57004B23F9 /* ViewDataSource.swift in Sources */,
 				909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */,

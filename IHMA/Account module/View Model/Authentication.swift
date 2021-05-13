@@ -6,41 +6,58 @@
 //
 
 import Foundation
+import UIKit
 
 class Authentication: NSObject {
-//    var user: postModel!
-//    var username: String {return postModel.username}
-//    var password: String {return postModel.password}
-    
-    typealias  authenticationLoginCallBack = (_ status:Bool, _ message:String) -> Void
-    var loginCallback:authenticationLoginCallBack?
+    weak var parentView: LoginViewController?
+    init(attachView: LoginViewController) {
+        super.init()
+        self.parentView = attachView
+        
+    }
+
     func authenticateUserWith(_ username:String, andPassword password:String) {
         if username.count != 0 {
             if password.count != 0 {
-                verifyUserWith(username, andPassword: password)
+                loginAPI(username, password)
             } else {
                 //Password empty
-                self.loginCallback?(false, "Password should not be empty")
+    
             }
         } else {
             //username empty
-            self.loginCallback?(false, "Username should not be empty")
+
         }
     }//func
     
-    //MARK:- verifyUserWith
-    fileprivate func verifyUserWith(_ username:String, andPassword password:String) {
-        
-        if username == "test@testmail.com" && password == "nikivava12#" {
-//            user = User1(userName: username, email: "\(username)@testmail.com")
-            self.loginCallback?(true, "User is successfully authenticated")
-        } else {
-            // invalid credentials
-            self.loginCallback?(false, "Please enter valid credentials")
-        }
-    }//func
-    
-    func loginCompletionHandler(callBack: @escaping authenticationLoginCallBack) {
-        self.loginCallback = callBack
+    func loginAPI(_ user: String, _ psw :String) {
+
+
+        let url = "\(baseUrl)\(userSignIn)"
+        let post = Post_Model(username: user, password: psw)
+        ApiClient.shared.getData(url, post, LoginModel.self) { (sucess, resp, msg) in
+                    if sucess{
+                        print(resp)
+                        let response = resp as! LoginModel
+                        print(response.data![0].session_token!)
+                        print(response.data![0].status!)
+                        
+                        
+                        if (response.data![0].status! == "Authenticated") {
+                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+                            //MARK:- to change the color of tabbar
+                            tabbar?.tabBar.barTintColor = UIColor.white
+                            self.parentView?.navigationController?.pushViewController(tabbar!, animated: true)
+                        } else {
+                            self.parentView?.toastMessage(message: "invalid credentials")
+                            self.parentView?.txtUsername.text = ""
+                            self.parentView?.txtPassword.text = ""
+                            self.parentView?.txtUsername.becomeFirstResponder()
+                        }//end of if condition
+                    }
+                   
+                }//api call
     }
+
 }//class

@@ -22,6 +22,7 @@ struct LoginModel : Codable {
         status = try values.decodeIfPresent(Status.self, forKey: .status)
         data = try values.decodeIfPresent([Data1].self, forKey: .data)
     }
+    
 
 }
 
