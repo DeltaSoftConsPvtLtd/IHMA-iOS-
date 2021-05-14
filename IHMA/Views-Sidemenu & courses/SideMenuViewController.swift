@@ -168,6 +168,18 @@ class MenuListController: UITableViewController {
         case 3:
             let destinationController = PaymentViewController .instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
+        case 4:
+            //MARK:- remove session token in userdefaults
+            UserDefaults.standard.removeObject(forKey: "sessionToken")
+            profileName = "Dr. Nancy Salmoren"
+            
+            //MARK:- Navigate to home page
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+            tabbar?.selectedIndex = 0
+            //MARK:- to change the color of tabbar
+            tabbar?.tabBar.barTintColor = UIColor.white
+            self.navigationController?.pushViewController(tabbar!, animated: true)
         default:
             print("ll")
         }
