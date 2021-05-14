@@ -24,11 +24,19 @@ class Authentication: NSObject {
                 loginAPI(username, password)
             } else {
                 //Password empty
-    
+                self.parentView?.activityIndicator.stopAnimating()
+                self.parentView?.activityIndicator.isHidden = true
+                self.parentView?.loginView.isUserInteractionEnabled = true
+                
+                self.parentView?.toastMessage(message: "Password field empty")
             }
         } else {
             //username empty
-
+            self.parentView?.activityIndicator.stopAnimating()
+            self.parentView?.activityIndicator.isHidden = true
+            self.parentView?.loginView.isUserInteractionEnabled = true
+            
+            self.parentView?.toastMessage(message: "Username field empty")
         }
     }//func
     
@@ -48,6 +56,11 @@ class Authentication: NSObject {
                        
                         
                         if (response.data![0].status! == "Authenticated") {
+                            //MARK:- activity indicator actions
+                            self.parentView?.activityIndicator.stopAnimating()
+                            self.parentView?.activityIndicator.isHidden = true
+                            self.parentView?.loginView.isUserInteractionEnabled = true
+                            
                             let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                             let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
                             //MARK:- to change the color of tabbar
@@ -59,6 +72,11 @@ class Authentication: NSObject {
                             //MARK:- save session token in userdefaults
                             UserDefaults.standard.set(response.data![0].session_token!, forKey: "sessionToken") //setObject
                         } else {
+                            //MARK:- activity indicator actions
+                            self.parentView?.activityIndicator.stopAnimating()
+                            self.parentView?.activityIndicator.isHidden = true
+                            self.parentView?.loginView.isUserInteractionEnabled = true
+                            
                             self.parentView?.toastMessage(message: "invalid credentials")
                             self.parentView?.txtUsername.text = ""
                             self.parentView?.txtPassword.text = ""
