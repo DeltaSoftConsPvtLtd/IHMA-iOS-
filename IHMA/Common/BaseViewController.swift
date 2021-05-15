@@ -110,11 +110,17 @@ class BaseViewController: UIViewController {
         }
     }
     
+    //MARK:- Alert view
+    func showAlertView(heading:String,message:String){
+        DispatchQueue.main.async {
+
+            let alert = UIAlertController(title: heading, message: message, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        }
+        
+    }
     
-    
-    
-    
-   
   
     @IBAction func tab1Tap(_ sender: Any) {
         lblTab1.textColor = UIColor.blue
@@ -135,6 +141,7 @@ class BaseViewController: UIViewController {
         tabbar?.tabBar.barTintColor = UIColor.white
         self.navigationController?.pushViewController(tabbar!, animated: true)
     }
+    
     
     @IBAction func tab2Tap(_ sender: Any) {
         //tab1

@@ -29,6 +29,7 @@ class Authentication: NSObject {
                 self.parentView?.loginView.isUserInteractionEnabled = true
                 
                 self.parentView?.toastMessage(message: "Password field empty")
+                self.parentView?.txtPassword.becomeFirstResponder()
             }
         } else {
             //username empty
@@ -37,6 +38,7 @@ class Authentication: NSObject {
             self.parentView?.loginView.isUserInteractionEnabled = true
             
             self.parentView?.toastMessage(message: "Username field empty")
+            self.parentView?.txtUsername.becomeFirstResponder()
         }
     }//func
     
@@ -60,12 +62,15 @@ class Authentication: NSObject {
                             self.parentView?.activityIndicator.stopAnimating()
                             self.parentView?.activityIndicator.isHidden = true
                             self.parentView?.loginView.isUserInteractionEnabled = true
-                            
-                            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-                            //MARK:- to change the color of tabbar
-                            tabbar?.tabBar.barTintColor = UIColor.white
-                            self.parentView?.navigationController?.pushViewController(tabbar!, animated: true)
+                            self.parentView?.showAlertView(heading: "Success", message: "Login done successfully")
+                            let seconds = 2.0
+                            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                                let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+                                //MARK:- to change the color of tabbar
+                                tabbar?.tabBar.barTintColor = UIColor.white
+                                self.parentView?.navigationController?.pushViewController(tabbar!, animated: true)
+                            }
                             //MARK:- set profile name
                             profileName = response.data![0].user?.username!
                             

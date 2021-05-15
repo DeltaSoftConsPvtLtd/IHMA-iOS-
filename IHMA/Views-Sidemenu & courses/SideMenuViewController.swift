@@ -128,7 +128,8 @@ class MenuListController: UITableViewController {
     var items = ["Profile","Login", "Register","Payment","Logout"]
     var images = ["userwhiteimage","userwhiteimage","userwhiteimage","userwhiteimage","logout"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
-    
+    let baseViewController = BaseViewController()
+    let splashViewController = SplashViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"0E589D")
@@ -169,17 +170,31 @@ class MenuListController: UITableViewController {
             let destinationController = PaymentViewController .instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
         case 4:
-            //MARK:- remove session token in userdefaults
-            UserDefaults.standard.removeObject(forKey: "sessionToken")
-            profileName = "Dr. Nancy Salmoren"
             
-            //MARK:- Navigate to home page
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-            tabbar?.selectedIndex = 0
-            //MARK:- to change the color of tabbar
-            tabbar?.tabBar.barTintColor = UIColor.white
-            self.navigationController?.pushViewController(tabbar!, animated: true)
+            if (profileName == "Dr. Nancy Salmoren")
+            {
+                
+            } else {
+            profileName = "Dr. Nancy Salmoren"
+                //MARK:- remove session token in userdefaults
+                UserDefaults.standard.removeObject(forKey: "sessionToken")
+               
+            //MARK:- present alertview
+//                let seconds = 4.0
+//                DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+//                    let alert = UIAlertController(title: "Success", message: "Logout Done Successfully", preferredStyle: UIAlertController.Style.alert)
+//                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//
+//                }
+                
+                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+                let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+                tabbar?.selectedIndex = 0
+                //MARK:- to change the color of tabbar
+                tabbar?.tabBar.barTintColor = UIColor.white
+                self.navigationController?.pushViewController(tabbar!, animated: true)
+            }
         default:
             print("ll")
         }
