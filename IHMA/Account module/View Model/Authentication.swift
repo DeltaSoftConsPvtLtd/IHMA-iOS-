@@ -53,18 +53,13 @@ class Authentication: NSObject {
                         let response = resp as! LoginModel
 //                        print(response.data![0].session_token!)
                        
-                        
-                        
-                       
-                        
                         if (response.data![0].status! == "Authenticated") {
                             //MARK:- activity indicator actions
                             self.parentView?.activityIndicator.stopAnimating()
                             self.parentView?.activityIndicator.isHidden = true
                             self.parentView?.loginView.isUserInteractionEnabled = true
                             self.parentView?.showAlertView(heading: "Success", message: "Login done successfully")
-                            let seconds = 2.0
-                            DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                                 let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
                                 //MARK:- to change the color of tabbar

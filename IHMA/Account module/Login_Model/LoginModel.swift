@@ -1,5 +1,5 @@
 //
-//  UserModel.swift
+//  LoginModel.swift
 //  IHMA
 //
 //  Created by Nikil Davis on 12/05/21.

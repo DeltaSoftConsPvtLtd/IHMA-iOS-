@@ -17,6 +17,8 @@
 		9027C31526367E3A00937441 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31426367E3A00937441 /* LoginViewController.swift */; };
 		9027C31D2636868D00937441 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C31C2636868D00937441 /* Authentication.swift */; };
 		9027C3372636D29900937441 /* hexToUiColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9027C3362636D29900937441 /* hexToUiColor.swift */; };
+		902A85CC26500B58002380BF /* RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902A85CB26500B58002380BF /* RegistrationModel.swift */; };
+		902A85D026502724002380BF /* Post_RegistrationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902A85CF26502724002380BF /* Post_RegistrationModel.swift */; };
 		902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA58C2641031500411097 /* RegistrationTableDataSource.swift */; };
 		902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A02641147600411097 /* FormTableViewCell.swift */; };
 		902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */; };
@@ -78,6 +80,8 @@
 		9027C31426367E3A00937441 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9027C31C2636868D00937441 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		9027C3362636D29900937441 /* hexToUiColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = hexToUiColor.swift; sourceTree = "<group>"; };
+		902A85CB26500B58002380BF /* RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationModel.swift; sourceTree = "<group>"; };
+		902A85CF26502724002380BF /* Post_RegistrationModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post_RegistrationModel.swift; sourceTree = "<group>"; };
 		902BA58C2641031500411097 /* RegistrationTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableDataSource.swift; sourceTree = "<group>"; };
 		902BA5A02641147600411097 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableViewCell.swift; sourceTree = "<group>"; };
@@ -151,13 +155,13 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		9027C317263685ED00937441 /* Model */ = {
+		9027C317263685ED00937441 /* Login_Model */ = {
 			isa = PBXGroup;
 			children = (
 				906C8B26264BC56D00AED3D8 /* LoginModel.swift */,
 				9026E995264CCC8900381E44 /* Post_Model.swift */,
 			);
-			path = Model;
+			path = Login_Model;
 			sourceTree = "<group>";
 		};
 		9027C31B2636867600937441 /* View Model */ = {
@@ -180,6 +184,15 @@
 				90446A522645A2450086AB42 /* UIString+Extension.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		902A85CA26500B2F002380BF /* Registration_Model */ = {
+			isa = PBXGroup;
+			children = (
+				902A85CB26500B58002380BF /* RegistrationModel.swift */,
+				902A85CF26502724002380BF /* Post_RegistrationModel.swift */,
+			);
+			path = Registration_Model;
 			sourceTree = "<group>";
 		};
 		903E8CB52631508A00D0AADD /* Views-Home page */ = {
@@ -222,9 +235,10 @@
 		90759C0A26328C490052FFAB /* Account module */ = {
 			isa = PBXGroup;
 			children = (
+				902A85CA26500B2F002380BF /* Registration_Model */,
 				90D4005B264387EA00DC82B9 /* OTP Module */,
 				9027C31B2636867600937441 /* View Model */,
-				9027C317263685ED00937441 /* Model */,
+				9027C317263685ED00937441 /* Login_Model */,
 				90759C0B26328C780052FFAB /* RegistrationViewController.swift */,
 				9027C31426367E3A00937441 /* LoginViewController.swift */,
 				902BA5A02641147600411097 /* FormTableViewCell.swift */,
@@ -503,6 +517,7 @@
 				90D4006026439DF500DC82B9 /* OTPDataSource.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
+				902A85CC26500B58002380BF /* RegistrationModel.swift in Sources */,
 				902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */,
 				90D4005D2643880900DC82B9 /* OTPViewController.swift in Sources */,
 				9002F4DA2637E510006292C1 /* CoursesTableViewCell.swift in Sources */,
@@ -518,6 +533,7 @@
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
 				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
+				902A85D026502724002380BF /* Post_RegistrationModel.swift in Sources */,
 				9026E996264CCC8900381E44 /* Post_Model.swift in Sources */,
 				909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */,
 				9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */,
