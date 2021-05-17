@@ -10,18 +10,36 @@ import UIKit
 
 class RegistrationTableDataSource: NSObject {
     weak var parentView: RegistrationViewController?
+    var firstName:String = ""
+    var lastName:String = ""
     init(attachView: RegistrationViewController) {
         super.init()
         self.parentView = attachView
         attachView.formTableView.delegate = self
         attachView.formTableView.dataSource = self
     }
+    //MARK:- to get values typed inside textfields
+    @objc func textFieldDidChange(sender: UITextField) {
+        print("hi")
+        switch (sender.tag) {
+        case 0:
+            firstName = sender.text!
+        case 1:
+            lastName = sender.text!
+        default:
+            break
+        }
+        
+        print(firstName)
+        print(lastName)
+    }
+    
     @objc func submitBtnTapped(sender: UIButton) {
         registrationApi()
         let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
         self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
-        
     }
+    
     func registrationApi () {
         let url = "\(baseUrl)\(userSignup)"
         let post = Param_Model()
@@ -72,6 +90,11 @@ extension RegistrationTableDataSource: UITableViewDataSource{
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
         cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
         cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
+            cell.fieldTxt.tag = indexPath.row
+            //MARK:- to add target to text field inside cell
+            cell.fieldTxt.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
+
+            
             switch  (indexPath.row) {
             case 0:
                 cell.fieldTxt.keyboardType = .alphabet
@@ -80,7 +103,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
             case 2:
                 cell.fieldTxt.keyboardType = .numberPad
             case 3:
-                cell.fieldTxt.keyboardType = .numberPad
+                cell.fieldTxt.keyboardType = .phonePad
             case 4:
                 cell.fieldTxt.keyboardType = .emailAddress
             case 5:
