@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FormTableViewCell: UITableViewCell {
+class FormTableViewCell: UITableViewCell,UITextFieldDelegate {
 
     @IBOutlet weak var fieldView: UIView!
     @IBOutlet weak var lblField: UILabel!
@@ -22,5 +22,6 @@ class FormTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
 
 }

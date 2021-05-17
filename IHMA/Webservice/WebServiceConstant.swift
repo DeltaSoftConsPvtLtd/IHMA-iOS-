@@ -63,6 +63,7 @@ enum ServiceMethodType
 var baseUrl = "http://lmsihma.co.in/"
 
 let userSignIn = "api/login/"
+let userSignup = "api/getRegisterDetail/"
 
 
 //MARK:- Web service completion handler closures

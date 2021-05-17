@@ -9,18 +9,18 @@ import Foundation
 import UIKit
 struct RegistrationModel : Codable {
     let status : Status1?
-    let Regdata : [RegData]?
+    let data : [RegData]?
 
     enum CodingKeys: String, CodingKey {
 
         case status = "status"
-        case Regdata = "Regdata"
+        case data = "data"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         status = try values.decodeIfPresent(Status1.self, forKey: .status)
-        Regdata = try values.decodeIfPresent([RegData].self, forKey: .Regdata)
+        data = try values.decodeIfPresent([RegData].self, forKey: .data)
     }
     
 
@@ -29,30 +29,30 @@ struct RegistrationModel : Codable {
 
 struct RegData : Codable {
     let status : String?
-    let return_to_url : String?
+//    let return_to_url : String?
+//    let user : Usertest?
+//    let expires_at : String?
+//    let session_token : String?
     let details : Details?
-    let user : Usertest?
-    let expires_at : String?
-    let session_token : String?
 
     enum CodingKeys: String, CodingKey {
 
         case status = "status"
-        case return_to_url = "return_to_url"
+//        case return_to_url = "return_to_url"
+//        case user = "user"
+//        case expires_at = "expires_at"
+//        case session_token = "session_token"
         case details = "details"
-        case user = "user"
-        case expires_at = "expires_at"
-        case session_token = "session_token"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         status = try values.decodeIfPresent(String.self, forKey: .status)
-        return_to_url = try values.decodeIfPresent(String.self, forKey: .return_to_url)
+//        return_to_url = try values.decodeIfPresent(String.self, forKey: .return_to_url)
+//        user = try values.decodeIfPresent(Usertest.self, forKey: .user)
+//        expires_at = try values.decodeIfPresent(String.self, forKey: .expires_at)
+//        session_token = try values.decodeIfPresent(String.self, forKey: .session_token)
         details = try values.decodeIfPresent(Details.self, forKey: .details)
-        user = try values.decodeIfPresent(Usertest.self, forKey: .user)
-        expires_at = try values.decodeIfPresent(String.self, forKey: .expires_at)
-        session_token = try values.decodeIfPresent(String.self, forKey: .session_token)
     }
 
 }
@@ -64,9 +64,9 @@ struct Details : Codable {
 
     enum CodingKeys: String, CodingKey {
 
-        case memberFee = "MemberFee"
-        case chapter = "Chapter"
-        case collage = "Collage"
+        case memberFee = "memberFee"
+        case chapter = "chapter"
+        case collage = "collage"
     }
 
     init(from decoder: Decoder) throws {

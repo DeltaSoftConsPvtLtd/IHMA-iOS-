@@ -8,6 +8,7 @@
 import Foundation
 import Alamofire
 
+var paramMethod:String = "POST"
 typealias OnCompletion =  (_ success: Bool, _ object: Any?,_ Alert : String?) -> ()
 
 class ApiClient{
@@ -20,7 +21,7 @@ class ApiClient{
         let url = url.replacingOccurrences(of: " ", with: "%20", options: .literal, range: nil)
         let myUrl = URL(string: url)!
         var Newrequest = URLRequest(url: myUrl)
-        Newrequest.httpMethod = "POST"
+        Newrequest.httpMethod = paramMethod
         Newrequest.setValue("application/json", forHTTPHeaderField: "content-type")
         Newrequest.setValue("Autherization Bareer", forHTTPHeaderField: "Authorization")
         return Newrequest
@@ -38,9 +39,21 @@ class ApiClient{
         return String(data: jsonData, encoding: .utf8)!
     }
     
-    func getData<T:Encodable,U:Decodable>(_ Url : String, _ req : T, _ resp : U.Type,completion:@escaping OnCompletion){
+    
+    func getData<T:Encodable,U:Decodable>(_ Method : String,_ Url : String, _ req : T, _ resp : U.Type,completion:@escaping OnCompletion){
+        if (Method == "GET") {
+            paramMethod = "GET"
+        } else{
+            paramMethod = "POST"
+        }
         var link = searchUrl(Url)
-        link.httpBody = makeJSONData1(req).data(using: .utf8)
+        if (Method == "GET") {
+            
+        } else{
+            link.httpBody = makeJSONData1(req).data(using: .utf8)
+            
+        }
+        
         serializeJSONRequest(link) { (response) in
             print(response)
             
@@ -53,8 +66,11 @@ class ApiClient{
                     let decoder = JSONDecoder()
                     let responseOBJ = try decoder.decode(U.self, from: response.data!)
                     completion(true, (responseOBJ as Any),"sucess")
+                    
+                    
                 } catch let err {
                    print("Err  ", err)
+                  
                 }
             case .failure( let error):
                 break

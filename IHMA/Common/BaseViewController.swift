@@ -35,7 +35,12 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.setNavigationBarHidden(true, animated: false)
        
+        //MARK:- to dismiss keyboard
+             let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
 
+           
+
+            view.addGestureRecognizer(tap)
         // Do any additional setup after loading the view.
     }
     
@@ -46,6 +51,11 @@ class BaseViewController: UIViewController {
       backgroundLayer!.frame = view.frame
       view.layer.insertSublayer(backgroundLayer!, at: 0)
         }
+    //Calls this function when the tap is recognized to dismiss keyboard.
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
     
     func gradientTwoColors() {
       view.backgroundColor = UIColor.clear

@@ -5,6 +5,7 @@
 //  Created by Nikil Davis on 04/05/21.
 //
 
+import Foundation
 import UIKit
 
 class RegistrationTableDataSource: NSObject {
@@ -16,9 +17,21 @@ class RegistrationTableDataSource: NSObject {
         attachView.formTableView.dataSource = self
     }
     @objc func submitBtnTapped(sender: UIButton) {
+        registrationApi()
         let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
         self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         
+    }
+    func registrationApi () {
+        let url = "\(baseUrl)\(userSignup)"
+        let post = Param_Model()
+        ApiClient.shared.getData("GET", url, post, RegistrationModel.self) { (sucess, resp, msg) in
+                    if sucess{
+                        let response = resp as! RegistrationModel
+                        print(response.status?.type!)
+                        print(resp)
+                    }
+        }
     }
 }
 
@@ -59,6 +72,25 @@ extension RegistrationTableDataSource: UITableViewDataSource{
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
         cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
         cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
+            switch  (indexPath.row) {
+            case 0:
+                cell.fieldTxt.keyboardType = .alphabet
+            case 1:
+                cell.fieldTxt.keyboardType = .alphabet
+            case 2:
+                cell.fieldTxt.keyboardType = .numberPad
+            case 3:
+                cell.fieldTxt.keyboardType = .numberPad
+            case 4:
+                cell.fieldTxt.keyboardType = .emailAddress
+            case 5:
+                cell.fieldTxt.keyboardType = .alphabet
+            case 6:
+                cell.fieldTxt.keyboardType = .alphabet
+            default:
+                break
+            }
+        
 //            cell.fieldView.addShadow(location: .bottom)
 //        cell.fieldTxt.addUnderLine()
         return cell

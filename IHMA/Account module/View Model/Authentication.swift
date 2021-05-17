@@ -47,7 +47,7 @@ class Authentication: NSObject {
 
         let url = "\(baseUrl)\(userSignIn)"
         let post = Post_Model(username: user, password: psw)
-        ApiClient.shared.getData(url, post, LoginModel.self) { (sucess, resp, msg) in
+        ApiClient.shared.getData("POST",url, post, LoginModel.self) { (sucess, resp, msg) in
                     if sucess{
                         print(resp)
                         let response = resp as! LoginModel
