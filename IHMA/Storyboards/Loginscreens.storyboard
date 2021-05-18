@@ -97,6 +97,12 @@
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <textInputTraits key="textInputTraits"/>
                                                                 </textField>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbx-MP-Qqm">
+                                                                    <rect key="frame" x="0.0" y="44" width="42" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
                                                             </subviews>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -108,7 +114,9 @@
                                                                 <constraint firstItem="MU1-yt-O3Y" firstAttribute="top" secondItem="cbO-Hd-5ON" secondAttribute="top" id="a22-bo-duk"/>
                                                                 <constraint firstAttribute="trailing" secondItem="vky-6p-fz1" secondAttribute="trailing" id="dJe-hI-GnM"/>
                                                                 <constraint firstAttribute="trailing" secondItem="VKt-EQ-wuw" secondAttribute="trailing" id="lQT-f5-WRx"/>
+                                                                <constraint firstItem="vbx-MP-Qqm" firstAttribute="top" secondItem="vky-6p-fz1" secondAttribute="bottom" constant="5" id="mS4-xo-OrT"/>
                                                                 <constraint firstItem="vky-6p-fz1" firstAttribute="top" secondItem="MU1-yt-O3Y" secondAttribute="bottom" id="ojl-Ny-YqS"/>
+                                                                <constraint firstItem="vbx-MP-Qqm" firstAttribute="leading" secondItem="vky-6p-fz1" secondAttribute="leading" id="v69-1s-mmr"/>
                                                                 <constraint firstItem="VKt-EQ-wuw" firstAttribute="leading" secondItem="cbO-Hd-5ON" secondAttribute="leading" id="zlF-Ve-ohG"/>
                                                             </constraints>
                                                         </view>
@@ -123,6 +131,7 @@
                                                     <outlet property="fieldTxt" destination="vky-6p-fz1" id="iKb-3A-1it"/>
                                                     <outlet property="fieldView" destination="cbO-Hd-5ON" id="DP8-ke-Nfg"/>
                                                     <outlet property="lblField" destination="MU1-yt-O3Y" id="FeY-aV-Ax5"/>
+                                                    <outlet property="lblValidation" destination="vbx-MP-Qqm" id="yDk-pr-u7I"/>
                                                 </connections>
                                             </tableViewCell>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dropdown" rowHeight="92" id="PKz-yb-xVF" customClass="DropdownTableViewCell" customModule="IHMA" customModuleProvider="target">
@@ -462,6 +471,7 @@
                         <outlet property="lblTab3" destination="1bp-Ca-BGK" id="uNR-VY-eMm"/>
                         <outlet property="lblTitle" destination="5RO-Gn-oan" id="JBU-ff-sHE"/>
                         <outlet property="pickedImage" destination="X5U-Me-1GT" id="7jX-7K-EJR"/>
+                        <outlet property="segmentedControlOutlet" destination="AVW-8P-VPP" id="9UC-nA-QXs"/>
                         <outlet property="tab1View" destination="yYH-BC-uDg" id="7St-4r-qv9"/>
                         <outlet property="tab2View" destination="hAD-GS-raF" id="AuO-d8-9l4"/>
                         <outlet property="tab3View" destination="nZT-Lg-pM2" id="9pb-4w-Cbp"/>

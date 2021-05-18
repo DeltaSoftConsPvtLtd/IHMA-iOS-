@@ -10,8 +10,17 @@ import UIKit
 
 class RegistrationTableDataSource: NSObject {
     weak var parentView: RegistrationViewController?
+    //MARK:- post parameters for registration call
     var firstName:String = ""
     var lastName:String = ""
+    var regNumber:Int?
+    var mobile:Int?
+    var email:String = ""
+    var homeAddress:String = ""
+    var clinicAddress:String = ""
+    var states:String = ""
+    var district:String = ""
+    var chapter:String = ""
     init(attachView: RegistrationViewController) {
         super.init()
         self.parentView = attachView
@@ -21,17 +30,31 @@ class RegistrationTableDataSource: NSObject {
     //MARK:- to get values typed inside textfields
     @objc func textFieldDidChange(sender: UITextField) {
         print("hi")
-        switch (sender.tag) {
-        case 0:
-            firstName = sender.text!
-        case 1:
-            lastName = sender.text!
-        default:
-            break
+        if (self.parentView?.segmentedControlOutlet.selectedSegmentIndex == 0)
+        {
+            switch (sender.tag) {
+            case 0:
+                firstName = sender.text!
+            case 1:
+                lastName = sender.text!
+            case 2:
+                regNumber = Int(sender.text!)
+            case 3:
+                mobile = Int(sender.text!)
+            case 4:
+                email = sender.text!
+            case 5:
+                homeAddress = sender.text!
+            case 6:
+                clinicAddress = sender.text!
+            default:
+                break
+            }
+        } else
+        {
+            //Student
         }
         
-        print(firstName)
-        print(lastName)
     }
     
     @objc func submitBtnTapped(sender: UIButton) {
@@ -88,31 +111,41 @@ extension RegistrationTableDataSource: UITableViewDataSource{
         }
         else if (indexPath.row < 7){
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
-        cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
-        cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
-            cell.fieldTxt.tag = indexPath.row
-            //MARK:- to add target to text field inside cell
-            cell.fieldTxt.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
+            if (self.parentView?.segmentedControlOutlet.selectedSegmentIndex == 0)
+            {
+                cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
+                cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
+                cell.lblValidation.text = "Please enter valid \((self.parentView?.textFieldNames[indexPath.row])!)"
+                cell.lblValidation.textColor = UIColor.red
+                cell.lblValidation.isHidden = true
+                
+                cell.fieldTxt.tag = indexPath.row
+                //MARK:- to add target to text field inside cell
+                cell.fieldTxt.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
 
             
-            switch  (indexPath.row) {
-            case 0:
-                cell.fieldTxt.keyboardType = .alphabet
-            case 1:
-                cell.fieldTxt.keyboardType = .alphabet
-            case 2:
-                cell.fieldTxt.keyboardType = .numberPad
-            case 3:
-                cell.fieldTxt.keyboardType = .phonePad
-            case 4:
-                cell.fieldTxt.keyboardType = .emailAddress
-            case 5:
-                cell.fieldTxt.keyboardType = .alphabet
-            case 6:
-                cell.fieldTxt.keyboardType = .alphabet
-            default:
-                break
-            }
+                switch  (indexPath.row) {
+                case 0:
+                    cell.fieldTxt.keyboardType = .alphabet
+                case 1:
+                    cell.fieldTxt.keyboardType = .alphabet
+                case 2:
+                    cell.fieldTxt.keyboardType = .numberPad
+                case 3:
+                    cell.fieldTxt.keyboardType = .phonePad
+                case 4:
+                    cell.fieldTxt.keyboardType = .emailAddress
+                case 5:
+                    cell.fieldTxt.keyboardType = .alphabet
+                case 6:
+                    cell.fieldTxt.keyboardType = .alphabet
+                default:
+                    break
+                }
+            } else {
+                cell.lblField.text = "Field Name"
+                cell.fieldTxt.text = "Demo"
+            }//End of segmented control outlet condition
         
 //            cell.fieldView.addShadow(location: .bottom)
 //        cell.fieldTxt.addUnderLine()
@@ -127,18 +160,21 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = cell.statesArray[index]
+                    states = cell.lblTitle.text!
                 }
             case 8:
                 cell.dropDown.dataSource = cell.districtsArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = cell.districtsArray[index]
+                    district = cell.lblTitle.text!
                 }
             case 9:
                 cell.dropDown.dataSource = cell.chapterArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = cell.chapterArray[index]
+                    chapter = cell.lblTitle.text!
                 }
             default:
                 cell.dropDown.dataSource = cell.districtsArray

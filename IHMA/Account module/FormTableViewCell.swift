@@ -12,6 +12,8 @@ class FormTableViewCell: UITableViewCell,UITextFieldDelegate {
     @IBOutlet weak var fieldView: UIView!
     @IBOutlet weak var lblField: UILabel!
     @IBOutlet weak var fieldTxt: UITextField!
+    
+    @IBOutlet weak var lblValidation: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

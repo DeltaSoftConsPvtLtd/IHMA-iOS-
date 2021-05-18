@@ -10,6 +10,7 @@ import UIKit
 
 class RegistrationViewController: BaseViewController {
     
+ 
     let fieldNames = ["First Name", "Last Name", "Registration Number", "Mobile","Email","Address Home","Address Clinic","","","",""]
     let textFieldNames = ["Nancy", "Salmoren", "28362", "+91 7736785236","","","","","","",""]
     let fieldArray = ["","","","","","","","State", "District", "Chapter"]
@@ -20,6 +21,7 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var registrationView: UIView!
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var formView: UIView!
+    @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
    
     @IBOutlet weak var formTableView: UITableView!
     
@@ -53,6 +55,7 @@ class RegistrationViewController: BaseViewController {
     
     
     @IBAction func segmentedControl(_ sender: Any) {
+        formTableView.reloadData()
     }
     //MARK:- Screen size changes
     func constraintSettings() {
