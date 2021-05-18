@@ -11,7 +11,7 @@ import UIKit
 class RegistrationViewController: BaseViewController {
     
  
-    let fieldNames = ["First Name", "Last Name", "Registration Number", "Mobile","Email","Address Home","Address Clinic","","","",""]
+    let fieldNames = ["First Name", "Last Name", "Registration Number", "Mobile","Email","Address Home","Username","","","",""]
     let textFieldNames = ["Nancy", "Salmoren", "28362", "+91 7736785236","","","","","","",""]
     let fieldArray = ["","","","","","","","State", "District", "Chapter"]
     @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
@@ -23,6 +23,7 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var formView: UIView!
     @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
    
+    @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var formTableView: UITableView!
     
     var registrationTableDataSource: RegistrationTableDataSource?
@@ -49,6 +50,7 @@ class RegistrationViewController: BaseViewController {
         formView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
 //        separatorView.dropShadow()
         TabbarView.addShadow(location: .top)
+        pickedImage.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"6EBEFB")
         
 //        separatorView.addShadow(location: .bottom)
     }
@@ -91,6 +93,7 @@ extension RegistrationViewController: UIImagePickerControllerDelegate,UINavigati
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey(rawValue: "UIImagePickerControllerEditedImage")] as? UIImage {
         pickedImage.image = image
+            cameraImage.isHidden = true
     }
         picker.dismiss(animated: true, completion: nil)
     }

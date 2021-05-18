@@ -17,19 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvN-tN-Mgm" userLabel="Image picker">
-                                <rect key="frame" x="264" y="44.5" width="150" height="149"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" backgroundImage="infinity.circle.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="imagePicker:" destination="FH2-5o-s6L" eventType="touchUpInside" id="HFF-a5-5N2"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X5U-Me-1GT">
-                                <rect key="frame" x="264" y="44" width="150" height="150"/>
+                                <rect key="frame" x="294" y="44" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="2Q9-3I-0Uq"/>
-                                    <constraint firstAttribute="width" constant="150" id="9n6-dt-eUt"/>
+                                    <constraint firstAttribute="height" constant="100" id="2Q9-3I-0Uq"/>
+                                    <constraint firstAttribute="width" constant="100" id="9n6-dt-eUt"/>
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQB-WV-IOU" userLabel="Navbar">
@@ -412,8 +404,23 @@
                                     <constraint firstItem="iKG-zm-Qyo" firstAttribute="top" secondItem="IFM-1M-no1" secondAttribute="bottom" id="nGT-Oe-vNz"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="4Jt-Hd-GuR">
+                                <rect key="frame" x="306.5" y="69" width="75" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1SV-i5-kED"/>
+                                    <constraint firstAttribute="width" constant="75" id="Zly-x1-FRG"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XvN-tN-Mgm" userLabel="Image picker">
+                                <rect key="frame" x="294" y="44" width="100" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <color key="tintColor" red="0.43137254901960786" green="0.74509803921568629" blue="0.98431372549019602" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="imagePicker:" destination="FH2-5o-s6L" eventType="touchUpInside" id="HFF-a5-5N2"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create         Your Account" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RO-Gn-oan">
-                                <rect key="frame" x="24" y="117" width="210" height="86"/>
+                                <rect key="frame" x="24" y="117" width="240" height="86"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -435,10 +442,11 @@
                         <viewLayoutGuide key="safeArea" id="Nsr-Yq-v6A"/>
                         <color key="backgroundColor" name="AccentColor"/>
                         <constraints>
+                            <constraint firstItem="4Jt-Hd-GuR" firstAttribute="centerY" secondItem="X5U-Me-1GT" secondAttribute="centerY" id="1yC-pd-jRB"/>
                             <constraint firstItem="X5U-Me-1GT" firstAttribute="leading" secondItem="5RO-Gn-oan" secondAttribute="trailing" constant="30" id="31F-Ez-wNv"/>
                             <constraint firstItem="lGO-Gq-jEN" firstAttribute="trailing" secondItem="Nsr-Yq-v6A" secondAttribute="trailing" id="5fR-ny-MWB"/>
                             <constraint firstItem="X5U-Me-1GT" firstAttribute="top" secondItem="vQB-WV-IOU" secondAttribute="top" id="8wG-1r-IP4"/>
-                            <constraint firstItem="X5U-Me-1GT" firstAttribute="trailing" secondItem="Nsr-Yq-v6A" secondAttribute="trailing" id="96u-Oh-0le"/>
+                            <constraint firstItem="X5U-Me-1GT" firstAttribute="trailing" secondItem="Nsr-Yq-v6A" secondAttribute="trailing" constant="-20" id="96u-Oh-0le"/>
                             <constraint firstItem="lGO-Gq-jEN" firstAttribute="top" secondItem="AVW-8P-VPP" secondAttribute="bottom" constant="-10" id="CDc-QG-f8D"/>
                             <constraint firstItem="lGO-Gq-jEN" firstAttribute="top" secondItem="5RO-Gn-oan" secondAttribute="bottom" constant="50" id="CqK-gq-fN4"/>
                             <constraint firstItem="Nsr-Yq-v6A" firstAttribute="trailing" secondItem="vQB-WV-IOU" secondAttribute="trailing" id="DRR-jm-TgL"/>
@@ -453,6 +461,7 @@
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="leading" secondItem="X5U-Me-1GT" secondAttribute="leading" id="oHF-Gg-qQI"/>
                             <constraint firstItem="vQB-WV-IOU" firstAttribute="leading" secondItem="FXA-h0-9aU" secondAttribute="leading" id="q1m-xr-sml"/>
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="trailing" secondItem="X5U-Me-1GT" secondAttribute="trailing" id="yJz-Ja-OI2"/>
+                            <constraint firstItem="4Jt-Hd-GuR" firstAttribute="centerX" secondItem="X5U-Me-1GT" secondAttribute="centerX" id="yZ3-yt-fyG"/>
                             <constraint firstItem="5RO-Gn-oan" firstAttribute="leading" secondItem="F7L-ZT-dqq" secondAttribute="leading" id="ycL-r7-2Yo"/>
                         </constraints>
                     </view>
@@ -461,6 +470,7 @@
                         <outlet property="btnTab1" destination="nNx-OO-1JA" id="xH9-a4-evo"/>
                         <outlet property="btnTab2" destination="OQS-lh-TbZ" id="qsM-Ml-T7x"/>
                         <outlet property="btnTab3" destination="ST6-7m-fvD" id="jNf-PE-tme"/>
+                        <outlet property="cameraImage" destination="4Jt-Hd-GuR" id="fVD-GO-qGC"/>
                         <outlet property="formTableView" destination="IFM-1M-no1" id="5Qw-9I-qj1"/>
                         <outlet property="formView" destination="lGO-Gq-jEN" id="YX8-wB-bZz"/>
                         <outlet property="imgTab1" destination="Ixi-2W-khN" id="kki-ES-hx0"/>
@@ -935,6 +945,7 @@
     </scenes>
     <resources>
         <image name="MenuTidingsIcon" width="96" height="96"/>
+        <image name="camera" width="471.04000854492188" height="471.04000854492188"/>
         <image name="down arrow" width="25" height="25"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="ic_remove_red_eye_48pt_2x" width="96" height="96"/>
@@ -942,7 +953,6 @@
         <image name="icons8-magazine-25" width="25" height="25"/>
         <image name="icons8-notification-25" width="25" height="25"/>
         <image name="ihma" width="225" height="225"/>
-        <image name="infinity.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

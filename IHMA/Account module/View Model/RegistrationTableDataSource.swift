@@ -20,7 +20,15 @@ class RegistrationTableDataSource: NSObject {
     var clinicAddress:String = ""
     var states:String = ""
     var district:String = ""
-    var chapter:String = ""
+    var chapter:Int?
+    var collageName:Int = 1
+    var membershipFee:Int = 1
+    var status = "pending_approval"
+    var userType = "doctor"
+    var idNo:Int = 1
+    var bloodGroup = "A+ve"
+    var userName = ""
+    var password = "nikil"
     init(attachView: RegistrationViewController) {
         super.init()
         self.parentView = attachView
@@ -46,7 +54,7 @@ class RegistrationTableDataSource: NSObject {
             case 5:
                 homeAddress = sender.text!
             case 6:
-                clinicAddress = sender.text!
+                userName = sender.text!
             default:
                 break
             }
@@ -58,9 +66,26 @@ class RegistrationTableDataSource: NSObject {
     }
     
     @objc func submitBtnTapped(sender: UIButton) {
-        registrationApi()
-        let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-        self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        signupApi()
+//        registrationApi()
+        
+    }
+    func signupApi() {
+        let url = "\(baseUrl)\(userSignup)"
+        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: chapter!, username: userName, email: email, password: password, password2: password, id_no: idNo, blood_group: bloodGroup)
+        ApiClient.shared.getData("POST", url, post, RegistrationModel.self) { (sucess, resp, msg) in
+                    if sucess{
+                        let response = resp as! RegistrationModel
+                        print(response.status?.type!)
+                        print(resp)
+                        self.parentView?.showAlertView(heading: "Registered", message: "Please enter the OTP received in the registered number")
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+                            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+                        }
+
+                    }
+        }
     }
     
     func registrationApi () {
@@ -71,6 +96,7 @@ class RegistrationTableDataSource: NSObject {
                         let response = resp as! RegistrationModel
                         print(response.status?.type!)
                         print(resp)
+                        
                     }
         }
     }
@@ -174,7 +200,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = cell.chapterArray[index]
-                    chapter = cell.lblTitle.text!
+                    chapter = index
                 }
             default:
                 cell.dropDown.dataSource = cell.districtsArray
