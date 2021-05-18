@@ -29,112 +29,33 @@ struct RegistrationModel : Codable {
 
 struct RegData : Codable {
     let status : String?
-//    let return_to_url : String?
-//    let user : Usertest?
-//    let expires_at : String?
-//    let session_token : String?
-    let details : Details?
+    let return_to_url : String?
+    let user : Usertest?
+    let expires_at : String?
+    let session_token : String?
+   
 
     enum CodingKeys: String, CodingKey {
 
         case status = "status"
-//        case return_to_url = "return_to_url"
-//        case user = "user"
-//        case expires_at = "expires_at"
-//        case session_token = "session_token"
-        case details = "details"
+        case return_to_url = "return_to_url"
+        case user = "user"
+        case expires_at = "expires_at"
+        case session_token = "session_token"
+      
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         status = try values.decodeIfPresent(String.self, forKey: .status)
-//        return_to_url = try values.decodeIfPresent(String.self, forKey: .return_to_url)
-//        user = try values.decodeIfPresent(Usertest.self, forKey: .user)
-//        expires_at = try values.decodeIfPresent(String.self, forKey: .expires_at)
-//        session_token = try values.decodeIfPresent(String.self, forKey: .session_token)
-        details = try values.decodeIfPresent(Details.self, forKey: .details)
+        return_to_url = try values.decodeIfPresent(String.self, forKey: .return_to_url)
+        user = try values.decodeIfPresent(Usertest.self, forKey: .user)
+        expires_at = try values.decodeIfPresent(String.self, forKey: .expires_at)
+        session_token = try values.decodeIfPresent(String.self, forKey: .session_token)
+       
     }
 
 }
-
-struct Details : Codable {
-    let memberFee : [MemberFee]?
-    let chapter : [Chapter]?
-    let collage : [Collage]?
-
-    enum CodingKeys: String, CodingKey {
-
-        case memberFee = "memberFee"
-        case chapter = "chapter"
-        case collage = "collage"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        memberFee = try values.decodeIfPresent([MemberFee].self, forKey: .memberFee)
-        chapter = try values.decodeIfPresent([Chapter].self, forKey: .chapter)
-        collage = try values.decodeIfPresent([Collage].self, forKey: .collage)
-    }
-
-}
-struct MemberFee : Codable {
-    let id : Int?
-    let name : String?
-    let amount : String?
-
-    enum CodingKeys: String, CodingKey {
-
-        case id = "id"
-        case name = "name"
-        case amount = "amount"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-        amount = try values.decodeIfPresent(String.self, forKey: .amount)
-    }
-
-}
-
-struct Chapter : Codable {
-    let id : Int?
-    let name : String?
-
-    enum CodingKeys: String, CodingKey {
-
-        case id = "id"
-        case name = "name"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-    }
-
-}
-
-
-struct Collage : Codable {
-    let id : Int?
-    let name : String?
-
-    enum CodingKeys: String, CodingKey {
-
-        case id = "id"
-        case name = "name"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(Int.self, forKey: .id)
-        name = try values.decodeIfPresent(String.self, forKey: .name)
-    }
-
-}
-
 
 
 
@@ -165,15 +86,27 @@ struct Status1 : Codable {
 
 struct Usertest : Codable {
     let username : String?
+    let email : String?
+    let firstname : String?
+    let id : Int?
+    let lastname : String?
 
     enum CodingKeys: String, CodingKey {
 
         case username = "username"
+        case email = "email"
+        case firstname = "firstname"
+        case id = "id"
+        case lastname = "lastname"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
         username = try values.decodeIfPresent(String.self, forKey: .username)
+        email = try values.decodeIfPresent(String.self, forKey: .email)
+        firstname = try values.decodeIfPresent(String.self, forKey: .firstname)
+        id = try values.decodeIfPresent(Int.self, forKey: .id)
+        lastname = try values.decodeIfPresent(String.self, forKey: .lastname)
     }
 
 }
