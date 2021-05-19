@@ -64,6 +64,7 @@ var baseUrl = "http://lmsihma.co.in/"
 
 let userSignIn = "api/login/"
 let userSignup = "api/getRegisterDetail/"
+let courses = "api/getcourses/"
 
 
 //MARK:- Web service completion handler closures

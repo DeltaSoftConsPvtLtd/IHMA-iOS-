@@ -16,9 +16,7 @@ class SplashViewController: BaseViewController {
         gradientTwoColors()
         setupUI()
         homeScreen()
-        
-    
-      
+        courseAPI()
     }
     
     func setupUI() {
@@ -36,5 +34,18 @@ class SplashViewController: BaseViewController {
             tabbar?.tabBar.barTintColor = UIColor.white
             self.navigationController?.pushViewController(tabbar!, animated: true)
         }
+    }
+    
+    func courseAPI() {
+        let url = "\(baseUrl)\(courses)"
+        let post = Param_Model()
+        ApiClient.shared.getData("GET", url, post, courseModel.self) { (sucess, resp, msg) in
+                    if sucess{
+                        let response = resp as! courseModel
+                        print(response.status?.type!)
+                        print(resp)
+                        
+                    }
+        }//end of api
     }
 }

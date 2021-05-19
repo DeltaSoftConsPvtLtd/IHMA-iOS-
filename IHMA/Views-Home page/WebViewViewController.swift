@@ -24,10 +24,11 @@ class WebViewViewController: BaseViewController {
         usageIndicator.isHidden = false
         usageIndicator.startAnimating()
         super.viewDidLoad()
+//        self.webView.configuration.processPool.perform(Selector(("_setCookieAcceptPolicy:")), with: HTTPCookie.AcceptPolicy.always)
         lbl.text = "Second Page"
 
         //Notification fired when screen is captured.
-        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
         // Your webView code goes here
 //        if let mediaURL:URL = URL(string: "http://elearnihma.in/") {
 //            let request:URLRequest = URLRequest(url: mediaURL);
@@ -40,7 +41,7 @@ class WebViewViewController: BaseViewController {
         usageIndicator.isHidden = true
         //MARK:- Func to prevent screen recording
 //        downloadCheckTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(isRecording()), userInfo: nil, repeats: true)
-        isRecording()
+//        isRecording()
         
          }
     

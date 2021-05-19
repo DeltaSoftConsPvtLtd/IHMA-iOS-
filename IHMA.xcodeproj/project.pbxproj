@@ -23,6 +23,7 @@
 		902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA58C2641031500411097 /* RegistrationTableDataSource.swift */; };
 		902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A02641147600411097 /* FormTableViewCell.swift */; };
 		902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */; };
+		902D042C2655507000EC3DA6 /* courseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D042B2655507000EC3DA6 /* courseModel.swift */; };
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* WebViewViewController.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
@@ -87,6 +88,7 @@
 		902BA58C2641031500411097 /* RegistrationTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationTableDataSource.swift; sourceTree = "<group>"; };
 		902BA5A02641147600411097 /* FormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormTableViewCell.swift; sourceTree = "<group>"; };
 		902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableViewCell.swift; sourceTree = "<group>"; };
+		902D042B2655507000EC3DA6 /* courseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseModel.swift; sourceTree = "<group>"; };
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,14 @@
 			path = Registration_Model;
 			sourceTree = "<group>";
 		};
+		902D042A2655503E00EC3DA6 /* Courses_Model */ = {
+			isa = PBXGroup;
+			children = (
+				902D042B2655507000EC3DA6 /* courseModel.swift */,
+			);
+			path = Courses_Model;
+			sourceTree = "<group>";
+		};
 		903E8CB52631508A00D0AADD /* Views-Home page */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 		903E8CBE2631A18B00D0AADD /* Views-Sidemenu & courses */ = {
 			isa = PBXGroup;
 			children = (
+				902D042A2655503E00EC3DA6 /* Courses_Model */,
 				903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */,
 				90C3144626358EC300EC7192 /* TableDataSource.swift */,
 				9002F4D92637E510006292C1 /* CoursesTableViewCell.swift */,
@@ -518,6 +529,7 @@
 				902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */,
 				906C8B27264BC56D00AED3D8 /* LoginModel.swift in Sources */,
 				90D4006026439DF500DC82B9 /* OTPDataSource.swift in Sources */,
+				902D042C2655507000EC3DA6 /* courseModel.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
 				902A85CC26500B58002380BF /* RegistrationModel.swift in Sources */,
