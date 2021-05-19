@@ -425,6 +425,11 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="lu8-fn-I0Y">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="backgroundColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="color" red="0.95294117649999999" green="0.15686274510000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AVW-8P-VPP">
                                 <rect key="frame" x="59" y="232" width="296" height="32"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -453,6 +458,7 @@
                             <constraint firstItem="vQB-WV-IOU" firstAttribute="top" secondItem="Nsr-Yq-v6A" secondAttribute="top" id="DXp-HN-7w7"/>
                             <constraint firstItem="lGO-Gq-jEN" firstAttribute="leading" secondItem="Nsr-Yq-v6A" secondAttribute="leading" id="Igr-Po-Ins"/>
                             <constraint firstItem="5RO-Gn-oan" firstAttribute="top" secondItem="F7L-ZT-dqq" secondAttribute="bottom" constant="28" id="LEl-I8-sqH"/>
+                            <constraint firstItem="lu8-fn-I0Y" firstAttribute="centerX" secondItem="FXA-h0-9aU" secondAttribute="centerX" id="OaU-sl-Xe7"/>
                             <constraint firstItem="AVW-8P-VPP" firstAttribute="width" secondItem="FXA-h0-9aU" secondAttribute="width" multiplier="20:28" id="P0R-mz-0gB"/>
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="top" secondItem="X5U-Me-1GT" secondAttribute="top" id="eQq-w5-Elc"/>
                             <constraint firstAttribute="bottom" secondItem="lGO-Gq-jEN" secondAttribute="bottom" id="iBX-3B-Tnt"/>
@@ -460,6 +466,7 @@
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="bottom" secondItem="X5U-Me-1GT" secondAttribute="bottom" id="o0j-s4-5oj"/>
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="leading" secondItem="X5U-Me-1GT" secondAttribute="leading" id="oHF-Gg-qQI"/>
                             <constraint firstItem="vQB-WV-IOU" firstAttribute="leading" secondItem="FXA-h0-9aU" secondAttribute="leading" id="q1m-xr-sml"/>
+                            <constraint firstItem="lu8-fn-I0Y" firstAttribute="centerY" secondItem="FXA-h0-9aU" secondAttribute="centerY" id="vDT-6F-Exr"/>
                             <constraint firstItem="XvN-tN-Mgm" firstAttribute="trailing" secondItem="X5U-Me-1GT" secondAttribute="trailing" id="yJz-Ja-OI2"/>
                             <constraint firstItem="4Jt-Hd-GuR" firstAttribute="centerX" secondItem="X5U-Me-1GT" secondAttribute="centerX" id="yZ3-yt-fyG"/>
                             <constraint firstItem="5RO-Gn-oan" firstAttribute="leading" secondItem="F7L-ZT-dqq" secondAttribute="leading" id="ycL-r7-2Yo"/>
@@ -467,6 +474,7 @@
                     </view>
                     <connections>
                         <outlet property="TabbarView" destination="iKG-zm-Qyo" id="CCD-fJ-YSJ"/>
+                        <outlet property="activityIndicator" destination="lu8-fn-I0Y" id="tyW-Hb-Ghe"/>
                         <outlet property="btnTab1" destination="nNx-OO-1JA" id="xH9-a4-evo"/>
                         <outlet property="btnTab2" destination="OQS-lh-TbZ" id="qsM-Ml-T7x"/>
                         <outlet property="btnTab3" destination="ST6-7m-fvD" id="jNf-PE-tme"/>

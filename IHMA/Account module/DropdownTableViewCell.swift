@@ -18,7 +18,7 @@ class DropdownTableViewCell: UITableViewCell {
     
     let statesArray = ["Karnataka","Kerala","Maharashtra"]
     let districtsArray = ["Trivandrum", "Ernakulam","Thrissur"]
-    let chapterArray = ["Aloor","Vellangallur","Mukundapuram","Perambra"]
+    let chapterArray = ["Aloor","Vellangallur"]
     override func awakeFromNib() {
         super.awakeFromNib()
         updateUI()

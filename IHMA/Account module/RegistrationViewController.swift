@@ -22,7 +22,8 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var formView: UIView!
     @IBOutlet weak var segmentedControlOutlet: UISegmentedControl!
-   
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var formTableView: UITableView!
     
@@ -51,12 +52,14 @@ class RegistrationViewController: BaseViewController {
 //        separatorView.dropShadow()
         TabbarView.addShadow(location: .top)
         pickedImage.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"6EBEFB")
+        activityIndicator.isHidden = true
         
 //        separatorView.addShadow(location: .bottom)
     }
     
     
     @IBAction func segmentedControl(_ sender: Any) {
+        self.registrationTableDataSource!.userType = segmentedControlOutlet.titleForSegment(at: segmentedControlOutlet.selectedSegmentIndex)!
         formTableView.reloadData()
     }
     //MARK:- Screen size changes
