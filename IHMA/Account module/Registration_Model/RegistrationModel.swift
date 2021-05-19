@@ -31,8 +31,7 @@ struct RegData : Codable {
     let status : String?
     let return_to_url : String?
     let user : Usertest?
-//    let expires_at : String?
-//    let session_token : String?
+
    
 
     enum CodingKeys: String, CodingKey {
@@ -40,8 +39,7 @@ struct RegData : Codable {
         case status = "status"
         case return_to_url = "return_to_url"
         case user = "user"
-//        case expires_at = "expires_at"
-//        case session_token = "session_token"
+
       
     }
 
@@ -50,8 +48,7 @@ struct RegData : Codable {
         status = try values.decodeIfPresent(String.self, forKey: .status)
         return_to_url = try values.decodeIfPresent(String.self, forKey: .return_to_url)
         user = try values.decodeIfPresent(Usertest.self, forKey: .user)
-//        expires_at = try values.decodeIfPresent(String.self, forKey: .expires_at)
-//        session_token = try values.decodeIfPresent(String.self, forKey: .session_token)
+
        
     }
 
