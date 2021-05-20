@@ -170,6 +170,7 @@ class MenuListController: UITableViewController {
             let destinationController = PaymentViewController .instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
         case 4:
+           
             
             if (profileName == "Dr. Nancy Salmoren")
             {

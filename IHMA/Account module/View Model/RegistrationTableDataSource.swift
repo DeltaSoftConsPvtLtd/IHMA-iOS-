@@ -55,6 +55,9 @@ class RegistrationTableDataSource: NSObject {
                 homeAddress = sender.text!
             case 6:
                 userName = sender.text!
+            case 7:
+                password = sender.text!
+                
             default:
                 break
             }
@@ -176,14 +179,14 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row == 10)
+        if (indexPath.row == 12)
         {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Button", for: indexPath))!  as? SubmitTableViewCell)!
             cell.btnSubmit.layer.cornerRadius = 30
             cell.btnSubmit.addTarget(self,action:#selector(submitBtnTapped(sender:)), for: .touchUpInside)
             return cell
         }
-        else if (indexPath.row < 7){
+        else if (indexPath.row < 9){
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
             if (self.parentView?.segmentedControlOutlet.selectedSegmentIndex == 0)
             {
@@ -213,6 +216,8 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                     cell.fieldTxt.keyboardType = .alphabet
                 case 6:
                     cell.fieldTxt.keyboardType = .alphabet
+                case 7:
+                    cell.fieldTxt.isSecureTextEntry = true
                 default:
                     break
                 }
@@ -229,21 +234,21 @@ extension RegistrationTableDataSource: UITableViewDataSource{
             
             //MARK:- to populate dropdown lists
             switch indexPath.row {
-            case 7:
+            case 9:
                 cell.dropDown.dataSource = cell.statesArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = cell.statesArray[index]
                     states = cell.lblTitle.text!
                 }
-            case 8:
+            case 10:
                 cell.dropDown.dataSource = cell.districtsArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = cell.districtsArray[index]
                     district = cell.lblTitle.text!
                 }
-            case 9:
+            case 11:
                 cell.dropDown.dataSource = cell.chapterArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")

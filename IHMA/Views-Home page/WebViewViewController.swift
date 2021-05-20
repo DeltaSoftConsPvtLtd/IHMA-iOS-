@@ -24,7 +24,7 @@ class WebViewViewController: BaseViewController {
         usageIndicator.isHidden = false
         usageIndicator.startAnimating()
         super.viewDidLoad()
-//        self.webView.configuration.processPool.perform(Selector(("_setCookieAcceptPolicy:")), with: HTTPCookie.AcceptPolicy.always)
+        self.webView.configuration.processPool.perform(Selector(("_setCookieAcceptPolicy:")), with: HTTPCookie.AcceptPolicy.always)
         lbl.text = "Second Page"
 
         //Notification fired when screen is captured.
@@ -34,17 +34,22 @@ class WebViewViewController: BaseViewController {
 //            let request:URLRequest = URLRequest(url: mediaURL);
 //            self.webView.load(request)
 //        }
-           let url = URL(string: "http://elearnihma.in/")//http://elearnihma.in/
+           let url = URL(string: "http://elearnihma.in/")//https://www.youtube.com
            let requestObj = URLRequest(url: url! as URL)
        webView.load(requestObj)
         usageIndicator.stopAnimating()
         usageIndicator.isHidden = true
         //MARK:- Func to prevent screen recording
 //        downloadCheckTimer = Timer.scheduledTimer(timeInterval: 0.05, target: self, selector: #selector(isRecording()), userInfo: nil, repeats: true)
-//        isRecording()
+        isRecording()
         
          }
-    
+    func settings() {
+//            webView.setJavaScriptEnabled(true);
+//           webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
+//           webview.getSettings().setPluginState(WebSettings.PluginState.ON);
+//           webview.getSettings().setMediaPlaybackRequiresUserGesture(false);
+    }
 
 //    MARK:- Screenshot capture
     @objc func didTakeScreenshot(notification:Notification) -> Void {
@@ -60,6 +65,7 @@ class WebViewViewController: BaseViewController {
 
                 if (screen.isCaptured) {
 
+                    exit(0);
                     print("screen is recorded")
 
                     return true
