@@ -126,7 +126,7 @@ extension UIImageView {
 //MARK:-List items for side menu
 class MenuListController: UITableViewController {
     var items = ["Profile","Login", "Register","Payment","Logout"]
-    var images = ["userwhiteimage","userwhiteimage","userwhiteimage","userwhiteimage","logout"]
+    var images = ["profile","login","register","payment","logout"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
     let baseViewController = BaseViewController()
     let splashViewController = SplashViewController()
