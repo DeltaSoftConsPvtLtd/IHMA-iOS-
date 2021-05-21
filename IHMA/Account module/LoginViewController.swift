@@ -74,7 +74,9 @@ class LoginViewController: BaseViewController {
         }
     }
 
-    @IBAction func btmForgotPassword(_ sender: Any) {
+    @IBAction func btnRegister(_ sender: Any) {
+        let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
     }
     @IBAction func btnSecureTextEntry(_ sender: Any) {
         txtPassword.isSecureTextEntry.toggle()

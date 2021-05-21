@@ -28,7 +28,7 @@ class RegistrationTableDataSource: NSObject {
     var idNo:Int = 1
     var bloodGroup = "A+ve"
     var userName = ""
-    var password = "nikil"
+    var password = ""
     init(attachView: RegistrationViewController) {
         super.init()
         self.parentView = attachView
@@ -125,9 +125,9 @@ class RegistrationTableDataSource: NSObject {
                 if (response.data![0].status! == "Authenticated") {
                     self.parentView?.activityIndicator.isHidden = true
                     
-                        self.parentView?.showAlertView(heading: "Registered", message: "Please enter the OTP received in the registered number")
+                        self.parentView?.showAlertView(heading: "Registered", message: "You have registered successfully")
                         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                            let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+                            let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
                             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
                         }
                     }//if loof authentication
@@ -195,7 +195,39 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                 cell.lblValidation.text = "Please enter valid \((self.parentView?.textFieldNames[indexPath.row])!)"
                 cell.lblValidation.textColor = UIColor.red
                 cell.lblValidation.isHidden = true
-                
+                if (firstName != nil && indexPath.row == 0)
+                {
+                    cell.fieldTxt.text = firstName
+                }
+                if (lastName != nil && indexPath.row == 1)
+                {
+                    cell.fieldTxt.text = lastName
+                }
+                if (regNumber != nil && indexPath.row == 2)
+                {
+                    cell.fieldTxt.text = String(regNumber!)
+                }
+                if (mobile != nil && indexPath.row == 3)
+                {
+                    cell.fieldTxt.text = String(mobile!)
+                }
+                if (email != nil && indexPath.row == 4)
+                {
+                    cell.fieldTxt.text = email
+                }
+                if (homeAddress != nil && indexPath.row == 5)
+                {
+                    cell.fieldTxt.text = homeAddress
+                }
+                if (userName != nil && indexPath.row == 6)
+                {
+                    cell.fieldTxt.text = userName
+                }
+                if (password != nil && indexPath.row == 7 || indexPath.row == 8)
+                {
+                    cell.fieldTxt.text = password
+                }
+               
                 cell.fieldTxt.tag = indexPath.row
                 //MARK:- to add target to text field inside cell
                 cell.fieldTxt.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
@@ -203,18 +235,25 @@ extension RegistrationTableDataSource: UITableViewDataSource{
             
                 switch  (indexPath.row) {
                 case 0:
+                    cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .alphabet
                 case 1:
+                    cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .alphabet
                 case 2:
+                    cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .numberPad
                 case 3:
+                    cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .phonePad
                 case 4:
+                    cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .emailAddress
                 case 5:
+                    cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .alphabet
                 case 6:
+                    cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .alphabet
                 case 7:
                     cell.fieldTxt.isSecureTextEntry = true
@@ -240,6 +279,10 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = cell.statesArray[index]
                     states = cell.lblTitle.text!
+                    if(states != nil )
+                    {
+                        cell.lblTitle.text = states
+                    }
                 }
             case 10:
                 cell.dropDown.dataSource = cell.districtsArray
@@ -247,6 +290,10 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = cell.districtsArray[index]
                     district = cell.lblTitle.text!
+                    if(district != nil )
+                    {
+                        cell.lblTitle.text = district
+                    }
                 }
             case 11:
                 cell.dropDown.dataSource = cell.chapterArray

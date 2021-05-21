@@ -28,11 +28,13 @@ class SplashViewController: BaseViewController {
     func homeScreen() {
         let seconds = 4.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-            //MARK:- to change the color of tabbar
-            tabbar?.tabBar.barTintColor = UIColor.white
-            self.navigationController?.pushViewController(tabbar!, animated: true)
+            let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+            self.navigationController?.pushViewController(destinationController!, animated: true)
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+//            //MARK:- to change the color of tabbar
+//            tabbar?.tabBar.barTintColor = UIColor.white
+//            self.navigationController?.pushViewController(tabbar!, animated: true)
         }
     }
     
