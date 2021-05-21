@@ -10,7 +10,7 @@ import UIKit
 import WebKit
 
 
-class WebViewViewController: BaseViewController {
+class WebViewViewController: BaseViewController,WKNavigationDelegate {
     
     @IBOutlet weak var usageIndicator: UIActivityIndicatorView!
     
@@ -23,7 +23,9 @@ class WebViewViewController: BaseViewController {
         sideMenu()
         usageIndicator.isHidden = false
         usageIndicator.startAnimating()
+        webView.navigationDelegate = self
         super.viewDidLoad()
+        
         self.webView.configuration.processPool.perform(Selector(("_setCookieAcceptPolicy:")), with: HTTPCookie.AcceptPolicy.always)
         lbl.text = "Second Page"
 
@@ -36,17 +38,12 @@ class WebViewViewController: BaseViewController {
        webView.load(requestObj)
         usageIndicator.stopAnimating()
         usageIndicator.isHidden = true
+        
         //MARK:- Func to prevent screen recording
         recorderTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(isRecording
 ), userInfo: nil, repeats: true)
 }
-    func settings() {
-//            webView.setJavaScriptEnabled(true);
-//           webview.getSettings().setJavaScriptCanOpenWindowsAutomatically(true);
-//           webview.getSettings().setPluginState(WebSettings.PluginState.ON);
-//           webview.getSettings().setMediaPlaybackRequiresUserGesture(false);
-    }
-
+   
 //    MARK:- Screenshot capture
     @objc func didTakeScreenshot(notification:Notification) -> Void {
 
@@ -74,5 +71,10 @@ class WebViewViewController: BaseViewController {
 
     }
 
-
+    func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
+        //print("Finished navigating to url \(webView.url)");
+        
+      }
 }
+
+

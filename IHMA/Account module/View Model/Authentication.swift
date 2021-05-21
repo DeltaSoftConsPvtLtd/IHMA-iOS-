@@ -58,14 +58,14 @@ class Authentication: NSObject {
                             self.parentView?.activityIndicator.stopAnimating()
                             self.parentView?.activityIndicator.isHidden = true
                             self.parentView?.loginView.isUserInteractionEnabled = true
-                            self.parentView?.showAlertView(heading: "Success", message: "Login done successfully")
-                            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            
+                        
                                 let storyBoard = UIStoryboard(name: "Main", bundle: nil)
                                 let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
                                 //MARK:- to change the color of tabbar
                                 tabbar?.tabBar.barTintColor = UIColor.white
                                 self.parentView?.navigationController?.pushViewController(tabbar!, animated: true)
-                            }
+                
                             //MARK:- set profile name
                             profileName = response.data![0].user?.username!
                             

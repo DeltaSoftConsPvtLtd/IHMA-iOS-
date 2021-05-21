@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vQB-WV-IOU" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuTidingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="M4B-PP-jum">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="M4B-PP-jum">
                                         <rect key="frame" x="24" y="20" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="GWk-6r-Mg0"/>
@@ -37,7 +37,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F7L-ZT-dqq" userLabel="Sidemenu Button">
                                         <rect key="frame" x="24" y="20" width="25" height="25"/>
                                         <connections>
-                                            <action selector="didTapMenu" destination="FH2-5o-s6L" eventType="touchUpInside" id="ong-yD-Que"/>
+                                            <action selector="backButtonPressed:" destination="FH2-5o-s6L" eventType="touchUpInside" id="Nij-OR-vmN"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -56,7 +56,7 @@
                                 <rect key="frame" x="0.0" y="253" width="414" height="643"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IFM-1M-no1">
-                                        <rect key="frame" x="0.0" y="10" width="414" height="553"/>
+                                        <rect key="frame" x="0.0" y="10" width="414" height="633"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Registration" id="mL8-n1-7IJ" customClass="FormTableViewCell" customModule="IHMA" customModuleProvider="target">
@@ -251,7 +251,7 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKG-zm-Qyo" userLabel="Tabbar">
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iKG-zm-Qyo" userLabel="Tabbar">
                                         <rect key="frame" x="0.0" y="563" width="414" height="80"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYH-BC-uDg" userLabel="Tab1">
@@ -396,12 +396,12 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="iKG-zm-Qyo" firstAttribute="leading" secondItem="lGO-Gq-jEN" secondAttribute="leading" id="547-YV-tvQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="IFM-1M-no1" secondAttribute="bottom" id="ELS-AZ-iTk"/>
                                     <constraint firstItem="IFM-1M-no1" firstAttribute="leading" secondItem="lGO-Gq-jEN" secondAttribute="leading" id="Qbs-CE-YkG"/>
                                     <constraint firstAttribute="bottom" secondItem="iKG-zm-Qyo" secondAttribute="bottom" id="YBF-DW-LUT"/>
                                     <constraint firstAttribute="trailing" secondItem="iKG-zm-Qyo" secondAttribute="trailing" id="dQt-Zb-Ykn"/>
                                     <constraint firstAttribute="trailing" secondItem="IFM-1M-no1" secondAttribute="trailing" id="gcL-7D-02i"/>
                                     <constraint firstItem="IFM-1M-no1" firstAttribute="top" secondItem="lGO-Gq-jEN" secondAttribute="top" constant="10" id="lK8-5f-tZW"/>
-                                    <constraint firstItem="iKG-zm-Qyo" firstAttribute="top" secondItem="IFM-1M-no1" secondAttribute="bottom" id="nGT-Oe-vNz"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="4Jt-Hd-GuR">
@@ -952,7 +952,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MenuTidingsIcon" width="96" height="96"/>
+        <image name="Back" width="48" height="48"/>
         <image name="camera" width="471.04000854492188" height="471.04000854492188"/>
         <image name="down arrow" width="25" height="25"/>
         <image name="homekit" catalog="system" width="128" height="106"/>

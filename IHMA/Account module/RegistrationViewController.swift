@@ -32,7 +32,6 @@ class RegistrationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        sideMenu()
         pickedImage.makeRounded()
         gradientColors()
         constraintSettings()
