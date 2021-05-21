@@ -179,6 +179,8 @@ class MenuListController: UITableViewController {
             profileName = "Dr. Nancy Salmoren"
                 //MARK:- remove session token in userdefaults
                 UserDefaults.standard.removeObject(forKey: "sessionToken")
+                let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+                self.navigationController?.pushViewController(destinationController!, animated: true)
                
             //MARK:- present alertview
 //                let seconds = 4.0
@@ -189,12 +191,7 @@ class MenuListController: UITableViewController {
 //
 //                }
                 
-                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-                tabbar?.selectedIndex = 0
-                //MARK:- to change the color of tabbar
-                tabbar?.tabBar.barTintColor = UIColor.white
-                self.navigationController?.pushViewController(tabbar!, animated: true)
+             
             }
         default:
             print("ll")

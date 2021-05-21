@@ -357,7 +357,6 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
-				90806D0D2657B33500F01358 /* About IHMA module */,
 				90D400682644564400DC82B9 /* Webservice */,
 				9027C3352636D26A00937441 /* Helpers */,
 				90759C1B2632ACD50052FFAB /* Common */,
@@ -366,6 +365,7 @@
 				9044AEF2263940D200E29A37 /* Payment Module */,
 				909F2F41263BF0F900200EE2 /* Profile Module */,
 				90759C0A26328C490052FFAB /* Account module */,
+				90806D0D2657B33500F01358 /* About IHMA module */,
 				903E8CBE2631A18B00D0AADD /* Views-Sidemenu & courses */,
 				903E8CB52631508A00D0AADD /* Views-Home page */,
 				FA2B528C2595CBD5004B23F9 /* Fonts */,

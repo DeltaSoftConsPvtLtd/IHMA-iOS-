@@ -29,6 +29,7 @@ class RegistrationTableDataSource: NSObject {
     var bloodGroup = "A+ve"
     var userName = ""
     var password = ""
+    var password2 = ""
     init(attachView: RegistrationViewController) {
         super.init()
         self.parentView = attachView
@@ -57,6 +58,8 @@ class RegistrationTableDataSource: NSObject {
                 userName = sender.text!
             case 7:
                 password = sender.text!
+            case 8:
+                password2 = sender.text!
                 
             default:
                 break
@@ -73,10 +76,15 @@ class RegistrationTableDataSource: NSObject {
         self.parentView?.activityIndicator.isHidden = false
         self.parentView?.activityIndicator.startAnimating()
         
-        if (firstName != nil && lastName != nil && regNumber != nil && mobile != nil && email != nil)  {
+        if (firstName != nil && lastName != nil && regNumber != nil && mobile != nil && email != nil && userName != nil && chapter != nil && states != nil && district != nil && homeAddress != nil)  {
             
-                                
+            if (password == password2) {
                                 signupApi()
+                                        } else {
+                                                self.parentView?.showAlertView(heading: "Passwords not Matching", message: "Please enter same passwords")
+                                            self.parentView?.activityIndicator.isHidden = true
+                                            self.parentView?.activityIndicator.stopAnimating()
+                                                }
         } else {
             self.parentView?.showAlertView(heading: "Fields not Entered", message: "Please enter all fields to register")
             self.parentView?.activityIndicator.isHidden = true
