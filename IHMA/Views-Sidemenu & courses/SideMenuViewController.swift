@@ -125,8 +125,8 @@ extension UIImageView {
 
 //MARK:-List items for side menu
 class MenuListController: UITableViewController {
-    var items = ["Profile","Logout"]
-    var images = ["profile","logout"]
+    var items = ["Logout"]
+    var images = ["logout"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
     let baseViewController = BaseViewController()
     let splashViewController = SplashViewController()
@@ -169,18 +169,18 @@ class MenuListController: UITableViewController {
 //        case 3:
 //            let destinationController = PaymentViewController .instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
 //            self.navigationController?.pushViewController(destinationController!, animated: true)
-        case 1:
-           
-            
-            if (profileName == "Dr. Nancy Salmoren")
-            {
-                
-            } else {
-            profileName = "Dr. Nancy Salmoren"
-                //MARK:- remove session token in userdefaults
-                UserDefaults.standard.removeObject(forKey: "sessionToken")
-                let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-                self.navigationController?.pushViewController(destinationController!, animated: true)
+//        case 1:
+//
+//
+//            if (profileName == "Dr. Nancy Salmoren")
+//            {
+//
+//            } else {
+//            profileName = "Dr. Nancy Salmoren"
+//                //MARK:- remove session token in userdefaults
+//                UserDefaults.standard.removeObject(forKey: "sessionToken")
+//                let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+//                self.navigationController?.pushViewController(destinationController!, animated: true)
                
             //MARK:- present alertview
 //                let seconds = 4.0
@@ -192,7 +192,7 @@ class MenuListController: UITableViewController {
 //                }
                 
              
-            }
+//            }
         default:
             print("ll")
         }

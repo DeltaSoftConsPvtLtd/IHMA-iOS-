@@ -42,13 +42,14 @@ class ProfileViewController: BaseViewController {
     }
     
     func setupUI(){
+        profileView.backgroundColor = UIColor.white
         profileView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
         profileImage.makeRounded()
         
         buttonView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1B8AF4")
         buttonView.layer.cornerRadius = buttonView.bounds.height/2;
         buttonView.clipsToBounds  =  true
-        TabbarView.addShadow(location: .top)
+//        TabbarView.addShadow(location: .top)
         lblprofileName.text = profileName!
     }
     /*
@@ -74,13 +75,13 @@ extension ProfileViewController
             profileViewTopConstraint.constant = 100
             buttonViewTopConstraint.constant = 25.0
             contactDetailsViewTopConstraint.constant = 20
-            tabbarHeightConstraint.constant = 60.0
+//            tabbarHeightConstraint.constant = 60.0
         }
         else{
             profileViewTopConstraint.constant = 150
             buttonViewTopConstraint.constant = 50.0
             contactDetailsViewTopConstraint.constant = 50
-            tabbarHeightConstraint.constant = 80.0
+//            tabbarHeightConstraint.constant = 80.0
         }
     }
 }
