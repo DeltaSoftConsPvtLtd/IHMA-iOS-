@@ -671,12 +671,10 @@
                                     <constraint firstItem="QDl-Pw-Aqd" firstAttribute="centerX" secondItem="ITe-T9-2jR" secondAttribute="centerX" id="z2F-zD-XhM"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irh-eF-pVP">
-                                <rect key="frame" x="24" y="153" width="390" height="660"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="irh-eF-pVP">
+                                <rect key="frame" x="24" y="153" width="366" height="660"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <attributedString key="attributedText">
-                                    <fragment>
-                                        <string key="content">ABOUT IHMA
+                                <mutableString key="text">ABOUT IHMA
 REGISTER NUMBER: 64/04
 IHMA - The National Platform of Indian Homoeopaths is relentless in its efforts to raise the standards of Homoeopathic Education &amp; Practice in India.
 
@@ -688,22 +686,9 @@ INTRODUCTION TO HOMOEOPATHY EDUCATIONAL SERIES
 Since its inception, IHMA took firm stand against the corruption and nepotism that were prevalent in the Central Council of Homoeopathy at the time. The corruptions were so gross that there were even vigilance cases against some of the top office bearers of the CCH. As a result of the complaints filed by the IHMA before the enquiry commission led by Honourable Justice Usha Verma, the then CCH were dismissed and new members were elected.
 
 HISTORY OF IHMA
-</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.79467790447397235" green="0.80254600253807107" blue="0.80254600253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">It has fought tooth and nail many absurd decisions of the authorities concerned and this way gained maximum acceptance among the homeopathic community which is evident from the growth.</string>
-                                        <attributes>
-                                            <color key="NSColor" red="0.79467790447397235" green="0.80254600253807107" blue="0.80254600253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" metaFont="system" size="17"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
+It has fought tooth and nail many absurd decisions of the authorities concerned and this way gained maximum acceptance among the homeopathic community which is evident from the growth.</mutableString>
+                                <color key="textColor" red="0.79467790447397235" green="0.80254600253807107" blue="0.80254600253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -711,7 +696,7 @@ HISTORY OF IHMA
                         <color key="backgroundColor" red="0.090196078431372548" green="0.41568627450980389" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="irh-eF-pVP" firstAttribute="top" secondItem="ITe-T9-2jR" secondAttribute="bottom" id="307-x8-3x9"/>
-                            <constraint firstItem="Dss-3t-dil" firstAttribute="trailing" secondItem="irh-eF-pVP" secondAttribute="trailing" id="Bkx-sB-fk3"/>
+                            <constraint firstItem="Dss-3t-dil" firstAttribute="trailing" secondItem="irh-eF-pVP" secondAttribute="trailing" constant="24" id="Bkx-sB-fk3"/>
                             <constraint firstItem="ITe-T9-2jR" firstAttribute="top" secondItem="Dss-3t-dil" secondAttribute="top" id="E61-af-QVA"/>
                             <constraint firstItem="irh-eF-pVP" firstAttribute="leading" secondItem="Dss-3t-dil" secondAttribute="leading" constant="24" id="Hxn-02-lEv"/>
                             <constraint firstItem="ITe-T9-2jR" firstAttribute="leading" secondItem="Dss-3t-dil" secondAttribute="leading" id="K5e-C1-6dI"/>

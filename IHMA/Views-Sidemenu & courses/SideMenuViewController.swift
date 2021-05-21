@@ -157,8 +157,10 @@ class MenuListController: UITableViewController {
         switch indexPath.row
         {
         case 0:
-            let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "ProfileScreens")
+            let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
+//            let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "ProfileScreens")
+//            self.navigationController?.pushViewController(destinationController!, animated: true)
 //        case 1:
 //            let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
 //            self.navigationController?.pushViewController(destinationController!, animated: true)
