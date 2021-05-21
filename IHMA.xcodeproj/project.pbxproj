@@ -38,6 +38,7 @@
 		90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */; };
 		90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */; };
 		90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C1C2632ACED0052FFAB /* BaseViewController.swift */; };
+		90806D0F2657B36500F01358 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90806D0E2657B36500F01358 /* AboutUsViewController.swift */; };
 		909BF98B2642E39D001B73D1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BF98A2642E39D001B73D1 /* SplashViewController.swift */; };
 		909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F34263BB4C300200EE2 /* NotificationViewController.swift */; };
 		909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F37263BC32100200EE2 /* NotificationDataSource.swift */; };
@@ -103,6 +104,7 @@
 		90759C152632946C0052FFAB /* StoryboardIdentifierHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifierHandlerType.swift; path = "IHMA/Storyboard Helpers/StoryboardIdentifierHandlerType.swift"; sourceTree = SOURCE_ROOT; };
 		90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Helpers.swift"; path = "IHMA/Storyboard Helpers/UIStoryboard+Helpers.swift"; sourceTree = SOURCE_ROOT; };
 		90759C1C2632ACED0052FFAB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		90806D0E2657B36500F01358 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		909BF98A2642E39D001B73D1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		909F2F34263BB4C300200EE2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		909F2F37263BC32100200EE2 /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
@@ -282,6 +284,14 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+		90806D0D2657B33500F01358 /* About IHMA module */ = {
+			isa = PBXGroup;
+			children = (
+				90806D0E2657B36500F01358 /* AboutUsViewController.swift */,
+			);
+			path = "About IHMA module";
+			sourceTree = "<group>";
+		};
 		909F2F33263BB49700200EE2 /* Notification Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +357,7 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
+				90806D0D2657B33500F01358 /* About IHMA module */,
 				90D400682644564400DC82B9 /* Webservice */,
 				9027C3352636D26A00937441 /* Helpers */,
 				90759C1B2632ACD50052FFAB /* Common */,
@@ -537,6 +548,7 @@
 				90D4005D2643880900DC82B9 /* OTPViewController.swift in Sources */,
 				9002F4DA2637E510006292C1 /* CoursesTableViewCell.swift in Sources */,
 				90D4007926445CBB00DC82B9 /* WebServiceConstant.swift in Sources */,
+				90806D0F2657B36500F01358 /* AboutUsViewController.swift in Sources */,
 				90446A532645A2450086AB42 /* UIString+Extension.swift in Sources */,
 				90D400662643D39600DC82B9 /* MainTabPage.swift in Sources */,
 				9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */,

@@ -125,8 +125,8 @@ extension UIImageView {
 
 //MARK:-List items for side menu
 class MenuListController: UITableViewController {
-    var items = ["Profile","Login", "Register","Payment","Logout"]
-    var images = ["profile","login","register","payment","logout"]
+    var items = ["Profile","Logout"]
+    var images = ["profile","logout"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
     let baseViewController = BaseViewController()
     let splashViewController = SplashViewController()
@@ -159,17 +159,17 @@ class MenuListController: UITableViewController {
         case 0:
             let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "ProfileScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
-        case 1:
-            let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-            self.navigationController?.pushViewController(destinationController!, animated: true)
+//        case 1:
+//            let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+//            self.navigationController?.pushViewController(destinationController!, animated: true)
             
-        case 2:
-            let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-            self.navigationController?.pushViewController(destinationController!, animated: true)
-        case 3:
-            let destinationController = PaymentViewController .instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
-            self.navigationController?.pushViewController(destinationController!, animated: true)
-        case 4:
+//        case 2:
+//            let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+//            self.navigationController?.pushViewController(destinationController!, animated: true)
+//        case 3:
+//            let destinationController = PaymentViewController .instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
+//            self.navigationController?.pushViewController(destinationController!, animated: true)
+        case 1:
            
             
             if (profileName == "Dr. Nancy Salmoren")

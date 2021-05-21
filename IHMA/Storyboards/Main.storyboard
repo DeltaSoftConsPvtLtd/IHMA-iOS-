@@ -90,7 +90,6 @@
                     <connections>
                         <segue destination="Mmk-XV-LBm" kind="relationship" relationship="viewControllers" id="CeS-No-I9E"/>
                         <segue destination="ZoL-mY-vRw" kind="relationship" relationship="viewControllers" id="1gw-V8-23X"/>
-                        <segue destination="18D-mT-qTT" kind="relationship" relationship="viewControllers" id="bJS-YC-kyk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O0o-p9-Cux" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -109,7 +108,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="wTd-Cz-Rys" kind="relationship" relationship="rootViewController" id="b4g-3G-lyq"/>
+                        <segue destination="Ouk-74-1Ca" kind="relationship" relationship="rootViewController" id="saB-Z5-VsJ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2K-2H-s8I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -125,10 +124,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tU-lx-iwP">
-                                <rect key="frame" x="0.0" y="406" width="414" height="490"/>
+                                <rect key="frame" x="0.0" y="362" width="414" height="534"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ar-CS-8NP">
-                                        <rect key="frame" x="0.0" y="15" width="414" height="475"/>
+                                        <rect key="frame" x="0.0" y="15" width="414" height="519"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="separatorColor" red="0.83921568627450982" green="0.33333333333333331" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
                                         <prototypes>
@@ -220,7 +219,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hpx-wX-NIW" userLabel="Navbar">
-                                <rect key="frame" x="0.0" y="88" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuTidingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Vaa-4v-7xG">
                                         <rect key="frame" x="24" y="20" width="25" height="25"/>
@@ -271,6 +270,104 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UjS-v5-KMA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-807.24637681159425" y="1200.6696428571429"/>
+        </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="ycO-LX-9kX">
+            <objects>
+                <viewController id="Ouk-74-1Ca" customClass="AboutUsViewController" customModule="IHMA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="egF-wR-T1Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITe-T9-2jR" userLabel="Navbar">
+                                <rect key="frame" x="0.0" y="88" width="414" height="65"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuTidingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Nnn-dK-boW">
+                                        <rect key="frame" x="24" y="20" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="oOd-ar-sLk"/>
+                                            <constraint firstAttribute="width" constant="25" id="sCB-xZ-6xl"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XG4-mw-gDg" userLabel="Sidemenu Button">
+                                        <rect key="frame" x="24" y="20" width="25" height="25"/>
+                                        <connections>
+                                            <action selector="didTapMenu" destination="Ouk-74-1Ca" eventType="touchUpInside" id="WUa-AB-Pvl"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IHMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDl-Pw-Aqd">
+                                        <rect key="frame" x="170.5" y="16" width="73" height="33.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="XG4-mw-gDg" firstAttribute="trailing" secondItem="Nnn-dK-boW" secondAttribute="trailing" id="POg-No-HQF"/>
+                                    <constraint firstItem="XG4-mw-gDg" firstAttribute="top" secondItem="Nnn-dK-boW" secondAttribute="top" id="Qib-LT-Hmw"/>
+                                    <constraint firstItem="Nnn-dK-boW" firstAttribute="leading" secondItem="ITe-T9-2jR" secondAttribute="leading" constant="24" id="WTN-w0-5v0"/>
+                                    <constraint firstAttribute="height" constant="65" id="Wbh-16-lia"/>
+                                    <constraint firstItem="QDl-Pw-Aqd" firstAttribute="centerY" secondItem="ITe-T9-2jR" secondAttribute="centerY" id="a0G-Do-hqn"/>
+                                    <constraint firstItem="Nnn-dK-boW" firstAttribute="centerY" secondItem="ITe-T9-2jR" secondAttribute="centerY" id="iLr-CY-gJR"/>
+                                    <constraint firstItem="XG4-mw-gDg" firstAttribute="bottom" secondItem="Nnn-dK-boW" secondAttribute="bottom" id="oST-Ck-03x"/>
+                                    <constraint firstItem="XG4-mw-gDg" firstAttribute="leading" secondItem="Nnn-dK-boW" secondAttribute="leading" id="r2L-nG-Ngx"/>
+                                    <constraint firstItem="QDl-Pw-Aqd" firstAttribute="centerX" secondItem="ITe-T9-2jR" secondAttribute="centerX" id="z2F-zD-XhM"/>
+                                </constraints>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="irh-eF-pVP">
+                                <rect key="frame" x="24" y="153" width="390" height="660"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">ABOUT IHMA
+REGISTER NUMBER: 64/04
+IHMA - The National Platform of Indian Homoeopaths is relentless in its efforts to raise the standards of Homoeopathic Education &amp; Practice in India.
+
+IHMA serve the human society by awarding the benefits of homoeopathic system of treatment to public, especially the low socio-economic groups by conducting regular medical camps and fight to maintain the honor and dignity of the profession. Conducts regular CMEs, leadership training programmes, faculty &amp; clinical training , PSC, UPSC &amp; PG Entrance coaching, conferences, newsletters &amp; magazines along with integrated medical research.
+
+It has fought tooth and nail many absurd decisions of the authorities concerned and this way gained maximum acceptance among the homoeopathic community which is evident from the growth it achieved along the length and breadth of India.
+
+INTRODUCTION TO HOMOEOPATHY EDUCATIONAL SERIES
+Since its inception, IHMA took firm stand against the corruption and nepotism that were prevalent in the Central Council of Homoeopathy at the time. The corruptions were so gross that there were even vigilance cases against some of the top office bearers of the CCH. As a result of the complaints filed by the IHMA before the enquiry commission led by Honourable Justice Usha Verma, the then CCH were dismissed and new members were elected.
+
+HISTORY OF IHMA
+</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" red="0.79467790447397235" green="0.80254600253807107" blue="0.80254600253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">It has fought tooth and nail many absurd decisions of the authorities concerned and this way gained maximum acceptance among the homeopathic community which is evident from the growth.</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.79467790447397235" green="0.80254600253807107" blue="0.80254600253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Dss-3t-dil"/>
+                        <color key="backgroundColor" red="0.090196078431372548" green="0.41568627450980389" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="irh-eF-pVP" firstAttribute="top" secondItem="ITe-T9-2jR" secondAttribute="bottom" id="307-x8-3x9"/>
+                            <constraint firstItem="Dss-3t-dil" firstAttribute="trailing" secondItem="irh-eF-pVP" secondAttribute="trailing" id="Bkx-sB-fk3"/>
+                            <constraint firstItem="ITe-T9-2jR" firstAttribute="top" secondItem="Dss-3t-dil" secondAttribute="top" id="E61-af-QVA"/>
+                            <constraint firstItem="irh-eF-pVP" firstAttribute="leading" secondItem="Dss-3t-dil" secondAttribute="leading" constant="24" id="Hxn-02-lEv"/>
+                            <constraint firstItem="ITe-T9-2jR" firstAttribute="leading" secondItem="Dss-3t-dil" secondAttribute="leading" id="K5e-C1-6dI"/>
+                            <constraint firstItem="Dss-3t-dil" firstAttribute="bottom" secondItem="irh-eF-pVP" secondAttribute="bottom" id="yVm-3V-ei6"/>
+                            <constraint firstItem="ITe-T9-2jR" firstAttribute="trailing" secondItem="Dss-3t-dil" secondAttribute="trailing" id="ynV-P9-AU9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RMK-UJ-1pd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ewf-eP-l4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2314" y="1144"/>
         </scene>
         <!--Web View View Controller-->
         <scene sceneID="GEf-iT-R8Z">
@@ -351,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pMf-CX-5Ky" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2314" y="1189"/>
+            <point key="canvasLocation" x="-1536" y="1144"/>
         </scene>
         <!--Courses-->
         <scene sceneID="f5E-Jm-Bhw">
@@ -363,7 +460,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="kXe-35-oQC" kind="relationship" relationship="rootViewController" id="sE2-Gs-qlW"/>
+                        <segue destination="wTd-Cz-Rys" kind="relationship" relationship="rootViewController" id="zFx-CB-rID"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wED-Bn-eTc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -379,9 +476,6 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="OUo-0s-Kba" kind="relationship" relationship="rootViewController" id="BBR-4p-7bh"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zee-lZ-6jY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -402,7 +496,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ely-el-U1L" userLabel="Navbar">
-                                <rect key="frame" x="0.0" y="88" width="414" height="65"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuTidingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="uSu-eX-ycd">
                                         <rect key="frame" x="24" y="20" width="25" height="25"/>
@@ -430,16 +524,16 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose                                      Your Course" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1Y-t1-SBo">
-                                <rect key="frame" x="24" y="153" width="365" height="120"/>
+                                <rect key="frame" x="24" y="109" width="365" height="120"/>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czk-JU-Dq5">
-                                <rect key="frame" x="0.0" y="343" width="414" height="826"/>
+                                <rect key="frame" x="0.0" y="299" width="414" height="870"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4pM-oT-Y97">
-                                        <rect key="frame" x="0.0" y="30" width="414" height="444"/>
+                                        <rect key="frame" x="0.0" y="30" width="414" height="488"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="separatorColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="sectionIndexColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -535,7 +629,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gfy-Cs-31Y">
-                                <rect key="frame" x="14" y="288" width="375" height="75"/>
+                                <rect key="frame" x="14" y="244" width="375" height="75"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search-1" translatesAutoresizingMaskIntoConstraints="NO" id="ygC-QQ-Frx">
                                         <rect key="frame" x="20" y="17" width="30" height="40"/>
@@ -606,7 +700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JXo-AC-DCY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1536" y="1201"/>
+            <point key="canvasLocation" x="-807" y="1894"/>
         </scene>
     </scenes>
     <resources>

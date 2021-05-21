@@ -31,7 +31,7 @@ class WebViewViewController: BaseViewController {
 //        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
         // Your webView code goes here
 
-           let url = URL(string: "http://elearnihma.in/")//https://www.youtube.com
+           let url = URL(string: "http://elearnihma.in/course/index.php")//http://elearnihma.in/https://www.youtube.com
            let requestObj = URLRequest(url: url! as URL)
        webView.load(requestObj)
         usageIndicator.stopAnimating()
