@@ -98,11 +98,11 @@
             </objects>
             <point key="canvasLocation" x="-1516" y="-424"/>
         </scene>
-        <!--Home-->
+        <!--About US-->
         <scene sceneID="2iz-DE-bzP">
             <objects>
                 <navigationController id="Mmk-XV-LBm" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="homekit" catalog="system" id="qwx-JU-ZUv">
+                    <tabBarItem key="tabBarItem" title="About US" image="homekit" catalog="system" id="qwx-JU-ZUv">
                         <color key="badgeColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lru-tm-CrL">
@@ -284,9 +284,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YU4-YT-Gd1">
                                 <rect key="frame" x="0.0" y="288" width="414" height="628"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nancy Salmoren" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAg-wC-8b5">
-                                        <rect key="frame" x="57.5" y="50" width="299" height="41"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nancy Salmoren" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAg-wC-8b5">
+                                        <rect key="frame" x="64.5" y="50" width="285" height="41"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -671,10 +671,10 @@
                                     <constraint firstItem="QDl-Pw-Aqd" firstAttribute="centerX" secondItem="ITe-T9-2jR" secondAttribute="centerX" id="z2F-zD-XhM"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="irh-eF-pVP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="irh-eF-pVP">
                                 <rect key="frame" x="24" y="153" width="366" height="660"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">ABOUT IHMA
+                                <string key="text">ABOUT IHMA
 REGISTER NUMBER: 64/04
 IHMA - The National Platform of Indian Homoeopaths is relentless in its efforts to raise the standards of Homoeopathic Education &amp; Practice in India.
 
@@ -686,7 +686,7 @@ INTRODUCTION TO HOMOEOPATHY EDUCATIONAL SERIES
 Since its inception, IHMA took firm stand against the corruption and nepotism that were prevalent in the Central Council of Homoeopathy at the time. The corruptions were so gross that there were even vigilance cases against some of the top office bearers of the CCH. As a result of the complaints filed by the IHMA before the enquiry commission led by Honourable Justice Usha Verma, the then CCH were dismissed and new members were elected.
 
 HISTORY OF IHMA
-It has fought tooth and nail many absurd decisions of the authorities concerned and this way gained maximum acceptance among the homeopathic community which is evident from the growth.</mutableString>
+It has fought tooth and nail many absurd decisions of the authorities concerned and this way gained maximum acceptance among the homeopathic community which is evident from the growth.</string>
                                 <color key="textColor" red="0.79467790447397235" green="0.80254600253807107" blue="0.80254600253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -736,6 +736,10 @@ It has fought tooth and nail many absurd decisions of the authorities concerned 
                                 <rect key="frame" x="197" y="440" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JS7-52-fbO">
+                                <rect key="frame" x="161" y="448" width="150" height="4"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jU7-Lu-lQq"/>
                         <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -751,6 +755,7 @@ It has fought tooth and nail many absurd decisions of the authorities concerned 
                     <navigationItem key="navigationItem" id="IOg-Hn-Zf9"/>
                     <connections>
                         <outlet property="lbl" destination="qOj-If-Uqb" id="na2-AJ-7BP"/>
+                        <outlet property="progressView" destination="JS7-52-fbO" id="IwL-6k-yUe"/>
                         <outlet property="usageIndicator" destination="g7P-ut-xmj" id="o2a-OC-Fc0"/>
                         <outlet property="webView" destination="Uw0-Ql-05i" id="DHJ-Jf-tVe"/>
                     </connections>
@@ -776,11 +781,11 @@ It has fought tooth and nail many absurd decisions of the authorities concerned 
             </objects>
             <point key="canvasLocation" x="-1535" y="428"/>
         </scene>
-        <!--Profile-->
+        <!--View Profile-->
         <scene sceneID="6Hx-TH-xcR">
             <objects>
                 <navigationController id="18D-mT-qTT" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Profile" image="profile" id="kIX-PR-Crb"/>
+                    <tabBarItem key="tabBarItem" title="View Profile" image="profile" id="kIX-PR-Crb"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="87D-Cf-AZV">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

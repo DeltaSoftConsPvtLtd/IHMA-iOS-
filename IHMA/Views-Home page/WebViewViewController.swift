@@ -16,38 +16,45 @@ class WebViewViewController: BaseViewController,WKNavigationDelegate {
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var lbl: UILabel!
-    var downloadCheckTimer = Timer()
     var recorderTimer: Timer?
     
+    @IBOutlet weak var progressView: UIProgressView!
+    
     override func viewDidLoad() {
-        sideMenu()
-        usageIndicator.isHidden = false
-        usageIndicator.startAnimating()
         webView.navigationDelegate = self
         super.viewDidLoad()
+        preventScreen()
+        setupUI()
         
         self.webView.configuration.processPool.perform(Selector(("_setCookieAcceptPolicy:")), with: HTTPCookie.AcceptPolicy.always)
-        lbl.text = "Second Page"
-
-        //Notification fired when screen is captured.
-//        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+        
+       
         // Your webView code goes here
 
            let url = URL(string: "http://elearnihma.in/course/index.php")//http://elearnihma.in/https://www.youtube.com
            let requestObj = URLRequest(url: url! as URL)
        webView.load(requestObj)
-        usageIndicator.stopAnimating()
-        usageIndicator.isHidden = true
-        
+       
+    }
+    
+   //MARK:- to set up UI
+    func setupUI() {
+        lbl.text = "Second Page"
+    }
+    
+   //MARK:- Func to call to prevent screen recording and screenshots
+    func preventScreen() {
+        //Notification fired when screen is captured.
+        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
         //MARK:- Func to prevent screen recording
         recorderTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(isRecording
 ), userInfo: nil, repeats: true)
-}
-   
+    }
 //    MARK:- Screenshot capture
     @objc func didTakeScreenshot(notification:Notification) -> Void {
 
        //screenshot
+        exit(0);
 
         }
     
@@ -71,10 +78,7 @@ class WebViewViewController: BaseViewController,WKNavigationDelegate {
 
     }
 
-    func webView(webView: WKWebView!, didFinishNavigation navigation: WKNavigation!) {
-        //print("Finished navigating to url \(webView.url)");
-        
-      }
+   
 }
 
 

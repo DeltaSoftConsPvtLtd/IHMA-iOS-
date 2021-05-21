@@ -582,8 +582,9 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yep-sX-IK6">
-                                <rect key="frame" x="149" y="731.5" width="116" height="30"/>
-                                <state key="normal" title="REGISTER HERE.">
+                                <rect key="frame" x="109" y="716.5" width="196" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="New Users Register Here.">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -656,7 +657,7 @@
                             <constraint firstItem="qJ0-2B-xcO" firstAttribute="trailing" secondItem="58D-PF-Sas" secondAttribute="trailing" constant="25" id="8vO-xB-Kn1"/>
                             <constraint firstItem="3G7-Ab-EGV" firstAttribute="trailing" secondItem="58D-PF-Sas" secondAttribute="trailing" id="A4j-8G-CUC"/>
                             <constraint firstItem="eIf-Vz-FQ2" firstAttribute="leading" secondItem="qJ0-2B-xcO" secondAttribute="leading" constant="50" id="I6l-BK-Utt"/>
-                            <constraint firstItem="yep-sX-IK6" firstAttribute="top" secondItem="eIf-Vz-FQ2" secondAttribute="bottom" constant="45" id="OGG-H5-xSS"/>
+                            <constraint firstItem="yep-sX-IK6" firstAttribute="top" secondItem="eIf-Vz-FQ2" secondAttribute="bottom" constant="30" id="OGG-H5-xSS"/>
                             <constraint firstItem="NjI-rM-J6A" firstAttribute="top" secondItem="qJ0-2B-xcO" secondAttribute="top" constant="150" id="PtC-za-GEL"/>
                             <constraint firstItem="eIf-Vz-FQ2" firstAttribute="top" secondItem="3G7-Ab-EGV" secondAttribute="bottom" constant="49" id="Uzu-jQ-Wxr"/>
                             <constraint firstItem="qJ0-2B-xcO" firstAttribute="trailing" secondItem="NmB-Jl-SKT" secondAttribute="trailing" constant="8" id="YFG-LQ-irE"/>
