@@ -73,41 +73,17 @@ class RegistrationTableDataSource: NSObject {
         self.parentView?.activityIndicator.isHidden = false
         self.parentView?.activityIndicator.startAnimating()
         
-        if firstName.count != 0 {
-            if lastName.count != 0 {
-                if regNumber != 0 {
-                    if mobile != 0 {
-                        if email.count != 0 {
-                            if homeAddress.count != 0 {
+        if (firstName != nil && lastName != nil && regNumber != nil && mobile != nil && email != nil)  {
+            
                                 
                                 signupApi()
-                                
-                            } else {
-                                //home address
-                            }
-                            
-                        } else {
-                            //email
-                        }
-                    } else {
-                            //mobile
-                        
-                    }
-                    
-                } else {
-                    //registration number
-                }
-                
-            } else {
-                //lastname
-            }
-            
         } else {
-            //firstname
+            self.parentView?.showAlertView(heading: "Fields not Entered", message: "Please enter all fields to register")
+            self.parentView?.activityIndicator.isHidden = true
+            self.parentView?.activityIndicator.stopAnimating()
+            
         }
-
-
-        
+    
 //        registrationApi()
         
     }
