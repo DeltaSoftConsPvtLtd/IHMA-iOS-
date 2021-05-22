@@ -17,6 +17,7 @@ class WebViewViewController: BaseViewController{
     @IBOutlet weak var lbl: UILabel!
     var recorderTimer: Timer?
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var progressView: UIProgressView!
     
     override func viewDidLoad() {
@@ -31,8 +32,10 @@ class WebViewViewController: BaseViewController{
    //MARK:- to set up UI
     func setupUI() {
         lbl.text = "Second Page"
-        progressView.setProgress(1000.02, animated: true)
-        progressView.isHidden = false
+//        progressView.setProgress(1000.02, animated: true)
+//        progressView.isHidden = false
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
     }
     
    //MARK:- Func to call to prevent screen recording and screenshots
@@ -56,7 +59,23 @@ class WebViewViewController: BaseViewController{
     @objc func didTakeScreenshot(notification:Notification) -> Void {
 
        //screenshot
-        exit(0);
+        //MARK:- Alert
+        DispatchQueue.main.async {
+
+            let alert = UIAlertController(title: "ScreenShot Not allowed", message: "Please dont take screenshots of the app.App is closing", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            // Create the actions
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+                    UIAlertAction in
+                //Action for exiting the app
+                exit(0);
+                }
+            // Add the actions
+                alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        }
+        
+        
 
         }
     
@@ -67,7 +86,11 @@ class WebViewViewController: BaseViewController{
 
                 if (screen.isCaptured) {
 
-                    exit(0);
+                    showAlertView(heading: "Recording on", message: "Screen Recording feature on. Please disabe it. App is closing")
+                    //MARK:- Exit app
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        exit(0);
+                    }
                     print("screen is recorded")
 
                     return true
@@ -79,13 +102,22 @@ class WebViewViewController: BaseViewController{
             return false
 
     }
-}
+//    let isCaptured = UIScreen.main.isCaptured
+//
+//    if isCaptured {
+//        blockView.hidden = false
+//    } else {
+//        blockView.hidden = true
+//    }
+}//End of class
 
 //MARK:- Delegate functions of webview
 extension WebViewViewController:WKNavigationDelegate
 {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        progressView.isHidden = true
+//        progressView.isHidden = true
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
         }
 }
 
