@@ -545,12 +545,18 @@
                                     <constraint firstItem="dsW-7O-LdW" firstAttribute="top" secondItem="BHD-lB-yFO" secondAttribute="top" id="yaR-La-8H9"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy profile picture" translatesAutoresizingMaskIntoConstraints="NO" id="FWv-LZ-nGB">
-                                <rect key="frame" x="132" y="188" width="150" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="userwhiteimage" translatesAutoresizingMaskIntoConstraints="NO" id="FWv-LZ-nGB">
+                                <rect key="frame" x="169.5" y="238" width="75" height="75"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="888-S8-qhc"/>
-                                    <constraint firstAttribute="height" constant="150" id="Ohu-RU-0Da"/>
+                                    <constraint firstAttribute="width" constant="75" id="888-S8-qhc"/>
+                                    <constraint firstAttribute="height" constant="75" id="Ohu-RU-0Da"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="changeColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sY4-UT-kGC" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="88" width="414" height="65"/>
@@ -589,7 +595,7 @@
                             <constraint firstItem="mRw-uv-Xfc" firstAttribute="trailing" secondItem="sY4-UT-kGC" secondAttribute="trailing" id="EUi-A9-v7M"/>
                             <constraint firstItem="sY4-UT-kGC" firstAttribute="top" secondItem="mRw-uv-Xfc" secondAttribute="top" id="KUJ-a4-27t"/>
                             <constraint firstAttribute="bottom" secondItem="YU4-YT-Gd1" secondAttribute="bottom" constant="-20" id="Kdv-pO-Q2F"/>
-                            <constraint firstItem="YU4-YT-Gd1" firstAttribute="top" secondItem="FWv-LZ-nGB" secondAttribute="bottom" constant="-50" id="Y8e-af-HjV"/>
+                            <constraint firstItem="YU4-YT-Gd1" firstAttribute="top" secondItem="FWv-LZ-nGB" secondAttribute="bottom" constant="-25" id="Y8e-af-HjV"/>
                             <constraint firstAttribute="bottom" secondItem="sDg-ne-9EK" secondAttribute="bottom" id="b9S-H7-WPR"/>
                             <constraint firstItem="YU4-YT-Gd1" firstAttribute="leading" secondItem="mRw-uv-Xfc" secondAttribute="leading" id="bPU-I7-PGX"/>
                             <constraint firstItem="FWv-LZ-nGB" firstAttribute="centerX" secondItem="mRw-uv-Xfc" secondAttribute="centerX" id="dR5-Q3-LGz"/>
@@ -1044,7 +1050,6 @@
     <resources>
         <image name="IHMA logo " width="99" height="96"/>
         <image name="MenuTidingsIcon" width="96" height="96"/>
-        <image name="dummy profile picture" width="840" height="420"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="icons8-magazine-25" width="25" height="25"/>
         <image name="icons8-notification-25" width="25" height="25"/>
@@ -1052,6 +1057,7 @@
         <image name="profile" width="25" height="25"/>
         <image name="search-1" width="512" height="512"/>
         <image name="seasonsofthanks" width="500" height="275"/>
+        <image name="userwhiteimage" width="23" height="27"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
