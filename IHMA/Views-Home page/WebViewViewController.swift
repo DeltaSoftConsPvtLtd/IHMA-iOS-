@@ -36,6 +36,10 @@ class WebViewViewController: BaseViewController{
 //        progressView.isHidden = false
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
+        self.webView!.isOpaque = false
+        self.webView!.backgroundColor = UIColor.clear
+        self.webView!.scrollView.backgroundColor = UIColor.clear
+
     }
     
    //MARK:- Func to call to prevent screen recording and screenshots
