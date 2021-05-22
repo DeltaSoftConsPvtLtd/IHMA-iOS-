@@ -651,7 +651,14 @@
                                             <action selector="didTapMenu" destination="Ouk-74-1Ca" eventType="touchUpInside" id="WUa-AB-Pvl"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IHMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDl-Pw-Aqd">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IHMA logo " translatesAutoresizingMaskIntoConstraints="NO" id="gHv-3h-ed9">
+                                        <rect key="frame" x="182" y="7.5" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="muI-QL-Xgh"/>
+                                            <constraint firstAttribute="height" constant="50" id="s46-vc-4OR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IHMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QDl-Pw-Aqd">
                                         <rect key="frame" x="170.5" y="16" width="73" height="33.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -660,6 +667,8 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="gHv-3h-ed9" firstAttribute="centerX" secondItem="ITe-T9-2jR" secondAttribute="centerX" id="DLu-iI-JyU"/>
+                                    <constraint firstItem="gHv-3h-ed9" firstAttribute="centerY" secondItem="ITe-T9-2jR" secondAttribute="centerY" id="FmO-B4-QQX"/>
                                     <constraint firstItem="XG4-mw-gDg" firstAttribute="trailing" secondItem="Nnn-dK-boW" secondAttribute="trailing" id="POg-No-HQF"/>
                                     <constraint firstItem="XG4-mw-gDg" firstAttribute="top" secondItem="Nnn-dK-boW" secondAttribute="top" id="Qib-LT-Hmw"/>
                                     <constraint firstItem="Nnn-dK-boW" firstAttribute="leading" secondItem="ITe-T9-2jR" secondAttribute="leading" constant="24" id="WTN-w0-5v0"/>
@@ -732,19 +741,20 @@ It has fought tooth and nail many absurd decisions of the authorities concerned 
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="g7P-ut-xmj">
-                                <rect key="frame" x="197" y="440" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </activityIndicatorView>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JS7-52-fbO">
-                                <rect key="frame" x="161" y="448" width="150" height="4"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="JS7-52-fbO">
+                                <rect key="frame" x="132" y="446" width="150" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="5Vw-52-EgZ"/>
+                                    <constraint firstAttribute="width" constant="150" id="Biz-ta-0yI"/>
+                                </constraints>
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jU7-Lu-lQq"/>
                         <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="JS7-52-fbO" firstAttribute="centerY" secondItem="BEg-fe-Okj" secondAttribute="centerY" id="3qT-Jd-AOx"/>
                             <constraint firstItem="qOj-If-Uqb" firstAttribute="centerX" secondItem="BEg-fe-Okj" secondAttribute="centerX" id="K7S-ya-4c6"/>
+                            <constraint firstItem="JS7-52-fbO" firstAttribute="centerX" secondItem="BEg-fe-Okj" secondAttribute="centerX" id="S0J-S1-wNL"/>
                             <constraint firstItem="Uw0-Ql-05i" firstAttribute="leading" secondItem="jU7-Lu-lQq" secondAttribute="leading" id="U62-E9-YmS"/>
                             <constraint firstItem="jU7-Lu-lQq" firstAttribute="bottom" secondItem="Uw0-Ql-05i" secondAttribute="bottom" id="aY2-hP-1O6"/>
                             <constraint firstItem="qOj-If-Uqb" firstAttribute="centerY" secondItem="BEg-fe-Okj" secondAttribute="centerY" id="b0a-Wk-8HZ"/>
@@ -756,7 +766,6 @@ It has fought tooth and nail many absurd decisions of the authorities concerned 
                     <connections>
                         <outlet property="lbl" destination="qOj-If-Uqb" id="na2-AJ-7BP"/>
                         <outlet property="progressView" destination="JS7-52-fbO" id="IwL-6k-yUe"/>
-                        <outlet property="usageIndicator" destination="g7P-ut-xmj" id="o2a-OC-Fc0"/>
                         <outlet property="webView" destination="Uw0-Ql-05i" id="DHJ-Jf-tVe"/>
                     </connections>
                 </viewController>
@@ -1021,6 +1030,7 @@ It has fought tooth and nail many absurd decisions of the authorities concerned 
         </scene>
     </scenes>
     <resources>
+        <image name="IHMA logo " width="99" height="96"/>
         <image name="MenuTidingsIcon" width="96" height="96"/>
         <image name="dummy profile picture" width="840" height="420"/>
         <image name="homekit" catalog="system" width="128" height="106"/>

@@ -18,9 +18,9 @@ class RegistrationTableDataSource: NSObject {
     var email:String = ""
     var homeAddress:String = ""
     var clinicAddress:String = ""
-    var states:String = ""
-    var district:String = ""
-    var chapter:Int?
+    var states:String = "Kerala"
+    var district:String = "Thrissur"
+    var chapter:Int = 1
     var collageName:Int = 1
     var membershipFee:Int = 1
     var status = "pending_approval"
@@ -97,7 +97,7 @@ class RegistrationTableDataSource: NSObject {
     }
     func signupApi() {
         let url = "\(baseUrl)\(userSignup)"
-        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: chapter!, username: userName, email: email, password: password, password2: password, id_no: idNo, blood_group: bloodGroup)
+        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: chapter, username: userName, email: email, password: password, password2: password, id_no: idNo, blood_group: bloodGroup)
         
         ApiClient.shared.getData("POST", url, post, RegistrationModel.self) { (sucess, resp, msg) in
             
@@ -172,8 +172,8 @@ extension RegistrationTableDataSource: UITableViewDataSource{
         }
         else if (indexPath.row < 9){
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
-            if (self.parentView?.segmentedControlOutlet.selectedSegmentIndex == 0)
-            {
+//            if (self.parentView?.segmentedControlOutlet.selectedSegmentIndex == 0)
+//            {
                 cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
                 cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
                 cell.lblValidation.text = "Please enter valid \((self.parentView?.textFieldNames[indexPath.row])!)"
@@ -244,10 +244,10 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                 default:
                     break
                 }
-            } else {
-                cell.lblField.text = "Field Name"
-                cell.fieldTxt.text = "Demo"
-            }//End of segmented control outlet condition
+//            } else {
+//                cell.lblField.text = "Field Name"
+//                cell.fieldTxt.text = "Demo"
+//            }//End of segmented control outlet condition
         
 //            cell.fieldView.addShadow(location: .bottom)
 //        cell.fieldTxt.addUnderLine()

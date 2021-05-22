@@ -10,9 +10,8 @@ import UIKit
 import WebKit
 
 
-class WebViewViewController: BaseViewController,WKNavigationDelegate {
+class WebViewViewController: BaseViewController{
     
-    @IBOutlet weak var usageIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var lbl: UILabel!
@@ -25,21 +24,15 @@ class WebViewViewController: BaseViewController,WKNavigationDelegate {
         super.viewDidLoad()
         preventScreen()
         setupUI()
-        
-        self.webView.configuration.processPool.perform(Selector(("_setCookieAcceptPolicy:")), with: HTTPCookie.AcceptPolicy.always)
-        
-       
-        // Your webView code goes here
-
-           let url = URL(string: "http://elearnihma.in/course/index.php")//http://elearnihma.in/https://www.youtube.com
-           let requestObj = URLRequest(url: url! as URL)
-       webView.load(requestObj)
+        loadWebView()
        
     }
     
    //MARK:- to set up UI
     func setupUI() {
         lbl.text = "Second Page"
+        progressView.setProgress(1000.02, animated: true)
+        progressView.isHidden = false
     }
     
    //MARK:- Func to call to prevent screen recording and screenshots
@@ -49,6 +42,15 @@ class WebViewViewController: BaseViewController,WKNavigationDelegate {
         //MARK:- Func to prevent screen recording
         recorderTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(isRecording
 ), userInfo: nil, repeats: true)
+    }
+    
+    func loadWebView() {
+        self.webView.configuration.processPool.perform(Selector(("_setCookieAcceptPolicy:")), with: HTTPCookie.AcceptPolicy.always)
+        // Your webView code goes here
+
+           let url = URL(string: "http://elearnihma.in/course/index.php")//http://elearnihma.in/https://www.youtube.com
+           let requestObj = URLRequest(url: url! as URL)
+            webView.load(requestObj)
     }
 //    MARK:- Screenshot capture
     @objc func didTakeScreenshot(notification:Notification) -> Void {
@@ -77,8 +79,14 @@ class WebViewViewController: BaseViewController,WKNavigationDelegate {
             return false
 
     }
+}
 
-   
+//MARK:- Delegate functions of webview
+extension WebViewViewController:WKNavigationDelegate
+{
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        progressView.isHidden = true
+        }
 }
 
 
