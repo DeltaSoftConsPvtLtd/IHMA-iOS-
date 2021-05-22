@@ -16,6 +16,7 @@ class FormTableViewCell: UITableViewCell,UITextFieldDelegate {
     @IBOutlet weak var lblValidation: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
+        fieldTxt.delegate = self
         // Initialization code
     }
 
@@ -25,5 +26,9 @@ class FormTableViewCell: UITableViewCell,UITextFieldDelegate {
         // Configure the view for the selected state
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder() // dismiss keyboard
+            return true
+        }
 
 }

@@ -61,6 +61,9 @@ class LoginViewController: BaseViewController {
        
         imgLogo.makeRounded()
         activityIndicator.isHidden = true
+        
+        txtUsername.delegate = self
+        txtPassword.delegate = self
     }
     
     //MARK:- update constraint for screen sizes
@@ -93,6 +96,14 @@ class LoginViewController: BaseViewController {
         authentication!.authenticateUserWith(userName, andPassword: password)
     }
 
+}
+
+//MARK:- Text field delegate functions
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // dismiss keyboard
+        return true
+    }
 }
 
 
