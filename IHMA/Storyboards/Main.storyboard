@@ -680,40 +680,39 @@
                                     <constraint firstItem="QDl-Pw-Aqd" firstAttribute="centerX" secondItem="ITe-T9-2jR" secondAttribute="centerX" id="z2F-zD-XhM"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" bouncesZoom="NO" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="irh-eF-pVP">
-                                <rect key="frame" x="24" y="153" width="366" height="660"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">ABOUT IHMA
-REGISTER NUMBER: 64/04
-IHMA - The National Platform of Indian Homoeopaths is relentless in its efforts to raise the standards of Homoeopathic Education &amp; Practice in India.
-
-IHMA serve the human society by awarding the benefits of homoeopathic system of treatment to public, especially the low socio-economic groups by conducting regular medical camps and fight to maintain the honor and dignity of the profession. Conducts regular CMEs, leadership training programmes, faculty &amp; clinical training , PSC, UPSC &amp; PG Entrance coaching, conferences, newsletters &amp; magazines along with integrated medical research.
-
-It has fought tooth and nail many absurd decisions of the authorities concerned and this way gained maximum acceptance among the homoeopathic community which is evident from the growth it achieved along the length and breadth of India.
-
-INTRODUCTION TO HOMOEOPATHY EDUCATIONAL SERIES
-Since its inception, IHMA took firm stand against the corruption and nepotism that were prevalent in the Central Council of Homoeopathy at the time. The corruptions were so gross that there were even vigilance cases against some of the top office bearers of the CCH. As a result of the complaints filed by the IHMA before the enquiry commission led by Honourable Justice Usha Verma, the then CCH were dismissed and new members were elected.
-
-HISTORY OF IHMA
-It has fought tooth and nail many absurd decisions of the authorities concerned and this way gained maximum acceptance among the homeopathic community which is evident from the growth.</string>
-                                <color key="textColor" red="0.79467790447397235" green="0.80254600253807107" blue="0.80254600253807107" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name=".SFNS-Regular" family=".AppleSystemUIFont" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GjY-I6-7b4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" red="0.10588235294117647" green="0.54509803921568623" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="xwR-05-82e">
+                                <rect key="frame" x="188.5" y="432" width="37" height="37"/>
+                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="color" red="0.95294117649999999" green="0.15686274510000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Dss-3t-dil"/>
-                        <color key="backgroundColor" red="0.090196078431372548" green="0.41568627450980389" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.54509803921568623" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="irh-eF-pVP" firstAttribute="top" secondItem="ITe-T9-2jR" secondAttribute="bottom" id="307-x8-3x9"/>
-                            <constraint firstItem="Dss-3t-dil" firstAttribute="trailing" secondItem="irh-eF-pVP" secondAttribute="trailing" constant="24" id="Bkx-sB-fk3"/>
+                            <constraint firstItem="xwR-05-82e" firstAttribute="centerY" secondItem="Dss-3t-dil" secondAttribute="centerY" id="8VW-J7-L7g"/>
+                            <constraint firstItem="xwR-05-82e" firstAttribute="centerX" secondItem="Dss-3t-dil" secondAttribute="centerX" id="AOo-Wl-ZyU"/>
                             <constraint firstItem="ITe-T9-2jR" firstAttribute="top" secondItem="Dss-3t-dil" secondAttribute="top" id="E61-af-QVA"/>
-                            <constraint firstItem="irh-eF-pVP" firstAttribute="leading" secondItem="Dss-3t-dil" secondAttribute="leading" constant="24" id="Hxn-02-lEv"/>
                             <constraint firstItem="ITe-T9-2jR" firstAttribute="leading" secondItem="Dss-3t-dil" secondAttribute="leading" id="K5e-C1-6dI"/>
-                            <constraint firstItem="Dss-3t-dil" firstAttribute="bottom" secondItem="irh-eF-pVP" secondAttribute="bottom" id="yVm-3V-ei6"/>
+                            <constraint firstItem="Dss-3t-dil" firstAttribute="bottom" secondItem="GjY-I6-7b4" secondAttribute="bottom" id="Pqu-hE-VWH"/>
+                            <constraint firstItem="Dss-3t-dil" firstAttribute="trailing" secondItem="GjY-I6-7b4" secondAttribute="trailing" id="gAT-Z2-0YG"/>
+                            <constraint firstItem="GjY-I6-7b4" firstAttribute="leading" secondItem="Dss-3t-dil" secondAttribute="leading" id="nzm-Tz-4Gb"/>
+                            <constraint firstItem="GjY-I6-7b4" firstAttribute="top" secondItem="Dss-3t-dil" secondAttribute="top" id="pJQ-0d-G96"/>
                             <constraint firstItem="ITe-T9-2jR" firstAttribute="trailing" secondItem="Dss-3t-dil" secondAttribute="trailing" id="ynV-P9-AU9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RMK-UJ-1pd"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="xwR-05-82e" id="CmF-8c-NUt"/>
+                        <outlet property="webView" destination="GjY-I6-7b4" id="viA-rd-HSv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewf-eP-l4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -727,9 +726,9 @@ It has fought tooth and nail many absurd decisions of the authorities concerned 
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uw0-Ql-05i">
+                            <wkWebView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uw0-Ql-05i">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.10588235294117647" green="0.54509803921568623" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                                 <wkWebViewConfiguration key="configuration" suppressesIncrementalRendering="YES">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -755,7 +754,7 @@ It has fought tooth and nail many absurd decisions of the authorities concerned 
                             </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jU7-Lu-lQq"/>
-                        <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.10588235294117647" green="0.54509803921568623" blue="0.96078431372549022" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="JS7-52-fbO" firstAttribute="centerY" secondItem="BEg-fe-Okj" secondAttribute="centerY" id="3qT-Jd-AOx"/>
                             <constraint firstItem="qOj-If-Uqb" firstAttribute="centerX" secondItem="BEg-fe-Okj" secondAttribute="centerX" id="K7S-ya-4c6"/>

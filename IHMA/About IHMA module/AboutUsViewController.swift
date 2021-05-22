@@ -6,23 +6,114 @@
 //
 
 import UIKit
+import WebKit
 
 class AboutUsViewController: BaseViewController {
 
  
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setupUI()
-        sideMenu()
-        
-     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var webView: WKWebView!
+    var recorderTimer: Timer?
 
-        // Do any additional setup after loading the view.
+  
+    
+    override func viewDidLoad() {
+        webView.navigationDelegate = self
+        super.viewDidLoad()
+        preventScreen()
+        setupUI()
+        loadWebView()
+       
     }
     
+   //MARK:- to set up UI
     func setupUI() {
-        view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")
         
+//        progressView.setProgress(1000.02, animated: true)
+//        progressView.isHidden = false
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
     }
     
+   //MARK:- Func to call to prevent screen recording and screenshots
+    func preventScreen() {
+        //Notification fired when screen is captured.
+        NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+        //MARK:- Func to prevent screen recording
+        recorderTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(isRecording
+), userInfo: nil, repeats: true)
+    }
+    
+    func loadWebView() {
+        self.webView.configuration.processPool.perform(Selector(("_setCookieAcceptPolicy:")), with: HTTPCookie.AcceptPolicy.always)
+        // Your webView code goes here
+
+           let url = URL(string: "https://www.ihma.in/page/about-us")//  http://elearnihma.in/https://www.youtube.comhttps://www.ihma.in/page/about-us
+           let requestObj = URLRequest(url: url! as URL)
+            webView.load(requestObj)
+    }
+//    MARK:- Screenshot capture
+    @objc func didTakeScreenshot(notification:Notification) -> Void {
+
+       //screenshot
+        //MARK:- Alert
+        DispatchQueue.main.async {
+
+            let alert = UIAlertController(title: "ScreenShot Not allowed", message: "Please dont take screenshots of the app.App is closing", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            // Create the actions
+            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
+                    UIAlertAction in
+                //Action for exiting the app
+                exit(0);
+                }
+            // Add the actions
+                alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+        }
+        
+        
+
+        }
+    
+    //MARK:- Screen recording
+    @objc func isRecording() ->Bool {
+
+            for screen in UIScreen.screens {
+
+                if (screen.isCaptured) {
+
+                    showAlertView(heading: "Recording on", message: "Screen Recording feature on. Please disabe it. App is closing")
+                    //MARK:- Exit app
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                        exit(0);
+                    }
+                    print("screen is recorded")
+
+                    return true
+
+                }
+
+            }
+
+            return false
+
+    }
+//    let isCaptured = UIScreen.main.isCaptured
+//
+//    if isCaptured {
+//        blockView.hidden = false
+//    } else {
+//        blockView.hidden = true
+//    }
+}//End of class
+
+//MARK:- Delegate functions of webview
+extension AboutUsViewController:WKNavigationDelegate
+{
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+//        progressView.isHidden = true
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        }
 }
