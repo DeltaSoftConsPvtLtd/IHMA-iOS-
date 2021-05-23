@@ -90,7 +90,7 @@ class WebViewViewController: BaseViewController{
 
                 if (screen.isCaptured) {
 
-                    showAlertView(heading: "Recording on", message: "Screen Recording feature on. Please disabe it. App is closing")
+                    showAlertView(heading: "Recording on", message: "Screen Recording feature on. Please disable it. App is closing")
                     //MARK:- Exit app
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         exit(0);

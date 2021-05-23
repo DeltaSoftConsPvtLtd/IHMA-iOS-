@@ -60,20 +60,8 @@ class AboutUsViewController: BaseViewController {
 
        //screenshot
         //MARK:- Alert
-        DispatchQueue.main.async {
+        showAlertView(heading: "ScreenShot Not allowed", message: "Please dont take screenshots of the app.")
 
-            let alert = UIAlertController(title: "ScreenShot Not allowed", message: "Please dont take screenshots of the app.App is closing", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-            // Create the actions
-            let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) {
-                    UIAlertAction in
-                //Action for exiting the app
-                exit(0);
-                }
-            // Add the actions
-                alert.addAction(okAction)
-        self.present(alert, animated: true, completion: nil)
-        }
         
         
 
@@ -86,11 +74,8 @@ class AboutUsViewController: BaseViewController {
 
                 if (screen.isCaptured) {
 
-                    showAlertView(heading: "Recording on", message: "Screen Recording feature on. Please disabe it. App is closing")
-                    //MARK:- Exit app
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                        exit(0);
-                    }
+                    showAlertView(heading: "Recording on", message: "Screen Recording feature on. Please disable it.")
+                  
                     print("screen is recorded")
 
                     return true
