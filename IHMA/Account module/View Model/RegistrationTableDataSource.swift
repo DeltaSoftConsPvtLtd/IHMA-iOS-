@@ -78,7 +78,7 @@ class RegistrationTableDataSource: NSObject {
         self.parentView?.activityIndicator.isHidden = false
         self.parentView?.activityIndicator.startAnimating()
         
-        if (firstName != nil && lastName != nil && regNumber != nil && mobile != nil && email != nil && userName != nil && chapter != nil && states != nil && district != nil && homeAddress != nil)  {
+        if (firstName != nil && lastName != nil && regNumber != nil && mobile != nil && email != nil && userName != nil && chapter != nil && idNo != nil && states != nil && district != nil && homeAddress != nil)  {
             
             if (password == password2) {
                                 signupApi()
