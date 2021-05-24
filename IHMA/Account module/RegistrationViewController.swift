@@ -11,9 +11,9 @@ import UIKit
 class RegistrationViewController: BaseViewController {
     
  
-    let fieldNames = ["First Name", "Last Name", "Registration Number", "Mobile","Email","Address Home","Username","Password","Confirm Password","","","",""]
+    let fieldNames = ["First Name", "Last Name", "Registration Number","Id No.", "Mobile","Email","Address Home","Username","Password","Confirm Password","","","",""]
     let textFieldNames = ["", "", "", "","","","","","","","","",""]
-    let fieldArray = ["","","","","","","","","","State", "District", "Chapter"]
+    let fieldArray = ["","","","","","","","","","","State", "District", "Chapter"]
     @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
     var imagePicker = UIImagePickerController()
     

@@ -25,7 +25,7 @@ class RegistrationTableDataSource: NSObject {
     var membershipFee:Int = 1
     var status = "pending_approval"
     var userType = "doctor"
-    var idNo:Int = 1
+    var idNo:Int?
     var bloodGroup = "A+ve"
     var userName = ""
     var password = ""
@@ -49,16 +49,18 @@ class RegistrationTableDataSource: NSObject {
             case 2:
                 regNumber = Int(sender.text!)
             case 3:
-                mobile = Int(sender.text!)
+                idNo = Int(sender.text!)
             case 4:
-                email = sender.text!
+                mobile = Int(sender.text!)
             case 5:
-                homeAddress = sender.text!
+                email = sender.text!
             case 6:
-                userName = sender.text!
+                homeAddress = sender.text!
             case 7:
-                password = sender.text!
+                userName = sender.text!
             case 8:
+                password = sender.text!
+            case 9:
                 password2 = sender.text!
                 
             default:
@@ -97,7 +99,7 @@ class RegistrationTableDataSource: NSObject {
     }
     func signupApi() {
         let url = "\(baseUrl)\(userSignup)"
-        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: chapter, username: userName, email: email, password: password, password2: password, id_no: idNo, blood_group: bloodGroup)
+        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: chapter, username: userName, email: email, password: password, password2: password, id_no: idNo!, blood_group: bloodGroup)
         
         ApiClient.shared.getData("POST", url, post, RegistrationModel.self) { (sucess, resp, msg) in
             
@@ -163,14 +165,14 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row == 12)
+        if (indexPath.row == 13)
         {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Button", for: indexPath))!  as? SubmitTableViewCell)!
             cell.btnSubmit.layer.cornerRadius = 30
             cell.btnSubmit.addTarget(self,action:#selector(submitBtnTapped(sender:)), for: .touchUpInside)
             return cell
         }
-        else if (indexPath.row < 9){
+        else if (indexPath.row < 10){
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
 //            if (self.parentView?.segmentedControlOutlet.selectedSegmentIndex == 0)
 //            {
@@ -191,23 +193,26 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                 {
                     cell.fieldTxt.text = String(regNumber!)
                 }
-                if (mobile != nil && indexPath.row == 3)
+                if (idNo != nil && indexPath.row == 3) {
+                    cell.fieldTxt.text = String(idNo!)
+                }
+                if (mobile != nil && indexPath.row == 4)
                 {
                     cell.fieldTxt.text = String(mobile!)
                 }
-                if (email != nil && indexPath.row == 4)
+                if (email != nil && indexPath.row == 5)
                 {
                     cell.fieldTxt.text = email
                 }
-                if (homeAddress != nil && indexPath.row == 5)
+                if (homeAddress != nil && indexPath.row == 6)
                 {
                     cell.fieldTxt.text = homeAddress
                 }
-                if (userName != nil && indexPath.row == 6)
+                if (userName != nil && indexPath.row == 7)
                 {
                     cell.fieldTxt.text = userName
                 }
-                if (password != nil && indexPath.row == 7 || indexPath.row == 8)
+                if (password != nil && indexPath.row == 8 || indexPath.row == 9)
                 {
                     cell.fieldTxt.text = password
                 }
@@ -229,17 +234,20 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                     cell.fieldTxt.keyboardType = .numberPad
                 case 3:
                     cell.fieldTxt.isSecureTextEntry = false
-                    cell.fieldTxt.keyboardType = .phonePad
+                    cell.fieldTxt.keyboardType = .numberPad
                 case 4:
                     cell.fieldTxt.isSecureTextEntry = false
-                    cell.fieldTxt.keyboardType = .emailAddress
+                    cell.fieldTxt.keyboardType = .phonePad
                 case 5:
                     cell.fieldTxt.isSecureTextEntry = false
-                    cell.fieldTxt.keyboardType = .alphabet
+                    cell.fieldTxt.keyboardType = .emailAddress
                 case 6:
                     cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .alphabet
                 case 7:
+                    cell.fieldTxt.isSecureTextEntry = false
+                    cell.fieldTxt.keyboardType = .alphabet
+                case 8:
                     cell.fieldTxt.isSecureTextEntry = true
                 default:
                     break
@@ -257,7 +265,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
             
             //MARK:- to populate dropdown lists
             switch indexPath.row {
-            case 9:
+            case 10:
                 cell.dropDown.dataSource = cell.statesArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
@@ -268,7 +276,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                         cell.lblTitle.text = states
                     }
                 }
-            case 10:
+            case 11:
                 cell.dropDown.dataSource = cell.districtsArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
@@ -279,7 +287,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                         cell.lblTitle.text = district
                     }
                 }
-            case 11:
+            case 12:
                 cell.dropDown.dataSource = cell.chapterArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
