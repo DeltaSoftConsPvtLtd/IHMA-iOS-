@@ -47,7 +47,7 @@ class WebViewViewController: BaseViewController{
         //Notification fired when screen is captured.
         NotificationCenter.default.addObserver(self, selector: #selector(didTakeScreenshot(notification:)), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
         //MARK:- Func to prevent screen recording
-        recorderTimer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(isRecording
+        recorderTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(isRecording
 ), userInfo: nil, repeats: true)
     }
     
@@ -106,13 +106,7 @@ class WebViewViewController: BaseViewController{
             return false
 
     }
-//    let isCaptured = UIScreen.main.isCaptured
-//
-//    if isCaptured {
-//        blockView.hidden = false
-//    } else {
-//        blockView.hidden = true
-//    }
+
 }//End of class
 
 //MARK:- Delegate functions of webview
