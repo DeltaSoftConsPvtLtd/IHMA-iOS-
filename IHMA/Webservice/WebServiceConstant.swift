@@ -60,7 +60,7 @@ enum ServiceMethodType
 
 
 
-var baseUrl = "http://lmsihma.co.in/"
+var baseUrl = "https://lmsihma.co.in/"
 
 let userSignIn = "api/login/"
 let userSignup = "api/getRegisterDetail/"
