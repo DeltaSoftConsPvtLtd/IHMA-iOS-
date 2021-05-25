@@ -52,8 +52,8 @@ class Authentication: NSObject {
                         print(resp)
                         let response = resp as! LoginModel
 //                        print(response.data![0].session_token!)
-                       
-                        if (response.data![0].status! == "Authenticated") {
+                    if let authentication = response.data![0].status {
+                        if (authentication == "Authenticated") {
                             //MARK:- activity indicator actions
                             self.parentView?.activityIndicator.stopAnimating()
                             self.parentView?.activityIndicator.isHidden = true
@@ -82,6 +82,9 @@ class Authentication: NSObject {
                             self.parentView?.txtPassword.text = ""
                             self.parentView?.txtUsername.becomeFirstResponder()
                         }//end of if condition
+                    } else { //end of if let
+                        self.parentView?.toastMessage(message: "Something went wrong")
+                    }//end of if let
                     }
                    
                 }//api call
