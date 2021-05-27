@@ -539,7 +539,6 @@
                                             <constraint firstAttribute="width" constant="30" id="qIX-if-PjS"/>
                                         </constraints>
                                         <color key="tintColor" red="0.94509803920000002" green="0.94509803920000002" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Button"/>
                                         <connections>
                                             <action selector="btnSecureTextEntry:" destination="bYR-qg-kxC" eventType="touchUpInside" id="auh-gr-tiy"/>
                                         </connections>
@@ -685,6 +684,7 @@
                         <outlet property="lblUsername" destination="dIP-zY-SEg" id="gRz-ON-MSk"/>
                         <outlet property="loginView" destination="eIf-Vz-FQ2" id="aGQ-6z-k8p"/>
                         <outlet property="passwordView" destination="3G7-Ab-EGV" id="COf-V3-2c9"/>
+                        <outlet property="secureEntryImage" destination="VhH-8x-KQi" id="RMt-3K-KIL"/>
                         <outlet property="txtPassword" destination="EwP-KI-4Be" id="ccw-0O-F8e"/>
                         <outlet property="txtUsername" destination="DOZ-rd-f8o" id="eyw-dg-jA8"/>
                         <outlet property="usernameView" destination="58D-PF-Sas" id="GBQ-Ee-S93"/>

@@ -19,6 +19,7 @@ class LoginViewController: BaseViewController {
     
     @IBOutlet weak var imgLogo: UIImageView!
     
+    @IBOutlet weak var secureEntryImage: UIImageView!
     
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var passwordView: UIView!
@@ -64,6 +65,11 @@ class LoginViewController: BaseViewController {
         
         txtUsername.delegate = self
         txtPassword.delegate = self
+        
+        secureEntryImage.image = UIImage(named: "eye")
+//        //MARK:- to change image tint color
+//        secureEntryImage.image = secureEntryImage.image?.withRenderingMode(.alwaysTemplate)
+//        secureEntryImage.tintColor = UIColor.white
     }
     
     //MARK:- update constraint for screen sizes
@@ -83,6 +89,13 @@ class LoginViewController: BaseViewController {
     }
     @IBAction func btnSecureTextEntry(_ sender: Any) {
         txtPassword.isSecureTextEntry.toggle()
+        if (secureEntryImage.image == UIImage(named: "eye")) {
+            secureEntryImage.image = UIImage(named: "closingeye")
+
+        } else {
+            secureEntryImage.image = UIImage(named: "eye")
+
+        }
     }
     
     @IBAction func loginButton(_ sender: Any) {
