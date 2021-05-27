@@ -26,6 +26,7 @@ class WebViewViewController: BaseViewController{
         preventScreen()
         setupUI()
         loadWebView()
+        sideMenu()
        
     }
     

@@ -60,11 +60,13 @@ class Authentication: NSObject {
                             self.parentView?.loginView.isUserInteractionEnabled = true
                             
                         
-                                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-                                let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-                                //MARK:- to change the color of tabbar
-                                tabbar?.tabBar.barTintColor = UIColor.white
-                                self.parentView?.navigationController?.pushViewController(tabbar!, animated: true)
+                            let destinationController = AboutUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+                            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+//                                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//                                let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+//                                //MARK:- to change the color of tabbar
+//                                tabbar?.tabBar.barTintColor = UIColor.white
+//                                self.parentView?.navigationController?.pushViewController(tabbar!, animated: true)
                 
                             //MARK:- set profile name
                             profileName = response.data![0].user?.username!

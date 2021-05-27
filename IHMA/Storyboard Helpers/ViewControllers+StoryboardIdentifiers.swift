@@ -79,6 +79,14 @@ extension NotificationViewController: StoryboardIdentifiable
 extension WebViewViewController: StoryboardIdentifiable
     {
         static func storyboardIdentifier() -> String {
-            return "ViewController2"
+            return "WebViewViewController"
         }
+}
+
+//MARK:-
+extension AboutUsViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "AboutUsViewController"
+            }
 }

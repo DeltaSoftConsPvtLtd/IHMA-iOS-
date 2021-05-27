@@ -23,6 +23,7 @@ class AboutUsViewController: BaseViewController {
         preventScreen()
         setupUI()
         loadWebView()
+        sideMenu()
        
     }
     
