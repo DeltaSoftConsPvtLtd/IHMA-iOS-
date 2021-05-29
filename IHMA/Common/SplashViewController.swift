@@ -11,12 +11,14 @@ class SplashViewController: BaseViewController {
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var imgLogo: UIImageView!
+//    var chapterArray = ["Chapter 1","Chapter 2"]
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientTwoColors()
         setupUI()
         homeScreen()
-        courseAPI()
+//        courseAPI()
+//        registrationApi()
     }
     
     func setupUI() {
@@ -37,7 +39,7 @@ class SplashViewController: BaseViewController {
 //            self.navigationController?.pushViewController(tabbar!, animated: true)
         }
     }
-    
+    //MARK:- Course API
     func courseAPI() {
         let url = "\(baseUrl)\(courses)"
         let post = Param_Model()
@@ -45,9 +47,26 @@ class SplashViewController: BaseViewController {
                     if sucess{
                         let response = resp as! courseModel
                         print(response.status?.type!)
+                        print(response.data![0].status)
                         print(resp)
                         
                     }
         }//end of api
+        
+    }
+    //MARK:- Registration API
+    func registrationApi () {
+        let url = "\(baseUrl)\(userSignup)"
+        let post = Param_Model()
+        ApiClient.shared.getData("GET", url, post, getList.self) { [self] (sucess, resp, msg) in
+                    if sucess{
+                        let response = resp as! getList
+                        print(response.status?.type!)
+                        print(resp)
+                        print(response.data![0].details?.memberFee![1].name)
+                        
+//                        chapterArray[0] = (response.data![0].details?.chapter![0].name)!
+                    }
+        }//end of api call
     }
 }

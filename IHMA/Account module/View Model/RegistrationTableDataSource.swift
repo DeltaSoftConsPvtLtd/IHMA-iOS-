@@ -126,18 +126,7 @@ class RegistrationTableDataSource: NSObject {
         }//end of api call
     }
     
-    func registrationApi () {
-        let url = "\(baseUrl)\(userSignup)"
-        let post = Param_Model()
-        ApiClient.shared.getData("GET", url, post, RegistrationModel.self) { (sucess, resp, msg) in
-                    if sucess{
-                        let response = resp as! RegistrationModel
-                        print(response.status?.type!)
-                        print(resp)
-                        
-                    }
-        }//end of api call
-    }
+ 
 }
 
 //Mark:- Delegate Methods

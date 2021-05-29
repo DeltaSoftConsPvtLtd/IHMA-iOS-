@@ -32,6 +32,7 @@
 		9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEEC26392FA200E29A37 /* UIView+Extension.swift */; };
 		9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */; };
 		9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEF3263940FE00E29A37 /* PaymentViewController.swift */; };
+		905B14062662053200A9BC4D /* getList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905B14052662053200A9BC4D /* getList.swift */; };
 		906C8B27264BC56D00AED3D8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C8B26264BC56D00AED3D8 /* LoginModel.swift */; };
 		90759C0826328BE60052FFAB /* Loginscreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90759C0726328BE60052FFAB /* Loginscreens.storyboard */; };
 		90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C0B26328C780052FFAB /* RegistrationViewController.swift */; };
@@ -98,6 +99,7 @@
 		9044AEEC26392FA200E29A37 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentScreens.storyboard; sourceTree = "<group>"; };
 		9044AEF3263940FE00E29A37 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		905B14052662053200A9BC4D /* getList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getList.swift; sourceTree = "<group>"; };
 		906C8B26264BC56D00AED3D8 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		90759C0726328BE60052FFAB /* Loginscreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loginscreens.storyboard; sourceTree = "<group>"; };
 		90759C0B26328C780052FFAB /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
@@ -198,6 +200,7 @@
 				902A85CB26500B58002380BF /* RegistrationModel.swift */,
 				902A85CF26502724002380BF /* Post_RegistrationModel.swift */,
 				901870DC2650F40E00A3563A /* Param_Model.swift */,
+				905B14052662053200A9BC4D /* getList.swift */,
 			);
 			path = Registration_Model;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
+				905B14062662053200A9BC4D /* getList.swift in Sources */,
 				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
 				902A85D026502724002380BF /* Post_RegistrationModel.swift in Sources */,
 				9026E996264CCC8900381E44 /* Post_Model.swift in Sources */,
