@@ -261,10 +261,10 @@ extension RegistrationTableDataSource: UITableViewDataSource{
             //MARK:- to populate dropdown lists
             switch indexPath.row {
             case 10:
-                cell.dropDown.dataSource = cell.statesArray
+                cell.dropDown.dataSource = statesArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
-                    cell.lblTitle.text = cell.statesArray[index]
+                    cell.lblTitle.text = statesArray[index]
                     states = cell.lblTitle.text!
                     if(states != nil )
                     {

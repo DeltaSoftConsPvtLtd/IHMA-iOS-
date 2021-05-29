@@ -7,6 +7,10 @@
 
 import UIKit
 
+var chapterArray = ["Chapter 1","Chapter 2"]
+var statesArray = [String]()
+
+
 class SplashViewController: BaseViewController {
 
     @IBOutlet weak var lblTitle: UILabel!
@@ -19,8 +23,29 @@ class SplashViewController: BaseViewController {
         homeScreen()
 //        courseAPI()
         registrationApi()
+        
+        
+        //Mark:- parse json data
+        Parser.shared.parserFile("states-and-districts") { (status,msg,resp) in
+            if status{
+                let response = resp as! StatesModel
+                print(response.states![1].state)
+                for index in 0...((response.states?.count)!-1)
+                {
+                    statesArray.append((response.states![index].state)!)
+                }
+//                for index in 0...((response.states![1].districts?.count)!-1)
+//                {
+//                    districtsArray = (response.states![1].districts)
+////                }
+//                print(districtsArray)//response.states![1].districts
+
+            }
+        }
+
     }
-    
+ 
+        
     func setupUI() {
         imgLogo.makeRounded()
         profileName = "Dr. Nancy Salmoren"

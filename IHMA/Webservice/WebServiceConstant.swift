@@ -65,7 +65,8 @@ var baseUrl = "https://lmsihma.co.in/"
 let userSignIn = "api/login/"
 let userSignup = "api/getRegisterDetail/"
 let courses = "api/getcourses/"
-var chapterArray = ["Chapter 1","Chapter 2"]
+var File = "states-and-districts"
+
 
 
 //MARK:- Web service completion handler closures
