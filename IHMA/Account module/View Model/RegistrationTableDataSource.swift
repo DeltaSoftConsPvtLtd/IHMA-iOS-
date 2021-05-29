@@ -60,6 +60,7 @@ class RegistrationTableDataSource: NSObject {
                 userName = sender.text!
             case 8:
                 password = sender.text!
+                
             case 9:
                 password2 = sender.text!
                 
@@ -212,14 +213,19 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                 {
                     cell.fieldTxt.text = userName
                 }
-                if (password != nil && indexPath.row == 8 || indexPath.row == 9)
+                if (password != "" && indexPath.row == 8)
                 {
                     cell.fieldTxt.text = password
                 }
-               
+                if (password2 != "" && indexPath.row == 9)
+                {
+                    cell.fieldTxt.text = password2
+                }
+         
                 cell.fieldTxt.tag = indexPath.row
                 //MARK:- to add target to text field inside cell
                 cell.fieldTxt.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
+            
 
             
                 switch  (indexPath.row) {
