@@ -65,7 +65,7 @@ var baseUrl = "https://lmsihma.co.in/"
 let userSignIn = "api/login/"
 let userSignup = "api/getRegisterDetail/"
 let courses = "api/getcourses/"
-var File = "states-and-districts"
+var File_List = "states-and-districts"
 
 
 

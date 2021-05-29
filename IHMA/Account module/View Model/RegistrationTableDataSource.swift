@@ -18,7 +18,7 @@ class RegistrationTableDataSource: NSObject {
     var email:String = ""
     var homeAddress:String = ""
     var clinicAddress:String = ""
-    var states:String = "Kerala"
+    var states:String = ""
     var district:String = "Thrissur"
     var chapter:Int = 1
     var collageName:Int = 1
@@ -35,6 +35,7 @@ class RegistrationTableDataSource: NSObject {
         self.parentView = attachView
         attachView.formTableView.delegate = self
         attachView.formTableView.dataSource = self
+        parsingData(x: 0)
     }
     //MARK:- to get values typed inside textfields
     @objc func textFieldDidChange(sender: UITextField) {
@@ -98,6 +99,35 @@ class RegistrationTableDataSource: NSObject {
 //        registrationApi()
         
     }
+    func parsingData(x:Int) {
+        //Mark:- parse json data
+        Parser.shared.parserFile(File_List) { (status,msg,resp) in
+            if status{
+                let response = resp as! StatesModel
+                print(response.states![1].state)
+                districtsArray.removeAll()
+                if(states != "" )
+                {
+                    
+                    for index in 0...((response.states![x].districts?.count)!-1)
+                    {
+//                        districtsArray[index] = response.states![x].districts![index]
+                        districtsArray.append(response.states![x].districts![index])
+                    }
+                    self.parentView?.formTableView.reloadData()
+                } else {
+                    for index in 0...((response.states?.count)!-1)
+                    {
+                        statesArray.append((response.states![index].state)!)
+                    }
+                }
+                
+
+            }//End of if loop for status
+        }//End of parser
+    }
+    
+    
     func signupApi() {
         let url = "\(baseUrl)\(userSignup)"
         let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: chapter, username: userName, email: email, password: password, password2: password, id_no: idNo!, blood_group: bloodGroup)
@@ -266,16 +296,17 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                   print("Selected item: \(item) at index: \(index)")
                     cell.lblTitle.text = statesArray[index]
                     states = cell.lblTitle.text!
+                    parsingData(x: index)
                     if(states != nil )
                     {
                         cell.lblTitle.text = states
                     }
                 }
             case 11:
-                cell.dropDown.dataSource = cell.districtsArray
+                cell.dropDown.dataSource = districtsArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
-                    cell.lblTitle.text = cell.districtsArray[index]
+                    cell.lblTitle.text = districtsArray[index]
                     district = cell.lblTitle.text!
                     if(district != nil )
                     {
