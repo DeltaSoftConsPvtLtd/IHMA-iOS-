@@ -11,14 +11,14 @@ class SplashViewController: BaseViewController {
 
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var imgLogo: UIImageView!
-//    var chapterArray = ["Chapter 1","Chapter 2"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientTwoColors()
         setupUI()
         homeScreen()
 //        courseAPI()
-//        registrationApi()
+        registrationApi()
     }
     
     func setupUI() {
@@ -64,8 +64,12 @@ class SplashViewController: BaseViewController {
                         print(response.status?.type!)
                         print(resp)
                         print(response.data![0].details?.memberFee![1].name)
-                        
-//                        chapterArray[0] = (response.data![0].details?.chapter![0].name)!
+                        let x = response.data![0].details?.memberFee?.count
+                        for index in 0...x!-1
+                        {
+                            chapterArray[index] = (response.data![0].details?.chapter![index].name)!
+                        }
+
                     }
         }//end of api call
     }

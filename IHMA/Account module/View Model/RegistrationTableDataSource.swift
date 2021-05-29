@@ -283,10 +283,10 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                     }
                 }
             case 12:
-                cell.dropDown.dataSource = cell.chapterArray
+                cell.dropDown.dataSource = chapterArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
-                    cell.lblTitle.text = cell.chapterArray[index]
+                    cell.lblTitle.text = chapterArray[index]
                     chapter = index + 1
                 }
             default:
