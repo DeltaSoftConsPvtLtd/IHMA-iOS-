@@ -109,6 +109,12 @@ class LoginViewController: BaseViewController {
         authentication!.authenticateUserWith(userName, andPassword: password)
     }
 
+    @IBAction func btnRembrPassword(_ sender: Any) {
+        if(UserDefaults.standard.value(forKey: "Username") != nil) {
+            self.txtPassword.text = UserDefaults.standard.value(forKey: "password") as! String
+        }
+         
+    }
 }
 
 //MARK:- Text field delegate functions

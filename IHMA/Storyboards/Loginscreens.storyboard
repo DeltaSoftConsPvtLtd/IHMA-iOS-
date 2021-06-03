@@ -647,15 +647,27 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="color" red="0.95294117649999999" green="0.15686274510000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jb-NC-YWB" userLabel="Remember Password ">
+                                <rect key="frame" x="50" y="585" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="GK3-y8-AaU"/>
+                                    <constraint firstAttribute="height" constant="25" id="Txd-Kq-r7K"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="btnRembrPassword:" destination="bYR-qg-kxC" eventType="touchUpInside" id="SyA-NK-3U3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qJ0-2B-xcO"/>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.53333333333333333" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="9Jb-NC-YWB" firstAttribute="top" secondItem="3G7-Ab-EGV" secondAttribute="bottom" constant="7.5" id="0UK-3u-U4S"/>
                             <constraint firstItem="NjI-rM-J6A" firstAttribute="centerX" secondItem="qJ0-2B-xcO" secondAttribute="centerX" id="2L0-ax-I3z"/>
                             <constraint firstItem="58D-PF-Sas" firstAttribute="top" secondItem="Fz7-ae-kmU" secondAttribute="bottom" constant="50" id="5sJ-t4-m0K"/>
                             <constraint firstItem="qJ0-2B-xcO" firstAttribute="trailing" secondItem="58D-PF-Sas" secondAttribute="trailing" constant="25" id="8vO-xB-Kn1"/>
                             <constraint firstItem="3G7-Ab-EGV" firstAttribute="trailing" secondItem="58D-PF-Sas" secondAttribute="trailing" id="A4j-8G-CUC"/>
                             <constraint firstItem="eIf-Vz-FQ2" firstAttribute="leading" secondItem="qJ0-2B-xcO" secondAttribute="leading" constant="50" id="I6l-BK-Utt"/>
+                            <constraint firstItem="9Jb-NC-YWB" firstAttribute="leading" secondItem="3G7-Ab-EGV" secondAttribute="leading" id="LuU-2w-fjH"/>
                             <constraint firstItem="yep-sX-IK6" firstAttribute="top" secondItem="eIf-Vz-FQ2" secondAttribute="bottom" constant="30" id="OGG-H5-xSS"/>
                             <constraint firstItem="NjI-rM-J6A" firstAttribute="top" secondItem="qJ0-2B-xcO" secondAttribute="top" constant="150" id="PtC-za-GEL"/>
                             <constraint firstItem="eIf-Vz-FQ2" firstAttribute="top" secondItem="3G7-Ab-EGV" secondAttribute="bottom" constant="49" id="Uzu-jQ-Wxr"/>
