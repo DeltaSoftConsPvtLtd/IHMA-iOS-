@@ -642,12 +642,15 @@
                                     <constraint firstAttribute="height" constant="60" id="rnd-4y-ThZ"/>
                                 </constraints>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aCd-OV-fWE">
+                                <rect key="frame" x="50" y="585" width="25" height="25"/>
+                            </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="9xG-9y-H0K">
                                 <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="color" red="0.95294117649999999" green="0.15686274510000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jb-NC-YWB" userLabel="Remember Password ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Jb-NC-YWB" userLabel="Remember Password ">
                                 <rect key="frame" x="50" y="585" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="GK3-y8-AaU"/>
@@ -657,6 +660,12 @@
                                     <action selector="btnRembrPassword:" destination="bYR-qg-kxC" eventType="touchUpInside" id="SyA-NK-3U3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLN-H9-RgR">
+                                <rect key="frame" x="95" y="587" width="161" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qJ0-2B-xcO"/>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.53333333333333333" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -664,13 +673,17 @@
                             <constraint firstItem="9Jb-NC-YWB" firstAttribute="top" secondItem="3G7-Ab-EGV" secondAttribute="bottom" constant="7.5" id="0UK-3u-U4S"/>
                             <constraint firstItem="NjI-rM-J6A" firstAttribute="centerX" secondItem="qJ0-2B-xcO" secondAttribute="centerX" id="2L0-ax-I3z"/>
                             <constraint firstItem="58D-PF-Sas" firstAttribute="top" secondItem="Fz7-ae-kmU" secondAttribute="bottom" constant="50" id="5sJ-t4-m0K"/>
+                            <constraint firstItem="bLN-H9-RgR" firstAttribute="leading" secondItem="9Jb-NC-YWB" secondAttribute="trailing" constant="20" id="6fr-mb-FQw"/>
                             <constraint firstItem="qJ0-2B-xcO" firstAttribute="trailing" secondItem="58D-PF-Sas" secondAttribute="trailing" constant="25" id="8vO-xB-Kn1"/>
                             <constraint firstItem="3G7-Ab-EGV" firstAttribute="trailing" secondItem="58D-PF-Sas" secondAttribute="trailing" id="A4j-8G-CUC"/>
+                            <constraint firstItem="aCd-OV-fWE" firstAttribute="bottom" secondItem="9Jb-NC-YWB" secondAttribute="bottom" id="CsG-zN-DfX"/>
                             <constraint firstItem="eIf-Vz-FQ2" firstAttribute="leading" secondItem="qJ0-2B-xcO" secondAttribute="leading" constant="50" id="I6l-BK-Utt"/>
+                            <constraint firstItem="aCd-OV-fWE" firstAttribute="trailing" secondItem="9Jb-NC-YWB" secondAttribute="trailing" id="LF7-VI-La5"/>
                             <constraint firstItem="9Jb-NC-YWB" firstAttribute="leading" secondItem="3G7-Ab-EGV" secondAttribute="leading" id="LuU-2w-fjH"/>
                             <constraint firstItem="yep-sX-IK6" firstAttribute="top" secondItem="eIf-Vz-FQ2" secondAttribute="bottom" constant="30" id="OGG-H5-xSS"/>
                             <constraint firstItem="NjI-rM-J6A" firstAttribute="top" secondItem="qJ0-2B-xcO" secondAttribute="top" constant="150" id="PtC-za-GEL"/>
                             <constraint firstItem="eIf-Vz-FQ2" firstAttribute="top" secondItem="3G7-Ab-EGV" secondAttribute="bottom" constant="49" id="Uzu-jQ-Wxr"/>
+                            <constraint firstItem="bLN-H9-RgR" firstAttribute="centerY" secondItem="9Jb-NC-YWB" secondAttribute="centerY" id="Vg6-PE-qJp"/>
                             <constraint firstItem="qJ0-2B-xcO" firstAttribute="trailing" secondItem="NmB-Jl-SKT" secondAttribute="trailing" constant="8" id="YFG-LQ-irE"/>
                             <constraint firstItem="eIf-Vz-FQ2" firstAttribute="centerX" secondItem="qNF-EA-jB5" secondAttribute="centerX" id="ZYe-eS-MNb"/>
                             <constraint firstItem="yep-sX-IK6" firstAttribute="centerX" secondItem="qNF-EA-jB5" secondAttribute="centerX" id="aTc-Io-Bk1"/>
@@ -679,17 +692,21 @@
                             <constraint firstItem="3G7-Ab-EGV" firstAttribute="top" secondItem="58D-PF-Sas" secondAttribute="bottom" constant="55" id="eKM-Ko-ZJU"/>
                             <constraint firstItem="yep-sX-IK6" firstAttribute="centerX" secondItem="qJ0-2B-xcO" secondAttribute="centerX" id="eoD-ja-ymX"/>
                             <constraint firstItem="Fz7-ae-kmU" firstAttribute="centerX" secondItem="qJ0-2B-xcO" secondAttribute="centerX" id="hSe-zU-Acx"/>
+                            <constraint firstItem="aCd-OV-fWE" firstAttribute="leading" secondItem="9Jb-NC-YWB" secondAttribute="leading" id="hve-Lc-LIp"/>
                             <constraint firstItem="NmB-Jl-SKT" firstAttribute="top" secondItem="qJ0-2B-xcO" secondAttribute="top" id="p4g-HN-mHS"/>
                             <constraint firstItem="3G7-Ab-EGV" firstAttribute="leading" secondItem="58D-PF-Sas" secondAttribute="leading" id="q6q-rz-qhn"/>
                             <constraint firstItem="9xG-9y-H0K" firstAttribute="centerY" secondItem="qNF-EA-jB5" secondAttribute="centerY" id="uXI-St-TO2"/>
                             <constraint firstItem="9xG-9y-H0K" firstAttribute="centerX" secondItem="qNF-EA-jB5" secondAttribute="centerX" id="vHM-Fz-1Zu"/>
+                            <constraint firstItem="aCd-OV-fWE" firstAttribute="top" secondItem="9Jb-NC-YWB" secondAttribute="top" id="viZ-o9-FkD"/>
                             <constraint firstItem="Fz7-ae-kmU" firstAttribute="top" secondItem="NjI-rM-J6A" secondAttribute="bottom" constant="8" id="yea-ot-gzt"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="9xG-9y-H0K" id="4ns-H2-b0d"/>
+                        <outlet property="btnRememberPassword" destination="9Jb-NC-YWB" id="xeB-PI-Ovh"/>
                         <outlet property="btnSecureEntry" destination="O30-1y-Apc" id="fHs-Yw-kqL"/>
                         <outlet property="imgLogo" destination="NjI-rM-J6A" id="VmZ-ac-D4G"/>
+                        <outlet property="imgRemeberPassword" destination="aCd-OV-fWE" id="vfD-Cc-ZSw"/>
                         <outlet property="imgTopConstraint" destination="PtC-za-GEL" id="jJb-wJ-rgv"/>
                         <outlet property="lblPassword" destination="y9t-v3-75p" id="M1C-jW-1eD"/>
                         <outlet property="lblTitle" destination="Fz7-ae-kmU" id="0ql-iw-pG7"/>

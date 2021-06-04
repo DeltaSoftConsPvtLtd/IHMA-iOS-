@@ -30,7 +30,9 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var lblUsername: UILabel!
     @IBOutlet weak var lblPassword: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var imgRemeberPassword: UIImageView!
     
+    @IBOutlet weak var btnRememberPassword: UIButton!
     var parameters : [String : Any]?
     var authentication:Authentication?
     
@@ -67,6 +69,8 @@ class LoginViewController: BaseViewController {
         txtPassword.delegate = self
         
         secureEntryImage.image = UIImage(named: "eye")
+        
+        imgRemeberPassword.image = UIImage(named: "unchecked")
 //        //MARK:- to change image tint color
 //        secureEntryImage.image = secureEntryImage.image?.withRenderingMode(.alwaysTemplate)
 //        secureEntryImage.tintColor = UIColor.white
@@ -110,7 +114,8 @@ class LoginViewController: BaseViewController {
     }
 
     @IBAction func btnRembrPassword(_ sender: Any) {
-        if(UserDefaults.standard.value(forKey: "Username") != nil) {
+        if((txtUsername.text == UserDefaults.standard.value(forKey: "Username") as! String) && txtUsername.text != "") {
+            imgRemeberPassword.image = UIImage(named: "checked")
             self.txtPassword.text = UserDefaults.standard.value(forKey: "password") as! String
         }
          
