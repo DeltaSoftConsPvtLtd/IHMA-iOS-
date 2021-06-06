@@ -19,6 +19,9 @@ class ResetPasswordViewController: BaseViewController {
     @IBOutlet weak var txtConfirmPassword: UITextField!
     @IBOutlet weak var imgSecureTextEntryConfPassword: UIImageView!
     @IBOutlet weak var imgSecureTextEntry: UIImageView!
+    
+    @IBOutlet weak var topImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientTwoColors()
@@ -34,6 +37,8 @@ class ResetPasswordViewController: BaseViewController {
         txtConfirmPassword.addUnderLine()
         imgSecureTextEntry.image = UIImage(named: "eye")
         imgSecureTextEntryConfPassword.image = UIImage(named: "eye")
+        topImage.makeRounded()
+        titleLabel.textColor = .white
     }
 
     
