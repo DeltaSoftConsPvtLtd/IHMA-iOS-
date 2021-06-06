@@ -83,10 +83,19 @@ extension WebViewViewController: StoryboardIdentifiable
         }
 }
 
-//MARK:-
+//MARK:- About us view controller
 extension AboutUsViewController: StoryboardIdentifiable
 {
     static func storyboardIdentifier() -> String {
         return "AboutUsViewController"
+            }
+}
+
+
+//MARK:- Reset Password view controller
+extension ResetPasswordViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "ResetPasswordViewController"
             }
 }

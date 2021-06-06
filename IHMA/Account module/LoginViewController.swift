@@ -120,6 +120,11 @@ class LoginViewController: BaseViewController {
         }
          
     }
+    
+    @IBAction func btnForgetPassword(_ sender: Any) {
+        let destinationController = ResetPasswordViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
+    }
 }
 
 //MARK:- Text field delegate functions
