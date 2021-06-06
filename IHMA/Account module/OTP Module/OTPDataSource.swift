@@ -27,11 +27,13 @@ class OTPDataSource: NSObject {
 //    let myInt = (otp as! NSString).integerValue
         if (otp == "1234")
         {
-            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
-            //MARK:- to change the color of tabbar
-            tabbar?.tabBar.barTintColor = UIColor.white
-            parentView!.navigationController?.pushViewController(tabbar!, animated: true)
+            let destinationController = ResetPasswordViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+//            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//            let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
+//            //MARK:- to change the color of tabbar
+//            tabbar?.tabBar.barTintColor = UIColor.white
+//            parentView!.navigationController?.pushViewController(tabbar!, animated: true)
         }
         else {
             parentView!.toastMessage(message: "Please enter correct otp!")

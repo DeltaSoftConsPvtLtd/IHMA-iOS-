@@ -114,15 +114,18 @@ class LoginViewController: BaseViewController {
     }
 
     @IBAction func btnRembrPassword(_ sender: Any) {
-        if((txtUsername.text == UserDefaults.standard.value(forKey: "Username") as! String) && txtUsername.text != "") {
-            imgRemeberPassword.image = UIImage(named: "checked")
-            self.txtPassword.text = UserDefaults.standard.value(forKey: "password") as! String
+        if (UserDefaults.standard.value(forKey: "Username") != nil)
+        {
+            if((txtUsername.text == UserDefaults.standard.value(forKey:         "Username") as! String) && txtUsername.text != "") {
+                imgRemeberPassword.image = UIImage(named: "checked")
+                self.txtPassword.text = UserDefaults.standard.value(forKey: "password") as! String
+            }
         }
          
     }
     
     @IBAction func btnForgetPassword(_ sender: Any) {
-        let destinationController = ResetPasswordViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+        let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
         self.navigationController?.pushViewController(destinationController!, animated: true)
     }
 }

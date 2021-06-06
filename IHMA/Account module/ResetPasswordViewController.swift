@@ -21,7 +21,7 @@ class ResetPasswordViewController: BaseViewController {
     @IBOutlet weak var imgSecureTextEntry: UIImageView!
     
     @IBOutlet weak var topImage: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientTwoColors()
@@ -29,6 +29,7 @@ class ResetPasswordViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+   
     func updateUI() {
         resetPasswordView.layer.cornerRadius = resetPasswordView.bounds.height/2;
         resetPasswordView.clipsToBounds  =  true
@@ -38,7 +39,7 @@ class ResetPasswordViewController: BaseViewController {
         imgSecureTextEntry.image = UIImage(named: "eye")
         imgSecureTextEntryConfPassword.image = UIImage(named: "eye")
         topImage.makeRounded()
-        titleLabel.textColor = .white
+        
     }
 
     
@@ -66,5 +67,10 @@ extension ResetPasswordViewController {
             imgSecureTextEntryConfPassword.image = UIImage(named: "eye")
 
         }
+    }
+    
+    @IBAction func btnUpdate(_ sender: Any) {
+        let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
     }
 }
