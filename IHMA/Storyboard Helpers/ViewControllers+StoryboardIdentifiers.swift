@@ -99,3 +99,11 @@ extension ResetPasswordViewController: StoryboardIdentifiable
         return "ResetPasswordViewController"
             }
 }
+
+//MARK:- Home Screen View Controller
+extension HomeScreenViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "HomeScreenViewController"
+            }
+}
