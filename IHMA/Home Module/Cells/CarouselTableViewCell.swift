@@ -10,7 +10,6 @@ import UIKit
 class CarouselTableViewCell: UITableViewCell {
 
     @IBOutlet weak var carouselCollectionView: UICollectionView!
-    @IBOutlet weak var lbl: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         carouselCollectionView.delegate = self
@@ -29,33 +28,33 @@ class CarouselTableViewCell: UITableViewCell {
 //MARK:- UIcollectionview delegate and datasources
 extension CarouselTableViewCell:UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        
+
         return 1
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-      
-        return 2
+
+        return 3
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        
+
+
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "image", for: indexPath)
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView,
-                        
+
                         layout collectionViewLayout: UICollectionViewLayout,
-                        
+
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         var cellSize = CGSize(width:0 ,height:0)
         let itemPerRow = CGFloat(1)
 //        let paddingSpace = sectionInsets.left * (itemPerRow + 1)
-        let availableWidth = carouselCollectionView.frame.width //- paddingSpace
+        let availableWidth = carouselCollectionView.frame.width - 20 //- paddingSpace
         let widthPerItem = availableWidth / itemPerRow
-        let availableHeight = self.carouselCollectionView.frame.height //- paddingSpace
-        let heightPerItem = availableHeight 
-        
+        let availableHeight = self.carouselCollectionView.frame.height - 20 //- paddingSpace
+        let heightPerItem = availableHeight
+
         cellSize = CGSize(width: widthPerItem, height: heightPerItem )//+ (widthPerItem/2))
         return cellSize
     }

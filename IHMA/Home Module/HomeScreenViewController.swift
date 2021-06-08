@@ -12,11 +12,14 @@ class HomeScreenViewController: BaseViewController {
     @IBOutlet weak var sideMenuImage: UIImageView!
     
     @IBOutlet weak var homeTableView: UITableView!
+    
+    @IBOutlet weak var logoImg: UIImageView!
     var homeScreenDataSource: HomeScreenDataSource?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientTwoColors()
+        logoImg.makeRounded()
         
 
         // Do any additional setup after loading the view.
