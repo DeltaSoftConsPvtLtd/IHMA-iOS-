@@ -27,6 +27,9 @@
 		902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */; };
 		902D042C2655507000EC3DA6 /* courseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 902D042B2655507000EC3DA6 /* courseModel.swift */; };
 		903C03E02670766D00D2BA28 /* imagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C03DF2670766D00D2BA28 /* imagesCollectionViewCell.swift */; };
+		903C03F8267099E600D2BA28 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C03F7267099E600D2BA28 /* TitleTableViewCell.swift */; };
+		903C03FB26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C03FA26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift */; };
+		903C03FE26709E4800D2BA28 /* ActivitiesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903C03FD26709E4800D2BA28 /* ActivitiesTableViewCell.swift */; };
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* WebViewViewController.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
@@ -102,6 +105,9 @@
 		902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownTableViewCell.swift; sourceTree = "<group>"; };
 		902D042B2655507000EC3DA6 /* courseModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = courseModel.swift; sourceTree = "<group>"; };
 		903C03DF2670766D00D2BA28 /* imagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = imagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		903C03F7267099E600D2BA28 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
+		903C03FA26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesCollectionViewCell.swift; sourceTree = "<group>"; };
+		903C03FD26709E4800D2BA28 /* ActivitiesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesTableViewCell.swift; sourceTree = "<group>"; };
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
@@ -362,6 +368,9 @@
 			children = (
 				90C681B4266E36EC009D022F /* CarouselTableViewCell.swift */,
 				903C03DF2670766D00D2BA28 /* imagesCollectionViewCell.swift */,
+				903C03F7267099E600D2BA28 /* TitleTableViewCell.swift */,
+				903C03FA26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift */,
+				903C03FD26709E4800D2BA28 /* ActivitiesTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -590,6 +599,7 @@
 			files = (
 				90D400632643B8CC00DC82B9 /* SubmitTableViewCell.swift in Sources */,
 				90C681B5266E36EC009D022F /* CarouselTableViewCell.swift in Sources */,
+				903C03FE26709E4800D2BA28 /* ActivitiesTableViewCell.swift in Sources */,
 				905B1418266275D600A9BC4D /* Parser.swift in Sources */,
 				90209D23263FB99C00EC8588 /* UIColor+Extension.swift in Sources */,
 				90C681B1266E319B009D022F /* HomeScreenDataSource.swift in Sources */,
@@ -597,6 +607,7 @@
 				903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */,
 				909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */,
 				90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */,
+				903C03FB26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift in Sources */,
 				909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */,
 				903C03E02670766D00D2BA28 /* imagesCollectionViewCell.swift in Sources */,
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
@@ -620,6 +631,7 @@
 				9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */,
 				903E8CB7263150B800D0AADD /* WebViewViewController.swift in Sources */,
 				9026E993264CC05200381E44 /* ApiClient.swift in Sources */,
+				903C03F8267099E600D2BA28 /* TitleTableViewCell.swift in Sources */,
 				902BA58D2641031500411097 /* RegistrationTableDataSource.swift in Sources */,
 				FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */,
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,

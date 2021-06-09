@@ -27,20 +27,31 @@ extension HomeScreenDataSource:UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if(indexPath.row == 0) {
-            let cell = (self.parentView?.homeTableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath))!
-            return cell
+        if(indexPath.row == 0 || indexPath.row == 2) {
+            let cell = (self.parentView?.homeTableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath))! as? TitleTableViewCell
+            switch  (indexPath.row) {
+            case 0:
+                cell?.titleLabel.text = "Collaborations"
+            case 2:
+                cell?.titleLabel.text = "Resources"
+            default:
+                break
+            }
+            return cell!
+        } else if (indexPath.row == 3) {
+            let cell = (self.parentView?.homeTableView.dequeueReusableCell(withIdentifier: "Activities", for: indexPath))! as? ActivitiesTableViewCell
+            return cell!
         }
         let cell = (self.parentView?.homeTableView.dequeueReusableCell(withIdentifier: "Carousel", for: indexPath))!   as? CarouselTableViewCell
         return cell!
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.row == 0) {
+        if (indexPath.row == 0 || indexPath.row == 2) {
             return 50
         }
         return (parentView?.homeTableView.frame.height)! / 3;//Choose your custom row height

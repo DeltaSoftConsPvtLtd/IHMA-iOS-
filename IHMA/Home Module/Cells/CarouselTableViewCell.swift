@@ -39,6 +39,8 @@ extension CarouselTableViewCell:UICollectionViewDelegate, UICollectionViewDataSo
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "image", for: indexPath) as? imagesCollectionViewCell
         cell?.imagesOutlet.layer.cornerRadius = 10.0
         cell?.imagesOutlet.clipsToBounds = true
+        cell?.clipsToBounds = true
+//        cell?.imagesOutlet.masksToBounds = true
         return cell!
     }
 
