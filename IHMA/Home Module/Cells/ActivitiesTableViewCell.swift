@@ -10,6 +10,8 @@ import UIKit
 class ActivitiesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
+    var images = ["courses-1","training","conference","events"]
+    var titles = ["Publications","Trainings","Conferences","Events"]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,7 +28,7 @@ class ActivitiesTableViewCell: UITableViewCell {
 }
 
 //MARK:- UIcollectionview delegate and datasources
-extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource
+extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
 
@@ -34,12 +36,27 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 3
+        return 4
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Research", for: indexPath) as? ActivitiesCollectionViewCell
         cell?.backgroundColor = UIColor.clear
-//        cell?.imagesOutlet.masksToBounds = true
+        cell?.imgActivity.image =  UIImage(named: images[indexPath.row])
+        cell?.viewActivity.layer.cornerRadius = (cell?.viewActivity.frame.width)! / 2
+        cell?.lblActivity.text = titles[indexPath.row]
         return cell!
+    }
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        var cellSize = CGSize(width:0 ,height:0)
+        let itemPerRow = CGFloat(1)
+        let availableWidth = activitiesCollectionView.frame.width/4.5
+        let widthPerItem = availableWidth / itemPerRow
+        let availableHeight = self.activitiesCollectionView.frame.height - 20
+        let heightPerItem = availableHeight
+
+        cellSize = CGSize(width: widthPerItem, height: heightPerItem )
+        return cellSize
     }
 }

@@ -37,7 +37,7 @@ extension HomeScreenDataSource:UITableViewDataSource,UITableViewDelegate {
             case 0:
                 cell?.titleLabel.text = "Collaborations"
             case 2:
-                cell?.titleLabel.text = "Resources"
+                cell?.titleLabel.text = "Research Activities"
             default:
                 break
             }
@@ -53,6 +53,9 @@ extension HomeScreenDataSource:UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if (indexPath.row == 0 || indexPath.row == 2) {
             return 50
+        } else if (indexPath.row == 1)
+        {
+            return (parentView?.homeTableView.frame.height)! / 2
         }
         return (parentView?.homeTableView.frame.height)! / 3;//Choose your custom row height
     }
