@@ -39,6 +39,12 @@ extension CarouselTableViewCell:UICollectionViewDelegate, UICollectionViewDataSo
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "image", for: indexPath) as? imagesCollectionViewCell
         cell?.imagesOutlet.layer.cornerRadius = 20.0
         cell?.imagesOutlet.clipsToBounds = true
+        if UIScreen.main.bounds.height == 812
+        {
+            cell?.imageHeightConstraint.constant = 150
+        } else {
+            cell?.imageHeightConstraint.constant = 200
+        }
         cell?.clipsToBounds = true
 //        cell?.imagesOutlet.masksToBounds = true
         return cell!

@@ -9,6 +9,7 @@ import UIKit
 
 class imagesCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var imagesOutlet: UIImageView!
 
 }
