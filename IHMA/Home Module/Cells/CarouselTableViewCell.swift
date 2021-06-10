@@ -37,7 +37,7 @@ extension CarouselTableViewCell:UICollectionViewDelegate, UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "image", for: indexPath) as? imagesCollectionViewCell
-        cell?.imagesOutlet.layer.cornerRadius = 10.0
+        cell?.imagesOutlet.layer.cornerRadius = 20.0
         cell?.imagesOutlet.clipsToBounds = true
         cell?.clipsToBounds = true
 //        cell?.imagesOutlet.masksToBounds = true
@@ -49,9 +49,9 @@ extension CarouselTableViewCell:UICollectionViewDelegate, UICollectionViewDataSo
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         var cellSize = CGSize(width:0 ,height:0)
         let itemPerRow = CGFloat(1)
-        let availableWidth = carouselCollectionView.frame.width/2
+        let availableWidth = carouselCollectionView.frame.width - 40
         let widthPerItem = availableWidth / itemPerRow
-        let availableHeight = self.carouselCollectionView.frame.height - 20
+        let availableHeight = self.carouselCollectionView.frame.height 
         let heightPerItem = availableHeight
 
         cellSize = CGSize(width: widthPerItem, height: heightPerItem )

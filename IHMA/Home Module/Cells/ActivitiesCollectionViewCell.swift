@@ -12,4 +12,6 @@ class ActivitiesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgActivity: UIImageView!
     @IBOutlet weak var lblActivity: UILabel!
     @IBOutlet weak var viewActivity: UIView!
+    
+    @IBOutlet weak var btnActivity: UIButton!
 }

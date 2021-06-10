@@ -55,7 +55,7 @@ extension HomeScreenDataSource:UITableViewDataSource,UITableViewDelegate {
             return 50
         } else if (indexPath.row == 1)
         {
-            return (parentView?.homeTableView.frame.height)! / 2
+            return (parentView?.homeTableView.frame.height)! / 2.7
         }
         return (parentView?.homeTableView.frame.height)! / 3;//Choose your custom row height
     }

@@ -24,6 +24,10 @@ class ActivitiesTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    @objc func activityBtnTapped(sender: UIButton)  {
+        print("Activity")
+    }
 
 }
 
@@ -43,7 +47,15 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
         cell?.backgroundColor = UIColor.clear
         cell?.imgActivity.image =  UIImage(named: images[indexPath.row])
         cell?.viewActivity.layer.cornerRadius = (cell?.viewActivity.frame.width)! / 2
+        if UIScreen.main.bounds.width < 400
+        {
+            cell?.lblActivity.font =  cell?.lblActivity.font.withSize(15)
+        } else {
+            
+            cell?.lblActivity.font =  cell?.lblActivity.font.withSize(17)
+        }
         cell?.lblActivity.text = titles[indexPath.row]
+        cell!.btnActivity.addTarget(self,action:#selector(activityBtnTapped(sender:)), for: .touchUpInside)
         return cell!
     }
     func collectionView(_ collectionView: UICollectionView,
