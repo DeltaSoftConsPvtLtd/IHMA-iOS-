@@ -669,7 +669,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="228"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HcZ-E4-pqt">
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HcZ-E4-pqt">
                                                     <rect key="frame" x="20" y="0.0" width="394" height="208"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BhO-tu-QNL">
@@ -705,6 +705,7 @@
                                                             <size key="customSize" width="379" height="230"/>
                                                             <connections>
                                                                 <outlet property="imageHeightConstraint" destination="JCX-GN-naJ" id="Nz3-yw-dHj"/>
+                                                                <outlet property="imageWidthConstraint" destination="Na1-Od-PSP" id="ps7-lR-6Ts"/>
                                                                 <outlet property="imagesOutlet" destination="LhK-at-Q3e" id="SU6-PL-ZBx"/>
                                                             </connections>
                                                         </collectionViewCell>

@@ -24,11 +24,22 @@ class ActivitiesTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
-    @objc func activityBtnTapped(sender: UIButton)  {
-        print("Activity")
+    @objc func activityBtnTapped(sender:UIButton)
+    {
+        switch (sender.tag) {
+        case 0:
+            print("publications")
+        case 1:
+            print("Trainings")
+        case 2:
+            print("Conferences")
+        case 3:
+            print("event")
+        default:
+            break
+        }
     }
-
+    
 }
 
 //MARK:- UIcollectionview delegate and datasources
@@ -55,7 +66,10 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
             cell?.lblActivity.font =  cell?.lblActivity.font.withSize(17)
         }
         cell?.lblActivity.text = titles[indexPath.row]
-        cell!.btnActivity.addTarget(self,action:#selector(activityBtnTapped(sender:)), for: .touchUpInside)
+        cell!.btnActivity.tag = indexPath.row
+        cell!.btnActivity.addTarget(self, action: #selector(activityBtnTapped(sender:)),
+                                    for: UIControl.Event.touchUpInside)
+
         return cell!
     }
     func collectionView(_ collectionView: UICollectionView,
