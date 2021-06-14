@@ -1041,6 +1041,58 @@
                                             <outlet property="txtDescptn" destination="388-rQ-pGG" id="IXL-fw-dpM"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="bearer" rowHeight="160" id="lqS-UA-JRh" customClass="officeBearerTableViewCell" customModule="IHMA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="554" width="414" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lqS-UA-JRh" id="CC3-hy-y5m">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BF9-dc-Ypv">
+                                                    <rect key="frame" x="40" y="10" width="334" height="140"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxw-P4-udI">
+                                                            <rect key="frame" x="25" y="25" width="110.5" height="25.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssx-Hl-e74">
+                                                            <rect key="frame" x="25" y="50.5" width="284" height="84.5"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="84.5" id="Tnu-R1-6iW"/>
+                                                            </constraints>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="ssx-Hl-e74" secondAttribute="bottom" constant="5" id="CNE-FJ-kub"/>
+                                                        <constraint firstItem="ssx-Hl-e74" firstAttribute="leading" secondItem="dxw-P4-udI" secondAttribute="leading" id="I5P-2N-FaL"/>
+                                                        <constraint firstItem="dxw-P4-udI" firstAttribute="leading" secondItem="BF9-dc-Ypv" secondAttribute="leading" constant="25" id="Qvt-oh-PFH"/>
+                                                        <constraint firstItem="dxw-P4-udI" firstAttribute="top" secondItem="BF9-dc-Ypv" secondAttribute="top" constant="25" id="d6W-cc-HtM"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ssx-Hl-e74" secondAttribute="trailing" constant="25" id="dci-yW-ebs"/>
+                                                        <constraint firstItem="ssx-Hl-e74" firstAttribute="top" secondItem="dxw-P4-udI" secondAttribute="bottom" id="uHC-Tx-bwE"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="BF9-dc-Ypv" secondAttribute="bottom" constant="10" id="0Bg-Nk-hlG"/>
+                                                <constraint firstItem="BF9-dc-Ypv" firstAttribute="top" secondItem="CC3-hy-y5m" secondAttribute="top" constant="10" id="kI0-Yi-Cqm"/>
+                                                <constraint firstItem="BF9-dc-Ypv" firstAttribute="leading" secondItem="CC3-hy-y5m" secondAttribute="leading" constant="40" id="m1G-R1-QJD"/>
+                                                <constraint firstAttribute="trailing" secondItem="BF9-dc-Ypv" secondAttribute="trailing" constant="40" id="tPJ-vm-Kfo"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="bearerView" destination="BF9-dc-Ypv" id="pFS-MD-jLb"/>
+                                            <outlet property="lblBearer" destination="dxw-P4-udI" id="IGA-8G-N2C"/>
+                                            <outlet property="txtDesc" destination="ssx-Hl-e74" id="C39-ak-Ms5"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>

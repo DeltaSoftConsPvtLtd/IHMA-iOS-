@@ -36,15 +36,22 @@ extension AboutTableDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "about", for: indexPath))! as? ChapterTableViewCell
-        cell?.lblTitle?.text = (self.parentView?.titles[indexPath.row])!
+        
         if (indexPath.row == 1) {
-            cell?.chapterView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"2CBFD8")
+            let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "bearer", for: indexPath))! as? officeBearerTableViewCell
+            cell?.bearerView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"2CBFD8")
+            cell?.lblBearer?.text = "Office Bearers"
+            return cell!
         } else {
+            let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "about", for: indexPath))! as? ChapterTableViewCell
+            cell?.lblTitle?.text = "Chapters"
             cell?.chapterView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"2CC2D7")
+            return cell!
         }
-       
+        let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "about", for: indexPath))! as? ChapterTableViewCell
+      
         return cell!
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

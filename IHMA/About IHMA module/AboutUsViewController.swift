@@ -31,6 +31,8 @@ class AboutUsViewController: BaseViewController {
     override func viewDidLoad() {
         webView.navigationDelegate = self
         super.viewDidLoad()
+        gradientTwoColors()
+//        view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1575CE")
         preventScreen()
         setupUI()
         loadWebView()
