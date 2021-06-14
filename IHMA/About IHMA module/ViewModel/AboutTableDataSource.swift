@@ -32,11 +32,17 @@ extension AboutTableDataSource: UITableViewDataSource {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return (self.parentView?.titles.count)!
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "about", for: indexPath))! as? ChapterTableViewCell
+        cell?.lblTitle?.text = (self.parentView?.titles[indexPath.row])!
+        if (indexPath.row == 1) {
+            cell?.chapterView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"2CBFD8")
+        } else {
+            cell?.chapterView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"2CC2D7")
+        }
        
         return cell!
     }

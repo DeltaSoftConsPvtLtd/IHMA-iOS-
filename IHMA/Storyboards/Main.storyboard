@@ -940,21 +940,21 @@
                                 <rect key="frame" x="0.0" y="65" width="414" height="797"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="qa0-J4-9CM">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="366"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d2G-w1-Ktg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="54"/>
+                                            <rect key="frame" x="0.0" y="40" width="414" height="54"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijD-wR-qSJ">
-                                                    <rect key="frame" x="40" y="16.5" width="46" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="40" y="4.5" width="99" height="45.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IHMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0dd-pr-O7e">
-                                                    <rect key="frame" x="91" y="16.5" width="45" height="21"/>
-                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <rect key="frame" x="144" y="4.5" width="98.5" height="45.5"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="38"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -969,11 +969,11 @@
                                             </constraints>
                                         </view>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O9z-gY-wM5">
-                                            <rect key="frame" x="40" y="42" width="324" height="66"/>
+                                            <rect key="frame" x="40" y="94.5" width="324" height="251.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <string key="text">The National Platform of Indian Homeopaths is relentless in its efforts to raise the standards of Homeopathic Education &amp; Practice in India.</string>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
@@ -983,14 +983,14 @@
                                         <constraint firstAttribute="trailing" secondItem="d2G-w1-Ktg" secondAttribute="trailing" id="8wh-Mi-qyr"/>
                                         <constraint firstItem="d2G-w1-Ktg" firstAttribute="leading" secondItem="qa0-J4-9CM" secondAttribute="leading" id="F8x-30-ffw"/>
                                         <constraint firstItem="O9z-gY-wM5" firstAttribute="leading" secondItem="ijD-wR-qSJ" secondAttribute="leading" id="SwD-1M-XCu"/>
-                                        <constraint firstItem="d2G-w1-Ktg" firstAttribute="top" secondItem="qa0-J4-9CM" secondAttribute="top" id="kVR-qV-pza"/>
+                                        <constraint firstItem="d2G-w1-Ktg" firstAttribute="top" secondItem="qa0-J4-9CM" secondAttribute="top" constant="40" id="kVR-qV-pza"/>
                                         <constraint firstAttribute="bottom" secondItem="O9z-gY-wM5" secondAttribute="bottom" constant="20" id="rjQ-st-zVH"/>
                                         <constraint firstAttribute="trailing" secondItem="O9z-gY-wM5" secondAttribute="trailing" constant="50" id="vpX-YK-Mhd"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="about" rowHeight="160" id="Uhb-28-4Af" customClass="ChapterTableViewCell" customModule="IHMA" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="156" width="414" height="160"/>
+                                        <rect key="frame" x="0.0" y="394" width="414" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Uhb-28-4Af" id="8Eg-68-3Ly">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
@@ -1000,8 +1000,8 @@
                                                     <rect key="frame" x="40" y="10" width="334" height="140"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-MJ-6tK">
-                                                            <rect key="frame" x="25" y="25" width="139" height="25.5"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
+                                                            <rect key="frame" x="25" y="25" width="110.5" height="25.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>

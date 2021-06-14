@@ -26,6 +26,7 @@ class AboutUsViewController: BaseViewController {
     
     
     var  aboutTableDataSource: AboutTableDataSource?
+    let titles = ["Chapters", "Office Bearers"]
     
     override func viewDidLoad() {
         webView.navigationDelegate = self
