@@ -756,8 +756,8 @@
                                                                             <constraint firstAttribute="width" constant="60" id="nLS-QC-J2Q"/>
                                                                         </constraints>
                                                                     </view>
-                                                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xR-7u-OGg">
-                                                                        <rect key="frame" x="41" y="49" width="46" height="30"/>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9xR-7u-OGg">
+                                                                        <rect key="frame" x="34" y="0.0" width="60" height="60"/>
                                                                     </button>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IHMA logo " translatesAutoresizingMaskIntoConstraints="NO" id="jLa-7b-m0U">
                                                                         <rect key="frame" x="44" y="10" width="40" height="40"/>
@@ -936,7 +936,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="color" red="0.95294117649999999" green="0.15686274510000001" blue="0.21176470589999999" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cgg-uR-iTu">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cgg-uR-iTu">
                                 <rect key="frame" x="0.0" y="65" width="414" height="797"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="qa0-J4-9CM">
@@ -969,7 +969,7 @@
                                             </constraints>
                                         </view>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="O9z-gY-wM5">
-                                            <rect key="frame" x="40" y="42" width="324" height="86"/>
+                                            <rect key="frame" x="40" y="42" width="324" height="66"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -984,7 +984,7 @@
                                         <constraint firstItem="d2G-w1-Ktg" firstAttribute="leading" secondItem="qa0-J4-9CM" secondAttribute="leading" id="F8x-30-ffw"/>
                                         <constraint firstItem="O9z-gY-wM5" firstAttribute="leading" secondItem="ijD-wR-qSJ" secondAttribute="leading" id="SwD-1M-XCu"/>
                                         <constraint firstItem="d2G-w1-Ktg" firstAttribute="top" secondItem="qa0-J4-9CM" secondAttribute="top" id="kVR-qV-pza"/>
-                                        <constraint firstAttribute="bottom" secondItem="O9z-gY-wM5" secondAttribute="bottom" id="rjQ-st-zVH"/>
+                                        <constraint firstAttribute="bottom" secondItem="O9z-gY-wM5" secondAttribute="bottom" constant="20" id="rjQ-st-zVH"/>
                                         <constraint firstAttribute="trailing" secondItem="O9z-gY-wM5" secondAttribute="trailing" constant="50" id="vpX-YK-Mhd"/>
                                     </constraints>
                                 </view>
@@ -999,8 +999,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aac-vX-26E">
                                                     <rect key="frame" x="40" y="10" width="334" height="140"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CECP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-MJ-6tK">
-                                                            <rect key="frame" x="25" y="25" width="99.5" height="25.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-MJ-6tK">
+                                                            <rect key="frame" x="25" y="25" width="139" height="25.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="38"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
