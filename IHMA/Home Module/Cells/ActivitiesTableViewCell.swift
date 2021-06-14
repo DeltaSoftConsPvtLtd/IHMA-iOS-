@@ -11,7 +11,7 @@ class ActivitiesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
     var images = ["courses-1","training","conference","events"]
-    var titles = ["Publications","Trainings","Conferences","Events"]
+    var titles = ["Articles","Trainings","Flash News","Events"]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

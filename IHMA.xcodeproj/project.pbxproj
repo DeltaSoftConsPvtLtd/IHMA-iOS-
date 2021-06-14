@@ -64,6 +64,8 @@
 		90D400632643B8CC00DC82B9 /* SubmitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */; };
 		90D400662643D39600DC82B9 /* MainTabPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D400652643D39600DC82B9 /* MainTabPage.swift */; };
 		90D4007926445CBB00DC82B9 /* WebServiceConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */; };
+		90D471BE26776F6E00371F16 /* AboutTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D471BD26776F6E00371F16 /* AboutTableDataSource.swift */; };
+		90D471C32677799600371F16 /* ChapterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D471C22677799600371F16 /* ChapterTableViewCell.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
 		FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */; };
 		FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA2B52632595BE53004B23F9 /* IHMA.xcdatamodeld */; };
@@ -142,6 +144,8 @@
 		90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmitTableViewCell.swift; sourceTree = "<group>"; };
 		90D400652643D39600DC82B9 /* MainTabPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabPage.swift; sourceTree = "<group>"; };
 		90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceConstant.swift; sourceTree = "<group>"; };
+		90D471BD26776F6E00371F16 /* AboutTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTableDataSource.swift; sourceTree = "<group>"; };
+		90D471C22677799600371F16 /* ChapterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTableViewCell.swift; sourceTree = "<group>"; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2B52572595BE53004B23F9 /* IHMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2B525A2595BE53004B23F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -322,6 +326,8 @@
 		90806D0D2657B33500F01358 /* About IHMA module */ = {
 			isa = PBXGroup;
 			children = (
+				90D471C02677797000371F16 /* Cells */,
+				90D471B826776F1000371F16 /* ViewModel */,
 				90806D0E2657B36500F01358 /* AboutUsViewController.swift */,
 			);
 			path = "About IHMA module";
@@ -392,6 +398,22 @@
 				90D4007826445CBB00DC82B9 /* WebServiceConstant.swift */,
 			);
 			path = Webservice;
+			sourceTree = "<group>";
+		};
+		90D471B826776F1000371F16 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				90D471BD26776F6E00371F16 /* AboutTableDataSource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		90D471C02677797000371F16 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				90D471C22677799600371F16 /* ChapterTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		B0D87695C4E049AAB23577AE /* Frameworks */ = {
@@ -623,6 +645,7 @@
 				902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */,
 				90D4005D2643880900DC82B9 /* OTPViewController.swift in Sources */,
 				90C681AC266E296B009D022F /* HomeScreenViewController.swift in Sources */,
+				90D471C32677799600371F16 /* ChapterTableViewCell.swift in Sources */,
 				9002F4DA2637E510006292C1 /* CoursesTableViewCell.swift in Sources */,
 				90D4007926445CBB00DC82B9 /* WebServiceConstant.swift in Sources */,
 				90806D0F2657B36500F01358 /* AboutUsViewController.swift in Sources */,
@@ -648,6 +671,7 @@
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
 				90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */,
 				909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */,
+				90D471BE26776F6E00371F16 /* AboutTableDataSource.swift in Sources */,
 				909BF98B2642E39D001B73D1 /* SplashViewController.swift in Sources */,
 				FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */,
 				FA2B52B42595D2C1004B23F9 /* Constants.swift in Sources */,

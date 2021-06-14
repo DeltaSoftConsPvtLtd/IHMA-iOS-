@@ -274,6 +274,11 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                     cell.fieldTxt.keyboardType = .alphabet
                 case 8:
                     cell.fieldTxt.isSecureTextEntry = true
+                    cell.fieldTxt.keyboardType = .alphabet
+                case 9:
+                    cell.fieldTxt.isSecureTextEntry = true
+                    cell.fieldTxt.keyboardType = .alphabet
+                    
                 default:
                     break
                 }

@@ -15,7 +15,17 @@ class AboutUsViewController: BaseViewController {
     @IBOutlet weak var webView: WKWebView!
     var recorderTimer: Timer?
 
-  
+    @IBOutlet weak var aboutTableView: UITableView!
+    
+    //MARK:- Header view outlets
+    @IBOutlet weak var tableViewHeader: UIView!
+    @IBOutlet weak var viewTitle: UIView!
+    @IBOutlet weak var lblAbout: UILabel!
+    @IBOutlet weak var lblIHMA: UILabel!
+    @IBOutlet weak var txtDescription: UITextView!
+    
+    
+    var  aboutTableDataSource: AboutTableDataSource?
     
     override func viewDidLoad() {
         webView.navigationDelegate = self
@@ -24,6 +34,7 @@ class AboutUsViewController: BaseViewController {
         setupUI()
         loadWebView()
         sideMenu()
+        self.aboutTableDataSource = AboutTableDataSource(attachView: self)
        
     }
     
