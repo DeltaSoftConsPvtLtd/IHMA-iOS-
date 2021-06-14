@@ -55,6 +55,9 @@ extension AboutTableDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if (indexPath.row == 1) {
+            return 250
+        }
         return 175
     }
 }
