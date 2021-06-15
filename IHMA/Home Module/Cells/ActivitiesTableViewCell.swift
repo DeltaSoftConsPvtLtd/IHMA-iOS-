@@ -10,8 +10,8 @@ import UIKit
 class ActivitiesTableViewCell: UITableViewCell {
 
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
-    var images = ["courses-1","training","conference","events"]
-    var titles = ["Articles","Trainings","Flash News","Events"]
+    var images = ["courses-1","training","conference","events","courses-1","training","conference","events"]
+    var titles = ["Articles","Trainings","Flash News","Events","Articles","Trainings","Flash News","Events"]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,6 +35,14 @@ class ActivitiesTableViewCell: UITableViewCell {
             print("Conferences")
         case 3:
             print("event")
+        case 4:
+            print("New")
+        case 5:
+            print("demo")
+        case 6:
+            print("struct")
+        case 7:
+            print("event")
         default:
             break
         }
@@ -51,7 +59,7 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 4
+        return 8
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Research", for: indexPath) as? ActivitiesCollectionViewCell
@@ -79,7 +87,7 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
         let itemPerRow = CGFloat(1)
         let availableWidth = activitiesCollectionView.frame.width/4.5
         let widthPerItem = availableWidth / itemPerRow
-        let availableHeight = self.activitiesCollectionView.frame.height - 20
+        let availableHeight = self.activitiesCollectionView.frame.height/2 - 20
         let heightPerItem = availableHeight
 
         cellSize = CGSize(width: widthPerItem, height: heightPerItem )

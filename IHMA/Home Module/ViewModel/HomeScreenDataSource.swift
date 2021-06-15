@@ -63,6 +63,6 @@ extension HomeScreenDataSource:UITableViewDataSource,UITableViewDelegate {
             
             
         }
-        return (parentView?.homeTableView.frame.height)! / 3;//Choose your custom row height
+        return (parentView?.homeTableView.frame.height)! / 2;//3 changed to 2  Choose your custom row height
     }
 }
