@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeScreenViewController: BaseViewController {
+class HomeScreenViewController: BaseViewController{
 
     @IBOutlet weak var sideMenuImage: UIImageView!
     
@@ -20,11 +20,13 @@ class HomeScreenViewController: BaseViewController {
         super.viewDidLoad()
         gradientTwoColors()
         logoImg.makeRounded()
+//        HomeScreenViewController.delegate = self
         
 
         // Do any additional setup after loading the view.
         self.homeScreenDataSource = HomeScreenDataSource(attachView: self)
     }
     
+
 
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+//protocol MenuModelDelegate : class {
+//    func menuReady()
+//}
+
 class ActivitiesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imgActivity: UIImageView!
@@ -14,4 +18,5 @@ class ActivitiesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var viewActivity: UIView!
     
     @IBOutlet weak var btnActivity: UIButton!
+//    var delegate: MenuModelDelegate?
 }

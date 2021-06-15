@@ -115,3 +115,12 @@ extension ContactUsViewController: StoryboardIdentifiable
         return "ContactUsViewController"
             }
 }
+
+
+//MARK:- Activities View Controller
+extension ActivitiesViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "ActivitiesViewController"
+            }
+}

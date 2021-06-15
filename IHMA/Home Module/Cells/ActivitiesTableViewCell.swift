@@ -7,9 +7,17 @@
 
 import UIKit
 
+
+
 class ActivitiesTableViewCell: UITableViewCell {
+//    func menuReady() {
+//        print("hi")
+//    }
+    
 
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
+
+
     var images = ["courses-1","training","conference","events","courses-1","training","conference","events"]
     var titles = ["Articles","Trainings","Flash News","Events","Articles","Trainings","Flash News","Events"]
     override func awakeFromNib() {
@@ -18,6 +26,7 @@ class ActivitiesTableViewCell: UITableViewCell {
         activitiesCollectionView.delegate = self
         activitiesCollectionView.dataSource = self
     }
+
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -28,6 +37,12 @@ class ActivitiesTableViewCell: UITableViewCell {
     {
         switch (sender.tag) {
         case 0:
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = self.storyboard?.instantiateViewController(withIdentifier: ActivitiesViewController) as! ActivitiesViewController
+//                self.present(vc, animated: true, completion: nil)
+//            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+//            self.navigationController?.pushViewController(destinationController!, animated: true)
+//            self.delegate.menuReady()
             print("publications")
         case 1:
             print("Trainings")
@@ -53,6 +68,8 @@ class ActivitiesTableViewCell: UITableViewCell {
 //MARK:- UIcollectionview delegate and datasources
 extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout
 {
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
 
         return 1
@@ -77,6 +94,10 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
         cell!.btnActivity.tag = indexPath.row
         cell!.btnActivity.addTarget(self, action: #selector(activityBtnTapped(sender:)),
                                     for: UIControl.Event.touchUpInside)
+//        cell!.delegate = self
+
+       
+       
 
         return cell!
     }

@@ -15,6 +15,9 @@
 		900CA486266A03E200441A3F /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CA485266A03E200441A3F /* ResetPasswordViewController.swift */; };
 		901870DD2650F40E00A3563A /* Param_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901870DC2650F40E00A3563A /* Param_Model.swift */; };
 		901B151C2678CEB800ECB22A /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B151B2678CEB800ECB22A /* ContactUsViewController.swift */; };
+		901B15202678EBEE00ECB22A /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B151F2678EBEE00ECB22A /* ActivitiesViewController.swift */; };
+		901B154026791F3200ECB22A /* ActivityDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B153F26791F3200ECB22A /* ActivityDatasource.swift */; };
+		901B15482679240E00ECB22A /* ActivityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B15472679240E00ECB22A /* ActivityTableViewCell.swift */; };
 		90209D23263FB99C00EC8588 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90209D22263FB99C00EC8588 /* UIColor+Extension.swift */; };
 		9026E993264CC05200381E44 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026E992264CC05200381E44 /* ApiClient.swift */; };
 		9026E996264CCC8900381E44 /* Post_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026E995264CCC8900381E44 /* Post_Model.swift */; };
@@ -98,6 +101,9 @@
 		900CA485266A03E200441A3F /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		901870DC2650F40E00A3563A /* Param_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Param_Model.swift; sourceTree = "<group>"; };
 		901B151B2678CEB800ECB22A /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
+		901B151F2678EBEE00ECB22A /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		901B153F26791F3200ECB22A /* ActivityDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityDatasource.swift; sourceTree = "<group>"; };
+		901B15472679240E00ECB22A /* ActivityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityTableViewCell.swift; sourceTree = "<group>"; };
 		90209D22263FB99C00EC8588 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9026E992264CC05200381E44 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		9026E995264CCC8900381E44 /* Post_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_Model.swift; sourceTree = "<group>"; };
@@ -201,6 +207,32 @@
 				901B151B2678CEB800ECB22A /* ContactUsViewController.swift */,
 			);
 			path = "Contact Module";
+			sourceTree = "<group>";
+		};
+		901B151E2678EBCF00ECB22A /* Activities Module */ = {
+			isa = PBXGroup;
+			children = (
+				901B153E26791F0700ECB22A /* ViewModel */,
+				901B151F2678EBEE00ECB22A /* ActivitiesViewController.swift */,
+				901B15452679225200ECB22A /* cells */,
+			);
+			path = "Activities Module";
+			sourceTree = "<group>";
+		};
+		901B153E26791F0700ECB22A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				901B153F26791F3200ECB22A /* ActivityDatasource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		901B15452679225200ECB22A /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				901B15472679240E00ECB22A /* ActivityTableViewCell.swift */,
+			);
+			path = cells;
 			sourceTree = "<group>";
 		};
 		9027C317263685ED00937441 /* Login_Model */ = {
@@ -468,6 +500,7 @@
 				90759C13263294150052FFAB /* Storyboard Helpers */,
 				909F2F33263BB49700200EE2 /* Notification Module */,
 				901B151A2678CE8500ECB22A /* Contact Module */,
+				901B151E2678EBCF00ECB22A /* Activities Module */,
 				9044AEF2263940D200E29A37 /* Payment Module */,
 				909F2F41263BF0F900200EE2 /* Profile Module */,
 				90759C0A26328C490052FFAB /* Account module */,
@@ -653,11 +686,13 @@
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */,
+				901B15202678EBEE00ECB22A /* ActivitiesViewController.swift in Sources */,
 				902BA5AA26418FFE00411097 /* DropdownTableViewCell.swift in Sources */,
 				906C8B27264BC56D00AED3D8 /* LoginModel.swift in Sources */,
 				90D4006026439DF500DC82B9 /* OTPDataSource.swift in Sources */,
 				902D042C2655507000EC3DA6 /* courseModel.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
+				901B154026791F3200ECB22A /* ActivityDatasource.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
 				902A85CC26500B58002380BF /* RegistrationModel.swift in Sources */,
 				902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */,
@@ -687,6 +722,7 @@
 				905B14152662614F00A9BC4D /* StatesModel.swift in Sources */,
 				909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */,
 				901870DD2650F40E00A3563A /* Param_Model.swift in Sources */,
+				901B15482679240E00ECB22A /* ActivityTableViewCell.swift in Sources */,
 				9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */,
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
 				90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */,
