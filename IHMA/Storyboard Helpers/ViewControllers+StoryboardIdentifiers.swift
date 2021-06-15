@@ -107,3 +107,11 @@ extension HomeScreenViewController: StoryboardIdentifiable
         return "HomeScreenViewController"
             }
 }
+
+//MARK:- Contact Screen View Controller
+extension ContactUsViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "ContactUsViewController"
+            }
+}

@@ -14,6 +14,7 @@
 		90068D09265C137200F5FDCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90068D03265C0EFA00F5FDCA /* Assets.xcassets */; };
 		900CA486266A03E200441A3F /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CA485266A03E200441A3F /* ResetPasswordViewController.swift */; };
 		901870DD2650F40E00A3563A /* Param_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901870DC2650F40E00A3563A /* Param_Model.swift */; };
+		901B151C2678CEB800ECB22A /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B151B2678CEB800ECB22A /* ContactUsViewController.swift */; };
 		90209D23263FB99C00EC8588 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90209D22263FB99C00EC8588 /* UIColor+Extension.swift */; };
 		9026E993264CC05200381E44 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026E992264CC05200381E44 /* ApiClient.swift */; };
 		9026E996264CCC8900381E44 /* Post_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9026E995264CCC8900381E44 /* Post_Model.swift */; };
@@ -96,6 +97,7 @@
 		90068D03265C0EFA00F5FDCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/nikil/Documents/xcode pjts/IHMA_iOS/IHMA/Assets.xcassets"; sourceTree = "<absolute>"; };
 		900CA485266A03E200441A3F /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		901870DC2650F40E00A3563A /* Param_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Param_Model.swift; sourceTree = "<group>"; };
+		901B151B2678CEB800ECB22A /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		90209D22263FB99C00EC8588 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		9026E992264CC05200381E44 /* ApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		9026E995264CCC8900381E44 /* Post_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_Model.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 				18B02C3848906860D167C001 /* Pods-IHMA.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		901B151A2678CE8500ECB22A /* Contact Module */ = {
+			isa = PBXGroup;
+			children = (
+				901B151B2678CEB800ECB22A /* ContactUsViewController.swift */,
+			);
+			path = "Contact Module";
 			sourceTree = "<group>";
 		};
 		9027C317263685ED00937441 /* Login_Model */ = {
@@ -457,6 +467,7 @@
 				90759C1B2632ACD50052FFAB /* Common */,
 				90759C13263294150052FFAB /* Storyboard Helpers */,
 				909F2F33263BB49700200EE2 /* Notification Module */,
+				901B151A2678CE8500ECB22A /* Contact Module */,
 				9044AEF2263940D200E29A37 /* Payment Module */,
 				909F2F41263BF0F900200EE2 /* Profile Module */,
 				90759C0A26328C490052FFAB /* Account module */,
@@ -672,6 +683,7 @@
 				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
 				902A85D026502724002380BF /* Post_RegistrationModel.swift in Sources */,
 				9026E996264CCC8900381E44 /* Post_Model.swift in Sources */,
+				901B151C2678CEB800ECB22A /* ContactUsViewController.swift in Sources */,
 				905B14152662614F00A9BC4D /* StatesModel.swift in Sources */,
 				909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */,
 				901870DD2650F40E00A3563A /* Param_Model.swift in Sources */,
