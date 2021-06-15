@@ -13,6 +13,8 @@ class ChapterTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var txtDescptn: UITextView!
     
+    @IBOutlet weak var lblSeeMore: UILabel!
+    @IBOutlet weak var btnSeeMore: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

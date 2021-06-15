@@ -1000,30 +1000,47 @@
                                                     <rect key="frame" x="40" y="10" width="334" height="140"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfR-MJ-6tK">
-                                                            <rect key="frame" x="25" y="25" width="110.5" height="25.5"/>
+                                                            <rect key="frame" x="25" y="25" width="110.5" height="36"/>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="388-rQ-pGG">
-                                                            <rect key="frame" x="25" y="50.5" width="284" height="84.5"/>
+                                                            <rect key="frame" x="25" y="61" width="284" height="48"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="84.5" id="IhZ-Jt-Yn9"/>
+                                                                <constraint firstAttribute="height" constant="48" id="rBh-FB-ntH"/>
                                                             </constraints>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To See more details.." textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DCx-t9-jaV">
+                                                            <rect key="frame" x="25" y="117" width="159" height="21"/>
+                                                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMn-3S-zat">
+                                                            <rect key="frame" x="214" y="112.5" width="95" height="30"/>
+                                                            <color key="backgroundColor" red="0.094117647060000004" green="0.4941176471" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <state key="normal" title="Click Here">
+                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="mMn-3S-zat" secondAttribute="trailing" constant="25" id="35e-be-hwi"/>
                                                         <constraint firstItem="gfR-MJ-6tK" firstAttribute="leading" secondItem="aac-vX-26E" secondAttribute="leading" constant="25" id="4jg-Gx-GDo"/>
                                                         <constraint firstItem="gfR-MJ-6tK" firstAttribute="top" secondItem="aac-vX-26E" secondAttribute="top" constant="25" id="7mq-Mb-9cM"/>
                                                         <constraint firstAttribute="trailing" secondItem="388-rQ-pGG" secondAttribute="trailing" constant="25" id="Mp2-3s-lQm"/>
                                                         <constraint firstItem="388-rQ-pGG" firstAttribute="leading" secondItem="gfR-MJ-6tK" secondAttribute="leading" id="SIQ-k7-6y0"/>
+                                                        <constraint firstItem="mMn-3S-zat" firstAttribute="leading" secondItem="DCx-t9-jaV" secondAttribute="trailing" constant="30" id="UHs-K5-wqF"/>
                                                         <constraint firstItem="388-rQ-pGG" firstAttribute="top" secondItem="gfR-MJ-6tK" secondAttribute="bottom" id="bzT-H1-1Nu"/>
-                                                        <constraint firstAttribute="bottom" secondItem="388-rQ-pGG" secondAttribute="bottom" constant="5" id="kaU-ym-Yia"/>
+                                                        <constraint firstItem="mMn-3S-zat" firstAttribute="centerY" secondItem="DCx-t9-jaV" secondAttribute="centerY" id="nyT-Gb-L35"/>
+                                                        <constraint firstItem="DCx-t9-jaV" firstAttribute="top" secondItem="388-rQ-pGG" secondAttribute="bottom" constant="8" symbolic="YES" id="tW2-kd-G7m"/>
+                                                        <constraint firstItem="DCx-t9-jaV" firstAttribute="leading" secondItem="388-rQ-pGG" secondAttribute="leading" id="wr4-NW-8Wq"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -1036,7 +1053,9 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="btnSeeMore" destination="mMn-3S-zat" id="vUL-nz-VKE"/>
                                             <outlet property="chapterView" destination="aac-vX-26E" id="S6U-7k-R5d"/>
+                                            <outlet property="lblSeeMore" destination="DCx-t9-jaV" id="tcm-Ld-kk6"/>
                                             <outlet property="lblTitle" destination="gfR-MJ-6tK" id="gUp-6Q-Rpc"/>
                                             <outlet property="txtDescptn" destination="388-rQ-pGG" id="IXL-fw-dpM"/>
                                         </connections>

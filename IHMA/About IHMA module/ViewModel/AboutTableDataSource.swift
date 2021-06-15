@@ -16,6 +16,10 @@ class AboutTableDataSource: NSObject {
         attachView.aboutTableView.delegate = self
         attachView.aboutTableView.dataSource = self
     }
+    
+    @objc func seemoreBtnTapped(sender:UIButton) {
+        print("tapped")
+    }
 }
 
 //Mark:- Delegate Methods
@@ -45,7 +49,10 @@ extension AboutTableDataSource: UITableViewDataSource {
         } else {
             let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "about", for: indexPath))! as? ChapterTableViewCell
             cell?.lblTitle?.text = "Chapters"
+            cell?.btnSeeMore.layer.cornerRadius = (cell?.btnSeeMore.frame.size.height)!/2 // this value vary as per your desire
             cell?.chapterView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"2CC2D7")
+            cell!.btnSeeMore.addTarget(self, action: #selector(seemoreBtnTapped(sender:)),
+                                        for: UIControl.Event.touchUpInside)
             return cell!
         }
         let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "about", for: indexPath))! as? ChapterTableViewCell
