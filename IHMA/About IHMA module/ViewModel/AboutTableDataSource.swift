@@ -7,7 +7,14 @@
 
 import UIKit
 
-class AboutTableDataSource: NSObject {
+class AboutTableDataSource: NSObject,NavDelegate {
+    
+    //MARK :- Delegate func called from collection view cell using another delegate
+    func clickEvent(tag: Int) {
+        let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+        self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+    }
+    
     weak var parentView: AboutUsViewController?
     
     init(attachView: AboutUsViewController) {
@@ -45,6 +52,7 @@ extension AboutTableDataSource: UITableViewDataSource {
             let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "bearer", for: indexPath))! as? officeBearerTableViewCell
             cell?.bearerView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"2CBFD8")
             cell?.lblBearer?.text = "Office Bearers"
+            cell!.navDelegate = self
             return cell!
         } else {
             let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "about", for: indexPath))! as? ChapterTableViewCell

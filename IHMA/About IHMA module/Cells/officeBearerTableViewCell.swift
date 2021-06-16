@@ -7,18 +7,34 @@
 
 import UIKit
 
-class officeBearerTableViewCell: UITableViewCell {
+protocol CellDelegate: class {
+    func Intermediate(index:Int)
+}
+protocol NavDelegate: class {
+    func clickEvent(tag:Int)
+}
 
+class officeBearerTableViewCell: UITableViewCell,CellDelegate {
+
+    
     @IBOutlet weak var bearerView: UIView!
     @IBOutlet weak var lblBearer: UILabel!
     @IBOutlet weak var txtDesc: UITextView!
     @IBOutlet weak var bearersCollectionView: UICollectionView!
     let images = ["demo1","demo2","demo3","bill-gates-philanthropist1"]
+    //Delegate func
+    func Intermediate(index: Int) {
+        //MARK:- 2nd delegate firing .Call transferred from collection view cell to view controller
+        navDelegate?.clickEvent(tag:index)
+    }
+    weak var cellDelegate: CellDelegate?
+    weak var navDelegate: NavDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         bearersCollectionView.delegate = self
         bearersCollectionView.dataSource = self
+        cellDelegate = self
         updateUI()
     }
 
@@ -33,6 +49,15 @@ class officeBearerTableViewCell: UITableViewCell {
             bearerView.layer.cornerRadius = 30
             bearerView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"25A8E2")
         }
+    
+    @objc func personButtonTapped(sender:UIButton)
+    {
+        //delegate to fire from collection view cell to table view cell
+        cellDelegate?.Intermediate(index: sender.tag)
+
+    }
+    
+
 
 }
 
@@ -51,6 +76,9 @@ extension officeBearerTableViewCell:UICollectionViewDelegate,UICollectionViewDat
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "officers", for: indexPath) as? OfficeBearersCollectionViewCell
         cell?.imgPerson.makeRounded()
         cell?.imgPerson.image = UIImage(named: images[indexPath.item])
+        cell!.btnPerson.tag = indexPath.row
+        cell!.btnPerson.addTarget(self, action: #selector(personButtonTapped(sender:)),
+                                    for: UIControl.Event.touchUpInside)
         return cell!
     }
     func collectionView(_ collectionView: UICollectionView,

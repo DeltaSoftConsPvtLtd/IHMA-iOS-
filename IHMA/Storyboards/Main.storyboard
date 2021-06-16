@@ -1111,14 +1111,22 @@
                                                                                     <constraint firstAttribute="width" constant="50" id="cgT-Qf-nNo"/>
                                                                                 </constraints>
                                                                             </imageView>
+                                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxJ-uC-Qgf">
+                                                                                <rect key="frame" x="41" y="46.5" width="46" height="30"/>
+                                                                            </button>
                                                                         </subviews>
                                                                         <constraints>
+                                                                            <constraint firstItem="DxJ-uC-Qgf" firstAttribute="trailing" secondItem="syL-jV-5bU" secondAttribute="trailing" id="6Re-72-yzB"/>
+                                                                            <constraint firstItem="DxJ-uC-Qgf" firstAttribute="top" secondItem="syL-jV-5bU" secondAttribute="top" id="FQ1-Ix-bts"/>
+                                                                            <constraint firstItem="DxJ-uC-Qgf" firstAttribute="bottom" secondItem="syL-jV-5bU" secondAttribute="bottom" id="Uvc-9d-PP2"/>
+                                                                            <constraint firstItem="DxJ-uC-Qgf" firstAttribute="leading" secondItem="syL-jV-5bU" secondAttribute="leading" id="aB3-tU-6wf"/>
                                                                             <constraint firstItem="syL-jV-5bU" firstAttribute="centerX" secondItem="qmq-Zb-DJn" secondAttribute="centerX" id="odV-HR-sac"/>
                                                                             <constraint firstItem="syL-jV-5bU" firstAttribute="centerY" secondItem="qmq-Zb-DJn" secondAttribute="centerY" id="ohE-jF-8Qb"/>
                                                                         </constraints>
                                                                     </collectionViewCellContentView>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <connections>
+                                                                        <outlet property="btnPerson" destination="DxJ-uC-Qgf" id="8lB-CX-pKM"/>
                                                                         <outlet property="imgPerson" destination="syL-jV-5bU" id="l2P-F4-vdJ"/>
                                                                     </connections>
                                                                 </collectionViewCell>

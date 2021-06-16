@@ -9,5 +9,6 @@ import UIKit
 
 class OfficeBearersCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var btnPerson: UIButton!
     @IBOutlet weak var imgPerson: UIImageView!
 }
