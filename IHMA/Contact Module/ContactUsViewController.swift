@@ -27,14 +27,32 @@ class ContactUsViewController: BaseViewController {
     @IBOutlet weak var imgEmail: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
     
+    //variables
+    var image:String?
+    var name:String?
+    var contactTitle:String?
+    var positionName:String?
+    var address:String?
+    var phone:String?
+    var email:String?
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColors()
         sideMenu()
+        updateUI()
         // Do any additional setup after loading the view.
     }
     
-
+    func updateUI() {
+        imgProfile.makeRounded()
+        imgProfile.image = UIImage(named: image!)
+        lblContactInfoTitle.text = contactTitle
+        lblTitle.text = name
+        lblContactInfo.text = positionName
+        lblAddress.text = address
+        lblPhone.text = phone
+        lblEmail.text = email
+    }
     /*
     // MARK: - Navigation
 

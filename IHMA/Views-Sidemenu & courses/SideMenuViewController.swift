@@ -175,7 +175,14 @@ class MenuListController: UITableViewController {
             let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
             self.navigationController?.pushViewController(destinationController!, animated: true)
         case 4:
-            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+            destinationController!.image = "logo-removebg-preview"
+            destinationController!.name = "IHMA"
+            destinationController!.contactTitle = "CONTACT INFO"
+            destinationController!.positionName = "Public Relationship Officer : Dr. M. Mathews Jo"
+            destinationController!.address = "1/4741, Eranjipalam P.O.,Kozhikode - 673 006, Kerala."
+            destinationController!.phone = "+91 9444 126 169"
+            destinationController!.email = "info@ihma.in"
             self.navigationController?.pushViewController(destinationController!, animated: true)
 //        case 1:
 //

@@ -11,7 +11,14 @@ class AboutTableDataSource: NSObject,NavDelegate {
     
     //MARK :- Delegate func called from collection view cell using another delegate
     func clickEvent(tag: Int) {
-        let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+        let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+        destinationController!.image = "Dr. ganesh"
+        destinationController!.name = "DR GANESH DAS"
+        destinationController!.contactTitle = "DESIGNATION"
+        destinationController!.positionName = "State President"
+        destinationController!.address = "Pallichambel Road, Samskara junction, Palarivattom, Ernakulam 682 025"
+        destinationController!.phone = "(+91) 9895 536 036"
+        destinationController!.email = "drganeshgdas@gmail.com"
         self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
     }
     
