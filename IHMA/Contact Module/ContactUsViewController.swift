@@ -8,10 +8,16 @@
 import UIKit
 
 class ContactUsViewController: BaseViewController {
-
+   
+    @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var viewProfile: UIView!
+    @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var viewAddress: UIView!
     @IBOutlet weak var lblAddressTitle: UILabel!
     @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var imgLocation: UIImageView!
+    @IBOutlet weak var viewContact: UIView!
     @IBOutlet weak var lblContactInfoTitle: UILabel!
     @IBOutlet weak var lblContactInfo: UILabel!
     @IBOutlet weak var viewPhone: UIView!
@@ -20,6 +26,7 @@ class ContactUsViewController: BaseViewController {
     @IBOutlet weak var viewEmail: UIView!
     @IBOutlet weak var imgEmail: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColors()
