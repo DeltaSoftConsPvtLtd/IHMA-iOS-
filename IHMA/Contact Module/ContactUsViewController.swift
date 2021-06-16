@@ -10,10 +10,10 @@ import UIKit
 class ContactUsViewController: BaseViewController {
 
     @IBOutlet weak var viewAddress: UIView!
-    @IBOutlet weak var lblAddress1: UILabel!
-    @IBOutlet weak var lblAddress2: UILabel!
-    @IBOutlet weak var lblAddress3: UILabel!
-    @IBOutlet weak var lblAddress4: UILabel!
+    @IBOutlet weak var lblAddressTitle: UILabel!
+    @IBOutlet weak var lblAddress: UILabel!
+    @IBOutlet weak var lblContactInfoTitle: UILabel!
+    @IBOutlet weak var lblContactInfo: UILabel!
     @IBOutlet weak var viewPhone: UIView!
     @IBOutlet weak var imgPhone: UIImageView!
     @IBOutlet weak var lblPhone: UILabel!
