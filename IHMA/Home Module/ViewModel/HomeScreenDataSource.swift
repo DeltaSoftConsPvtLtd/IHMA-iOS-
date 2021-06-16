@@ -16,30 +16,45 @@ class HomeScreenDataSource: NSObject,NavigationDelegate {
         
         switch (tag) {
         case 0:
-            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
-            destinationController?.activity = "Articles"
+            let destinationController = AboutUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") 
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
-            print("publications")
+            print("About IHMA")
         case 1:
-            print("Trainings")
+            print("Homeopathy")
             let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
-            destinationController?.activity = "trainings"
+            destinationController?.activity = "Homeopathy"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 2:
-            print("Conferences")
+            print("Flash News")
             let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
             destinationController?.activity = "Flash news"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 3:
-            print("event")
+            print("events")
+            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.activity = "Events"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 4:
-            print("New")
+            print("SOH")
+            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.activity = "SOH"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 5:
-            print("demo")
+            print("Articles")
+            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.activity = "Articles"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 6:
-            print("struct")
+            print("Institutions")
+            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.activity = "Institutions"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+            
         case 7:
-            print("event")
+            print("IHRC")
+            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.activity = "IHRC"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         default:
             break
         }

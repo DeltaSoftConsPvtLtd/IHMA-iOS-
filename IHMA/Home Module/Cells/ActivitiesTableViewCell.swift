@@ -31,8 +31,8 @@ class ActivitiesTableViewCell: UITableViewCell,ExampleCellDelegate {
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
 
 
-    var images = ["courses-1","training","conference","events","courses-1","training","conference","events"]
-    var titles = ["Articles","Trainings","Flash News","Events","Articles","Trainings","Flash News","Events"]
+    var images = ["IHMA logo","Homeopathy","conference","events","courses-1","Institution","conference","events"]
+    var titles = ["About IHMA","Homeopathy","Flash News","Events","Articles","Institutions","SOH","IHRC"]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -53,40 +53,7 @@ class ActivitiesTableViewCell: UITableViewCell,ExampleCellDelegate {
     {
         //delegate to fire from collection view cell to table view cell
         cellDelegate?.demo(index: sender.tag)
-//        switch (sender.tag) {
-//        case 0:
-//            //delegate to fire from collection view cell to table view cell
-//            cellDelegate?.demo(index: sender.tag)
-//            print("publications")
-//        case 1:
-//            //delegate to fire from collection view cell to table view cell
-//            cellDelegate?.demo(index: sender.tag)
-//            print("Trainings")
-//        case 2:
-//            //delegate to fire from collection view cell to table view cell
-//            cellDelegate?.demo(index: sender.tag)
-//            print("Conferences")
-//        case 3:
-//            //delegate to fire from collection view cell to table view cell
-//            cellDelegate?.demo(index: sender.tag)
-//            print("event")
-//        case 4:
-//            //delegate to fire from collection view cell to table view cell
-//            cellDelegate?.demo(index: sender.tag)
-//            print("New")
-//        case 5:
-//            //delegate to fire from collection view cell to table view cell
-//            cellDelegate?.demo(index: sender.tag)
-//            print("demo")
-//        case 6:
-//            //delegate to fire from collection view cell to table view cell
-//            cellDelegate?.demo(index: sender.tag)
-//            print("struct")
-//        case 7:
-//            print("event")
-//        default:
-//            break
-//        }
+
     }
     
 }
@@ -134,7 +101,7 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
         var cellSize = CGSize(width:0 ,height:0)
         let itemPerRow = CGFloat(1)
-        let availableWidth = activitiesCollectionView.frame.width/4.5
+        let availableWidth = activitiesCollectionView.frame.width/4
         let widthPerItem = availableWidth / itemPerRow
         let availableHeight = self.activitiesCollectionView.frame.height/2 - 20
         let heightPerItem = availableHeight

@@ -733,7 +733,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="MHz-tY-VhZ">
-                                                    <rect key="frame" x="20" y="11" width="394" height="206"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="206"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DSN-39-3Dy">
                                                         <size key="itemSize" width="128" height="128"/>
@@ -801,7 +801,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="MHz-tY-VhZ" secondAttribute="bottom" id="IKI-Ms-A5I"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="MHz-tY-VhZ" secondAttribute="trailing" constant="-20" id="N7A-0l-IfA"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MHz-tY-VhZ" secondAttribute="trailing" id="N7A-0l-IfA"/>
                                                 <constraint firstItem="MHz-tY-VhZ" firstAttribute="leading" secondItem="y2X-oL-bLt" secondAttribute="leadingMargin" id="Xcr-p9-Rgm"/>
                                                 <constraint firstItem="MHz-tY-VhZ" firstAttribute="top" secondItem="y2X-oL-bLt" secondAttribute="topMargin" id="gfu-aR-72Z"/>
                                             </constraints>
