@@ -7,7 +7,48 @@
 
 import UIKit
 
-class HomeScreenDataSource: NSObject {
+class HomeScreenDataSource: NSObject,NavigationDelegate {
+   
+    
+    
+    //MARK :- Delegate func called from collection view cell using another delegate
+    func nextPage(tag: Int) {
+        
+        switch (tag) {
+        case 0:
+            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.activity = "Articles"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+            print("publications")
+        case 1:
+            print("Trainings")
+            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.activity = "trainings"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        case 2:
+            print("Conferences")
+            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.activity = "Flash news"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        case 3:
+            print("event")
+        case 4:
+            print("New")
+        case 5:
+            print("demo")
+        case 6:
+            print("struct")
+        case 7:
+            print("event")
+        default:
+            break
+        }
+
+        
+    }
+    
+   
+    
     weak var parentView: HomeScreenViewController?
     
     init(attachView: HomeScreenViewController) {
@@ -17,6 +58,7 @@ class HomeScreenDataSource: NSObject {
         attachView.homeTableView.dataSource = self
         parentView?.sideMenu()
     }
+    
 }
 
 //Mark:- Datasource and delegate methods
@@ -44,9 +86,11 @@ extension HomeScreenDataSource:UITableViewDataSource,UITableViewDelegate {
             return cell!
         } else if (indexPath.row == 3) {
             let cell = (self.parentView?.homeTableView.dequeueReusableCell(withIdentifier: "Activities", for: indexPath))! as? ActivitiesTableViewCell
+            cell!.navigationDelegate = self
             return cell!
         }
         let cell = (self.parentView?.homeTableView.dequeueReusableCell(withIdentifier: "Carousel", for: indexPath))!   as? CarouselTableViewCell
+        
         return cell!
     }
     

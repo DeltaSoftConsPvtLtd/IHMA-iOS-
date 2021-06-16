@@ -7,13 +7,26 @@
 
 import UIKit
 
+protocol ExampleCellDelegate: class {
+    func demo(index:Int)
+}
+
+protocol NavigationDelegate: class {
+    func nextPage(tag:Int)
+}
 
 
-class ActivitiesTableViewCell: UITableViewCell {
-//    func menuReady() {
-//        print("hi")
-//    }
+class ActivitiesTableViewCell: UITableViewCell,ExampleCellDelegate {
+    func demo(index: Int) {
+        //MARK:- 2nd delegate firing .Call transferred from collection view cell to view controller
+        navigationDelegate?.nextPage(tag:index)
+    }
     
+    weak var cellDelegate: ExampleCellDelegate?
+    weak var navigationDelegate: NavigationDelegate?
+
+    
+
 
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
 
@@ -25,6 +38,9 @@ class ActivitiesTableViewCell: UITableViewCell {
         // Initialization code
         activitiesCollectionView.delegate = self
         activitiesCollectionView.dataSource = self
+        cellDelegate = self
+        
+     
     }
 
 
@@ -35,32 +51,42 @@ class ActivitiesTableViewCell: UITableViewCell {
     }
     @objc func activityBtnTapped(sender:UIButton)
     {
-        switch (sender.tag) {
-        case 0:
-//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: ActivitiesViewController) as! ActivitiesViewController
-//                self.present(vc, animated: true, completion: nil)
-//            let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
-//            self.navigationController?.pushViewController(destinationController!, animated: true)
-//            self.delegate.menuReady()
-            print("publications")
-        case 1:
-            print("Trainings")
-        case 2:
-            print("Conferences")
-        case 3:
-            print("event")
-        case 4:
-            print("New")
-        case 5:
-            print("demo")
-        case 6:
-            print("struct")
-        case 7:
-            print("event")
-        default:
-            break
-        }
+        //delegate to fire from collection view cell to table view cell
+        cellDelegate?.demo(index: sender.tag)
+//        switch (sender.tag) {
+//        case 0:
+//            //delegate to fire from collection view cell to table view cell
+//            cellDelegate?.demo(index: sender.tag)
+//            print("publications")
+//        case 1:
+//            //delegate to fire from collection view cell to table view cell
+//            cellDelegate?.demo(index: sender.tag)
+//            print("Trainings")
+//        case 2:
+//            //delegate to fire from collection view cell to table view cell
+//            cellDelegate?.demo(index: sender.tag)
+//            print("Conferences")
+//        case 3:
+//            //delegate to fire from collection view cell to table view cell
+//            cellDelegate?.demo(index: sender.tag)
+//            print("event")
+//        case 4:
+//            //delegate to fire from collection view cell to table view cell
+//            cellDelegate?.demo(index: sender.tag)
+//            print("New")
+//        case 5:
+//            //delegate to fire from collection view cell to table view cell
+//            cellDelegate?.demo(index: sender.tag)
+//            print("demo")
+//        case 6:
+//            //delegate to fire from collection view cell to table view cell
+//            cellDelegate?.demo(index: sender.tag)
+//            print("struct")
+//        case 7:
+//            print("event")
+//        default:
+//            break
+//        }
     }
     
 }
@@ -95,6 +121,8 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
         cell!.btnActivity.addTarget(self, action: #selector(activityBtnTapped(sender:)),
                                     for: UIControl.Event.touchUpInside)
 //        cell!.delegate = self
+        
+        
 
        
        
