@@ -13,7 +13,8 @@ class ChaptersDataSource: NSObject {
     weak var parentView: ChaptersViewController?
     
     var states:String = ""
-    var district:String = "Thrissur"
+    var district:String = ""
+    var chaptersArray = ["","","Ernakulam","Kollam"]
     
     init(attachView: ChaptersViewController) {
         super.init()
@@ -65,6 +66,7 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
+        if indexPath.row < 2 {
         let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "dropDown", for: indexPath))!  as? ChaptersTableViewCell
         switch indexPath.row  {
         case 0:
@@ -92,9 +94,10 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
               print("Selected item: \(item) at index: \(index)")
                 cell?.lblList.text = districtsArray[index]
                 district = (cell?.lblList.text!)!
-                if(district != nil )
+                if(district != "" )
                 {
                     cell?.lblList.text = district
+                    self.parentView?.chapterListTableView.reloadData()
                 }
             }
         default:
@@ -103,10 +106,24 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
             break
         }
         return cell!
+        } else {
+            let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "List", for: indexPath))!  as? ListTableViewCell
+            if district != "" {
+                cell?.lblList.text = chaptersArray[indexPath.row]
+            } else{
+                cell?.lblList.text = ""
+            }
+            return cell!
+        }
+        let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "List", for: indexPath))!  as? ListTableViewCell
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        if indexPath.row < 2 {
+            return 80
+        }
+        return 50
         
     }
 }

@@ -50,6 +50,7 @@
 		907022D1267B614D00D074EE /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907022D0267B614D00D074EE /* ChaptersViewController.swift */; };
 		907022D9267B664700D074EE /* ChaptersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907022D8267B664700D074EE /* ChaptersDataSource.swift */; };
 		907022E1267B6AD600D074EE /* ChaptersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907022E0267B6AD600D074EE /* ChaptersTableViewCell.swift */; };
+		907022E4267BC15100D074EE /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907022E3267BC15100D074EE /* ListTableViewCell.swift */; };
 		90759C0826328BE60052FFAB /* Loginscreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90759C0726328BE60052FFAB /* Loginscreens.storyboard */; };
 		90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C0B26328C780052FFAB /* RegistrationViewController.swift */; };
 		90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C142632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift */; };
@@ -139,6 +140,7 @@
 		907022D0267B614D00D074EE /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
 		907022D8267B664700D074EE /* ChaptersDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersDataSource.swift; sourceTree = "<group>"; };
 		907022E0267B6AD600D074EE /* ChaptersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersTableViewCell.swift; sourceTree = "<group>"; };
+		907022E3267BC15100D074EE /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		90759C0726328BE60052FFAB /* Loginscreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loginscreens.storyboard; sourceTree = "<group>"; };
 		90759C0B26328C780052FFAB /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		90759C142632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "ViewControllers+StoryboardIdentifiers.swift"; path = "IHMA/Storyboard Helpers/ViewControllers+StoryboardIdentifiers.swift"; sourceTree = SOURCE_ROOT; };
@@ -349,6 +351,7 @@
 			isa = PBXGroup;
 			children = (
 				907022E0267B6AD600D074EE /* ChaptersTableViewCell.swift */,
+				907022E3267BC15100D074EE /* ListTableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
 				907022D9267B664700D074EE /* ChaptersDataSource.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
+				907022E4267BC15100D074EE /* ListTableViewCell.swift in Sources */,
 				905B14062662053200A9BC4D /* getList.swift in Sources */,
 				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
 				902A85D026502724002380BF /* Post_RegistrationModel.swift in Sources */,
