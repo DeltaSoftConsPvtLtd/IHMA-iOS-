@@ -33,6 +33,8 @@ class AboutTableDataSource: NSObject,NavDelegate {
     
     @objc func seemoreBtnTapped(sender:UIButton) {
         print("tapped")
+        let destinationController = ChaptersViewController.instantiateViewControllerFromStoryboard(storyBoardName: "ChapterScreens")
+        self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
     }
 }
 
