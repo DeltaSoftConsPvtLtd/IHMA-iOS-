@@ -1416,7 +1416,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lmg-yH-dxq" userLabel="AddressView">
-                                        <rect key="frame" x="69" y="420.5" width="276" height="251"/>
+                                        <rect key="frame" x="69" y="370.5" width="276" height="251"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="location" translatesAutoresizingMaskIntoConstraints="NO" id="SdB-Ha-iDM">
                                                 <rect key="frame" x="20" y="73.5" width="30" height="25"/>
@@ -1537,7 +1537,7 @@ Kozhikode - 673 006, Kerala.</string>
                                     <constraint firstItem="8SA-xJ-wsZ" firstAttribute="top" secondItem="YWq-wJ-keA" secondAttribute="top" constant="50" id="iBu-jW-i1q"/>
                                     <constraint firstItem="Lmg-yH-dxq" firstAttribute="height" secondItem="YWq-wJ-keA" secondAttribute="height" multiplier="1:3" id="lp5-Wa-xOT"/>
                                     <constraint firstItem="Lmg-yH-dxq" firstAttribute="width" secondItem="YWq-wJ-keA" secondAttribute="width" multiplier="2:3" id="ogO-xJ-E3o"/>
-                                    <constraint firstItem="Lmg-yH-dxq" firstAttribute="top" secondItem="YOJ-hL-Gzi" secondAttribute="bottom" constant="-50" id="tPY-vu-snK"/>
+                                    <constraint firstItem="Lmg-yH-dxq" firstAttribute="top" secondItem="YOJ-hL-Gzi" secondAttribute="bottom" constant="-100" id="tPY-vu-snK"/>
                                     <constraint firstItem="YOJ-hL-Gzi" firstAttribute="centerY" secondItem="YWq-wJ-keA" secondAttribute="centerY" id="yCr-uK-LmC"/>
                                     <constraint firstItem="8SA-xJ-wsZ" firstAttribute="height" secondItem="YWq-wJ-keA" secondAttribute="height" multiplier="1:4" id="zsL-3o-QnA"/>
                                 </constraints>

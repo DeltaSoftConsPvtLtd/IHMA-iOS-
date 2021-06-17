@@ -124,3 +124,12 @@ extension ActivitiesViewController: StoryboardIdentifiable
         return "ActivitiesViewController"
             }
 }
+
+
+//MARK:- Chapters View Controller
+extension ChaptersViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "ChaptersViewController"
+            }
+}
