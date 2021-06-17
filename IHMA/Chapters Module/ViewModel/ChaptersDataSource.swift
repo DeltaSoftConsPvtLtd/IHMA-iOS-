@@ -6,15 +6,50 @@
 //
 
 import UIKit
+import Foundation
 
 class ChaptersDataSource: NSObject {
+    
     weak var parentView: ChaptersViewController?
+    
+    var states:String = ""
+    var district:String = "Thrissur"
+    
     init(attachView: ChaptersViewController) {
         super.init()
         self.parentView = attachView
         attachView.chapterListTableView.delegate = self
         attachView.chapterListTableView.dataSource = self
+        parsingData(x: 0)
        
+    }
+    
+    func parsingData(x:Int) {
+        //Mark:- parse json data
+        Parser.shared.parserFile(File_List) { (status,msg,resp) in
+            if status{
+                let response = resp as! StatesModel
+                print(response.states![1].state)
+                districtsArray.removeAll()
+                if(states != "" )
+                {
+                    
+                    for index in 0...((response.states![x].districts?.count)!-1)
+                    {
+//                        districtsArray[index] = response.states![x].districts![index]
+                        districtsArray.append(response.states![x].districts![index])
+                    }
+                    self.parentView?.chapterListTableView.reloadData()
+                } else {
+                    for index in 0...((response.states?.count)!-1)
+                    {
+                        statesArray.append((response.states![index].state)!)
+                    }
+                }
+                
+
+            }//End of if loop for status
+        }//End of parser
     }
 }
 
@@ -31,18 +66,42 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
         let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "dropDown", for: indexPath))!  as? ChaptersTableViewCell
-        cell?.dropDown.dataSource = statesArray
-        cell?.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-          print("Selected item: \(item) at index: \(index)")
-            cell?.lblList.text = statesArray[index]
-//            states = cell.lblTitle.text!
-//            parsingData(x: index)
-//            if(states != nil )
-//            {
-//                cell.lblTitle.text = states
+        switch indexPath.row  {
+        case 0:
+//            if states == "" {
+//                cell?.lblList.text = "Select"
 //            }
+            cell?.lblTitle.text = "States"
+            cell?.dropDown.dataSource = statesArray
+            cell?.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                print("Selected item: \(item) at index: \(index)")
+            cell?.lblList.text = statesArray[index]
+            states = (cell?.lblList.text!)!
+            parsingData(x: index)
         }
+            if(states != "" )
+            {
+                cell?.lblList.text = states
+            }
 
+        
+        case 1:
+            cell?.lblTitle.text = "District"
+            cell?.dropDown.dataSource = districtsArray
+            cell?.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+              print("Selected item: \(item) at index: \(index)")
+                cell?.lblList.text = districtsArray[index]
+                district = (cell?.lblList.text!)!
+                if(district != nil )
+                {
+                    cell?.lblList.text = district
+                }
+            }
+        default:
+            cell?.dropDownView.isHidden = true
+            cell?.lblTitle.text = ""
+            break
+        }
         return cell!
     }
     
