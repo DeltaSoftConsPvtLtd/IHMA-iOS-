@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,7 +53,7 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="j7u-rt-XgJ">
                                 <rect key="frame" x="0.0" y="109" width="414" height="753"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="dropDown" id="jVl-mg-dxh" customClass="ChaptersTableViewCell" customModule="IHMA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -86,6 +85,7 @@
                                                         </imageView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c9U-lM-yxJ">
                                                             <rect key="frame" x="0.0" y="0.0" width="276" height="55"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <connections>
                                                                 <action selector="dropDownTap:" destination="jVl-mg-dxh" eventType="touchUpInside" id="jIO-gb-q0Q"/>
                                                             </connections>
@@ -132,6 +132,7 @@
                                                 <constraint firstItem="E3j-jy-Y0J" firstAttribute="centerY" secondItem="Nvg-Bs-EcC" secondAttribute="centerY" id="PcF-In-A3j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="btnDropDown" destination="c9U-lM-yxJ" id="rkA-Ij-hOX"/>
                                             <outlet property="dropDownView" destination="E3j-jy-Y0J" id="5Zd-nh-MT6"/>
@@ -141,7 +142,7 @@
                                             <outlet property="viewSeparator" destination="G3p-iy-dJ8" id="hhB-qT-jKu"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="List" id="GvN-eo-Pg6" customClass="ListTableViewCell" customModule="IHMA" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="List" id="GvN-eo-Pg6" customClass="ListTableViewCell" customModule="IHMA" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GvN-eo-Pg6" id="x8b-Wz-2GW">
@@ -160,6 +161,7 @@
                                                 <constraint firstItem="dn0-Zk-AHf" firstAttribute="centerY" secondItem="x8b-Wz-2GW" secondAttribute="centerY" id="b71-RT-47p"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="lblList" destination="dn0-Zk-AHf" id="Te9-Ic-BtW"/>
                                         </connections>
@@ -191,8 +193,5 @@
     <resources>
         <image name="MenuTidingsIcon" width="96" height="96"/>
         <image name="down arrow" width="25" height="25"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

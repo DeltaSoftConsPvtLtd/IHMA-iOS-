@@ -75,6 +75,10 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
 //            }
             cell?.lblTitle.text = "States"
             cell?.dropDown.dataSource = statesArray
+            //to change the color of a dropdown
+            cell?.dropDownView.backgroundColor = UIColor.clear
+            cell?.dropDown.backgroundColor = UIColor.clear
+            
             cell?.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                 print("Selected item: \(item) at index: \(index)")
             cell?.lblList.text = statesArray[index]
@@ -90,6 +94,9 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
         case 1:
             cell?.lblTitle.text = "District"
             cell?.dropDown.dataSource = districtsArray
+            //to change the color of a dropdown
+            cell?.dropDownView.backgroundColor = UIColor.clear
+            
             cell?.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
               print("Selected item: \(item) at index: \(index)")
                 cell?.lblList.text = districtsArray[index]
