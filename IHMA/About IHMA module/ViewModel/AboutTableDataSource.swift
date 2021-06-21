@@ -33,6 +33,26 @@ class AboutTableDataSource: NSObject,NavDelegate {
             destinationController!.phone = "(+91) 944 412 6169"
             destinationController!.email = "info@ihma.in"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        case 2:
+            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+            destinationController!.image = "Dr. Jibil"
+            destinationController!.name = "DR. JIBIL"
+            destinationController!.contactTitle = "DESIGNATION"
+            destinationController!.positionName = "Secretary"
+            destinationController!.address = "1/4741, Eranjipalam P.O., Kozhikode - 673 006, Kerala"
+            destinationController!.phone = "(+91) 944 412 6169"
+            destinationController!.email = "info@ihma.in"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        case 3:
+            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+            destinationController!.image = "Dr. Deepu"
+            destinationController!.name = "DR. DEEPU DEV"
+            destinationController!.contactTitle = "DESIGNATION"
+            destinationController!.positionName = "Secretary"
+            destinationController!.address = "1/4741, Eranjipalam P.O., Kozhikode - 673 006, Kerala"
+            destinationController!.phone = "(+91) 944 412 6169"
+            destinationController!.email = "info@ihma.in"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         default:
             break
         }
