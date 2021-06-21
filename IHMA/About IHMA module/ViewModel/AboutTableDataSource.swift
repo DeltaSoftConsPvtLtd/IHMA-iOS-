@@ -11,15 +11,32 @@ class AboutTableDataSource: NSObject,NavDelegate {
     
     //MARK :- Delegate func called from collection view cell using another delegate
     func clickEvent(tag: Int) {
-        let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
-        destinationController!.image = "Dr. ganesh"
-        destinationController!.name = "DR GANESH DAS"
-        destinationController!.contactTitle = "DESIGNATION"
-        destinationController!.positionName = "State President"
-        destinationController!.address = "Pallichambel Road, Samskara junction, Palarivattom, Ernakulam 682 025"
-        destinationController!.phone = "(+91) 9895 536 036"
-        destinationController!.email = "drganeshgdas@gmail.com"
-        self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+   
+        switch (tag) {
+        case 0:
+            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+            destinationController!.image = "Dr. ganesh"
+            destinationController!.name = "DR GANESH DAS"
+            destinationController!.contactTitle = "DESIGNATION"
+            destinationController!.positionName = "State President"
+            destinationController!.address = "Pallichambel Road, Samskara junction, Palarivattom, Ernakulam 682 025"
+            destinationController!.phone = "(+91) 9895 536 036"
+            destinationController!.email = "drganeshgdas@gmail.com"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        case 1:
+            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+            destinationController!.image = "Dr. Anwar"
+            destinationController!.name = "DR ANWAR RAHMAN T.K"
+            destinationController!.contactTitle = "DESIGNATION"
+            destinationController!.positionName = "General Secretary"
+            destinationController!.address = "1/4741, Eranjipalam P.O., Kozhikode - 673 006, Kerala"
+            destinationController!.phone = "(+91) 944 412 6169"
+            destinationController!.email = "info@ihma.in"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        default:
+            break
+        }
+      
     }
     
     weak var parentView: AboutUsViewController?

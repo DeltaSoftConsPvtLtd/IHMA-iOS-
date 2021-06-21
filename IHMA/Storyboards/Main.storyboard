@@ -1366,17 +1366,17 @@
                                 <rect key="frame" x="0.0" y="109" width="414" height="753"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SA-xJ-wsZ" userLabel="LogoView">
-                                        <rect key="frame" x="50" y="50" width="314" height="188.5"/>
+                                        <rect key="frame" x="25" y="50" width="364" height="188.5"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="RSM-Dg-raR">
-                                                <rect key="frame" x="107" y="25" width="100" height="100"/>
+                                                <rect key="frame" x="132" y="25" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="6zT-FZ-tvI"/>
                                                     <constraint firstAttribute="height" constant="100" id="jQk-AO-Px3"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IHMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6w0-0u-XdV">
-                                                <rect key="frame" x="120.5" y="135" width="73" height="34"/>
+                                                <rect key="frame" x="145.5" y="135" width="73" height="34"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1531,8 +1531,8 @@ Kozhikode - 673 006, Kerala.</string>
                                     <constraint firstItem="YOJ-hL-Gzi" firstAttribute="height" secondItem="YWq-wJ-keA" secondAttribute="height" multiplier="1:4" id="5Cu-1N-zde"/>
                                     <constraint firstItem="YOJ-hL-Gzi" firstAttribute="centerX" secondItem="YWq-wJ-keA" secondAttribute="centerX" id="DiY-Uu-nyd"/>
                                     <constraint firstItem="YOJ-hL-Gzi" firstAttribute="width" secondItem="YWq-wJ-keA" secondAttribute="width" multiplier="2:3" id="SIe-2o-fP6"/>
-                                    <constraint firstItem="8SA-xJ-wsZ" firstAttribute="leading" secondItem="YWq-wJ-keA" secondAttribute="leading" constant="50" id="XMg-5X-GAA"/>
-                                    <constraint firstAttribute="trailing" secondItem="8SA-xJ-wsZ" secondAttribute="trailing" constant="50" id="clr-Dp-6QZ"/>
+                                    <constraint firstItem="8SA-xJ-wsZ" firstAttribute="leading" secondItem="YWq-wJ-keA" secondAttribute="leading" constant="25" id="XMg-5X-GAA"/>
+                                    <constraint firstAttribute="trailing" secondItem="8SA-xJ-wsZ" secondAttribute="trailing" constant="25" id="clr-Dp-6QZ"/>
                                     <constraint firstItem="Lmg-yH-dxq" firstAttribute="centerX" secondItem="YWq-wJ-keA" secondAttribute="centerX" id="dgw-nN-VrO"/>
                                     <constraint firstItem="8SA-xJ-wsZ" firstAttribute="top" secondItem="YWq-wJ-keA" secondAttribute="top" constant="50" id="iBu-jW-i1q"/>
                                     <constraint firstItem="Lmg-yH-dxq" firstAttribute="height" secondItem="YWq-wJ-keA" secondAttribute="height" multiplier="1:3" id="lp5-Wa-xOT"/>

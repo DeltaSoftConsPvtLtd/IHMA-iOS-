@@ -21,7 +21,7 @@ class officeBearerTableViewCell: UITableViewCell,CellDelegate {
     @IBOutlet weak var lblBearer: UILabel!
     @IBOutlet weak var txtDesc: UITextView!
     @IBOutlet weak var bearersCollectionView: UICollectionView!
-    let images = ["Dr. ganesh","demo2","demo3","bill-gates-philanthropist1"]
+    let images = ["Dr. ganesh","Dr. Anwar","demo3","bill-gates-philanthropist1"]
     //Delegate func
     func Intermediate(index: Int) {
         //MARK:- 2nd delegate firing .Call transferred from collection view cell to view controller
