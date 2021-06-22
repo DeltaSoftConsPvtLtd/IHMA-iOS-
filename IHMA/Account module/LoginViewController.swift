@@ -114,14 +114,12 @@ class LoginViewController: BaseViewController {
     }
 
     @IBAction func btnRembrPassword(_ sender: Any) {
-        if (UserDefaults.standard.value(forKey: "Username") != nil)
-        {
-            if((txtUsername.text == UserDefaults.standard.value(forKey:         "Username") as! String) && txtUsername.text != "") {
+        
+            if(UserDefaults.standard.value(forKey:"Username") as! String != "") {
                 imgRemeberPassword.image = UIImage(named: "checked")
                 self.txtPassword.text = UserDefaults.standard.value(forKey: "password") as! String
-            }
-        }
-         
+                self.txtUsername.text = UserDefaults.standard.value(forKey: "Username") as! String
+            }    
     }
     
     @IBAction func btnForgetPassword(_ sender: Any) {
