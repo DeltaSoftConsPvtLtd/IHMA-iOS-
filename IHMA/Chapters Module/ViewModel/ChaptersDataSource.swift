@@ -83,7 +83,7 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
                 print("Selected item: \(item) at index: \(index)")
             cell?.lblList.text = chapterDistrictArray[index]
             states = (cell?.lblList.text!)!
-            parsingData(x: index+1)
+            parsingData(x: index)
         }
             if(states != "" )
             {

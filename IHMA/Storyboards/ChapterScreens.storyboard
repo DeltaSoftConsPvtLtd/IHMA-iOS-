@@ -63,15 +63,24 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dn0-Zk-AHf">
-                                                    <rect key="frame" x="40" y="11.5" width="42" height="21"/>
+                                                    <rect key="frame" x="50" y="11.5" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square" translatesAutoresizingMaskIntoConstraints="NO" id="DPM-Dh-Hy8">
+                                                    <rect key="frame" x="20" y="14.5" width="15" height="15"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="15" id="0kb-fZ-rO6"/>
+                                                        <constraint firstAttribute="height" constant="15" id="fmE-gt-Miy"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="dn0-Zk-AHf" firstAttribute="leading" secondItem="x8b-Wz-2GW" secondAttribute="leadingMargin" constant="20" id="Wxg-ka-eIE"/>
+                                                <constraint firstItem="DPM-Dh-Hy8" firstAttribute="centerY" secondItem="x8b-Wz-2GW" secondAttribute="centerY" id="STc-Ny-HnV"/>
+                                                <constraint firstItem="dn0-Zk-AHf" firstAttribute="leading" secondItem="DPM-Dh-Hy8" secondAttribute="trailing" constant="15" id="X97-WW-WlS"/>
                                                 <constraint firstItem="dn0-Zk-AHf" firstAttribute="centerY" secondItem="x8b-Wz-2GW" secondAttribute="centerY" id="b71-RT-47p"/>
+                                                <constraint firstItem="DPM-Dh-Hy8" firstAttribute="leading" secondItem="x8b-Wz-2GW" secondAttribute="leading" constant="20" id="hmN-wP-Ng3"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,7 +112,7 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="color" keyPath="changeColor">
-                                                                    <color key="value" red="0.57254901960000004" green="0.57254901960000004" blue="0.65490196079999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <color key="value" red="0.10588235294117647" green="0.53333333333333333" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </imageView>
@@ -122,9 +131,9 @@
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N81-hO-FC1">
-                                                            <rect key="frame" x="0.0" y="0.0" width="40" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <rect key="frame" x="0.0" y="-5" width="55" height="26.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                            <color key="textColor" red="0.10588235294117647" green="0.53333333333333333" blue="0.94509803921568625" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -134,7 +143,7 @@
                                                         <constraint firstAttribute="height" constant="55" id="0as-FO-8vb"/>
                                                         <constraint firstAttribute="bottom" secondItem="c9U-lM-yxJ" secondAttribute="bottom" id="2MY-Ts-SYZ"/>
                                                         <constraint firstAttribute="trailing" secondItem="JT6-jA-iGh" secondAttribute="trailing" id="5iQ-1h-GdQ"/>
-                                                        <constraint firstItem="N81-hO-FC1" firstAttribute="top" secondItem="E3j-jy-Y0J" secondAttribute="top" id="BvL-bk-Za1"/>
+                                                        <constraint firstItem="N81-hO-FC1" firstAttribute="top" secondItem="E3j-jy-Y0J" secondAttribute="top" constant="-5" id="BvL-bk-Za1"/>
                                                         <constraint firstItem="8Ku-q8-vnI" firstAttribute="leading" secondItem="E3j-jy-Y0J" secondAttribute="leading" constant="10" id="E2H-qK-lyM"/>
                                                         <constraint firstItem="N81-hO-FC1" firstAttribute="leading" secondItem="E3j-jy-Y0J" secondAttribute="leading" id="HSg-IG-txi"/>
                                                         <constraint firstItem="c9U-lM-yxJ" firstAttribute="top" secondItem="E3j-jy-Y0J" secondAttribute="top" id="KM0-WB-OX4"/>
@@ -193,5 +202,6 @@
     <resources>
         <image name="MenuTidingsIcon" width="96" height="96"/>
         <image name="down arrow" width="25" height="25"/>
+        <image name="square" width="15" height="15"/>
     </resources>
 </document>

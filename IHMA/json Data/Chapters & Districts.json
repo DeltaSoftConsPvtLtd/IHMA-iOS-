@@ -28,8 +28,8 @@
          ]
       },
       {
-         "state":"Kannur",
-         "districts":[
+         "district":"Kannur",
+         "chapters":[
             "Kannur",
             "Iritty",
             "Thalassery-Koothuparambu",
