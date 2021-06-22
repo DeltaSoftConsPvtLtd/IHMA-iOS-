@@ -8,35 +8,35 @@
 import Foundation
 
 struct ChaptersModel : Codable {
-    let chapters : [Chapters]?
+    let districts : [Districts]?
 
     enum CodingKeys: String, CodingKey {
 
-        case chapters = "chapters"
-    }
-
-    init(from decoder: Decoder) throws {
-        let values = try decoder.container(keyedBy: CodingKeys.self)
-        chapters = try values.decodeIfPresent([Chapters].self, forKey: .chapters)
-    }
-
-}
-
-
-struct Chapters : Codable {
-    let state : String?
-    let districts : [String]?
-
-    enum CodingKeys: String, CodingKey {
-
-        case state = "state"
         case districts = "districts"
     }
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        state = try values.decodeIfPresent(String.self, forKey: .state)
-        districts = try values.decodeIfPresent([String].self, forKey: .districts)
+        districts = try values.decodeIfPresent([Districts].self, forKey: .districts)
+    }
+
+}
+
+
+struct Districts : Codable {
+    let district : String?
+    let chapters : [String]?
+
+    enum CodingKeys: String, CodingKey {
+
+        case district = "district"
+        case chapters = "chapters"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        district = try values.decodeIfPresent(String.self, forKey: .district)
+        chapters = try values.decodeIfPresent([String].self, forKey: .chapters)
     }
 
 }

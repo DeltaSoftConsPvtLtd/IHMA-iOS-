@@ -27,24 +27,27 @@ class ChaptersDataSource: NSObject {
     
     func parsingData(x:Int) {
         //Mark:- parse json data
-        Parser.shared.parserFile(Chapters_List) { (status,msg,resp) in
+        ChapterParser.shared.parserFile(Chapters_List) { (status,msg,resp) in
             if status{
-                let response = resp as! StatesModel
-                print(response.states![1].state)
-                districtsArray.removeAll()
+                let response = resp as! ChaptersModel
+                print(response.districts![1].district)
+                chaptersArray.removeAll()
+                
                 if(states != "" )
                 {
                     
-                    for index in 0...((response.states![x].districts?.count)!-1)
+                    for index in 0...((response.districts![x].chapters?.count)!-1)
                     {
 //                        districtsArray[index] = response.states![x].districts![index]
-                        districtsArray.append(response.states![x].districts![index])
+                        chaptersArray.append(response.districts![x].chapters![index])
                     }
                     self.parentView?.chapterListTableView.reloadData()
                 } else {
-                    for index in 0...((response.states?.count)!-1)
+                    for index in 0...((response.districts?.count)!-1)
                     {
-                        statesArray.append((response.states![index].state)!)
+                        if  ( (response.districts![index].district) != nil) {
+                        chapterDistrictArray.append((response.districts![index].district)!)
+                        }
                     }
                 }
                 
@@ -62,7 +65,7 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return districtsArray.count + 1
+        return chaptersArray.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
@@ -70,7 +73,7 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
         let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "dropDown", for: indexPath))!  as? ChaptersTableViewCell
         
             cell?.lblTitle.text = "District"
-            cell?.dropDown.dataSource = statesArray
+            cell?.dropDown.dataSource = chapterDistrictArray
             cell?.backgroundColor = UIColor.white
             //to change the color of a dropdown
             cell?.dropDownView.backgroundColor = UIColor.clear
@@ -78,9 +81,9 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
             
             cell?.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                 print("Selected item: \(item) at index: \(index)")
-            cell?.lblList.text = statesArray[index]
+            cell?.lblList.text = chapterDistrictArray[index]
             states = (cell?.lblList.text!)!
-            parsingData(x: index)
+            parsingData(x: index+1)
         }
             if(states != "" )
             {
@@ -91,14 +94,14 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
         } else {
             let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "List", for: indexPath))!  as? ListTableViewCell
             if states != "" {
-                cell?.lblList.text = districtsArray[indexPath.row-1]
+                cell?.lblList.text = chaptersArray[indexPath.row-1]
             } else{
                 cell?.lblList.text = ""
             }
             return cell!
         }
         let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "List", for: indexPath))!  as? ListTableViewCell
-        cell?.lblList.text = districtsArray[indexPath.row-2]
+        cell?.lblList.text = chaptersArray[indexPath.row-2]
         return cell!
     }
     

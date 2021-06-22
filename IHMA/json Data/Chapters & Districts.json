@@ -1,16 +1,16 @@
-{  
-   "states":[  
-      {  
-         "state":"Alappuzha",
-         "districts":[  
+{
+   "districts":[
+      {
+         "district":"Alappuzha",
+         "chapters":[
             "Alappuzha",
             "Cherthala",
             "Haripad"
          ]
       },
-      {  
-         "state":"Ernakulam",
-         "districts":[  
+      {
+         "district":"Ernakulam",
+         "chapters":[
             "Ernakulam City",
             "Thripunithura",
             "Kochi",
@@ -21,37 +21,37 @@
             "Muvatupuzha"
          ]
       },
-      {  
-         "state":"Idukki",
-         "districts":[  
+      {
+         "district":"Idukki",
+         "chapters":[
             "Idukki"
          ]
       },
-      {  
+      {
          "state":"Kannur",
-         "districts":[  
+         "districts":[
             "Kannur",
             "Iritty",
             "Thalassery-Koothuparambu",
             "Thaliparambu"
          ]
       },
-      {  
-         "state":"Kasargod",
-         "districts":[  
+      {
+         "district":"Kasargod",
+         "chapters":[
             "Kasargod",
             "Payannur-Thrikkaripur"
          ]
       },
-      {  
-         "state":"Kollam",
-         "districts":[  
+      {
+         "district":"Kollam",
+         "chapters":[
             "Kollam"
          ]
       },
-      {  
-         "state":"Kottayam",
-         "districts":[  
+      {
+         "district":"Kottayam",
+         "chapters":[
             "Kottayam City",
             "ANSS College",
             "Changanacherry",
@@ -59,9 +59,9 @@
             "Vaikom"
          ]
       },
-      {  
-         "state":"Kozhikode",
-         "districts":[  
+      {
+         "district":"Kozhikode",
+         "chapters":[
             "Kozhikode City",
             "Kozhikode South",
             "Kozhikode East",
@@ -71,9 +71,9 @@
             "Koilandy"
          ]
       },
-      {  
-         "state":"Malappuram",
-         "districts":[  
+      {
+         "district":"Malappuram",
+         "chapters":[
             "Malappuram",
             "Perinthalmanna",
             "Kondotty",
@@ -84,28 +84,28 @@
             "Tirurangadi"
          ]
       },
-      {  
-         "state":"Palakkad",
-         "districts":[  
+      {
+         "district":"Palakkad",
+         "chapters":[
             "Palakkad",
             "Pattambi"
          ]
       },
-      {  
-         "state":"Pathanamthitta",
-         "districts":[  
+      {
+         "district":"Pathanamthitta",
+         "chapters":[
             "Pathanamthitta"
          ]
       },
-      {  
-         "state":"Thiruvananthapuram",
-         "districts":[  
+      {
+         "district":"Thiruvananthapuram",
+         "chapters":[
             "Thiruvananthapuram"
          ]
       },
-      {  
-         "state":"Thrissur",
-         "districts":[  
+      {
+         "district":"Thrissur",
+         "chapters":[
             "Thrissur City",
             "Guruvayoor"
          ]

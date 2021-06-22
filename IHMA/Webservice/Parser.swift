@@ -23,3 +23,22 @@ class Parser{
         }
     }
 }
+
+
+typealias oncompletion = (_ sucess:Bool,_ msg:String,_ Resp:Any) -> Void
+class ChapterParser{
+    static let shared = ChapterParser()
+    private init(){
+    }
+    func parserFile(_ filename:String,completion:oncompletion){
+        let decoder = JSONDecoder()
+        if let path = Bundle.main.path(forResource: "\(filename)", ofType: "json") {
+            do {
+                 let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                 let jsonPetitions = try? decoder.decode(ChaptersModel.self, from: data)
+                completion(true,"",jsonPetitions!)
+                } catch {
+            }
+        }
+    }
+}
