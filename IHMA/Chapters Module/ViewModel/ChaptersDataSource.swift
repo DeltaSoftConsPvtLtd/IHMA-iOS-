@@ -27,7 +27,7 @@ class ChaptersDataSource: NSObject {
     
     func parsingData(x:Int) {
         //Mark:- parse json data
-        Parser.shared.parserFile(File_List) { (status,msg,resp) in
+        Parser.shared.parserFile(Chapters_List) { (status,msg,resp) in
             if status{
                 let response = resp as! StatesModel
                 print(response.states![1].state)
@@ -62,22 +62,19 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return districtsArray.count + 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
-        if indexPath.row < 2 {
+        if indexPath.row == 0 {
         let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "dropDown", for: indexPath))!  as? ChaptersTableViewCell
-        switch indexPath.row  {
-        case 0:
-//            if states == "" {
-//                cell?.lblList.text = "Select"
-//            }
-            cell?.lblTitle.text = "States"
+        
+            cell?.lblTitle.text = "District"
             cell?.dropDown.dataSource = statesArray
+            cell?.backgroundColor = UIColor.white
             //to change the color of a dropdown
             cell?.dropDownView.backgroundColor = UIColor.clear
-            cell?.dropDown.backgroundColor = UIColor.clear
+            cell?.dropDown.backgroundColor = UIColor.white
             
             cell?.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                 print("Selected item: \(item) at index: \(index)")
@@ -90,39 +87,18 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
                 cell?.lblList.text = states
             }
 
-        
-        case 1:
-            cell?.lblTitle.text = "District"
-            cell?.dropDown.dataSource = districtsArray
-            //to change the color of a dropdown
-            cell?.dropDownView.backgroundColor = UIColor.clear
-            
-            cell?.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
-              print("Selected item: \(item) at index: \(index)")
-                cell?.lblList.text = districtsArray[index]
-                district = (cell?.lblList.text!)!
-                if(district != "" )
-                {
-                    cell?.lblList.text = district
-                    self.parentView?.chapterListTableView.reloadData()
-                }
-            }
-        default:
-            cell?.dropDownView.isHidden = true
-            cell?.lblTitle.text = ""
-            break
-        }
         return cell!
         } else {
             let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "List", for: indexPath))!  as? ListTableViewCell
-            if district != "" {
-                cell?.lblList.text = chaptersArray[indexPath.row]
+            if states != "" {
+                cell?.lblList.text = districtsArray[indexPath.row-1]
             } else{
                 cell?.lblList.text = ""
             }
             return cell!
         }
         let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "List", for: indexPath))!  as? ListTableViewCell
+        cell?.lblList.text = districtsArray[indexPath.row-2]
         return cell!
     }
     

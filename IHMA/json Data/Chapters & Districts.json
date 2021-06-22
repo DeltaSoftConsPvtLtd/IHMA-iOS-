@@ -1,0 +1,114 @@
+{  
+   "states":[  
+      {  
+         "state":"Alappuzha",
+         "districts":[  
+            "Alappuzha",
+            "Cherthala",
+            "Haripad"
+         ]
+      },
+      {  
+         "state":"Ernakulam",
+         "districts":[  
+            "Ernakulam City",
+            "Thripunithura",
+            "Kochi",
+            "DPM HMC Chapter",
+            "Paravur",
+            "Aluva",
+            "Perumbavoor",
+            "Muvatupuzha"
+         ]
+      },
+      {  
+         "state":"Idukki",
+         "districts":[  
+            "Idukki"
+         ]
+      },
+      {  
+         "state":"Kannur",
+         "districts":[  
+            "Kannur",
+            "Iritty",
+            "Thalassery-Koothuparambu",
+            "Thaliparambu"
+         ]
+      },
+      {  
+         "state":"Kasargod",
+         "districts":[  
+            "Kasargod",
+            "Payannur-Thrikkaripur"
+         ]
+      },
+      {  
+         "state":"Kollam",
+         "districts":[  
+            "Kollam"
+         ]
+      },
+      {  
+         "state":"Kottayam",
+         "districts":[  
+            "Kottayam City",
+            "ANSS College",
+            "Changanacherry",
+            "Pala",
+            "Vaikom"
+         ]
+      },
+      {  
+         "state":"Kozhikode",
+         "districts":[  
+            "Kozhikode City",
+            "Kozhikode South",
+            "Kozhikode East",
+            "GHMC",
+            "Vadakara",
+            "Perambra",
+            "Koilandy"
+         ]
+      },
+      {  
+         "state":"Malappuram",
+         "districts":[  
+            "Malappuram",
+            "Perinthalmanna",
+            "Kondotty",
+            "Kuttippuram",
+            "Nilambur",
+            "Manjeri",
+            "Tirur",
+            "Tirurangadi"
+         ]
+      },
+      {  
+         "state":"Palakkad",
+         "districts":[  
+            "Palakkad",
+            "Pattambi"
+         ]
+      },
+      {  
+         "state":"Pathanamthitta",
+         "districts":[  
+            "Pathanamthitta"
+         ]
+      },
+      {  
+         "state":"Thiruvananthapuram",
+         "districts":[  
+            "Thiruvananthapuram"
+         ]
+      },
+      {  
+         "state":"Thrissur",
+         "districts":[  
+            "Thrissur City",
+            "Guruvayoor"
+         ]
+      }
+   ]
+}

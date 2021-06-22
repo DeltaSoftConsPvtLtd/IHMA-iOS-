@@ -66,6 +66,7 @@ let userSignIn = "api/login/"
 let userSignup = "api/getRegisterDetail/"
 let courses = "api/getcourses/"
 var File_List = "states-and-districts"
+var Chapters_List = "Chapters & Districts"
 
 
 

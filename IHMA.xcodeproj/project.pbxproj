@@ -58,6 +58,8 @@
 		90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */; };
 		90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C1C2632ACED0052FFAB /* BaseViewController.swift */; };
 		90806D0F2657B36500F01358 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90806D0E2657B36500F01358 /* AboutUsViewController.swift */; };
+		908507652681AB8800746657 /* Chapters & Districts.json in Resources */ = {isa = PBXBuildFile; fileRef = 908507642681AB8800746657 /* Chapters & Districts.json */; };
+		9085076D2681B79A00746657 /* ChaptersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9085076C2681B79A00746657 /* ChaptersModel.swift */; };
 		909BF98B2642E39D001B73D1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BF98A2642E39D001B73D1 /* SplashViewController.swift */; };
 		909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F34263BB4C300200EE2 /* NotificationViewController.swift */; };
 		909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F37263BC32100200EE2 /* NotificationDataSource.swift */; };
@@ -148,6 +150,8 @@
 		90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Helpers.swift"; path = "IHMA/Storyboard Helpers/UIStoryboard+Helpers.swift"; sourceTree = SOURCE_ROOT; };
 		90759C1C2632ACED0052FFAB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		90806D0E2657B36500F01358 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		908507642681AB8800746657 /* Chapters & Districts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Chapters & Districts.json"; sourceTree = "<group>"; };
+		9085076C2681B79A00746657 /* ChaptersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersModel.swift; sourceTree = "<group>"; };
 		909BF98A2642E39D001B73D1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		909F2F34263BB4C300200EE2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		909F2F37263BC32100200EE2 /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
@@ -325,6 +329,7 @@
 			isa = PBXGroup;
 			children = (
 				905B141026625E2C00A9BC4D /* states-and-districts.json */,
+				908507642681AB8800746657 /* Chapters & Districts.json */,
 			);
 			path = "json Data";
 			sourceTree = "<group>";
@@ -332,6 +337,7 @@
 		907022CF267B611C00D074EE /* Chapters Module */ = {
 			isa = PBXGroup;
 			children = (
+				908507672681B71B00746657 /* Model */,
 				907022DB267B6A8000D074EE /* cells */,
 				907022D7267B662400D074EE /* ViewModel */,
 				907022D0267B614D00D074EE /* ChaptersViewController.swift */,
@@ -412,6 +418,14 @@
 				90806D0E2657B36500F01358 /* AboutUsViewController.swift */,
 			);
 			path = "About IHMA module";
+			sourceTree = "<group>";
+		};
+		908507672681B71B00746657 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9085076C2681B79A00746657 /* ChaptersModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		909F2F33263BB49700200EE2 /* Notification Module */ = {
@@ -645,6 +659,7 @@
 				90068D09265C137200F5FDCA /* Assets.xcassets in Resources */,
 				9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */,
 				FA2B52AD2595CC42004B23F9 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
+				908507652681AB8800746657 /* Chapters & Districts.json in Resources */,
 				903E8CB226314C6500D0AADD /* Main.storyboard in Resources */,
 				FA2B52992595CC27004B23F9 /* TitilliumWeb-Black.ttf in Resources */,
 				FA2B529D2595CC2C004B23F9 /* TitilliumWeb-BoldItalic.ttf in Resources */,
@@ -730,6 +745,7 @@
 				902D042C2655507000EC3DA6 /* courseModel.swift in Sources */,
 				90759C0C26328C780052FFAB /* RegistrationViewController.swift in Sources */,
 				901B154026791F3200ECB22A /* ActivityDatasource.swift in Sources */,
+				9085076D2681B79A00746657 /* ChaptersModel.swift in Sources */,
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
 				902A85CC26500B58002380BF /* RegistrationModel.swift in Sources */,
 				902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */,
