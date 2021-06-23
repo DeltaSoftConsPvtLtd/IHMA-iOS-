@@ -13,9 +13,9 @@ class VideosViewController: BaseViewController {
     
     var videosTableDataSource: VideosTableDataSource?
     
-    var videoTitle = ["Big Bunny"]
-    var videoSubTitle = ["Subtitle asdfg asddd"]
-    var videoUrl = ["http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"]
+    var videoTitle = ["Big Buck Bunny","Elephant Dream"]
+    var videoSubTitle = ["Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself.","The first blender movie from 2006"]
+    var videoUrl = ["http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"]
     
     override func viewDidLoad() {
         

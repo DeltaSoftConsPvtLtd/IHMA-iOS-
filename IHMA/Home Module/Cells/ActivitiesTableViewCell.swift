@@ -31,8 +31,8 @@ class ActivitiesTableViewCell: UITableViewCell,ExampleCellDelegate {
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
 
 
-    var images = ["IHMA logo","Homeopathy","conference","events","courses-1","Institution","conference","events"]
-    var titles = ["About IHMA","Homeopathy","Flash News","Events","Articles","Institutions","SOH","IHRC"]
+    var images = ["IHMA logo","Homeopathy","conference","events","courses-1","Institution"]
+    var titles = ["About IHMA","Homeopathy","Flash News","Events","Articles","Institutions"]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -69,7 +69,7 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 8
+        return titles.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Research", for: indexPath) as? ActivitiesCollectionViewCell
