@@ -27,12 +27,22 @@ extension ActivityDatasource:UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if (parentView?.objectivesArray.count != 0) {
+            return (parentView?.objectivesArray.count)!
+        }
         return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
         let cell = (self.parentView?.activityTableView.dequeueReusableCell(withIdentifier: "activity", for: indexPath))!  as? ActivityTableViewCell
-        cell?.lblActivity.text = String(indexPath.row)
+        if (parentView?.objectivesArray.count != 0) {
+            cell?.lblActivity.text = parentView?.objectivesArray[indexPath.row]
+        } else {
+            cell?.lblActivity.text = String(indexPath.row)
+        }
         return cell!
+    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }

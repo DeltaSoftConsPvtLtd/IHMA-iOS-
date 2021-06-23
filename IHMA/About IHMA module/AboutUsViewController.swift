@@ -29,6 +29,9 @@ class AboutUsViewController: BaseViewController {
     let titles = ["Chapters", "Office Bearers"]
     
     override func viewDidLoad() {
+        
+        self.aboutTableDataSource = AboutTableDataSource(attachView: self)
+        
         webView.navigationDelegate = self
         super.viewDidLoad()
         gradientTwoColors()
@@ -37,7 +40,7 @@ class AboutUsViewController: BaseViewController {
         setupUI()
         loadWebView()
         sideMenu()
-        self.aboutTableDataSource = AboutTableDataSource(attachView: self)
+      
        
     }
     

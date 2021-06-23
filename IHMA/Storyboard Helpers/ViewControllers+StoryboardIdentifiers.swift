@@ -133,3 +133,12 @@ extension ChaptersViewController: StoryboardIdentifiable
         return "ChaptersViewController"
             }
 }
+
+
+//MARK:- VideosViewController
+extension VideosViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "VideosViewController"
+            }
+}

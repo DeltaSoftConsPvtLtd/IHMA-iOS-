@@ -22,7 +22,8 @@ class HomeScreenDataSource: NSObject,NavigationDelegate {
         case 1:
             print("Homeopathy")
             let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
-            destinationController?.activity = "Homeopathy"
+            destinationController?.activity = "Homeopathy - Objectives"
+            destinationController?.objectivesArray = ["- To serve the human society by awarding the benefits of Homoeopathic System of treatment to public, especially the low socio-economic groups.","- To improve the quality of Homoeopathic Medical Practice.","- To improve the quality of Homoeopathic Medical Education.","- To maintain the honour and dignity and to uphold the interest of the profession of Homoeopathic Practice and to promote cooperation amongst the members thereof.","- To work for the abolition of fake Homoeopathic Practices.","- To achieve welfare of qualified Homoeopathic Doctors.","- To stand for integrated medical research in Homoeopathy.","- To conduction medical camps, especially in epidemics affected areas.","- To promote and advance Homoeopathic System of Medicine and allied sciences and to benefit and improve public health thereby."]
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 2:
             print("Flash News")

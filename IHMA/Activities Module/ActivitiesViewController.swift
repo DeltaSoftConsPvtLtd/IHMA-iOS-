@@ -16,6 +16,7 @@ class ActivitiesViewController: BaseViewController {
     var activityDatasource: ActivityDatasource?
     
     var activity:String?
+    var objectivesArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColors()

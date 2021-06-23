@@ -58,6 +58,12 @@
 		90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */; };
 		90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90759C1C2632ACED0052FFAB /* BaseViewController.swift */; };
 		90806D0F2657B36500F01358 /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90806D0E2657B36500F01358 /* AboutUsViewController.swift */; };
+		908484E826831A6600463BEA /* VideoScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 908484E726831A6600463BEA /* VideoScreens.storyboard */; };
+		908484EE26831E3400463BEA /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908484ED26831E3400463BEA /* VideosViewController.swift */; };
+		908484F426833A8D00463BEA /* VideosTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908484F326833A8D00463BEA /* VideosTableDataSource.swift */; };
+		908484F926833E4100463BEA /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 908484F726833E4100463BEA /* VideosTableViewCell.swift */; };
+		908484FA26833E4100463BEA /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 908484F826833E4100463BEA /* VideosTableViewCell.xib */; };
+		908484FF268366FE00463BEA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908484FD268366FA00463BEA /* AVKit.framework */; };
 		908507652681AB8800746657 /* Chapters & Districts.json in Resources */ = {isa = PBXBuildFile; fileRef = 908507642681AB8800746657 /* Chapters & Districts.json */; };
 		9085076D2681B79A00746657 /* ChaptersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9085076C2681B79A00746657 /* ChaptersModel.swift */; };
 		909BF98B2642E39D001B73D1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BF98A2642E39D001B73D1 /* SplashViewController.swift */; };
@@ -150,6 +156,12 @@
 		90759C162632946C0052FFAB /* UIStoryboard+Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Helpers.swift"; path = "IHMA/Storyboard Helpers/UIStoryboard+Helpers.swift"; sourceTree = SOURCE_ROOT; };
 		90759C1C2632ACED0052FFAB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		90806D0E2657B36500F01358 /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		908484E726831A6600463BEA /* VideoScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideoScreens.storyboard; sourceTree = "<group>"; };
+		908484ED26831E3400463BEA /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		908484F326833A8D00463BEA /* VideosTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableDataSource.swift; sourceTree = "<group>"; };
+		908484F726833E4100463BEA /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
+		908484F826833E4100463BEA /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
+		908484FD268366FA00463BEA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		908507642681AB8800746657 /* Chapters & Districts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Chapters & Districts.json"; sourceTree = "<group>"; };
 		9085076C2681B79A00746657 /* ChaptersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersModel.swift; sourceTree = "<group>"; };
 		909BF98A2642E39D001B73D1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -197,6 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				908484FF268366FE00463BEA /* AVKit.framework in Frameworks */,
 				759A5BDCC6DADB263C92EEF1 /* Pods_IHMA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +382,7 @@
 				90759C0726328BE60052FFAB /* Loginscreens.storyboard */,
 				9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */,
 				907022CB267B609500D074EE /* ChapterScreens.storyboard */,
+				908484E726831A6600463BEA /* VideoScreens.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -418,6 +432,33 @@
 				90806D0E2657B36500F01358 /* AboutUsViewController.swift */,
 			);
 			path = "About IHMA module";
+			sourceTree = "<group>";
+		};
+		908484EC26831DFA00463BEA /* VideoModule */ = {
+			isa = PBXGroup;
+			children = (
+				908484F626833E1E00463BEA /* Cells & xib */,
+				908484F226833A5E00463BEA /* ViewModel */,
+				908484ED26831E3400463BEA /* VideosViewController.swift */,
+			);
+			path = VideoModule;
+			sourceTree = "<group>";
+		};
+		908484F226833A5E00463BEA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				908484F326833A8D00463BEA /* VideosTableDataSource.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		908484F626833E1E00463BEA /* Cells & xib */ = {
+			isa = PBXGroup;
+			children = (
+				908484F726833E4100463BEA /* VideosTableViewCell.swift */,
+				908484F826833E4100463BEA /* VideosTableViewCell.xib */,
+			);
+			path = "Cells & xib";
 			sourceTree = "<group>";
 		};
 		908507672681B71B00746657 /* Model */ = {
@@ -516,6 +557,7 @@
 		B0D87695C4E049AAB23577AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				908484FD268366FA00463BEA /* AVKit.framework */,
 				7936371CC97C66B7C8BEF159 /* Pods_IHMA.framework */,
 			);
 			name = Frameworks;
@@ -557,6 +599,7 @@
 				90806D0D2657B33500F01358 /* About IHMA module */,
 				903E8CBE2631A18B00D0AADD /* Views-Sidemenu & courses */,
 				903E8CB52631508A00D0AADD /* Views-Home page */,
+				908484EC26831DFA00463BEA /* VideoModule */,
 				90C681AA266E294A009D022F /* Home Module */,
 				FA2B528C2595CBD5004B23F9 /* Fonts */,
 				90759C0526328BBC0052FFAB /* Storyboards */,
@@ -661,6 +704,8 @@
 				FA2B52AD2595CC42004B23F9 /* TitilliumWeb-SemiBoldItalic.ttf in Resources */,
 				908507652681AB8800746657 /* Chapters & Districts.json in Resources */,
 				903E8CB226314C6500D0AADD /* Main.storyboard in Resources */,
+				908484FA26833E4100463BEA /* VideosTableViewCell.xib in Resources */,
+				908484E826831A6600463BEA /* VideoScreens.storyboard in Resources */,
 				FA2B52992595CC27004B23F9 /* TitilliumWeb-Black.ttf in Resources */,
 				FA2B529D2595CC2C004B23F9 /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				FA2B52A52595CC37004B23F9 /* TitilliumWeb-Light.ttf in Resources */,
@@ -734,7 +779,9 @@
 				903C03FB26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift in Sources */,
 				90D471C92677C8C300371F16 /* OfficeBearersCollectionViewCell.swift in Sources */,
 				909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */,
+				908484F926833E4100463BEA /* VideosTableViewCell.swift in Sources */,
 				903C03E02670766D00D2BA28 /* imagesCollectionViewCell.swift in Sources */,
+				908484F426833A8D00463BEA /* VideosTableDataSource.swift in Sources */,
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */,
@@ -774,6 +821,7 @@
 				902A85D026502724002380BF /* Post_RegistrationModel.swift in Sources */,
 				907022D1267B614D00D074EE /* ChaptersViewController.swift in Sources */,
 				9026E996264CCC8900381E44 /* Post_Model.swift in Sources */,
+				908484EE26831E3400463BEA /* VideosViewController.swift in Sources */,
 				901B151C2678CEB800ECB22A /* ContactUsViewController.swift in Sources */,
 				905B14152662614F00A9BC4D /* StatesModel.swift in Sources */,
 				909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */,

@@ -9,7 +9,17 @@ import UIKit
 
 class AboutTableDataSource: NSObject,NavDelegate {
     
+    weak var parentView: AboutUsViewController?
+    
+    init(attachView: AboutUsViewController) {
+        super.init()
+        self.parentView = attachView
+        attachView.aboutTableView.delegate = self
+        attachView.aboutTableView.dataSource = self
+    }
+    
     //MARK :- Delegate func called from collection view cell using another delegate
+    
     func clickEvent(tag: Int) {
    
         switch (tag) {
@@ -59,14 +69,7 @@ class AboutTableDataSource: NSObject,NavDelegate {
       
     }
     
-    weak var parentView: AboutUsViewController?
-    
-    init(attachView: AboutUsViewController) {
-        super.init()
-        self.parentView = attachView
-        attachView.aboutTableView.delegate = self
-        attachView.aboutTableView.dataSource = self
-    }
+  
     
     @objc func seemoreBtnTapped(sender:UIButton) {
         print("tapped")

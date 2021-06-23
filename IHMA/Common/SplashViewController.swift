@@ -25,6 +25,7 @@ class SplashViewController: BaseViewController {
         setupUI()
         homeScreen()
 //        courseAPI()
+        
         registrationApi()
 
     }//end of view did load
