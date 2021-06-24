@@ -87,6 +87,29 @@ class LoginViewController: BaseViewController {
         }
     }
 
+    //MARK:- Api call to reset password
+    func resetPasswordAPI(_ email: String) {
+        //MARK:- Activity Indicator
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
+        loginView.isUserInteractionEnabled = false
+        
+        
+        let url = "\(testUrl)\(resetPassword)"
+        let post = ResetPassword_Model(email: email)
+        ApiClient.shared.getData("POST", url, post, otpModel.self) {(sucess, resp, msg) in
+            if sucess {
+                //APi call success
+                self.activityIndicator.stopAnimating()
+                self.activityIndicator.isHidden = true
+                self.loginView.isUserInteractionEnabled = true
+              print("success")
+                let response = resp as! otpModel
+                print(response.data![0].details?.token)
+            }
+        }//api call
+        }
+    
     @IBAction func btnRegister(_ sender: Any) {
         let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
         self.navigationController?.pushViewController(destinationController!, animated: true)
@@ -123,8 +146,9 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func btnForgetPassword(_ sender: Any) {
-        let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-        self.navigationController?.pushViewController(destinationController!, animated: true)
+        resetPasswordAPI("annmarykalapurackal@gmail.com")
+//        let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+//        self.navigationController?.pushViewController(destinationController!, animated: true)
     }
 }
 

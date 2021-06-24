@@ -60,13 +60,16 @@ enum ServiceMethodType
 
 
 
-var baseUrl = "https://lmsihma.co.in/"
+let baseUrl = "https://lmsihma.co.in/"
+let testUrl = "https://65.1.213.215/"
 
 let userSignIn = "api/login/"
 let userSignup = "api/getRegisterDetail/"
 let courses = "api/getcourses/"
+let resetPassword = "api/resetpassword/"
 var File_List = "states-and-districts"
 var Chapters_List = "Chapters & Districts"
+
 
 
 
