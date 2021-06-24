@@ -18,6 +18,8 @@ class OTPViewController: BaseViewController {
     @IBOutlet weak var verifyButton: UIButton!
     var otpDataSource : OTPDataSource?
     
+    var token:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()

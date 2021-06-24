@@ -99,13 +99,27 @@ class LoginViewController: BaseViewController {
         let post = ResetPassword_Model(email: email)
         ApiClient.shared.getData("POST", url, post, otpModel.self) {(sucess, resp, msg) in
             if sucess {
-                //APi call success
-                self.activityIndicator.stopAnimating()
-                self.activityIndicator.isHidden = true
-                self.loginView.isUserInteractionEnabled = true
-              print("success")
                 let response = resp as! otpModel
-                print(response.data![0].details?.token)
+                if let authentication = response.data![0].status {
+                    if (authentication == "Authenticated") {
+                        //APi call success
+                        self.activityIndicator.stopAnimating()
+                        self.activityIndicator.isHidden = true
+                        self.loginView.isUserInteractionEnabled = true
+                      print("success")
+                        
+                        let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens") as? OTPViewController
+                        destinationController?.token = String((response.data![0].details?.token)!)
+                        self.navigationController?.pushViewController(destinationController!, animated: true)
+                        print(response.data![0].details?.token)
+                    } else {
+                        self.activityIndicator.stopAnimating()
+                        self.activityIndicator.isHidden = true
+                        self.loginView.isUserInteractionEnabled = true
+                        self.toastMessage(message: "invalid credential")
+                    }
+                }
+                
             }
         }//api call
         }
