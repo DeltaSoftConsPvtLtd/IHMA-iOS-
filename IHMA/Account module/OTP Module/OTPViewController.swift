@@ -17,9 +17,11 @@ class OTPViewController: BaseViewController {
     @IBOutlet weak var txtOTP5: UITextField!
     @IBOutlet weak var txtOTP6: UITextField!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var verifyButton: UIButton!
     var otpDataSource : OTPDataSource?
     
+    @IBOutlet var otpView: UIView!
     var token:String?
     var email:String?
     
@@ -39,6 +41,7 @@ class OTPViewController: BaseViewController {
         txtOTP5.backgroundColor = UIColor.clear
         txtOTP6.backgroundColor = UIColor.clear
         OTPView.backgroundColor = UIColor.clear
+        activityIndicator.isHidden = true
         
         addBottomBorder(textfield:txtOTP1)
         addBottomBorder(textfield:txtOTP2)

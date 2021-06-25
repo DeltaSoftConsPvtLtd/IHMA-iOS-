@@ -10,6 +10,7 @@ import UIKit
 class OTPDataSource: NSObject {
     weak var parentView: OTPViewController?
     var otp:String?
+    var newPassword:String?
     init(attachView: OTPViewController) {
         super.init()
         self.parentView = attachView
@@ -24,21 +25,47 @@ class OTPDataSource: NSObject {
     }
     
     func confirmOTPApi(_ email: String,_ token: String,_ otp: String) {
+        //MARK:- Activity Indicator
+        parentView!.activityIndicator.startAnimating()
+        parentView!.activityIndicator.isHidden = false
+//        emailView.isUserInteractionEnabled = false
         let url = "\(testUrl)\(confirmOTP)"
         let post = Post_OTPModel(email: email,token:token,otp:otp)
-        ApiClient.shared.getData("POST", url, post, ConfirmotpModel.self){(sucess, resp, msg) in
+        ApiClient.shared.getData("POST", url, post, ConfirmotpModel.self){ [self](sucess, resp, msg) in
             if sucess {
                 let response = resp as! ConfirmotpModel
-                let newPassword = response.data![0].details?.newPassword
+                newPassword = (response.data![0].details?.newPassword)!
                 if let authentication = response.data![0].status {
                     if (authentication == "Authenticated") {
+                        parentView!.activityIndicator.stopAnimating()
+                        parentView!.activityIndicator.isHidden = true
+                        parentView!.otpView.isUserInteractionEnabled = true
+                        alert()
                         
                     } else {
-                        
+                        parentView!.activityIndicator.stopAnimating()
+                        parentView!.activityIndicator.isHidden = true
+                        parentView!.otpView.isUserInteractionEnabled = true
+                        parentView!.toastMessage(message: "invalid credential")
                     }
                 }//if let
              }//success
             }//Api
+    }
+    
+//    MARK:- Alert message
+    func alert() {
+        let alert = UIAlertController(title: "New Password", message: "New Password is '\(newPassword!)'. Please use it for login", preferredStyle: UIAlertController.Style.alert)
+        // Create the actions
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [self]
+                UIAlertAction in
+            //Action for exiting the app
+            let destinationController = LoginViewController.instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+            parentView!.navigationController?.pushViewController(destinationController!, animated: true)
+            }
+        // Add the actions
+            alert.addAction(okAction)
+        parentView!.present(alert, animated: true, completion: nil)
     }
     
    

@@ -976,6 +976,10 @@
                                     <constraint firstItem="wpX-ZU-joG" firstAttribute="top" secondItem="KZa-YJ-fyO" secondAttribute="top" id="vyz-Lv-KWw"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="k8M-S5-fxY">
+                                <rect key="frame" x="188.5" y="429.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemRedColor"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wgX-Wu-uu7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -983,6 +987,7 @@
                             <constraint firstItem="wgX-Wu-uu7" firstAttribute="trailing" secondItem="hWz-z8-2zM" secondAttribute="trailing" constant="40" id="AzM-Vb-GvC"/>
                             <constraint firstAttribute="trailing" secondItem="ehq-yp-27k" secondAttribute="trailing" constant="10" id="GB9-ny-hc5"/>
                             <constraint firstItem="vzu-Ip-01l" firstAttribute="top" secondItem="ehq-yp-27k" secondAttribute="bottom" constant="100" id="Igj-cX-DDf"/>
+                            <constraint firstItem="k8M-S5-fxY" firstAttribute="centerY" secondItem="BSB-A3-1RF" secondAttribute="centerY" id="MHj-Rn-vtF"/>
                             <constraint firstItem="hWz-z8-2zM" firstAttribute="centerX" secondItem="vzu-Ip-01l" secondAttribute="centerX" id="RNe-Ee-T46"/>
                             <constraint firstItem="40Z-9u-9vM" firstAttribute="leading" secondItem="BSB-A3-1RF" secondAttribute="leading" id="dhM-1o-gAt"/>
                             <constraint firstItem="wgX-Wu-uu7" firstAttribute="trailing" secondItem="vzu-Ip-01l" secondAttribute="trailing" constant="20" id="e0z-1e-IGO"/>
@@ -992,17 +997,20 @@
                             <constraint firstItem="vzu-Ip-01l" firstAttribute="leading" secondItem="wgX-Wu-uu7" secondAttribute="leading" constant="20" id="oNF-gW-csx"/>
                             <constraint firstItem="ehq-yp-27k" firstAttribute="top" secondItem="wgX-Wu-uu7" secondAttribute="top" constant="200" id="pOw-TP-svE"/>
                             <constraint firstItem="wgX-Wu-uu7" firstAttribute="bottom" secondItem="40Z-9u-9vM" secondAttribute="bottom" id="rRa-aR-1LC"/>
+                            <constraint firstItem="k8M-S5-fxY" firstAttribute="centerX" secondItem="BSB-A3-1RF" secondAttribute="centerX" id="sAJ-bL-2C4"/>
                             <constraint firstItem="wgX-Wu-uu7" firstAttribute="trailing" secondItem="40Z-9u-9vM" secondAttribute="trailing" id="u6b-JY-S6K"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="OTPView" destination="vzu-Ip-01l" id="8Kq-zu-nJx"/>
+                        <outlet property="activityIndicator" destination="k8M-S5-fxY" id="2Al-tn-Brz"/>
                         <outlet property="imgTab1" destination="e6x-FV-JZP" id="lxn-vX-CLe"/>
                         <outlet property="imgTab3" destination="wpX-ZU-joG" id="xA5-9h-b20"/>
                         <outlet property="imgtab2" destination="KZa-YJ-fyO" id="nSV-IU-OMe"/>
                         <outlet property="lblTab1" destination="9uk-86-8gc" id="Izg-5M-uN1"/>
                         <outlet property="lblTab2" destination="tCh-og-Ld5" id="7yz-5X-GIz"/>
                         <outlet property="lblTab3" destination="sJM-ai-ZRo" id="7uJ-po-Jag"/>
+                        <outlet property="otpView" destination="BSB-A3-1RF" id="LCR-L5-CRR"/>
                         <outlet property="txtOTP1" destination="WW6-uo-yP7" id="n7c-tJ-2oH"/>
                         <outlet property="txtOTP2" destination="S2z-j6-XNg" id="a4V-4p-qmJ"/>
                         <outlet property="txtOTP3" destination="xMg-Up-OHY" id="F21-nf-seI"/>
