@@ -46,7 +46,7 @@ class OTPDataSource: NSObject {
       print (otp!)
         if (otp != "")
         {
-            confirmOTPApi((parentView?.token)!, (parentView?.token)!, self.otp!)
+            confirmOTPApi((parentView?.email)!, (parentView?.token)!, self.otp!)
         } else {
             parentView?.showAlertView(heading: "OTP", message: "Plz enter the OTP")
         }
@@ -101,7 +101,7 @@ extension OTPDataSource:UITextFieldDelegate {
             }
             
             if textField == parentView?.txtOTP5 {
-                parentView?.txtOTP5.resignFirstResponder()
+                parentView?.txtOTP6.becomeFirstResponder()
                 otp = otp! + string
             }
             
