@@ -87,43 +87,7 @@ class LoginViewController: BaseViewController {
         }
     }
 
-    //MARK:- Api call to reset password
-    func resetPasswordAPI(_ email: String) {
-        //MARK:- Activity Indicator
-        activityIndicator.startAnimating()
-        activityIndicator.isHidden = false
-        loginView.isUserInteractionEnabled = false
-        
-        
-        let url = "\(testUrl)\(resetPassword)"
-        let post = ResetPassword_Model(email: email)
-        ApiClient.shared.getData("POST", url, post, otpModel.self) {(sucess, resp, msg) in
-            if sucess {
-                let response = resp as! otpModel
-                if let authentication = response.data![0].status {
-                    if (authentication == "Authenticated") {
-                        //APi call success
-                        self.activityIndicator.stopAnimating()
-                        self.activityIndicator.isHidden = true
-                        self.loginView.isUserInteractionEnabled = true
-                      print("success")
-                        
-                        let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens") as? OTPViewController
-                        destinationController?.token = String((response.data![0].details?.token)!)
-                        destinationController?.email = email
-                        self.navigationController?.pushViewController(destinationController!, animated: true)
-                        print(response.data![0].details?.token)
-                    } else {
-                        self.activityIndicator.stopAnimating()
-                        self.activityIndicator.isHidden = true
-                        self.loginView.isUserInteractionEnabled = true
-                        self.toastMessage(message: "invalid credential")
-                    }
-                }
-                
-            }
-        }//api call
-        }
+   
     
     @IBAction func btnRegister(_ sender: Any) {
         let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
@@ -161,7 +125,8 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func btnForgetPassword(_ sender: Any) {
-        resetPasswordAPI("nikilvd1985@gmail.com")
+        let destinationController = EmailViewController.instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
     }
 }
 

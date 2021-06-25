@@ -12,7 +12,7 @@
 		9002F4DD263819A8006292C1 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DC263819A8006292C1 /* UIImage+Extension.swift */; };
 		9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */; };
 		90068D09265C137200F5FDCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90068D03265C0EFA00F5FDCA /* Assets.xcassets */; };
-		900CA486266A03E200441A3F /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CA485266A03E200441A3F /* ResetPasswordViewController.swift */; };
+		900CA486266A03E200441A3F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CA485266A03E200441A3F /* EmailViewController.swift */; };
 		901870DD2650F40E00A3563A /* Param_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901870DC2650F40E00A3563A /* Param_Model.swift */; };
 		901B151C2678CEB800ECB22A /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B151B2678CEB800ECB22A /* ContactUsViewController.swift */; };
 		901B15202678EBEE00ECB22A /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B151F2678EBEE00ECB22A /* ActivitiesViewController.swift */; };
@@ -114,7 +114,7 @@
 		9002F4DC263819A8006292C1 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		90068D03265C0EFA00F5FDCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/nikil/Documents/xcode pjts/IHMA_iOS/IHMA/Assets.xcassets"; sourceTree = "<absolute>"; };
-		900CA485266A03E200441A3F /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		900CA485266A03E200441A3F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		901870DC2650F40E00A3563A /* Param_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Param_Model.swift; sourceTree = "<group>"; };
 		901B151B2678CEB800ECB22A /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		901B151F2678EBEE00ECB22A /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
@@ -408,7 +408,7 @@
 				902BA5A02641147600411097 /* FormTableViewCell.swift */,
 				902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */,
 				90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */,
-				900CA485266A03E200441A3F /* ResetPasswordViewController.swift */,
+				900CA485266A03E200441A3F /* EmailViewController.swift */,
 			);
 			path = "Account module";
 			sourceTree = "<group>";
@@ -791,7 +791,7 @@
 				905B1418266275D600A9BC4D /* Parser.swift in Sources */,
 				90209D23263FB99C00EC8588 /* UIColor+Extension.swift in Sources */,
 				90C681B1266E319B009D022F /* HomeScreenDataSource.swift in Sources */,
-				900CA486266A03E200441A3F /* ResetPasswordViewController.swift in Sources */,
+				900CA486266A03E200441A3F /* EmailViewController.swift in Sources */,
 				907022E1267B6AD600D074EE /* ChaptersTableViewCell.swift in Sources */,
 				903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */,
 				909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */,

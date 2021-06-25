@@ -93,10 +93,10 @@ extension AboutUsViewController: StoryboardIdentifiable
 
 
 //MARK:- Reset Password view controller
-extension ResetPasswordViewController: StoryboardIdentifiable
+extension EmailViewController: StoryboardIdentifiable
 {
     static func storyboardIdentifier() -> String {
-        return "ResetPasswordViewController"
+        return "EmailViewController"
             }
 }
 
