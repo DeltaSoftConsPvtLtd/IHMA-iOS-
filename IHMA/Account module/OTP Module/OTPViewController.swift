@@ -14,11 +14,14 @@ class OTPViewController: BaseViewController {
     @IBOutlet weak var txtOTP2: UITextField!
     @IBOutlet weak var txtOTP3: UITextField!
     @IBOutlet weak var txtOTP4: UITextField!
+    @IBOutlet weak var txtOTP5: UITextField!
+    @IBOutlet weak var txtOTP6: UITextField!
     
     @IBOutlet weak var verifyButton: UIButton!
     var otpDataSource : OTPDataSource?
     
     var token:String?
+    var email:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +36,16 @@ class OTPViewController: BaseViewController {
         txtOTP2.backgroundColor = UIColor.clear
         txtOTP3.backgroundColor = UIColor.clear
         txtOTP4.backgroundColor = UIColor.clear
+        txtOTP5.backgroundColor = UIColor.clear
+        txtOTP6.backgroundColor = UIColor.clear
         OTPView.backgroundColor = UIColor.clear
         
         addBottomBorder(textfield:txtOTP1)
         addBottomBorder(textfield:txtOTP2)
         addBottomBorder(textfield:txtOTP3)
         addBottomBorder(textfield:txtOTP4)
+        addBottomBorder(textfield:txtOTP5)
+        addBottomBorder(textfield:txtOTP6)
         
         verifyButton.layer.cornerRadius = 30
         txtOTP1.becomeFirstResponder()

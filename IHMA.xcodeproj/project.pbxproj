@@ -86,6 +86,8 @@
 		90D471C92677C8C300371F16 /* OfficeBearersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D471C82677C8C300371F16 /* OfficeBearersCollectionViewCell.swift */; };
 		90E3EE17268464D900D0EBD6 /* ResetPassword_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3EE16268464D900D0EBD6 /* ResetPassword_Model.swift */; };
 		90E3EE1B2684806100D0EBD6 /* otpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3EE1A2684806100D0EBD6 /* otpModel.swift */; };
+		90E3EE312684BB8A00D0EBD6 /* Post_OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3EE302684BB8A00D0EBD6 /* Post_OTPModel.swift */; };
+		90E3EE342684C5A300D0EBD6 /* ConfirmotpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3EE332684C5A300D0EBD6 /* ConfirmotpModel.swift */; };
 		FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525A2595BE53004B23F9 /* AppDelegate.swift */; };
 		FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2B525C2595BE53004B23F9 /* SceneDelegate.swift */; };
 		FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA2B52632595BE53004B23F9 /* IHMA.xcdatamodeld */; };
@@ -186,6 +188,8 @@
 		90D471C82677C8C300371F16 /* OfficeBearersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeBearersCollectionViewCell.swift; sourceTree = "<group>"; };
 		90E3EE16268464D900D0EBD6 /* ResetPassword_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword_Model.swift; sourceTree = "<group>"; };
 		90E3EE1A2684806100D0EBD6 /* otpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otpModel.swift; sourceTree = "<group>"; };
+		90E3EE302684BB8A00D0EBD6 /* Post_OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_OTPModel.swift; sourceTree = "<group>"; };
+		90E3EE332684C5A300D0EBD6 /* ConfirmotpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfirmotpModel.swift; sourceTree = "<group>"; };
 		BD83E661FC8D60579560BCA0 /* Pods-IHMA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IHMA.debug.xcconfig"; path = "Target Support Files/Pods-IHMA/Pods-IHMA.debug.xcconfig"; sourceTree = "<group>"; };
 		FA2B52572595BE53004B23F9 /* IHMA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IHMA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA2B525A2595BE53004B23F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -564,6 +568,8 @@
 			isa = PBXGroup;
 			children = (
 				90E3EE1A2684806100D0EBD6 /* otpModel.swift */,
+				90E3EE302684BB8A00D0EBD6 /* Post_OTPModel.swift */,
+				90E3EE332684C5A300D0EBD6 /* ConfirmotpModel.swift */,
 			);
 			path = OTP_Model;
 			sourceTree = "<group>";
@@ -793,9 +799,11 @@
 				903C03FB26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift in Sources */,
 				90D471C92677C8C300371F16 /* OfficeBearersCollectionViewCell.swift in Sources */,
 				909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */,
+				90E3EE342684C5A300D0EBD6 /* ConfirmotpModel.swift in Sources */,
 				908484F926833E4100463BEA /* VideosTableViewCell.swift in Sources */,
 				903C03E02670766D00D2BA28 /* imagesCollectionViewCell.swift in Sources */,
 				908484F426833A8D00463BEA /* VideosTableDataSource.swift in Sources */,
+				90E3EE312684BB8A00D0EBD6 /* Post_OTPModel.swift in Sources */,
 				90759C1D2632ACED0052FFAB /* BaseViewController.swift in Sources */,
 				90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */,
 				9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */,

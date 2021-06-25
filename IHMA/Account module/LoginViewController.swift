@@ -110,6 +110,7 @@ class LoginViewController: BaseViewController {
                         
                         let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens") as? OTPViewController
                         destinationController?.token = String((response.data![0].details?.token)!)
+                        destinationController?.email = email
                         self.navigationController?.pushViewController(destinationController!, animated: true)
                         print(response.data![0].details?.token)
                     } else {
@@ -160,9 +161,7 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func btnForgetPassword(_ sender: Any) {
-        resetPasswordAPI("annmarykalapurackal@gmail.com")
-//        let destinationController = OTPViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
-//        self.navigationController?.pushViewController(destinationController!, animated: true)
+        resetPasswordAPI("nikilvd1985@gmail.com")
     }
 }
 
