@@ -72,7 +72,7 @@ class EmailViewController: BaseViewController {
                         self.activityIndicator.stopAnimating()
                         self.activityIndicator.isHidden = true
                         self.emailView.isUserInteractionEnabled = true
-                        self.toastMessage(message: "invalid credential")
+                        self.toastMessage(message: "Please enter the registered mail id")
                     }
                 }
                 
@@ -87,6 +87,14 @@ class EmailViewController: BaseViewController {
 extension EmailViewController {
   
     @IBAction func btnSubmit(_ sender: Any) {
+        if (isValidEmail(testStr: txtEmail.text!)) {
         resetPasswordAPI(txtEmail.text!)
+        } else {
+            self.activityIndicator.stopAnimating()
+            self.activityIndicator.isHidden = true
+            self.emailView.isUserInteractionEnabled = true
+            showAlertView(heading: "Invalid mail id", message: "Please enter correct mail id")
+        }
+         
     }
 }

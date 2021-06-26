@@ -841,6 +841,10 @@
                                     <constraint firstItem="Dvl-m4-fQd" firstAttribute="trailing" secondItem="Vzb-ud-qYf" secondAttribute="trailing" id="p7c-oX-Src"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="APZ-x9-uz0">
+                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
+                                <color key="color" systemColor="systemRedColor"/>
+                            </activityIndicatorView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="I0C-6j-QwB">
                                 <rect key="frame" x="167" y="44" width="80" height="80"/>
                             </imageView>
@@ -855,13 +859,16 @@
                             <constraint firstAttribute="trailing" secondItem="owU-vd-jbN" secondAttribute="trailing" id="KmE-ml-Oy9"/>
                             <constraint firstItem="owU-vd-jbN" firstAttribute="top" secondItem="W5Q-Te-4hh" secondAttribute="top" id="NOZ-EE-ZKA"/>
                             <constraint firstItem="I0C-6j-QwB" firstAttribute="top" secondItem="owU-vd-jbN" secondAttribute="top" id="Uwx-A0-s3U"/>
+                            <constraint firstItem="APZ-x9-uz0" firstAttribute="centerX" secondItem="W5Q-Te-4hh" secondAttribute="centerX" id="YKX-i0-zj5"/>
                             <constraint firstItem="I0C-6j-QwB" firstAttribute="width" secondItem="nBy-Jk-hB1" secondAttribute="width" multiplier="80:414" id="afd-qY-BRe"/>
                             <constraint firstItem="Ybj-Z2-EmN" firstAttribute="top" secondItem="I0C-6j-QwB" secondAttribute="bottom" constant="35" id="ce8-eb-A0T"/>
+                            <constraint firstItem="APZ-x9-uz0" firstAttribute="centerY" secondItem="W5Q-Te-4hh" secondAttribute="centerY" id="hNp-Am-F9Q"/>
                             <constraint firstItem="I0C-6j-QwB" firstAttribute="height" secondItem="nBy-Jk-hB1" secondAttribute="height" multiplier="80:896" id="lWT-sl-BWz"/>
                             <constraint firstItem="Ybj-Z2-EmN" firstAttribute="leading" secondItem="W5Q-Te-4hh" secondAttribute="leading" id="pOq-yB-Tdv"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="APZ-x9-uz0" id="8lb-uL-NFs"/>
                         <outlet property="homeTableView" destination="Ybj-Z2-EmN" id="Gif-vr-bT6"/>
                         <outlet property="logoImg" destination="I0C-6j-QwB" id="oBT-j2-IpP"/>
                         <outlet property="sideMenuImage" destination="Vzb-ud-qYf" id="0w4-91-PNI"/>

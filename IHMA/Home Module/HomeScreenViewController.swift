@@ -11,6 +11,7 @@ class HomeScreenViewController: BaseViewController{
 
     @IBOutlet weak var sideMenuImage: UIImageView!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var homeTableView: UITableView!
     
     @IBOutlet weak var logoImg: UIImageView!
@@ -23,6 +24,7 @@ class HomeScreenViewController: BaseViewController{
         super.viewDidLoad()
         gradientTwoColors()
         logoImg.makeRounded()
+        activityIndicator.isHidden = true
         
         //MARK:- API call
         eventsAPI()
@@ -37,6 +39,8 @@ class HomeScreenViewController: BaseViewController{
     
     //MARK:- Course API
     func eventsAPI() {
+        activityIndicator.startAnimating()
+        activityIndicator.isHidden = false
         let url = "\(testUrl)\(eventsList)"
         let post = Param_Model()
         ApiClient.shared.getData("GET", url, post, EventsModel.self) { [self] (sucess, resp, msg) in
@@ -61,6 +65,8 @@ class HomeScreenViewController: BaseViewController{
 //                        flashNewsArray[index] = (response.data![0].details?.flash_News![index].name)!
                             eventsArray.append((response.data![0].details?.events![index].name)!)
                         }
+                        activityIndicator.stopAnimating()
+                        activityIndicator.isHidden = true
                     }
         }//end of api
         

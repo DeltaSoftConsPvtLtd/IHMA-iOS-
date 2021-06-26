@@ -28,7 +28,7 @@ class OTPDataSource: NSObject {
         //MARK:- Activity Indicator
         parentView!.activityIndicator.startAnimating()
         parentView!.activityIndicator.isHidden = false
-//        emailView.isUserInteractionEnabled = false
+        parentView!.otpView.isUserInteractionEnabled = false
         let url = "\(testUrl)\(confirmOTP)"
         let post = Post_OTPModel(email: email,token:token,otp:otp)
         ApiClient.shared.getData("POST", url, post, ConfirmotpModel.self){ [self](sucess, resp, msg) in
@@ -46,7 +46,7 @@ class OTPDataSource: NSObject {
                         parentView!.activityIndicator.stopAnimating()
                         parentView!.activityIndicator.isHidden = true
                         parentView!.otpView.isUserInteractionEnabled = true
-                        parentView!.toastMessage(message: "invalid credential")
+                        parentView!.toastMessage(message: "Please enter the correct OTP!")
                     }
                 }//if let
              }//success
