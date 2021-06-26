@@ -68,6 +68,7 @@ let userSignup = "api/getRegisterDetail/"
 let courses = "api/getcourses/"
 let resetPassword = "api/resetpassword/"
 let confirmOTP = "api/resetpassword/confirm"
+let eventsList = "api/getAlerts/"
 var File_List = "states-and-districts"
 var Chapters_List = "Chapters & Districts"
 

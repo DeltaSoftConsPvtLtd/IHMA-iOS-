@@ -45,6 +45,7 @@
 		905B141126625E2C00A9BC4D /* states-and-districts.json in Resources */ = {isa = PBXBuildFile; fileRef = 905B141026625E2C00A9BC4D /* states-and-districts.json */; };
 		905B14152662614F00A9BC4D /* StatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905B14142662614F00A9BC4D /* StatesModel.swift */; };
 		905B1418266275D600A9BC4D /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905B1417266275D500A9BC4D /* Parser.swift */; };
+		905EBBCD2686DBB100B9350D /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905EBBCC2686DBB100B9350D /* EventsModel.swift */; };
 		906C8B27264BC56D00AED3D8 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906C8B26264BC56D00AED3D8 /* LoginModel.swift */; };
 		907022CC267B609500D074EE /* ChapterScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 907022CB267B609500D074EE /* ChapterScreens.storyboard */; };
 		907022D1267B614D00D074EE /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907022D0267B614D00D074EE /* ChaptersViewController.swift */; };
@@ -147,6 +148,7 @@
 		905B141026625E2C00A9BC4D /* states-and-districts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "states-and-districts.json"; sourceTree = "<group>"; };
 		905B14142662614F00A9BC4D /* StatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesModel.swift; sourceTree = "<group>"; };
 		905B1417266275D500A9BC4D /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		905EBBCC2686DBB100B9350D /* EventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 		906C8B26264BC56D00AED3D8 /* LoginModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		907022CB267B609500D074EE /* ChapterScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChapterScreens.storyboard; sourceTree = "<group>"; };
 		907022D0267B614D00D074EE /* ChaptersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
@@ -356,6 +358,14 @@
 			path = "json Data";
 			sourceTree = "<group>";
 		};
+		905EBBC72686DB1100B9350D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				905EBBCC2686DBB100B9350D /* EventsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		907022CF267B611C00D074EE /* Chapters Module */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,6 +509,7 @@
 		90C681AA266E294A009D022F /* Home Module */ = {
 			isa = PBXGroup;
 			children = (
+				905EBBC72686DB1100B9350D /* Model */,
 				90C681B3266E36C3009D022F /* Cells */,
 				90C681AF266E3158009D022F /* ViewModel */,
 				90C681AB266E296B009D022F /* HomeScreenViewController.swift */,
@@ -855,6 +866,7 @@
 				FA2B52BA2595D3BD004B23F9 /* Utils.swift in Sources */,
 				90759C182632946C0052FFAB /* StoryboardIdentifierHandlerType.swift in Sources */,
 				909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */,
+				905EBBCD2686DBB100B9350D /* EventsModel.swift in Sources */,
 				90D471BE26776F6E00371F16 /* AboutTableDataSource.swift in Sources */,
 				909BF98B2642E39D001B73D1 /* SplashViewController.swift in Sources */,
 				FA2B525D2595BE53004B23F9 /* SceneDelegate.swift in Sources */,

@@ -16,7 +16,11 @@ class ActivitiesViewController: BaseViewController {
     var activityDatasource: ActivityDatasource?
     
     var activity:String?
+//    MARK:- Arrays for contents of activities
     var objectivesArray = [String]()
+    var flashNewsArray = [String]()
+    var eventsArray = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColors()

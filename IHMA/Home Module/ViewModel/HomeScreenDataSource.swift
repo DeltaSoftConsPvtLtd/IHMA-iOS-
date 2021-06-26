@@ -29,10 +29,12 @@ class HomeScreenDataSource: NSObject,NavigationDelegate {
             print("Flash News")
             let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
             destinationController?.activity = "Flash news"
+            destinationController?.objectivesArray = parentView!.flashNewsArray
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 3:
             print("events")
             let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
+            destinationController?.objectivesArray = parentView!.eventsArray
             destinationController?.activity = "Events"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 4:
