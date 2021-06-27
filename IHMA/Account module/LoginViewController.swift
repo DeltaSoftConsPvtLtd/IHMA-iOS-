@@ -8,6 +8,9 @@
 import UIKit
 import Alamofire
 
+var chapterDistrictArray = [String]()
+var chaptersArray = [String]()
+
 class LoginViewController: BaseViewController {
 
     //MARK:- constraint outlets
@@ -90,6 +93,7 @@ class LoginViewController: BaseViewController {
    
     
     @IBAction func btnRegister(_ sender: Any) {
+        statesArray.removeAll()
         let destinationController = RegistrationViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
         self.navigationController?.pushViewController(destinationController!, animated: true)
     }

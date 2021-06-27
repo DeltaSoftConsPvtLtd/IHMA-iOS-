@@ -10,8 +10,7 @@ import UIKit
 var chapterArray = ["Chapter 1","Chapter 2"]
 var statesArray = [String]()
 var districtsArray = [String]()
-var chapterDistrictArray = [String]()
-var chaptersArray = [String]()
+
 
 
 class SplashViewController: BaseViewController {

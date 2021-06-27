@@ -45,7 +45,7 @@ class Authentication: NSObject {
     func loginAPI(_ user: String, _ psw :String) {
 
 
-        let url = "\(baseUrl)\(userSignIn)"
+        let url = "\(testUrl)\(userSignIn)"
         let post = Post_Model(username: user, password: psw)
         ApiClient.shared.getData("POST",url, post, LoginModel.self) { (sucess, resp, msg) in
                     if sucess{

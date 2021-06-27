@@ -159,6 +159,9 @@ class MenuListController: UITableViewController {
         case 3:
             let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
+            chapterDistrictArray.removeAll()
+            chaptersArray.removeAll()
+            statesArray.removeAll()
 //            let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "ProfileScreens")
 //            self.navigationController?.pushViewController(destinationController!, animated: true)
         case 1:

@@ -73,6 +73,7 @@ class AboutTableDataSource: NSObject,NavDelegate {
     
     @objc func seemoreBtnTapped(sender:UIButton) {
         print("tapped")
+        chapterDistrictArray.removeAll()
         let destinationController = ChaptersViewController.instantiateViewControllerFromStoryboard(storyBoardName: "ChapterScreens")
         self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
     }

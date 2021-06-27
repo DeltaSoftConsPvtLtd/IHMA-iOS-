@@ -40,6 +40,7 @@ class OTPDataSource: NSObject {
                         parentView!.activityIndicator.stopAnimating()
                         parentView!.activityIndicator.isHidden = true
                         parentView!.otpView.isUserInteractionEnabled = true
+                        UserDefaults.standard.set(newPassword, forKey: "password")
                         alert()
                         
                     } else {
@@ -59,9 +60,13 @@ class OTPDataSource: NSObject {
         // Create the actions
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { [self]
                 UIAlertAction in
+            chapterDistrictArray.removeAll()
+            chaptersArray.removeAll()
+            statesArray.removeAll()
             //Action for exiting the app
             let destinationController = LoginViewController.instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
             parentView!.navigationController?.pushViewController(destinationController!, animated: true)
+          
             }
         // Add the actions
             alert.addAction(okAction)

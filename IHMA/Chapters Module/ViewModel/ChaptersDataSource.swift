@@ -33,6 +33,7 @@ class ChaptersDataSource: NSObject {
                 print(response.districts![1].district)
                 chaptersArray.removeAll()
                 
+                
                 if(states != "" )
                 {
                     
