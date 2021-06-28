@@ -15,6 +15,7 @@ class AboutUsViewController: BaseViewController {
     @IBOutlet weak var webView: WKWebView!
     var recorderTimer: Timer?
 
+    @IBOutlet weak var ttileTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var aboutTableView: UITableView!
     
     //MARK:- Header view outlets
@@ -40,6 +41,7 @@ class AboutUsViewController: BaseViewController {
         setupUI()
         loadWebView()
         sideMenu()
+        constraintSettings()
       
        
     }
@@ -54,6 +56,16 @@ class AboutUsViewController: BaseViewController {
         self.webView!.isOpaque = false
         self.webView!.backgroundColor = UIColor.clear
         self.webView!.scrollView.backgroundColor = UIColor.clear
+    }
+    
+    func constraintSettings() {
+        if UIScreen.main.bounds.height < 850
+        {
+            ttileTopConstraint.constant = 10
+        }
+        else{
+            ttileTopConstraint.constant = 40
+        }
     }
     
    //MARK:- Func to call to prevent screen recording and screenshots

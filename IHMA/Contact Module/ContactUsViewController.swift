@@ -27,6 +27,8 @@ class ContactUsViewController: BaseViewController {
     @IBOutlet weak var imgEmail: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
     
+    //MARK:- Constraints
+    @IBOutlet weak var addressViewTopConstraint: NSLayoutConstraint!
     //variables
     var image:String?
     var name:String?
@@ -40,6 +42,7 @@ class ContactUsViewController: BaseViewController {
         gradientColors()
         sideMenu()
         updateUI()
+        constraintSettings()
         // Do any additional setup after loading the view.
     }
     
@@ -53,14 +56,14 @@ class ContactUsViewController: BaseViewController {
         lblPhone.text = phone
         lblEmail.text = email
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func constraintSettings() {
+        if UIScreen.main.bounds.height < 850
+        {
+            addressViewTopConstraint.constant = -50
+        }
+        else{
+            addressViewTopConstraint.constant = -100
+        }
     }
-    */
 
 }

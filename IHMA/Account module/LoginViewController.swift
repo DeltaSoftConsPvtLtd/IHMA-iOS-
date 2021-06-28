@@ -35,6 +35,7 @@ class LoginViewController: BaseViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var imgRemeberPassword: UIImageView!
     
+    @IBOutlet weak var guestUserView: UIView!
     @IBOutlet weak var btnRememberPassword: UIButton!
     var parameters : [String : Any]?
     var authentication:Authentication?
@@ -74,6 +75,10 @@ class LoginViewController: BaseViewController {
         secureEntryImage.image = UIImage(named: "eye")
         
         imgRemeberPassword.image = UIImage(named: "unchecked")
+        
+        guestUserView.layer.cornerRadius = loginView.bounds.height/2;
+        guestUserView.clipsToBounds  =  true
+        guestUserView.backgroundColor = UIColor.white
 //        //MARK:- to change image tint color
 //        secureEntryImage.image = secureEntryImage.image?.withRenderingMode(.alwaysTemplate)
 //        secureEntryImage.tintColor = UIColor.white
@@ -83,10 +88,10 @@ class LoginViewController: BaseViewController {
     func constraintSettings() {
         if UIScreen.main.bounds.height < 850
         {
-            imgTopConstraint.constant = 90.0
+            imgTopConstraint.constant = 40.0
         }
         else{
-            imgTopConstraint.constant = 150.0
+            imgTopConstraint.constant = 50.0
         }
     }
 
@@ -132,6 +137,12 @@ class LoginViewController: BaseViewController {
         let destinationController = EmailViewController.instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
         self.navigationController?.pushViewController(destinationController!, animated: true)
     }
+    
+    @IBAction func guestUserTapped(_ sender: Any) {
+        let destinationController = HomeScreenViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
+    }
+    
 }
 
 //MARK:- Text field delegate functions

@@ -64,7 +64,7 @@ class Authentication: NSObject {
                             UserDefaults.standard.set(psw, forKey: "password")
                             
                         
-                            let destinationController = AboutUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+                            let destinationController = HomeScreenViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
                             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
 //                                let storyBoard = UIStoryboard(name: "Main", bundle: nil)
 //                                let tabbar: UITabBarController? = (storyBoard.instantiateViewController(withIdentifier: "MainTabPage") as? UITabBarController)
