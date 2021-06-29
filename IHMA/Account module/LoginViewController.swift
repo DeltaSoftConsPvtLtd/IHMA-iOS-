@@ -58,7 +58,8 @@ class LoginViewController: BaseViewController {
         
         loginView.layer.cornerRadius = loginView.bounds.height/2;
         loginView.clipsToBounds  =  true
-        loginView.backgroundColor = UIColor.white
+        loginView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")//UIColor.white
+        
         lblTitle.textColor = .white
         txtUsername.addUnderLine()
         txtPassword.addUnderLine()
@@ -78,7 +79,7 @@ class LoginViewController: BaseViewController {
         
         guestUserView.layer.cornerRadius = loginView.bounds.height/2;
         guestUserView.clipsToBounds  =  true
-        guestUserView.backgroundColor = UIColor.white
+        guestUserView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"176AB5")//UIColor.white
 //        //MARK:- to change image tint color
 //        secureEntryImage.image = secureEntryImage.image?.withRenderingMode(.alwaysTemplate)
 //        secureEntryImage.tintColor = UIColor.white
