@@ -52,6 +52,8 @@ class RegistrationViewController: BaseViewController {
         TabbarView.addShadow(location: .top)
         pickedImage.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"6EBEFB")
         activityIndicator.isHidden = true
+        formTableView.backgroundColor = UIColor.white
+        formView.backgroundColor = UIColor.white
         
 //        separatorView.addShadow(location: .bottom)
     }

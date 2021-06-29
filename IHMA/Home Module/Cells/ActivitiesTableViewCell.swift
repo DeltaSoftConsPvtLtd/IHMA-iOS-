@@ -75,6 +75,7 @@ extension ActivitiesTableViewCell:UICollectionViewDelegate,UICollectionViewDataS
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Research", for: indexPath) as? ActivitiesCollectionViewCell
         cell?.backgroundColor = UIColor.clear
         cell?.imgActivity.image =  UIImage(named: images[indexPath.row])
+        cell?.viewActivity.backgroundColor = UIColor.white
         cell?.viewActivity.layer.cornerRadius = (cell?.viewActivity.frame.width)! / 2
         if UIScreen.main.bounds.width < 400
         {

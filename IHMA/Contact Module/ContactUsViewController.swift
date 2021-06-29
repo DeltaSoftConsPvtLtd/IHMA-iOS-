@@ -55,6 +55,7 @@ class ContactUsViewController: BaseViewController {
         lblAddress.text = address
         lblPhone.text = phone
         lblEmail.text = email
+        mainView.backgroundColor = UIColor.white
     }
     func constraintSettings() {
         if UIScreen.main.bounds.height < 850

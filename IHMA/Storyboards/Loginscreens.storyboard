@@ -57,7 +57,7 @@
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IFM-1M-no1">
                                         <rect key="frame" x="0.0" y="10" width="414" height="633"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Registration" id="mL8-n1-7IJ" customClass="FormTableViewCell" customModule="IHMA" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
@@ -119,6 +119,7 @@
                                                         <constraint firstItem="cbO-Hd-5ON" firstAttribute="width" secondItem="joN-Kx-5G5" secondAttribute="width" multiplier="1.5:2" id="TJ6-W6-JvR"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <outlet property="fieldTxt" destination="vky-6p-fz1" id="iKb-3A-1it"/>
                                                     <outlet property="fieldView" destination="cbO-Hd-5ON" id="DP8-ke-Nfg"/>
@@ -202,6 +203,7 @@
                                                         <constraint firstItem="AFE-kH-vZG" firstAttribute="centerY" secondItem="swr-2K-jQm" secondAttribute="centerY" id="uFV-NS-SKd"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <outlet property="dropdownView" destination="AFE-kH-vZG" id="xyM-Z3-4RN"/>
                                                     <outlet property="lblField" destination="XdD-le-J8b" id="ZY2-2S-LXq"/>
@@ -244,6 +246,7 @@
                                                         <constraint firstItem="wni-EM-yjp" firstAttribute="centerX" secondItem="lWH-AL-8Na" secondAttribute="centerX" id="ELr-wm-hgY"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <connections>
                                                     <outlet property="btnSubmit" destination="Jtc-fb-l5O" id="f37-2F-UGg"/>
                                                     <outlet property="btnView" destination="wni-EM-yjp" id="w4J-Db-Ead"/>
@@ -393,7 +396,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="iKG-zm-Qyo" firstAttribute="leading" secondItem="lGO-Gq-jEN" secondAttribute="leading" id="547-YV-tvQ"/>
                                     <constraint firstAttribute="bottom" secondItem="IFM-1M-no1" secondAttribute="bottom" id="ELS-AZ-iTk"/>

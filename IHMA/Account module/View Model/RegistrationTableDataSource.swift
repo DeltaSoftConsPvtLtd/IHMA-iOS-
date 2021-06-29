@@ -189,6 +189,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
         {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Button", for: indexPath))!  as? SubmitTableViewCell)!
             cell.btnSubmit.layer.cornerRadius = 30
+            cell.backgroundColor = UIColor.white
             cell.btnSubmit.addTarget(self,action:#selector(submitBtnTapped(sender:)), for: .touchUpInside)
             return cell
         }
@@ -201,6 +202,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                 cell.lblValidation.text = "Please enter valid \((self.parentView?.textFieldNames[indexPath.row])!)"
                 cell.lblValidation.textColor = UIColor.red
                 cell.lblValidation.isHidden = true
+                cell.backgroundColor = UIColor.white
                 if (firstName != nil && indexPath.row == 0)
                 {
                     cell.fieldTxt.text = firstName
@@ -292,7 +294,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
         return cell
         } else {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "dropdown", for: indexPath))!  as? DropdownTableViewCell)!
-            
+            cell.backgroundColor = UIColor.white
             //MARK:- to populate dropdown lists
             switch indexPath.row {
             case 10:

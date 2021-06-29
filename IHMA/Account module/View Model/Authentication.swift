@@ -60,6 +60,7 @@ class Authentication: NSObject {
                             self.parentView?.loginView.isUserInteractionEnabled = true
                             //to save username
 //                            let saveSuccessful: Bool = KeychainWrapper.standard.set(user, forKey: "username")
+                            
                             UserDefaults.standard.set(user, forKey: "Username")
                             UserDefaults.standard.set(psw, forKey: "password")
                             
