@@ -72,7 +72,7 @@ class HomeScreenViewController: BaseViewController{
                         for index in 0...y!-1
                         {
 //                        flashNewsArray[index] = (response.data![0].details?.flash_News![index].name)!
-                            notificationsArray.append((response.data![0].details?.events![index].name)!)
+                            notificationsArray.append((response.data![0].details?.notifications![index].name)!)
                         }
                         activityIndicator.stopAnimating()
                         activityIndicator.isHidden = true

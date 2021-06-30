@@ -31,7 +31,7 @@ class ActivitiesTableViewCell: UITableViewCell,ExampleCellDelegate {
     @IBOutlet weak var activitiesCollectionView: UICollectionView!
 
 
-    var images = ["IHMA logo","Homeopathy","conference","events","courses-1","Institution"]
+    var images = ["IHMA logo","Homeopathy","conference","events","courses-1","icons8-notification-25"]
     var titles = ["About IHMA","Homeopathy","Flash News","Events","Articles","Notifications"]
     override func awakeFromNib() {
         super.awakeFromNib()
