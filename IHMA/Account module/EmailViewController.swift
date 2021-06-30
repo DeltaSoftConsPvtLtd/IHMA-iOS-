@@ -52,7 +52,7 @@ class EmailViewController: BaseViewController {
         
         let url = "\(testUrl)\(resetPassword)"
         let post = ResetPassword_Model(email: email)
-        ApiClient.shared.getData("POST", url, post, otpModel.self) {(sucess, resp, msg) in
+        ApiClient.shared.getData("POST", url, post, otpModel.self) { [self](sucess, resp, msg) in
             if sucess {
                 let response = resp as! otpModel
                 if let authentication = response.data![0].status {
@@ -72,6 +72,8 @@ class EmailViewController: BaseViewController {
                         self.activityIndicator.stopAnimating()
                         self.activityIndicator.isHidden = true
                         self.emailView.isUserInteractionEnabled = true
+                        self.txtEmail.text = ""
+                        self.txtEmail.becomeFirstResponder()
                         self.toastMessage(message: "Please enter the registered mail id")
                     }
                 }
@@ -93,6 +95,8 @@ extension EmailViewController {
             self.activityIndicator.stopAnimating()
             self.activityIndicator.isHidden = true
             self.emailView.isUserInteractionEnabled = true
+            txtEmail.text = ""
+            txtEmail.becomeFirstResponder()
             showAlertView(heading: "Invalid mail id", message: "Please enter correct mail id")
         }
          
