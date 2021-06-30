@@ -98,7 +98,7 @@ extension AboutTableDataSource: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (indexPath.row == 1) {
+        if (indexPath.row == 0) {
             let cell = (self.parentView?.aboutTableView.dequeueReusableCell(withIdentifier: "bearer", for: indexPath))! as? officeBearerTableViewCell
             cell?.bearerView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"2CBFD8")
             cell?.lblBearer?.text = "Office Bearers"
@@ -120,7 +120,7 @@ extension AboutTableDataSource: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if (indexPath.row == 1) {
+        if (indexPath.row == 0) {
             return 250
         }
         return 175

@@ -32,7 +32,7 @@ class ActivitiesTableViewCell: UITableViewCell,ExampleCellDelegate {
 
 
     var images = ["IHMA logo","Homeopathy","conference","events","courses-1","Institution"]
-    var titles = ["About IHMA","Homeopathy","Flash News","Events","Articles","Institutions"]
+    var titles = ["About IHMA","Homeopathy","Flash News","Events","Articles","Notifications"]
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

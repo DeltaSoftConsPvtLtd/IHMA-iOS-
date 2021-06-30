@@ -45,12 +45,14 @@ class HomeScreenDataSource: NSObject,NavigationDelegate {
         case 5:
             print("Articles")
             let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
-            destinationController?.activity = "Articles"
+            destinationController?.objectivesArray = parentView!.notificationsArray
+            destinationController?.activity = "Notifications"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 6:
-            print("Institutions")
+            print("Notifications")
             let destinationController = ActivitiesViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ActivitiesViewController
-            destinationController?.activity = "Institutions"
+            destinationController?.objectivesArray = parentView!.notificationsArray
+            destinationController?.activity = "Notifications"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
             
         case 7:

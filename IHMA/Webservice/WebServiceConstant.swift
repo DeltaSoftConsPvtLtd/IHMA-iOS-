@@ -60,7 +60,7 @@ enum ServiceMethodType
 
 
 
-let baseUrl = "https://lmsihma.co.in/"
+let baseUrl = "https://65.1.213.215/"//"https://lmsihma.co.in/"
 let testUrl = "https://65.1.213.215/"
 
 let userSignIn = "api/login/"

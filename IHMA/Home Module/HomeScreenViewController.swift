@@ -19,6 +19,7 @@ class HomeScreenViewController: BaseViewController{
     
     var flashNewsArray = [String]()
     var eventsArray = [String]()
+    var notificationsArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +65,14 @@ class HomeScreenViewController: BaseViewController{
                         {
 //                        flashNewsArray[index] = (response.data![0].details?.flash_News![index].name)!
                             eventsArray.append((response.data![0].details?.events![index].name)!)
+                        }
+                        
+                        let z = response.data![0].details?.notifications?.count
+                        notificationsArray.removeAll()
+                        for index in 0...y!-1
+                        {
+//                        flashNewsArray[index] = (response.data![0].details?.flash_News![index].name)!
+                            notificationsArray.append((response.data![0].details?.events![index].name)!)
                         }
                         activityIndicator.stopAnimating()
                         activityIndicator.isHidden = true

@@ -1347,7 +1347,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QwM-h9-X5G" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuTidingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="kwr-Px-LyP">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="kwr-Px-LyP">
                                         <rect key="frame" x="24" y="20" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="Mi3-GG-7ha"/>
@@ -1357,7 +1357,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Bz-Jv-wbM" userLabel="Sidemenu Button">
                                         <rect key="frame" x="24" y="20" width="25" height="25"/>
                                         <connections>
-                                            <action selector="didTapMenu" destination="1nI-Fc-Onh" eventType="touchUpInside" id="Zc5-95-Nr0"/>
+                                            <action selector="backButtonPressed:" destination="1nI-Fc-Onh" eventType="touchUpInside" id="Mup-OB-B9e"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1959,6 +1959,7 @@ Kozhikode - 673 006, Kerala.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="Back" width="48" height="48"/>
         <image name="IHMA logo " width="99" height="96"/>
         <image name="MenuTidingsIcon" width="96" height="96"/>
         <image name="bill-gates-philanthropist1" width="550" height="368"/>
