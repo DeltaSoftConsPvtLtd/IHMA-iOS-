@@ -19,7 +19,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iY7-q9-EgV" userLabel="Navbar">
                                 <rect key="frame" x="0.0" y="44" width="414" height="65"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MenuTidingsIcon" translatesAutoresizingMaskIntoConstraints="NO" id="gLu-vd-DXh">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="gLu-vd-DXh">
                                         <rect key="frame" x="24" y="20" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="1GT-9D-rO9"/>
@@ -29,7 +29,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eOr-5d-Rvf" userLabel="Sidemenu Button">
                                         <rect key="frame" x="24" y="20" width="25" height="25"/>
                                         <connections>
-                                            <action selector="didTapMenu" destination="ceZ-am-SDu" eventType="touchUpInside" id="50e-tL-hxj"/>
+                                            <action selector="backButtonPressed:" destination="ceZ-am-SDu" eventType="touchUpInside" id="OGJ-RD-jbe"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KERALA - CHAPTERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-kk-VGl">
@@ -228,7 +228,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MenuTidingsIcon" width="96" height="96"/>
+        <image name="Back" width="48" height="48"/>
         <image name="down arrow" width="25" height="25"/>
         <image name="square" width="15" height="15"/>
         <systemColor name="labelColor">

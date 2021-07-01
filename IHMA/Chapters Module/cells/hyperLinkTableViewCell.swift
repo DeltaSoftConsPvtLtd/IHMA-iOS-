@@ -12,8 +12,14 @@ class hyperLinkTableViewCell: UITableViewCell {
     @IBOutlet weak var chaptersTextView: UITextView!
     override func awakeFromNib() {
         super.awakeFromNib()
+        updateUI()
+        
         // Initialization code
         updateTextView()
+    }
+    func updateUI() {
+        chaptersTextView.text = "To know more about chapters Click Here"
+        chaptersTextView.font = UIFont(name: chaptersTextView.font!.fontName, size: 25)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,8 +29,8 @@ class hyperLinkTableViewCell: UITableViewCell {
     }
 
     func updateTextView() {
-        let path = "https://mail.google.com/"
-        let text = chaptersTextView.text ?? ""//demoTextView.text ?? ""
+        let path = "https://www.ihma.in/chapters"
+        let text = chaptersTextView.text ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: "Click Here")
         chaptersTextView.attributedText = attributedString
     }

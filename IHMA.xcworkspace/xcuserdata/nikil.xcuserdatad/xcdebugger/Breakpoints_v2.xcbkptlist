@@ -148,53 +148,5 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3FD3D544-8EF4-4C6C-B10B-D5434292D90D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "IHMA/Chapters Module/ViewModel/ChaptersDataSource.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "parsingData(x:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3FD3D544-8EF4-4C6C-B10B-D5434292D90D - fda1c1c3ccfa1ffd"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "IHMA.ChaptersDataSource.parsingData(x: Swift.Int) -&gt; ()"
-                  moduleName = "IHMA"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nikil/Documents/xcode%20pjts/IHMA_iOS/IHMA/Chapters%20Module/ViewModel/ChaptersDataSource.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "45">
-               </Location>
-               <Location
-                  uuid = "3FD3D544-8EF4-4C6C-B10B-D5434292D90D - cf24be0c94caa209"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Bool, Swift.String, Any) -&gt; () in IHMA.ChaptersDataSource.parsingData(x: Swift.Int) -&gt; ()"
-                  moduleName = "IHMA"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nikil/Documents/xcode%20pjts/IHMA_iOS/IHMA/Chapters%20Module/ViewModel/ChaptersDataSource.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "414">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

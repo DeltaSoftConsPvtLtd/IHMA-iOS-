@@ -119,7 +119,7 @@ class LoginViewController: BaseViewController {
         activityIndicator.startAnimating()
         activityIndicator.isHidden = false
         loginView.isUserInteractionEnabled = false
-        
+        guestUser = "login"
         guard let userName = self.txtUsername.text else {return}
         guard let password = self.txtPassword.text else {return}
         authentication!.authenticateUserWith(userName, andPassword: password)
@@ -141,6 +141,7 @@ class LoginViewController: BaseViewController {
     }
     
     @IBAction func guestUserTapped(_ sender: Any) {
+        guestUser = "guest"
         let destinationController = HomeScreenViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
         self.navigationController?.pushViewController(destinationController!, animated: true)
     }

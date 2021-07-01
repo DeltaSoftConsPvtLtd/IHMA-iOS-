@@ -178,8 +178,12 @@ class MenuListController: UITableViewController {
 //            let destinationController = HomeScreenViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
 //            self.navigationController?.pushViewController(destinationController!, animated: true)
         case 3:
-            let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
-            self.navigationController?.pushViewController(destinationController!, animated: true)
+            if guestUser == "guest" {
+                break
+            } else {
+                let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+                self.navigationController?.pushViewController(destinationController!, animated: true)
+                }
         case 5:
             let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
             destinationController!.image = "logo-removebg-preview"

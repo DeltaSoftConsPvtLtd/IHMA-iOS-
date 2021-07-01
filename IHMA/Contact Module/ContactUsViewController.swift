@@ -49,9 +49,11 @@ class ContactUsViewController: BaseViewController {
         // Do any additional setup after loading the view.
     }
     
+  
+    //MARK:- to create hyperlink from text view
     func updateTextView() {
         let path = "https://mail.google.com/"
-        let text = email ?? ""//demoTextView.text ?? ""
+        let text = email ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: text)
         demoTextView.attributedText = attributedString
     }
@@ -64,6 +66,7 @@ class ContactUsViewController: BaseViewController {
         lblAddress.text = address
         lblPhone.text = phone
         lblEmail.text = email
+        
         mainView.backgroundColor = UIColor.white
     }
     func constraintSettings() {
