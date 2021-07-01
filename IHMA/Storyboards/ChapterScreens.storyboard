@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -31,8 +32,8 @@
                                             <action selector="didTapMenu" destination="ceZ-am-SDu" eventType="touchUpInside" id="50e-tL-hxj"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CHAPTERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-kk-VGl">
-                                        <rect key="frame" x="154" y="20.5" width="106.5" height="24"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KERALA - CHAPTERS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MEL-kk-VGl">
+                                        <rect key="frame" x="106" y="20.5" width="202" height="24"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -175,6 +176,33 @@
                                             <outlet property="viewSeparator" destination="G3p-iy-dJ8" id="hhB-qT-jKu"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hyperLink" id="Waw-Ua-J3X" customClass="hyperLinkTableViewCell" customModule="IHMA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="116" width="414" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Waw-Ua-J3X" id="9xx-M7-447">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="To View more about Chapters Click Here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jXH-tM-NkA">
+                                                    <rect key="frame" x="20" y="10" width="374" height="0.0"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <color key="textColor" systemColor="labelColor"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="jXH-tM-NkA" secondAttribute="bottom" constant="10" id="HFC-Rn-ajP"/>
+                                                <constraint firstItem="jXH-tM-NkA" firstAttribute="top" secondItem="9xx-M7-447" secondAttribute="top" constant="10" id="Z2L-bQ-1hH"/>
+                                                <constraint firstAttribute="trailing" secondItem="jXH-tM-NkA" secondAttribute="trailing" constant="20" id="bIP-d6-QXI"/>
+                                                <constraint firstItem="jXH-tM-NkA" firstAttribute="leading" secondItem="9xx-M7-447" secondAttribute="leading" constant="20" id="sja-v2-dKf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="chaptersTextView" destination="jXH-tM-NkA" id="9rf-qW-9xm"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                             </tableView>
                         </subviews>
@@ -196,12 +224,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zND-4E-LRX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="173"/>
+            <point key="canvasLocation" x="357.97101449275362" y="172.76785714285714"/>
         </scene>
     </scenes>
     <resources>
         <image name="MenuTidingsIcon" width="96" height="96"/>
         <image name="down arrow" width="25" height="25"/>
         <image name="square" width="15" height="15"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

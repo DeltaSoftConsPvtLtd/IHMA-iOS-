@@ -41,6 +41,8 @@
 		9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEEC26392FA200E29A37 /* UIView+Extension.swift */; };
 		9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */; };
 		9044AEF4263940FE00E29A37 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEF3263940FE00E29A37 /* PaymentViewController.swift */; };
+		90483509268D911100E4E606 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90483508268D911100E4E606 /* NSAttributedString+Extension.swift */; };
+		9048350C268DAF2400E4E606 /* hyperLinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9048350B268DAF2400E4E606 /* hyperLinkTableViewCell.swift */; };
 		905B14062662053200A9BC4D /* getList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905B14052662053200A9BC4D /* getList.swift */; };
 		905B141126625E2C00A9BC4D /* states-and-districts.json in Resources */ = {isa = PBXBuildFile; fileRef = 905B141026625E2C00A9BC4D /* states-and-districts.json */; };
 		905B14152662614F00A9BC4D /* StatesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905B14142662614F00A9BC4D /* StatesModel.swift */; };
@@ -144,6 +146,8 @@
 		9044AEEC26392FA200E29A37 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentScreens.storyboard; sourceTree = "<group>"; };
 		9044AEF3263940FE00E29A37 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		90483508268D911100E4E606 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		9048350B268DAF2400E4E606 /* hyperLinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hyperLinkTableViewCell.swift; sourceTree = "<group>"; };
 		905B14052662053200A9BC4D /* getList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = getList.swift; sourceTree = "<group>"; };
 		905B141026625E2C00A9BC4D /* states-and-districts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "states-and-districts.json"; sourceTree = "<group>"; };
 		905B14142662614F00A9BC4D /* StatesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesModel.swift; sourceTree = "<group>"; };
@@ -298,6 +302,7 @@
 				9044AEEC26392FA200E29A37 /* UIView+Extension.swift */,
 				90209D22263FB99C00EC8588 /* UIColor+Extension.swift */,
 				90446A522645A2450086AB42 /* UIString+Extension.swift */,
+				90483508268D911100E4E606 /* NSAttributedString+Extension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 			children = (
 				907022E0267B6AD600D074EE /* ChaptersTableViewCell.swift */,
 				907022E3267BC15100D074EE /* ListTableViewCell.swift */,
+				9048350B268DAF2400E4E606 /* hyperLinkTableViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -809,6 +815,7 @@
 				90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */,
 				903C03FB26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift in Sources */,
 				90D471C92677C8C300371F16 /* OfficeBearersCollectionViewCell.swift in Sources */,
+				90483509268D911100E4E606 /* NSAttributedString+Extension.swift in Sources */,
 				909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */,
 				90E3EE342684C5A300D0EBD6 /* ConfirmotpModel.swift in Sources */,
 				908484F926833E4100463BEA /* VideosTableViewCell.swift in Sources */,
@@ -857,6 +864,7 @@
 				9026E996264CCC8900381E44 /* Post_Model.swift in Sources */,
 				908484EE26831E3400463BEA /* VideosViewController.swift in Sources */,
 				901B151C2678CEB800ECB22A /* ContactUsViewController.swift in Sources */,
+				9048350C268DAF2400E4E606 /* hyperLinkTableViewCell.swift in Sources */,
 				905B14152662614F00A9BC4D /* StatesModel.swift in Sources */,
 				90E3EE1B2684806100D0EBD6 /* otpModel.swift in Sources */,
 				909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */,

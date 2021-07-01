@@ -35,12 +35,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzA-2W-0O7">
-                                <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <rect key="frame" x="107" y="248" width="200" height="200"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAg-8f-wWc">
-                                        <rect key="frame" x="-77" y="110" width="354" height="315.5"/>
+                                        <rect key="frame" x="-77" y="140" width="354" height="155.5"/>
                                         <string key="text">IHMA - The National Platform of Indian Homoeopaths is relentless in its efforts to raise the standards of Homoeopathic Education &amp; Practice in India.</string>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -58,7 +58,7 @@
                                     <constraint firstItem="twe-xl-L4W" firstAttribute="centerX" secondItem="SAg-8f-wWc" secondAttribute="centerX" constant="-5" id="60y-rF-Uhz"/>
                                     <constraint firstItem="SAg-8f-wWc" firstAttribute="centerX" secondItem="CzA-2W-0O7" secondAttribute="centerX" id="DeB-Zg-HnM"/>
                                     <constraint firstAttribute="height" constant="200" id="VGH-lC-Aso"/>
-                                    <constraint firstItem="SAg-8f-wWc" firstAttribute="top" secondItem="twe-xl-L4W" secondAttribute="bottom" constant="10" id="mGa-Gg-RDD"/>
+                                    <constraint firstItem="SAg-8f-wWc" firstAttribute="top" secondItem="twe-xl-L4W" secondAttribute="bottom" constant="40" id="mGa-Gg-RDD"/>
                                     <constraint firstItem="twe-xl-L4W" firstAttribute="top" secondItem="CzA-2W-0O7" secondAttribute="top" id="vS2-h7-1kT"/>
                                 </constraints>
                             </view>
@@ -68,7 +68,7 @@
                         <constraints>
                             <constraint firstItem="vGm-YM-fnA" firstAttribute="leading" secondItem="SAg-8f-wWc" secondAttribute="leading" constant="-30" id="9fI-kk-Ac6"/>
                             <constraint firstItem="SAg-8f-wWc" firstAttribute="trailing" secondItem="vGm-YM-fnA" secondAttribute="trailing" constant="-30" id="Y6k-7Z-O06"/>
-                            <constraint firstItem="CzA-2W-0O7" firstAttribute="centerY" secondItem="NCW-Xb-2va" secondAttribute="centerY" id="ah9-if-2YY"/>
+                            <constraint firstItem="CzA-2W-0O7" firstAttribute="centerY" secondItem="NCW-Xb-2va" secondAttribute="centerY" constant="-100" id="ah9-if-2YY"/>
                             <constraint firstItem="CzA-2W-0O7" firstAttribute="centerX" secondItem="NCW-Xb-2va" secondAttribute="centerX" id="o51-Ni-VPk"/>
                         </constraints>
                     </view>
@@ -1508,6 +1508,14 @@ Kozhikode - 673 006, Kerala.</string>
                                                         <color key="textColor" red="0.19607843137254902" green="0.39215686274509803" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="info@ihma.in" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="0Ye-w3-XSY">
+                                                        <rect key="frame" x="40" y="12.5" width="118" height="25.5"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="textColor" systemColor="labelColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                    </textView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -1516,6 +1524,10 @@ Kozhikode - 673 006, Kerala.</string>
                                                     <constraint firstItem="eEI-Sq-y0e" firstAttribute="leading" secondItem="yZa-ih-nBc" secondAttribute="leading" id="IZi-iY-unV"/>
                                                     <constraint firstAttribute="height" constant="50" id="Nh9-TX-lk3"/>
                                                     <constraint firstItem="eEI-Sq-y0e" firstAttribute="top" secondItem="yZa-ih-nBc" secondAttribute="top" constant="10" id="RE1-9s-HsV"/>
+                                                    <constraint firstItem="0Ye-w3-XSY" firstAttribute="leading" secondItem="AUw-pU-zbR" secondAttribute="leading" id="Svn-af-4Yn"/>
+                                                    <constraint firstItem="0Ye-w3-XSY" firstAttribute="bottom" secondItem="AUw-pU-zbR" secondAttribute="bottom" id="UqR-JS-yQZ"/>
+                                                    <constraint firstItem="0Ye-w3-XSY" firstAttribute="top" secondItem="AUw-pU-zbR" secondAttribute="top" id="Yd3-j7-a9C"/>
+                                                    <constraint firstItem="0Ye-w3-XSY" firstAttribute="trailing" secondItem="AUw-pU-zbR" secondAttribute="trailing" id="l3x-FJ-dYd"/>
                                                     <constraint firstAttribute="bottom" secondItem="eEI-Sq-y0e" secondAttribute="bottom" constant="10" id="noy-8Z-Q83"/>
                                                     <constraint firstAttribute="width" constant="176" id="uFF-rb-Zgo"/>
                                                 </constraints>
@@ -1570,6 +1582,7 @@ Kozhikode - 673 006, Kerala.</string>
                     </view>
                     <connections>
                         <outlet property="addressViewTopConstraint" destination="tPY-vu-snK" id="1K4-qh-a7I"/>
+                        <outlet property="demoTextView" destination="0Ye-w3-XSY" id="QZU-cC-er4"/>
                         <outlet property="imgEmail" destination="eEI-Sq-y0e" id="4jS-JY-yOc"/>
                         <outlet property="imgLocation" destination="SdB-Ha-iDM" id="mac-Cr-3vx"/>
                         <outlet property="imgPhone" destination="cr1-eS-hOr" id="V9A-rO-JG0"/>
@@ -1979,6 +1992,9 @@ Kozhikode - 673 006, Kerala.</string>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

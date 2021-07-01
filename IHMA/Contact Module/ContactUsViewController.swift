@@ -26,7 +26,7 @@ class ContactUsViewController: BaseViewController {
     @IBOutlet weak var viewEmail: UIView!
     @IBOutlet weak var imgEmail: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
-    
+    @IBOutlet weak var demoTextView: UITextView!
     //MARK:- Constraints
     @IBOutlet weak var addressViewTopConstraint: NSLayoutConstraint!
     //variables
@@ -37,15 +37,24 @@ class ContactUsViewController: BaseViewController {
     var address:String?
     var phone:String?
     var email:String?
+//    var emailLink:NSAttributedString
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColors()
         sideMenu()
         updateUI()
         constraintSettings()
+        updateTextView()
         // Do any additional setup after loading the view.
     }
     
+    func updateTextView() {
+        let path = "https://mail.google.com/"
+        let text = email ?? ""//demoTextView.text ?? ""
+        let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: text)
+        demoTextView.attributedText = attributedString
+    }
     func updateUI() {
         imgProfile.makeRounded()
         imgProfile.image = UIImage(named: image!)

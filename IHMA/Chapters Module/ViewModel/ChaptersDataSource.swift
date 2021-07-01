@@ -66,7 +66,7 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return chaptersArray.count + 1
+        return chaptersArray.count + 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
@@ -92,6 +92,10 @@ extension ChaptersDataSource:UITableViewDataSource,UITableViewDelegate {
             }
 
         return cell!
+        } else if (indexPath.row == (chaptersArray.count+1)) {
+            let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "hyperLink", for: indexPath))
+            cell?.backgroundColor = UIColor.white
+            return cell!
         } else {
             let cell = (self.parentView?.chapterListTableView.dequeueReusableCell(withIdentifier: "List", for: indexPath))!  as? ListTableViewCell
             if states != "" {
