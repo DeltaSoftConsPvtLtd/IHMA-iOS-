@@ -37,8 +37,9 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzA-2W-0O7">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IHMA" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAg-8f-wWc">
-                                        <rect key="frame" x="57" y="110" width="86" height="39.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SAg-8f-wWc">
+                                        <rect key="frame" x="-77" y="110" width="354" height="315.5"/>
+                                        <string key="text">IHMA - The National Platform of Indian Homoeopaths is relentless in its efforts to raise the standards of Homoeopathic Education &amp; Practice in India.</string>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -65,6 +66,8 @@
                         <viewLayoutGuide key="safeArea" id="vGm-YM-fnA"/>
                         <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="vGm-YM-fnA" firstAttribute="leading" secondItem="SAg-8f-wWc" secondAttribute="leading" constant="-30" id="9fI-kk-Ac6"/>
+                            <constraint firstItem="SAg-8f-wWc" firstAttribute="trailing" secondItem="vGm-YM-fnA" secondAttribute="trailing" constant="-30" id="Y6k-7Z-O06"/>
                             <constraint firstItem="CzA-2W-0O7" firstAttribute="centerY" secondItem="NCW-Xb-2va" secondAttribute="centerY" id="ah9-if-2YY"/>
                             <constraint firstItem="CzA-2W-0O7" firstAttribute="centerX" secondItem="NCW-Xb-2va" secondAttribute="centerX" id="o51-Ni-VPk"/>
                         </constraints>
@@ -77,7 +80,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="blG-vb-QKf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3612" y="-366"/>
+            <point key="canvasLocation" x="-3613.04347826087" y="-366.29464285714283"/>
         </scene>
         <!--Main Tab Page-->
         <scene sceneID="8Yh-IW-q9Q">
