@@ -176,14 +176,23 @@
                                             <outlet property="viewSeparator" destination="G3p-iy-dJ8" id="hhB-qT-jKu"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hyperLink" id="Waw-Ua-J3X" customClass="hyperLinkTableViewCell" customModule="IHMA" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="116" width="414" height="20"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="blank" id="Waw-Ua-J3X">
+                                        <rect key="frame" x="0.0" y="116" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Waw-Ua-J3X" id="9xx-M7-447">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hyperLink" id="Qp0-uL-Gkn" customClass="hyperLinkTableViewCell" customModule="IHMA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="160" width="414" height="20"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qp0-uL-Gkn" id="KbZ-Ag-tFu">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="20"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="To View more about Chapters Click Here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="jXH-tM-NkA">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="To View more about Chapters Click Here." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="6LM-dY-Ssw">
                                                     <rect key="frame" x="20" y="10" width="374" height="0.0"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <color key="textColor" systemColor="labelColor"/>
@@ -192,15 +201,15 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="jXH-tM-NkA" secondAttribute="bottom" constant="10" id="HFC-Rn-ajP"/>
-                                                <constraint firstItem="jXH-tM-NkA" firstAttribute="top" secondItem="9xx-M7-447" secondAttribute="top" constant="10" id="Z2L-bQ-1hH"/>
-                                                <constraint firstAttribute="trailing" secondItem="jXH-tM-NkA" secondAttribute="trailing" constant="20" id="bIP-d6-QXI"/>
-                                                <constraint firstItem="jXH-tM-NkA" firstAttribute="leading" secondItem="9xx-M7-447" secondAttribute="leading" constant="20" id="sja-v2-dKf"/>
+                                                <constraint firstAttribute="bottom" secondItem="6LM-dY-Ssw" secondAttribute="bottom" constant="10" id="TSr-hQ-2dG"/>
+                                                <constraint firstAttribute="trailing" secondItem="6LM-dY-Ssw" secondAttribute="trailing" constant="20" id="cgO-0a-yGT"/>
+                                                <constraint firstItem="6LM-dY-Ssw" firstAttribute="leading" secondItem="KbZ-Ag-tFu" secondAttribute="leading" constant="20" id="jRo-0r-Bsn"/>
+                                                <constraint firstItem="6LM-dY-Ssw" firstAttribute="top" secondItem="KbZ-Ag-tFu" secondAttribute="top" constant="10" id="xwj-uG-aEd"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="chaptersTextView" destination="jXH-tM-NkA" id="9rf-qW-9xm"/>
+                                            <outlet property="chaptersTextView" destination="6LM-dY-Ssw" id="t00-9n-qnc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

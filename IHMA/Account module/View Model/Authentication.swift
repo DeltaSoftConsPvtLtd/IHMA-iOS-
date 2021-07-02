@@ -77,6 +77,8 @@ class Authentication: NSObject {
                             profileName = response.data![0].user?.username!
                             //MARK:- save session token in userdefaults
                             UserDefaults.standard.set(response.data![0].session_token!, forKey: "sessionToken") //setObject
+                            //UserDefaults.standard.removeObject(forKey: "sessionToken") //remove object
+
                         } else {
                             //MARK:- activity indicator actions
                             self.parentView?.activityIndicator.stopAnimating()

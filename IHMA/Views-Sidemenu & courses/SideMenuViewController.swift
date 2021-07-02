@@ -124,7 +124,7 @@ extension UIImageView {
 
 
 //MARK:-List items for side menu
-class MenuListController: UITableViewController {
+class MenuListController: UITableViewController{
     var items = ["Home","About Us","Courses","View Profile","Logout","Contact Us","Videos"]
     var images = ["home1","about us","courses-1","profile","logout","",""]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
@@ -179,7 +179,14 @@ class MenuListController: UITableViewController {
 //            self.navigationController?.pushViewController(destinationController!, animated: true)
         case 3:
             if guestUser == "guest" {
-                break
+                
+                //alert view
+                DispatchQueue.main.async {
+
+                    let alert = UIAlertController(title: "Error", message: "Please login to access this", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+                }
             } else {
                 let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
                 self.navigationController?.pushViewController(destinationController!, animated: true)
