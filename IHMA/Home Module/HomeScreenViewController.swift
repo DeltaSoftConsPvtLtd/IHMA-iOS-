@@ -69,7 +69,7 @@ class HomeScreenViewController: BaseViewController{
                         
                         let z = response.data![0].details?.notifications?.count
                         notificationsArray.removeAll()
-                        for index in 0...y!-1
+                        for index in 0...z!-1
                         {
 //                        flashNewsArray[index] = (response.data![0].details?.flash_News![index].name)!
                             notificationsArray.append((response.data![0].details?.notifications![index].name)!)

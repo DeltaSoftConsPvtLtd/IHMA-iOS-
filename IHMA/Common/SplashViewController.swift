@@ -75,7 +75,7 @@ class SplashViewController: BaseViewController {
                         print(response.status?.type!)
                         print(resp)
                         print(response.data![0].details?.memberFee![1].name)
-                        let x = response.data![0].details?.memberFee?.count
+                        let x = response.data![0].details?.chapter?.count
                         for index in 0...x!-1
                         {
                             chapterArray[index] = (response.data![0].details?.chapter![index].name)!
