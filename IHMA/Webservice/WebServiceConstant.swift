@@ -62,6 +62,7 @@ enum ServiceMethodType
 
 let baseUrl = "https://65.1.213.215/"//"https://lmsihma.co.in/"
 let testUrl = "https://65.1.213.215/"
+//let apiUrl = "https://lmsihma.co.in/"
 
 let userSignIn = "api/login/"
 let userSignup = "api/getRegisterDetail/"

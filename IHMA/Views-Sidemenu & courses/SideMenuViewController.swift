@@ -125,8 +125,8 @@ extension UIImageView {
 
 //MARK:-List items for side menu
 class MenuListController: UITableViewController{
-    var items = ["Home","About Us","Courses","View Profile","Logout","Contact Us","Videos"]
-    var images = ["home1","about us","courses-1","profile","logout","",""]
+    var items = ["Home","About Us","Courses","View Profile","Videos","Contact Us","Logout"]
+    var images = ["home1","about us","courses-1","profile","Video gallery","contact us","logout"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
     let baseViewController = BaseViewController()
     let splashViewController = SplashViewController()
@@ -159,7 +159,7 @@ class MenuListController: UITableViewController{
         case 0:
             let destinationController = HomeScreenViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
             self.navigationController?.pushViewController(destinationController!, animated: true)
-        case 4:
+        case 6:
             let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
             chapterDistrictArray.removeAll()
@@ -225,7 +225,7 @@ class MenuListController: UITableViewController{
                 
              
 //            }
-        case 6:
+        case 4:
             let destinationController = VideosViewController.instantiateViewControllerFromStoryboard(storyBoardName: "VideoScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
         default:
