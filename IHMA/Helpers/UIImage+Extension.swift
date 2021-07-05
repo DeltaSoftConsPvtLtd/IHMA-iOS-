@@ -21,4 +21,10 @@ extension UIImageView {
         self.image = templateImage
         self.tintColor = color
       }
+    
+    //MARK:- to round corners of an image rounded
+    func roundCorners() {
+        self.layer.cornerRadius = 10.0
+        self.clipsToBounds = true
+    }
  }

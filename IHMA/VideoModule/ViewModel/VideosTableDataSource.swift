@@ -57,6 +57,7 @@ extension VideosTableDataSource: UITableViewDataSource,UITableViewDelegate {
         if (indexPath.row < (self.parentView?.videoTitle.count)!) {
 
         let cell = self.parentView?.videosTableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as? VideosTableViewCell
+            cell?.backgroundColor = UIColor.clear
         cell?.comminInit(title: (self.parentView?.videoTitle[indexPath.row])!, subTitle: (self.parentView?.videoSubTitle[indexPath.row])!, videoUrl: (self.parentView?.videoUrl[indexPath.row])!)
         cell!.clickBtn.tag = indexPath.row
         cell!.clickBtn.addTarget(self, action: #selector(playBtnTapped(sender:)),
@@ -65,6 +66,7 @@ extension VideosTableDataSource: UITableViewDataSource,UITableViewDelegate {
         } else {
             let cell = self.parentView?.videosTableView.dequeueReusableCell(withIdentifier: "photosCell", for: indexPath) as? PhotosTableViewCell
             cell?.imageDisplay.image = UIImage(named: (self.parentView?.photos[indexPath.row - ((self.parentView?.videoUrl.count)!)])!)
+            cell?.backgroundColor = UIColor.clear
                     return cell!
             
         }

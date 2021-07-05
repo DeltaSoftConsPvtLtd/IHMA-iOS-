@@ -18,8 +18,7 @@ class PhotosTableViewCell: UITableViewCell {
     }
 
     func updateUI() {
-        imageDisplay.layer.cornerRadius = 10.0
-        imageDisplay.clipsToBounds = true
+        imageDisplay.roundCorners()
     }
     
 }
