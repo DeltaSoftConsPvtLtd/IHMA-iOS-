@@ -77,10 +77,12 @@ class SplashViewController: BaseViewController {
                         print(resp)
                         print(response.data![0].details?.memberFee![1].name)
                         let x = response.data![0].details?.chapter?.count
-                        for index in 0...x!-1
-                        {
-                            chapterid.append((response.data![0].details?.chapter![index].id)!)
-                            chapterArray.append((response.data![0].details?.chapter![index].name)!)
+                        if x == 0 { } else {
+                            for index in 0...x!-1
+                            {
+                                chapterid.append((response.data![0].details?.chapter![index].id)!)
+                                chapterArray.append((response.data![0].details?.chapter![index].name)!)
+                            }
                         }
 
                     }

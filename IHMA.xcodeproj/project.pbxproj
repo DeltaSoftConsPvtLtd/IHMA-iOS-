@@ -13,6 +13,8 @@
 		9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */; };
 		90068D09265C137200F5FDCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90068D03265C0EFA00F5FDCA /* Assets.xcassets */; };
 		900CA486266A03E200441A3F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CA485266A03E200441A3F /* EmailViewController.swift */; };
+		90150CD12693649B00614C3B /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90150CCF2693649B00614C3B /* PhotosTableViewCell.swift */; };
+		90150CD22693649B00614C3B /* PhotosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90150CD02693649B00614C3B /* PhotosTableViewCell.xib */; };
 		901870DD2650F40E00A3563A /* Param_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901870DC2650F40E00A3563A /* Param_Model.swift */; };
 		901B151C2678CEB800ECB22A /* ContactUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B151B2678CEB800ECB22A /* ContactUsViewController.swift */; };
 		901B15202678EBEE00ECB22A /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901B151F2678EBEE00ECB22A /* ActivitiesViewController.swift */; };
@@ -118,6 +120,8 @@
 		9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		90068D03265C0EFA00F5FDCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/nikil/Documents/xcode pjts/IHMA_iOS/IHMA/Assets.xcassets"; sourceTree = "<absolute>"; };
 		900CA485266A03E200441A3F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		90150CCF2693649B00614C3B /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		90150CD02693649B00614C3B /* PhotosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosTableViewCell.xib; sourceTree = "<group>"; };
 		901870DC2650F40E00A3563A /* Param_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Param_Model.swift; sourceTree = "<group>"; };
 		901B151B2678CEB800ECB22A /* ContactUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactUsViewController.swift; sourceTree = "<group>"; };
 		901B151F2678EBEE00ECB22A /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
@@ -482,6 +486,8 @@
 			children = (
 				908484F726833E4100463BEA /* VideosTableViewCell.swift */,
 				908484F826833E4100463BEA /* VideosTableViewCell.xib */,
+				90150CCF2693649B00614C3B /* PhotosTableViewCell.swift */,
+				90150CD02693649B00614C3B /* PhotosTableViewCell.xib */,
 			);
 			path = "Cells & xib";
 			sourceTree = "<group>";
@@ -729,6 +735,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90150CD22693649B00614C3B /* PhotosTableViewCell.xib in Resources */,
 				FA2B52A92595CC3C004B23F9 /* TitilliumWeb-Regular.ttf in Resources */,
 				FA2B526A2595BE55004B23F9 /* LaunchScreen.storyboard in Resources */,
 				FA2B529F2595CC2F004B23F9 /* TitilliumWeb-ExtraLight.ttf in Resources */,
@@ -860,6 +867,7 @@
 				905B14062662053200A9BC4D /* getList.swift in Sources */,
 				9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */,
 				902A85D026502724002380BF /* Post_RegistrationModel.swift in Sources */,
+				90150CD12693649B00614C3B /* PhotosTableViewCell.swift in Sources */,
 				907022D1267B614D00D074EE /* ChaptersViewController.swift in Sources */,
 				9026E996264CCC8900381E44 /* Post_Model.swift in Sources */,
 				908484EE26831E3400463BEA /* VideosViewController.swift in Sources */,

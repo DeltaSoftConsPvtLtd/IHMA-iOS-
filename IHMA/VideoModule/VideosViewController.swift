@@ -17,6 +17,8 @@ class VideosViewController: BaseViewController {
     var videoSubTitle = ["Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself.","The first blender movie from 2006"]
     var videoUrl = ["http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"]
     
+    var photos = ["demo3","seasonsofthanks","demo3","seasonsofthanks","demo3","seasonsofthanks","demo3","seasonsofthanks"]
+    
     override func viewDidLoad() {
         
         self.videosTableDataSource = VideosTableDataSource(attachView: self)
@@ -36,6 +38,9 @@ class VideosViewController: BaseViewController {
     //Create Nib
     let nib = UINib(nibName: "VideosTableViewCell", bundle: nil)
     videosTableView.register(nib, forCellReuseIdentifier: "videoCell")
+    
+    let nib2 = UINib(nibName: "PhotosTableViewCell", bundle: nil)
+    videosTableView.register(nib2, forCellReuseIdentifier: "photosCell")
   }
 
 }
