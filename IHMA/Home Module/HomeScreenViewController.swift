@@ -52,28 +52,34 @@ class HomeScreenViewController: BaseViewController{
                         print(resp)
                         let x = response.data![0].details?.flash_News?.count
                         flashNewsArray.removeAll()
-                        for index in 0...x!-1
-                        {
+                        if x == 0 { } else {
+                        
+                            for index in 0...x!-1
+                            {
 //                        flashNewsArray[index] = (response.data![0].details?.flash_News![index].name)!
                             flashNewsArray.append((response.data![0].details?.flash_News![index].name)!)
-                        }
-                        
+                            }
+                        }//end of if
                         
                         let y = response.data![0].details?.events?.count
                         eventsArray.removeAll()
-                        for index in 0...y!-1
-                        {
+                        if y == 0 { } else {
+                            for index in 0...y!-1   
+                            {
 //                        flashNewsArray[index] = (response.data![0].details?.flash_News![index].name)!
-                            eventsArray.append((response.data![0].details?.events![index].name)!)
-                        }
+                                eventsArray.append((response.data![0].details?.events![index].name)!)
+                            }
+                        }//end of if
                         
                         let z = response.data![0].details?.notifications?.count
                         notificationsArray.removeAll()
-                        for index in 0...z!-1
-                        {
+                        if z == 0 { } else {
+                            for index in 0...z!-1
+                            {
 //                        flashNewsArray[index] = (response.data![0].details?.flash_News![index].name)!
-                            notificationsArray.append((response.data![0].details?.notifications![index].name)!)
-                        }
+                                notificationsArray.append((response.data![0].details?.notifications![index].name)!)
+                            }
+                        }//end of if
                         activityIndicator.stopAnimating()
                         activityIndicator.isHidden = true
                     }

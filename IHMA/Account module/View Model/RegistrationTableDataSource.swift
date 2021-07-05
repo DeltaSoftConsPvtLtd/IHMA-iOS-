@@ -24,9 +24,9 @@ class RegistrationTableDataSource: NSObject {
     var collageName:Int = 1
     var membershipFee:Int = 1
     var status = "pending_approval"
-    var userType = "doctor"
+    var userType = "student"
     var idNo:Int?
-    var bloodGroup = "A+ve"
+    var bloodGroup = "O+ve"
     var userName = ""
     var password = ""
     var password2 = ""

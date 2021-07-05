@@ -7,7 +7,8 @@
 
 import UIKit
 
-var chapterArray = [""]
+var chapterid = [Int]()
+var chapterArray = ["","",""]
 var statesArray = [String]()
 var districtsArray = [String]()
 var guestUser:String?
