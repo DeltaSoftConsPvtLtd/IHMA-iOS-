@@ -150,7 +150,7 @@ class RegistrationTableDataSource: NSObject {
                     }//if loof authentication
                         else {
                             self.parentView?.activityIndicator.isHidden = true
-                            self.parentView?.showAlertView(heading: "Failed", message: "Registration process failed")
+                            self.parentView?.showAlertView(heading: "Failed", message: "Registration process failed \(response.data![0].details!.error!)")
                                 }//authentication else case
                     }//If success
         }//end of api call

@@ -31,7 +31,7 @@ struct RegData : Codable {
     let status : String?
     let return_to_url : String?
     let user : Usertest?
-
+    let details : RegDetails?
    
 
     enum CodingKeys: String, CodingKey {
@@ -39,6 +39,7 @@ struct RegData : Codable {
         case status = "status"
         case return_to_url = "return_to_url"
         case user = "user"
+        case details = "details"
 
       
     }
@@ -48,12 +49,27 @@ struct RegData : Codable {
         status = try values.decodeIfPresent(String.self, forKey: .status)
         return_to_url = try values.decodeIfPresent(String.self, forKey: .return_to_url)
         user = try values.decodeIfPresent(Usertest.self, forKey: .user)
+        details = try values.decodeIfPresent(RegDetails.self, forKey: .details)
 
        
     }
 
 }
 
+struct RegDetails : Codable {
+    let error : String?
+
+    enum CodingKeys: String, CodingKey {
+
+        case error = "error"
+    }
+
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        error = try values.decodeIfPresent(String.self, forKey: .error)
+    }
+
+}
 
 
 struct Status1 : Codable {

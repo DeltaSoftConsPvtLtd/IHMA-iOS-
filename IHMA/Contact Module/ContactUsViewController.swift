@@ -26,7 +26,7 @@ class ContactUsViewController: BaseViewController {
     @IBOutlet weak var viewEmail: UIView!
     @IBOutlet weak var imgEmail: UIImageView!
     @IBOutlet weak var lblEmail: UILabel!
-    @IBOutlet weak var demoTextView: UITextView!
+    @IBOutlet weak var emailTextView: UITextView!
     //MARK:- Constraints
     @IBOutlet weak var addressViewTopConstraint: NSLayoutConstraint!
     //variables
@@ -55,7 +55,7 @@ class ContactUsViewController: BaseViewController {
         let path = "https://mail.google.com/"
         let text = email ?? ""
         let attributedString = NSAttributedString.makeHyperlink(for: path, in: text, as: text)
-        demoTextView.attributedText = attributedString
+        emailTextView.attributedText = attributedString
     }
     func updateUI() {
         imgProfile.makeRounded()
@@ -66,6 +66,8 @@ class ContactUsViewController: BaseViewController {
         lblAddress.text = address
         lblPhone.text = phone
         lblEmail.text = email
+        
+        emailTextView.backgroundColor = UIColor.white
         
         mainView.backgroundColor = UIColor.white
     }

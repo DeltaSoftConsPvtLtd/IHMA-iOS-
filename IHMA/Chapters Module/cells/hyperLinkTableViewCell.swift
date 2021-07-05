@@ -18,6 +18,7 @@ class hyperLinkTableViewCell: UITableViewCell {
         updateTextView()
     }
     func updateUI() {
+        chaptersTextView.backgroundColor = UIColor.white
         chaptersTextView.text = "To know more about chapters Click Here"
         chaptersTextView.font = UIFont(name: chaptersTextView.font!.fontName, size: 25)
     }
