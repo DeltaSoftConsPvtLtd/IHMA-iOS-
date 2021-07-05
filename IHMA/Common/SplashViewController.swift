@@ -8,7 +8,7 @@
 import UIKit
 
 var chapterid = [Int]()
-var chapterArray = ["","",""]
+var chapterArray = [String]()
 var statesArray = [String]()
 var districtsArray = [String]()
 var guestUser:String?
@@ -79,7 +79,8 @@ class SplashViewController: BaseViewController {
                         let x = response.data![0].details?.chapter?.count
                         for index in 0...x!-1
                         {
-                            chapterArray[index] = (response.data![0].details?.chapter![index].name)!
+                            chapterid.append((response.data![0].details?.chapter![index].id)!)
+                            chapterArray.append((response.data![0].details?.chapter![index].name)!)
                         }
 
                     }
