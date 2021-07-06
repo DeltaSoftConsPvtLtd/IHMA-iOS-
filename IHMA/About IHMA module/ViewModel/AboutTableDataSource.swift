@@ -63,6 +63,36 @@ class AboutTableDataSource: NSObject,NavDelegate {
             destinationController!.phone = "(+91) 944 412 6169"
             destinationController!.email = "info@ihma.in"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        case 4:
+            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+            destinationController!.image = "ashok kumar"
+            destinationController!.name = "DR. S N. ASOKKUMAR"
+            destinationController!.contactTitle = "DESIGNATION"
+            destinationController!.positionName = "Vice President"
+            destinationController!.address = "Tharakanparambil,Arakulam P.O, Idukki - 685 591, Kerala"
+            destinationController!.phone = "(+91) 944 760 9510"
+            destinationController!.email = "snasok3@gmail.com"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        case 5:
+            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+            destinationController!.image = "shameem"
+            destinationController!.name = "DR. MOHAMMED SHAMEEM V"
+            destinationController!.contactTitle = "DESIGNATION"
+            destinationController!.positionName = "Vice President"
+            destinationController!.address = "Varikkodan House,Chemmaniyod P.O, Malappuram - 679 325, Kerala"
+            destinationController!.phone = "(+91) 989 544 8906"
+            destinationController!.email = "drshameem2012@gmail.com"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        case 6:
+            let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
+            destinationController!.image = "biju"
+            destinationController!.name = "DR. BIJU A"
+            destinationController!.contactTitle = "DESIGNATION"
+            destinationController!.positionName = "Treasurer"
+            destinationController!.address = "Pulickal,Kavanad P O,Kollam - 691 003, Kerala"
+            destinationController!.phone = "(+91) 944 642 0917"
+            destinationController!.email = "drbijua@yahoo.com"
+            self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         default:
             break
         }

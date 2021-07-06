@@ -21,7 +21,7 @@ class officeBearerTableViewCell: UITableViewCell,CellDelegate {
     @IBOutlet weak var lblBearer: UILabel!
     @IBOutlet weak var txtDesc: UITextView!
     @IBOutlet weak var bearersCollectionView: UICollectionView!
-    let images = ["Dr. ganesh","Dr. Anwar","Dr. Jibil","Dr. Deepu"]
+    let images = ["Dr. ganesh","Dr. Anwar","Dr. Jibil","Dr. Deepu","ashok kumar","shameem","biju"]
     //Delegate func
     func Intermediate(index: Int) {
         //MARK:- 2nd delegate firing .Call transferred from collection view cell to view controller
@@ -70,7 +70,7 @@ extension officeBearerTableViewCell:UICollectionViewDelegate,UICollectionViewDat
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 4
+        return images.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "officers", for: indexPath) as? OfficeBearersCollectionViewCell
