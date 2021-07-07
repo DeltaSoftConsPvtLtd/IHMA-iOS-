@@ -49,9 +49,9 @@ class AboutTableDataSource: NSObject,NavDelegate {
             destinationController!.name = "DR. JIBIL"
             destinationController!.contactTitle = "DESIGNATION"
             destinationController!.positionName = "Secretary"
-            destinationController!.address = "1/4741, Eranjipalam P.O., Kozhikode - 673 006, Kerala"
-            destinationController!.phone = "(+91) 944 412 6169"
-            destinationController!.email = "info@ihma.in"
+            destinationController!.address = "Pookkottil House,Nallalam P.O., Kozhikode - 673 027, Kerala"
+            destinationController!.phone = "(+91) 808 993 0450"
+            destinationController!.email = "jibil.p@gmail.com"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 3:
             let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
@@ -59,9 +59,9 @@ class AboutTableDataSource: NSObject,NavDelegate {
             destinationController!.name = "DR. DEEPU DEV"
             destinationController!.contactTitle = "DESIGNATION"
             destinationController!.positionName = "Secretary"
-            destinationController!.address = "1/4741, Eranjipalam P.O., Kozhikode - 673 006, Kerala"
-            destinationController!.phone = "(+91) 944 412 6169"
-            destinationController!.email = "info@ihma.in"
+            destinationController!.address = "Padmaragam, Zacharia Bazar, Alappuzha - 688 012, Kerala"
+            destinationController!.phone = "(+91) 984 603 6943"
+            destinationController!.email = "deepudev@gmail.com"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 4:
             let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
@@ -89,7 +89,7 @@ class AboutTableDataSource: NSObject,NavDelegate {
             destinationController!.name = "DR. BIJU A"
             destinationController!.contactTitle = "DESIGNATION"
             destinationController!.positionName = "Treasurer"
-            destinationController!.address = "Pulickal,Kavanad P O,Kollam - 691 003, Kerala"
+            destinationController!.address = "Pulickal, Kavanad P O, Kollam - 691 003, Kerala"
             destinationController!.phone = "(+91) 944 642 0917"
             destinationController!.email = "drbijua@yahoo.com"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
