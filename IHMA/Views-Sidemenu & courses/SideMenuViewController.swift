@@ -125,8 +125,8 @@ extension UIImageView {
 
 //MARK:-List items for side menu
 class MenuListController: UITableViewController{
-    var items = ["Home","About Us","Courses","View Profile","Gallery","Contact Us","Logout"]
-    var images = ["home1","about us","courses-1","profile","Video gallery","contact us","logout"]
+    var items = ["Home","About Us","Courses","View Profile","Gallery","Payment","Contact Us","Logout"]
+    var images = ["home1","about us","courses-1","profile","Video gallery","payment","contact us","logout"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
     let baseViewController = BaseViewController()
     let splashViewController = SplashViewController()
@@ -159,7 +159,7 @@ class MenuListController: UITableViewController{
         case 0:
             let destinationController = HomeScreenViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
             self.navigationController?.pushViewController(destinationController!, animated: true)
-        case 6:
+        case 7:
             let destinationController = LoginViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
             chapterDistrictArray.removeAll()
@@ -191,7 +191,7 @@ class MenuListController: UITableViewController{
                 let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
                 self.navigationController?.pushViewController(destinationController!, animated: true)
                 }
-        case 5:
+        case 6:
             let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
             destinationController!.image = "logo-removebg-preview"
             destinationController!.name = "IHMA"
@@ -227,6 +227,9 @@ class MenuListController: UITableViewController{
 //            }
         case 4:
             let destinationController = VideosViewController.instantiateViewControllerFromStoryboard(storyBoardName: "VideoScreens")
+            self.navigationController?.pushViewController(destinationController!, animated: true)
+        case 5:
+            let destinationController = PaymentViewController.instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
         default:
             print("ll")
