@@ -36,6 +36,7 @@ class SideMenuViewController: BaseViewController {
             txtLabel.sizeToFit()
         }
     }
+    
     let courses = [["CECP", "MOST"],
                  ["Objective C", "Android"],
                  ["Photoshop"]]
@@ -125,6 +126,7 @@ extension UIImageView {
 
 //MARK:-List items for side menu
 class MenuListController: UITableViewController{
+
     var items = ["Home","About Us","Courses","View Profile","Gallery","Payment","Contact Us","Logout"]
     var images = ["home1","about us","courses-1","profile","Video gallery","payment","contact us","logout"]
     let darkcolor = UIColor(red: 33/255, green: 33/255, blue: 33/255, alpha: 1)
@@ -141,6 +143,16 @@ class MenuListController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        if guestUser == "guest" {
+        items = ["Home","About Us","Courses","View Profile","Gallery","Payment","Contact Us","Login"]
+        images = ["home1","about us","courses-1","profile","Video gallery","payment","contact us","login"]
+            
+        } else{
+        items = ["Home","About Us","Courses","View Profile","Gallery","Payment","Contact Us","Logout"]
+        images = ["home1","about us","courses-1","profile","Video gallery","payment","contact us","logout"]
+        }
+        
         cell.textLabel?.text = items[indexPath.row]
           cell.imageView?.image = UIImage(named: images[indexPath.row])
         //MARK:- to change image tint color
@@ -168,8 +180,19 @@ class MenuListController: UITableViewController{
 //            let destinationController = ProfileViewController .instantiateViewControllerFromStoryboard(storyBoardName: "ProfileScreens")
 //            self.navigationController?.pushViewController(destinationController!, animated: true)
         case 2:
+            if guestUser == "guest" {
+                //alert view
+                DispatchQueue.main.async {
+
+                    let alert = UIAlertController(title: "Error", message: "Please login to access this", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            } else {
+                
             let destinationController = WebViewViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
             self.navigationController?.pushViewController(destinationController!, animated: true)
+            }
             
         case 1:
             let destinationController = AboutUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main")
