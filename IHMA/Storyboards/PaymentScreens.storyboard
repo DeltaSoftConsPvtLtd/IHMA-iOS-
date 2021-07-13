@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rku-Jd-CPp">
-                                <rect key="frame" x="0.0" y="288" width="414" height="528"/>
+                                <rect key="frame" x="0.0" y="288" width="414" height="608"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYN-e0-4bp">
-                                        <rect key="frame" x="60" y="70" width="294" height="388"/>
+                                        <rect key="frame" x="60" y="50" width="294" height="488"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SeJ-q5-9B3">
                                                 <rect key="frame" x="23.5" y="38" width="247" height="41"/>
@@ -119,11 +119,11 @@
                                 <constraints>
                                     <constraint firstItem="zYN-e0-4bp" firstAttribute="leading" secondItem="rku-Jd-CPp" secondAttribute="leading" constant="60" id="7vs-Wc-8Qr"/>
                                     <constraint firstAttribute="trailing" secondItem="zYN-e0-4bp" secondAttribute="trailing" constant="60" id="F2u-CB-gE1"/>
-                                    <constraint firstItem="zYN-e0-4bp" firstAttribute="top" secondItem="rku-Jd-CPp" secondAttribute="top" constant="70" id="U6R-f2-CZ3"/>
+                                    <constraint firstItem="zYN-e0-4bp" firstAttribute="top" secondItem="rku-Jd-CPp" secondAttribute="top" constant="50" id="U6R-f2-CZ3"/>
                                     <constraint firstAttribute="bottom" secondItem="zYN-e0-4bp" secondAttribute="bottom" constant="70" id="l0x-mf-yXf"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0c-zP-yC2" userLabel="Tabbar">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0c-zP-yC2" userLabel="Tabbar">
                                 <rect key="frame" x="0.0" y="816" width="414" height="80"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hqA-3j-Pjd" userLabel="Tab1">
@@ -293,9 +293,9 @@
                             <constraint firstAttribute="bottom" secondItem="g0c-zP-yC2" secondAttribute="bottom" id="KTJ-9h-HzB"/>
                             <constraint firstItem="rku-Jd-CPp" firstAttribute="top" secondItem="688-Ir-Go8" secondAttribute="bottom" constant="203" id="NP6-5O-VYC"/>
                             <constraint firstItem="rku-Jd-CPp" firstAttribute="trailing" secondItem="Q8v-eH-9en" secondAttribute="trailing" id="Ok1-ar-7pf"/>
+                            <constraint firstAttribute="bottom" secondItem="rku-Jd-CPp" secondAttribute="bottom" id="Pki-p1-prg"/>
                             <constraint firstItem="wP9-rU-K1b" firstAttribute="top" secondItem="Q8v-eH-9en" secondAttribute="top" constant="150" id="SLI-ey-DPh"/>
                             <constraint firstItem="g0c-zP-yC2" firstAttribute="leading" secondItem="Q8v-eH-9en" secondAttribute="leading" id="WaS-Rx-E0o"/>
-                            <constraint firstItem="g0c-zP-yC2" firstAttribute="top" secondItem="rku-Jd-CPp" secondAttribute="bottom" id="ZC5-ZG-Ttx"/>
                             <constraint firstItem="rku-Jd-CPp" firstAttribute="leading" secondItem="Q8v-eH-9en" secondAttribute="leading" id="iLq-KI-lIi"/>
                             <constraint firstItem="g0c-zP-yC2" firstAttribute="trailing" secondItem="Q8v-eH-9en" secondAttribute="trailing" id="vts-4X-R8e"/>
                         </constraints>
