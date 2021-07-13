@@ -13,6 +13,7 @@
 		9002F4E026381A15006292C1 /* UITextfield+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */; };
 		90068D09265C137200F5FDCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90068D03265C0EFA00F5FDCA /* Assets.xcassets */; };
 		900CA486266A03E200441A3F /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 900CA485266A03E200441A3F /* EmailViewController.swift */; };
+		9010E9AF269DAFCA0093F069 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9010E9AE269DAFCA0093F069 /* GoogleService-Info.plist */; };
 		90150CD12693649B00614C3B /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90150CCF2693649B00614C3B /* PhotosTableViewCell.swift */; };
 		90150CD22693649B00614C3B /* PhotosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90150CD02693649B00614C3B /* PhotosTableViewCell.xib */; };
 		901870DD2650F40E00A3563A /* Param_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901870DC2650F40E00A3563A /* Param_Model.swift */; };
@@ -120,6 +121,8 @@
 		9002F4DF26381A15006292C1 /* UITextfield+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextfield+Extension.swift"; sourceTree = "<group>"; };
 		90068D03265C0EFA00F5FDCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/nikil/Documents/xcode pjts/IHMA_iOS/IHMA/Assets.xcassets"; sourceTree = "<absolute>"; };
 		900CA485266A03E200441A3F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		9010E9AA269DAD6C0093F069 /* IHMA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IHMA.entitlements; sourceTree = "<group>"; };
+		9010E9AE269DAFCA0093F069 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90150CCF2693649B00614C3B /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		90150CD02693649B00614C3B /* PhotosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosTableViewCell.xib; sourceTree = "<group>"; };
 		901870DC2650F40E00A3563A /* Param_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Param_Model.swift; sourceTree = "<group>"; };
@@ -627,6 +630,7 @@
 		FA2B52592595BE53004B23F9 /* IHMA */ = {
 			isa = PBXGroup;
 			children = (
+				9010E9AA269DAD6C0093F069 /* IHMA.entitlements */,
 				905B140F26625E1500A9BC4D /* json Data */,
 				90D400682644564400DC82B9 /* Webservice */,
 				9027C3352636D26A00937441 /* Helpers */,
@@ -653,6 +657,7 @@
 				90068D03265C0EFA00F5FDCA /* Assets.xcassets */,
 				FA2B52682595BE55004B23F9 /* LaunchScreen.storyboard */,
 				FA2B526B2595BE55004B23F9 /* Info.plist */,
+				9010E9AE269DAFCA0093F069 /* GoogleService-Info.plist */,
 				FA2B52632595BE53004B23F9 /* IHMA.xcdatamodeld */,
 			);
 			path = IHMA;
@@ -754,6 +759,7 @@
 				FA2B529D2595CC2C004B23F9 /* TitilliumWeb-BoldItalic.ttf in Resources */,
 				FA2B52A52595CC37004B23F9 /* TitilliumWeb-Light.ttf in Resources */,
 				FA2B52AB2595CC40004B23F9 /* TitilliumWeb-SemiBold.ttf in Resources */,
+				9010E9AF269DAFCA0093F069 /* GoogleService-Info.plist in Resources */,
 				FA2B52A32595CC35004B23F9 /* TitilliumWeb-Italic.ttf in Resources */,
 				FA2B52A12595CC32004B23F9 /* TitilliumWeb-ExtraLightItalic.ttf in Resources */,
 				907022CC267B609500D074EE /* ChapterScreens.storyboard in Resources */,
@@ -1027,6 +1033,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IHMA/IHMA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = IHMA/Assets.xcassets;
@@ -1037,7 +1044,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.deltasoft.ihma;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.delta-soft.ihma";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1050,6 +1057,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IHMA/IHMA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = IHMA/Assets.xcassets;
@@ -1060,7 +1068,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.deltasoft.ihma;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.delta-soft.ihma";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

@@ -9,5 +9,13 @@ target 'IHMA' do
   pod 'Alamofire'
   pod 'SwiftyJSON'
   pod 'DropDown'
+  # Add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+
+  # For Analytics without IDFA collection capability, use this pod instead
+  # pod ‘Firebase/AnalyticsWithoutAdIdSupport’
+
+  # Add the pod for Firebase Cloud Messaging
+  pod 'Firebase/Messaging'
 
 end
