@@ -53,6 +53,9 @@ class ProfileViewController: BaseViewController {
         contactDetailsView.backgroundColor = UIColor.white
 //        TabbarView.addShadow(location: .top)
         lblprofileName.text = profileName!
+        lblEmail.text = email!
+        lblPhoneno.text = phone!
+        lblAboutPayment.text = joiningDate!
     }
     /*
     // MARK: - Navigation

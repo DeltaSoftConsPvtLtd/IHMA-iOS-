@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 var profileName:String?
+var email:String?
+var phone:String?
+var joiningDate:String?
 
 class Authentication: NSObject {
     weak var parentView: LoginViewController?
@@ -73,8 +76,13 @@ class Authentication: NSObject {
 //                                tabbar?.tabBar.barTintColor = UIColor.white
 //                                self.parentView?.navigationController?.pushViewController(tabbar!, animated: true)
                 
-                            //MARK:- set profile name
+                            //MARK:- set profile Details
                             profileName = response.data![0].user?.username!
+                            email = response.data![0].email?.email!
+                            phone = response.data![0].phone?.phone!
+                            joiningDate = response.data![0].join_date?.join_date!
+                            
+                            
                             //MARK:- save session token in userdefaults
                             UserDefaults.standard.set(response.data![0].session_token!, forKey: "sessionToken") //setObject
                             //UserDefaults.standard.removeObject(forKey: "sessionToken") //remove object
