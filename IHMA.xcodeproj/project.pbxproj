@@ -122,7 +122,7 @@
 		90068D03265C0EFA00F5FDCA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "/Users/nikil/Documents/xcode pjts/IHMA_iOS/IHMA/Assets.xcassets"; sourceTree = "<absolute>"; };
 		900CA485266A03E200441A3F /* EmailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		9010E9AA269DAD6C0093F069 /* IHMA.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IHMA.entitlements; sourceTree = "<group>"; };
-		9010E9AE269DAFCA0093F069 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9010E9AE269DAFCA0093F069 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../ihma required files/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90150CCF2693649B00614C3B /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
 		90150CD02693649B00614C3B /* PhotosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotosTableViewCell.xib; sourceTree = "<group>"; };
 		901870DC2650F40E00A3563A /* Param_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Param_Model.swift; sourceTree = "<group>"; };

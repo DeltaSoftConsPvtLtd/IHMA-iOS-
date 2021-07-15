@@ -41,6 +41,7 @@ class PaymentViewController: BaseViewController {
     func setupUI() {
         view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1B88F1")
         separationView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"E9E9E9")
+        paymentView.backgroundColor = UIColor.white
         paymentView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
         paymentButtonView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1B8AF4")
         paymentButtonView.layer.cornerRadius = paymentButtonView.bounds.height/2;

@@ -30,7 +30,7 @@ extension ActivityDatasource:UITableViewDataSource,UITableViewDelegate {
         if (parentView?.objectivesArray.count != 0) {
             return (parentView?.objectivesArray.count)!
         }
-        return 4
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell  {
@@ -38,7 +38,9 @@ extension ActivityDatasource:UITableViewDataSource,UITableViewDelegate {
         if (parentView?.objectivesArray.count != 0) {
             cell?.lblActivity.text = parentView?.objectivesArray[indexPath.row]
         } else {
-            cell?.lblActivity.text = String(indexPath.row)
+//            parentView?.showAlertView(heading: "No New Updates", message: " \((parentView?.activity)!) has no new updates")
+            parentView?.toastMessage(message: "\((parentView?.activity)!) has no new updates")
+            cell?.lblActivity.text = ""
         }
         return cell!
     }

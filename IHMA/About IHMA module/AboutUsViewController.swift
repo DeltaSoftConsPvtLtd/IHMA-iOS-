@@ -37,9 +37,8 @@ class AboutUsViewController: BaseViewController {
         super.viewDidLoad()
         gradientTwoColors()
 //        view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1575CE")
-        preventScreen()
+//        preventScreen()
         setupUI()
-        loadWebView()
         sideMenu()
         constraintSettings()
       
@@ -51,8 +50,8 @@ class AboutUsViewController: BaseViewController {
         
 //        progressView.setProgress(1000.02, animated: true)
 //        progressView.isHidden = false
-        activityIndicator.startAnimating()
-        activityIndicator.isHidden = false
+//        activityIndicator.startAnimating()
+        activityIndicator.isHidden = true
         self.webView!.isOpaque = false
         self.webView!.backgroundColor = UIColor.clear
         self.webView!.scrollView.backgroundColor = UIColor.clear
