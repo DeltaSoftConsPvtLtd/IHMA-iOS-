@@ -74,13 +74,14 @@ class EmailViewController: BaseViewController {
                         self.emailView.isUserInteractionEnabled = true
                         self.txtEmail.text = ""
                         self.txtEmail.becomeFirstResponder()
-                        self.toastMessage(message: "Please enter the registered mail id")
+                        self.showAlertView(heading: "Invalid", message: "Please enter the registered mail id")
+//                        self.toastMessage(message: "Please enter the registered mail id")
                     }
                 }
                 
             }
         }//api call
-        }
+    }
 
     
 }

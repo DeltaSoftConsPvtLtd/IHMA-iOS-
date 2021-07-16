@@ -85,6 +85,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         
     }
+    
+    //to get device token
+    func application(_ application: UIApplication,
+    didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+      Messaging.messaging().apnsToken = deviceToken;
+    }
 
 
     // MARK: - Core Data stack
@@ -164,7 +170,11 @@ extension AppDelegate:UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
+        //MARK:- to give sound for notification
+//        content.sound = UNNotificationSound.defaultSound()
+        
       let userInfo = response.notification.request.content.userInfo
+        
 
       Messaging.messaging().appDidReceiveMessage(userInfo)
 
