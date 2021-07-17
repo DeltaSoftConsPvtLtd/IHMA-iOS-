@@ -265,7 +265,7 @@
                                     <constraint firstAttribute="trailing" secondItem="7cx-el-vzt" secondAttribute="trailing" id="s1u-9E-7B8"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dummy profile picture" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-rU-K1b">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ihma" translatesAutoresizingMaskIntoConstraints="NO" id="wP9-rU-K1b">
                                 <rect key="frame" x="132" y="194" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="KZO-iY-shU"/>
@@ -337,10 +337,10 @@
     </scenes>
     <resources>
         <image name="MenuTidingsIcon" width="96" height="96"/>
-        <image name="dummy profile picture" width="840" height="420"/>
         <image name="homekit" catalog="system" width="128" height="106"/>
         <image name="icons8-magazine-25" width="25" height="25"/>
         <image name="icons8-notification-25" width="25" height="25"/>
+        <image name="ihma" width="225" height="225"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

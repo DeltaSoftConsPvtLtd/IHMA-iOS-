@@ -1033,18 +1033,18 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssx-Hl-e74">
-                                                            <rect key="frame" x="25" y="61" width="284" height="84.5"/>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="The list of Office Bearers in Kerala are given below." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssx-Hl-e74">
+                                                            <rect key="frame" x="25" y="61" width="284" height="75"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="84.5" id="Tnu-R1-6iW"/>
+                                                                <constraint firstAttribute="height" constant="75" id="Tnu-R1-6iW"/>
                                                             </constraints>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9MC-z3-b19">
-                                                            <rect key="frame" x="0.0" y="145.5" width="334" height="76.5"/>
+                                                            <rect key="frame" x="0.0" y="136" width="334" height="86"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FUn-GE-Iwk">
                                                                 <size key="itemSize" width="128" height="128"/>
@@ -1054,7 +1054,7 @@
                                                             </collectionViewFlowLayout>
                                                             <cells>
                                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="officers" id="12E-6v-84v" customClass="OfficeBearersCollectionViewCell" customModule="IHMA" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="-26" width="128" height="128"/>
+                                                                    <rect key="frame" x="0.0" y="-21" width="128" height="128"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qmq-Zb-DJn">
                                                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
