@@ -17,7 +17,7 @@ class VideosViewController: BaseViewController {
     var videoSubTitle = ["Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself.","The first blender movie from 2006"]
     var videoUrl = ["http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4","http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"]
     
-    var photos = ["demo3","seasonsofthanks","demo3","seasonsofthanks","demo3","seasonsofthanks","demo3","seasonsofthanks"]
+    var photos = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","22","23","24","25","26","27","28","29","30"]
     
     override func viewDidLoad() {
         

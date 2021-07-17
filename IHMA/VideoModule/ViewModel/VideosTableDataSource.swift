@@ -49,30 +49,28 @@ extension VideosTableDataSource: UITableViewDataSource,UITableViewDelegate {
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (self.parentView?.videoUrl.count)! + (self.parentView?.photos.count)!
+        return (self.parentView?.photos.count)!
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (indexPath.row < (self.parentView?.videoTitle.count)!) {
+//        if (indexPath.row < (self.parentView?.videoTitle.count)!) {
 
-        let cell = self.parentView?.videosTableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as? VideosTableViewCell
-            cell?.backgroundColor = UIColor.clear
-        cell?.comminInit(title: (self.parentView?.videoTitle[indexPath.row])!, subTitle: (self.parentView?.videoSubTitle[indexPath.row])!, videoUrl: (self.parentView?.videoUrl[indexPath.row])!)
-        cell!.clickBtn.tag = indexPath.row
-        cell!.clickBtn.addTarget(self, action: #selector(playBtnTapped(sender:)),
-                                    for: UIControl.Event.touchUpInside)
-        return cell!
-        } else {
+//        let cell = self.parentView?.videosTableView.dequeueReusableCell(withIdentifier: "videoCell", for: indexPath) as? VideosTableViewCell
+//            cell?.backgroundColor = UIColor.clear
+//        cell?.comminInit(title: (self.parentView?.videoTitle[indexPath.row])!, subTitle: (self.parentView?.videoSubTitle[indexPath.row])!, videoUrl: (self.parentView?.videoUrl[indexPath.row])!)
+//        cell!.clickBtn.tag = indexPath.row
+//        cell!.clickBtn.addTarget(self, action: #selector(playBtnTapped(sender:)),
+//                                    for: UIControl.Event.touchUpInside)
+//        return cell!
+//        } else {
             let cell = self.parentView?.videosTableView.dequeueReusableCell(withIdentifier: "photosCell", for: indexPath) as? PhotosTableViewCell
-            cell?.imageDisplay.image = UIImage(named: (self.parentView?.photos[indexPath.row - ((self.parentView?.videoUrl.count)!)])!)
+            cell?.imageDisplay.image = UIImage(named: (self.parentView?.photos[indexPath.row])!)
             cell?.backgroundColor = UIColor.clear
                     return cell!
             
-        }
-        let cell = self.parentView?.videosTableView.dequeueReusableCell(withIdentifier: "photosCell", for: indexPath) as? PhotosTableViewCell
-     
-        return cell!
+//        }
+        
 
     }
 

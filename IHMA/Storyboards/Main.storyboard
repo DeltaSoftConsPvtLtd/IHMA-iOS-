@@ -284,10 +284,10 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YU4-YT-Gd1">
-                                <rect key="frame" x="0.0" y="244" width="414" height="397"/>
+                                <rect key="frame" x="40" y="249.5" width="334" height="397"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ihma" translatesAutoresizingMaskIntoConstraints="NO" id="FWv-LZ-nGB">
-                                        <rect key="frame" x="157" y="185" width="100" height="100"/>
+                                        <rect key="frame" x="117" y="185" width="100" height="100"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="888-S8-qhc"/>
@@ -295,25 +295,25 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dr. Nancy Salmoren" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAg-wC-8b5">
-                                        <rect key="frame" x="64.5" y="50" width="285" height="41"/>
+                                        <rect key="frame" x="24.5" y="50" width="285" height="41"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="34"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Membership Fee Paid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opv-lL-VQV">
-                                        <rect key="frame" x="130.5" y="99" width="153" height="18"/>
+                                        <rect key="frame" x="90.5" y="99" width="153" height="18"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                         <color key="textColor" red="0.46274509800000002" green="0.70196078429999997" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Joined on 20 April 2021" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8D-nX-noo">
-                                        <rect key="frame" x="98.5" y="111" width="217" height="24"/>
+                                        <rect key="frame" x="58.5" y="111" width="217" height="24"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QxT-dD-DpB">
-                                        <rect key="frame" x="137.5" y="141" width="139" height="32"/>
+                                        <rect key="frame" x="97.5" y="141" width="139" height="32"/>
                                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <segments>
                                             <segment title="Annual"/>
@@ -322,22 +322,22 @@
                                         <color key="selectedSegmentTintColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </segmentedControl>
                                     <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28362" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkz-DX-lEP">
-                                        <rect key="frame" x="167" y="159" width="80" height="30"/>
+                                        <rect key="frame" x="127" y="159" width="80" height="30"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <color key="textColor" red="0.1058823529" green="0.53333333329999999" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LO5-mO-mZm">
-                                        <rect key="frame" x="25" y="204" width="364" height="56"/>
+                                        <rect key="frame" x="25" y="204" width="284" height="56"/>
                                         <subviews>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kottayam,Kerala" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xe4-Ye-UCk">
-                                                <rect key="frame" x="114.5" y="0.0" width="135" height="21"/>
+                                                <rect key="frame" x="74.5" y="0.0" width="135" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chapter 222" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jH-zA-Odi">
-                                                <rect key="frame" x="131.5" y="22" width="101" height="21"/>
+                                                <rect key="frame" x="91.5" y="22" width="101" height="21"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -353,16 +353,16 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Woe-Sj-x1c">
-                                        <rect key="frame" x="25" y="320" width="364" height="57"/>
+                                        <rect key="frame" x="25" y="320" width="284" height="57"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+91 7736785236" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpB-Xr-TbL">
-                                                <rect key="frame" x="122.5" y="0.0" width="119" height="18"/>
+                                                <rect key="frame" x="82.5" y="0.0" width="119" height="18"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nancy.sal@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pa-zk-Rry">
-                                                <rect key="frame" x="100" y="19" width="164" height="21"/>
+                                                <rect key="frame" x="60" y="19" width="164" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -377,10 +377,10 @@
                                         </constraints>
                                     </view>
                                     <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ZS-xa-UJ3">
-                                        <rect key="frame" x="25" y="402" width="364" height="50"/>
+                                        <rect key="frame" x="25" y="402" width="284" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GOb-pB-2n9">
-                                                <rect key="frame" x="0.0" y="0.0" width="364" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="284" height="50"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Edit">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -589,15 +589,15 @@
                         <viewLayoutGuide key="safeArea" id="mRw-uv-Xfc"/>
                         <color key="backgroundColor" red="0.1058823529" green="0.53333333329999999" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="mRw-uv-Xfc" firstAttribute="trailing" secondItem="YU4-YT-Gd1" secondAttribute="trailing" id="2vM-fh-w0E"/>
+                            <constraint firstItem="mRw-uv-Xfc" firstAttribute="trailing" secondItem="YU4-YT-Gd1" secondAttribute="trailing" constant="40" id="2vM-fh-w0E"/>
                             <constraint firstItem="sDg-ne-9EK" firstAttribute="leading" secondItem="mRw-uv-Xfc" secondAttribute="leading" id="8ZD-0J-F6i"/>
                             <constraint firstItem="mRw-uv-Xfc" firstAttribute="trailing" secondItem="sY4-UT-kGC" secondAttribute="trailing" id="EUi-A9-v7M"/>
+                            <constraint firstItem="YU4-YT-Gd1" firstAttribute="centerY" secondItem="qLQ-dB-eUL" secondAttribute="centerY" id="Pco-yt-5Ot"/>
                             <constraint firstItem="sY4-UT-kGC" firstAttribute="top" secondItem="mRw-uv-Xfc" secondAttribute="top" id="Xci-Tw-djQ"/>
                             <constraint firstAttribute="bottom" secondItem="sDg-ne-9EK" secondAttribute="bottom" id="b9S-H7-WPR"/>
-                            <constraint firstItem="YU4-YT-Gd1" firstAttribute="leading" secondItem="mRw-uv-Xfc" secondAttribute="leading" id="bPU-I7-PGX"/>
+                            <constraint firstItem="YU4-YT-Gd1" firstAttribute="leading" secondItem="mRw-uv-Xfc" secondAttribute="leading" constant="40" id="bPU-I7-PGX"/>
                             <constraint firstItem="sDg-ne-9EK" firstAttribute="trailing" secondItem="mRw-uv-Xfc" secondAttribute="trailing" id="s1o-4X-15g"/>
                             <constraint firstItem="sY4-UT-kGC" firstAttribute="leading" secondItem="qLQ-dB-eUL" secondAttribute="leading" id="u23-6o-bwn"/>
-                            <constraint firstItem="YU4-YT-Gd1" firstAttribute="top" secondItem="mRw-uv-Xfc" secondAttribute="top" constant="200" id="yge-1P-UQt"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -619,7 +619,6 @@
                         <outlet property="lblprofileName" destination="LAg-wC-8b5" id="4Ff-WM-zYf"/>
                         <outlet property="profileImage" destination="FWv-LZ-nGB" id="xQv-Lc-CML"/>
                         <outlet property="profileView" destination="YU4-YT-Gd1" id="c2H-T9-z4k"/>
-                        <outlet property="profileViewTopConstraint" destination="yge-1P-UQt" id="eRb-In-SNb"/>
                         <outlet property="segmentedControl" destination="QxT-dD-DpB" id="ywG-Pk-kAe"/>
                     </connections>
                 </viewController>
@@ -963,7 +962,7 @@
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, " textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="388-rQ-pGG">
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Chapters in Kerala listed below." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="388-rQ-pGG">
                                                             <rect key="frame" x="25" y="61" width="284" height="48"/>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>

@@ -9,9 +9,7 @@ import UIKit
 
 class ProfileViewController: BaseViewController {
 //MARK:- Constraints
-    @IBOutlet weak var profileViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var contactDetailsViewTopConstraint: NSLayoutConstraint!
-    @IBOutlet weak var buttonViewTopConstraint: NSLayoutConstraint!
+
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var lblprofileName: UILabel!
@@ -29,13 +27,13 @@ class ProfileViewController: BaseViewController {
     @IBOutlet weak var lblPhoneno: UILabel!
     @IBOutlet weak var lblEmail: UILabel!
     
-    @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var buttonView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         sideMenu()
-        constraintSettings()
+//        constraintSettings()
         print(profileName)
 
         // Do any additional setup after loading the view.
@@ -77,13 +75,13 @@ extension ProfileViewController
     func constraintSettings() {
         if UIScreen.main.bounds.height < 850
         {
-            profileViewTopConstraint.constant = 100
+//            profileViewTopConstraint.constant = 100
 //            buttonViewTopConstraint.constant = 25.0
 //            contactDetailsViewTopConstraint.constant = 20
 //            tabbarHeightConstraint.constant = 60.0
         }
         else{
-            profileViewTopConstraint.constant = 150
+//            profileViewTopConstraint.constant = 150
 //            buttonViewTopConstraint.constant = 50.0
 //            tabbarHeightConstraint.constant = 80.0
         }
