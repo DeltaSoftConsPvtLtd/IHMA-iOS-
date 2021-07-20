@@ -77,6 +77,7 @@
 		909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F37263BC32100200EE2 /* NotificationDataSource.swift */; };
 		909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */; };
 		909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F42263BF15600200EE2 /* ProfileViewController.swift */; };
+		90B273F226A7129100EE32AF /* ReturnPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B273F126A7129100EE32AF /* ReturnPolicyViewController.swift */; };
 		90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3144626358EC300EC7192 /* TableDataSource.swift */; };
 		90C681AC266E296B009D022F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C681AB266E296B009D022F /* HomeScreenViewController.swift */; };
 		90C681B1266E319B009D022F /* HomeScreenDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C681B0266E319B009D022F /* HomeScreenDataSource.swift */; };
@@ -186,6 +187,7 @@
 		909F2F37263BC32100200EE2 /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
 		909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		909F2F42263BF15600200EE2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		90B273F126A7129100EE32AF /* ReturnPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnPolicyViewController.swift; sourceTree = "<group>"; };
 		90C3144626358EC300EC7192 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		90C681AB266E296B009D022F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
 		90C681B0266E319B009D022F /* HomeScreenDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenDataSource.swift; sourceTree = "<group>"; };
@@ -357,6 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				9044AEF3263940FE00E29A37 /* PaymentViewController.swift */,
+				90B273F126A7129100EE32AF /* ReturnPolicyViewController.swift */,
 			);
 			path = "Payment Module";
 			sourceTree = "<group>";
@@ -867,6 +870,7 @@
 				FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */,
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
+				90B273F226A7129100EE32AF /* ReturnPolicyViewController.swift in Sources */,
 				907022D9267B664700D074EE /* ChaptersDataSource.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
 				907022E4267BC15100D074EE /* ListTableViewCell.swift in Sources */,
@@ -1035,10 +1039,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = IHMA/IHMA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = IHMA/Assets.xcassets;
 				DEVELOPMENT_TEAM = BFMSJ4LG2S;
 				INFOPLIST_FILE = IHMA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1059,10 +1064,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = IHMA/IHMA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 1.1;
 				DEVELOPMENT_ASSET_PATHS = IHMA/Assets.xcassets;
 				DEVELOPMENT_TEAM = BFMSJ4LG2S;
 				INFOPLIST_FILE = IHMA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -8,8 +8,11 @@
 import UIKit
 
 class CarouselTableViewCell: UITableViewCell {
+    
+    var Colimages = ["11","12","13"]
 
     @IBOutlet weak var carouselCollectionView: UICollectionView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         carouselCollectionView.delegate = self
@@ -33,12 +36,13 @@ extension CarouselTableViewCell:UICollectionViewDelegate, UICollectionViewDataSo
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 3
+        return Colimages.count
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
       let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "image", for: indexPath) as? imagesCollectionViewCell
         cell?.imagesOutlet.layer.cornerRadius = 20.0
         cell?.imagesOutlet.clipsToBounds = true
+        cell?.imagesOutlet.image = UIImage(named: Colimages[indexPath.row])
         if UIScreen.main.bounds.height < 750
         {
             cell?.imageHeightConstraint.constant = 150

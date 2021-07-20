@@ -142,3 +142,13 @@ extension VideosViewController: StoryboardIdentifiable
         return "VideosViewController"
             }
 }
+
+
+
+//MARK:- ReturnPolicyViewController
+extension ReturnPolicyViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "ReturnPolicyViewController"
+            }
+}

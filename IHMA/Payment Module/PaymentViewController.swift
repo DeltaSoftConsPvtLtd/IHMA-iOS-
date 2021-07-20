@@ -38,6 +38,7 @@ class PaymentViewController: BaseViewController {
         constraintSettings()
     }
     
+    
     func setupUI() {
         view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1B88F1")
         separationView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"E9E9E9")
@@ -66,8 +67,15 @@ class PaymentViewController: BaseViewController {
         }
 
     }
+    
+    @IBAction func returnPolicyTap(_ sender: Any) {
+        let destinationController = ReturnPolicyViewController.instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
+    }
  
-
+    @IBAction func paymentTap(_ sender: Any) {
+    }
+    
 }
 
 //MARK:- autolayout setups
@@ -78,13 +86,13 @@ extension PaymentViewController
         {
             paymentViewTopConstraint.constant = 100
             profileImageTopConstraint.constant = 40
-            payNowViewTopConstraint.constant = 20
+            payNowViewTopConstraint.constant = 0
             tabbarHeightConstraint.constant = 60
         }
         else{
             paymentViewTopConstraint.constant = 200
             profileImageTopConstraint.constant = 140
-            payNowViewTopConstraint.constant = 50
+            payNowViewTopConstraint.constant = 0
             tabbarHeightConstraint.constant = 80
         }
     }
