@@ -59,7 +59,7 @@ class PaymentViewController: BaseViewController {
     @IBAction func segmentAction(_ sender: Any) {
         if (segmentedControl.selectedSegmentIndex == 0)
         {
-            lblFee.text = "1000"
+            lblFee.text = "400"
         } else
         {
             
@@ -74,6 +74,8 @@ class PaymentViewController: BaseViewController {
     }
  
     @IBAction func paymentTap(_ sender: Any) {
+        showAlertView(heading: "Amount", message: "Amount to be paid is \(lblFee.text!)")
+        
     }
     
 }
