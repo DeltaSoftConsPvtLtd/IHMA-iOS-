@@ -437,6 +437,105 @@ Amount once paid through the payment gateway shall not be refunded other than in
             </objects>
             <point key="canvasLocation" x="754" y="210"/>
         </scene>
+        <!--Payment Details View Controller-->
+        <scene sceneID="lxt-hh-wBn">
+            <objects>
+                <viewController storyboardIdentifier="PaymentDetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NKy-RL-tkW" customClass="PaymentDetailsViewController" customModule="IHMA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hoT-Qb-hJD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="82E-H0-Cmt" userLabel="Navbar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="65"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pay IHMA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hxb-dR-62c">
+                                        <rect key="frame" x="148.5" y="17" width="117.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Back" translatesAutoresizingMaskIntoConstraints="NO" id="r1B-yA-ewp">
+                                        <rect key="frame" x="24" y="20" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="KNJ-6S-oRY"/>
+                                            <constraint firstAttribute="width" constant="25" id="y0g-7Y-h99"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-wt-tA0" userLabel="Back Button">
+                                        <rect key="frame" x="24" y="20" width="25" height="25"/>
+                                        <connections>
+                                            <action selector="backButtonPressed:" destination="NKy-RL-tkW" eventType="touchUpInside" id="XfX-Oz-VgM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Hxb-dR-62c" firstAttribute="centerY" secondItem="82E-H0-Cmt" secondAttribute="centerY" id="BDh-To-ajh"/>
+                                    <constraint firstItem="0vw-wt-tA0" firstAttribute="trailing" secondItem="r1B-yA-ewp" secondAttribute="trailing" id="KgD-h8-84A"/>
+                                    <constraint firstAttribute="height" constant="65" id="QGv-cp-FrR"/>
+                                    <constraint firstItem="0vw-wt-tA0" firstAttribute="bottom" secondItem="r1B-yA-ewp" secondAttribute="bottom" id="UWI-9q-Ci3"/>
+                                    <constraint firstItem="Hxb-dR-62c" firstAttribute="centerX" secondItem="82E-H0-Cmt" secondAttribute="centerX" id="Ws8-PL-uwh"/>
+                                    <constraint firstItem="r1B-yA-ewp" firstAttribute="centerY" secondItem="82E-H0-Cmt" secondAttribute="centerY" id="dhr-LR-tgH"/>
+                                    <constraint firstItem="r1B-yA-ewp" firstAttribute="leading" secondItem="82E-H0-Cmt" secondAttribute="leading" constant="24" id="nrt-Du-Wgk"/>
+                                    <constraint firstItem="0vw-wt-tA0" firstAttribute="top" secondItem="r1B-yA-ewp" secondAttribute="top" id="s4r-XK-alS"/>
+                                    <constraint firstItem="0vw-wt-tA0" firstAttribute="leading" secondItem="r1B-yA-ewp" secondAttribute="leading" id="vPO-Ze-TOI"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XcM-86-rPD">
+                                <rect key="frame" x="0.0" y="209" width="414" height="653"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IHMA A/C DETAILS : -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMX-vB-DHx">
+                                        <rect key="frame" x="40" y="50" width="334" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.65561548223350252" green="0.16014841038068148" blue="0.10085139448839273" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SRP-My-a7R">
+                                        <rect key="frame" x="40" y="84" width="334" height="549"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <string key="text">Punjab National Bank
+
+A/c No.- 4362002100003539
+
+IFSC-PUNB0984800
+
+Poonkunnam Branch
+
+Thrissur-2</string>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="SRP-My-a7R" firstAttribute="top" secondItem="JMX-vB-DHx" secondAttribute="bottom" constant="10" id="73K-a3-zpI"/>
+                                    <constraint firstItem="SRP-My-a7R" firstAttribute="leading" secondItem="JMX-vB-DHx" secondAttribute="leading" id="LbK-kc-y4V"/>
+                                    <constraint firstItem="JMX-vB-DHx" firstAttribute="top" secondItem="XcM-86-rPD" secondAttribute="top" constant="50" id="NwP-5Y-XWL"/>
+                                    <constraint firstAttribute="trailing" secondItem="JMX-vB-DHx" secondAttribute="trailing" constant="40" id="Vc3-PZ-GJF"/>
+                                    <constraint firstItem="SRP-My-a7R" firstAttribute="trailing" secondItem="JMX-vB-DHx" secondAttribute="trailing" id="Zka-IK-27r"/>
+                                    <constraint firstAttribute="bottom" secondItem="SRP-My-a7R" secondAttribute="bottom" constant="20" id="nX6-oY-KHp"/>
+                                    <constraint firstItem="JMX-vB-DHx" firstAttribute="leading" secondItem="XcM-86-rPD" secondAttribute="leading" constant="40" id="uyc-2G-aFC"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vz5-KS-IXF"/>
+                        <color key="backgroundColor" red="0.1019607843" green="0.52941176469999995" blue="0.93725490199999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Vz5-KS-IXF" firstAttribute="trailing" secondItem="XcM-86-rPD" secondAttribute="trailing" id="GDz-ah-MCR"/>
+                            <constraint firstItem="Vz5-KS-IXF" firstAttribute="trailing" secondItem="82E-H0-Cmt" secondAttribute="trailing" id="QwZ-fH-B2v"/>
+                            <constraint firstItem="Vz5-KS-IXF" firstAttribute="bottom" secondItem="XcM-86-rPD" secondAttribute="bottom" id="VrI-n5-IHz"/>
+                            <constraint firstItem="82E-H0-Cmt" firstAttribute="top" secondItem="Vz5-KS-IXF" secondAttribute="top" id="YZn-nq-64O"/>
+                            <constraint firstItem="XcM-86-rPD" firstAttribute="leading" secondItem="Vz5-KS-IXF" secondAttribute="leading" id="bHI-fM-okd"/>
+                            <constraint firstItem="82E-H0-Cmt" firstAttribute="leading" secondItem="hoT-Qb-hJD" secondAttribute="leading" id="hcO-5G-MUG"/>
+                            <constraint firstItem="XcM-86-rPD" firstAttribute="top" secondItem="82E-H0-Cmt" secondAttribute="bottom" constant="100" id="oij-PF-bOE"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BbO-Fg-l5y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1733" y="197"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Back" width="48" height="48"/>
@@ -449,7 +548,7 @@ Amount once paid through the payment gateway shall not be refunded other than in
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

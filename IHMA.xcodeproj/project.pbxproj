@@ -40,6 +40,7 @@
 		903E8CB226314C6500D0AADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 903E8CB126314C6500D0AADD /* Main.storyboard */; };
 		903E8CB7263150B800D0AADD /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CB6263150B800D0AADD /* WebViewViewController.swift */; };
 		903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */; };
+		9043865526AFBDCC00FAD0D7 /* PaymentDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043865426AFBDCC00FAD0D7 /* PaymentDetailsViewController.swift */; };
 		90446A532645A2450086AB42 /* UIString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90446A522645A2450086AB42 /* UIString+Extension.swift */; };
 		9044AEED26392FA200E29A37 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9044AEEC26392FA200E29A37 /* UIView+Extension.swift */; };
 		9044AEF0263940A500E29A37 /* PaymentScreens.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */; };
@@ -150,6 +151,7 @@
 		903E8CB126314C6500D0AADD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		903E8CB6263150B800D0AADD /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		903E8CBF2631A1B000D0AADD /* SideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuViewController.swift; sourceTree = "<group>"; };
+		9043865426AFBDCC00FAD0D7 /* PaymentDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentDetailsViewController.swift; sourceTree = "<group>"; };
 		90446A522645A2450086AB42 /* UIString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIString+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEC26392FA200E29A37 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		9044AEEF263940A500E29A37 /* PaymentScreens.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PaymentScreens.storyboard; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 			children = (
 				9044AEF3263940FE00E29A37 /* PaymentViewController.swift */,
 				90B273F126A7129100EE32AF /* ReturnPolicyViewController.swift */,
+				9043865426AFBDCC00FAD0D7 /* PaymentDetailsViewController.swift */,
 			);
 			path = "Payment Module";
 			sourceTree = "<group>";
@@ -870,6 +873,7 @@
 				FA2B52652595BE53004B23F9 /* IHMA.xcdatamodeld in Sources */,
 				FA2B525B2595BE53004B23F9 /* AppDelegate.swift in Sources */,
 				9027C3372636D29900937441 /* hexToUiColor.swift in Sources */,
+				9043865526AFBDCC00FAD0D7 /* PaymentDetailsViewController.swift in Sources */,
 				90B273F226A7129100EE32AF /* ReturnPolicyViewController.swift in Sources */,
 				907022D9267B664700D074EE /* ChaptersDataSource.swift in Sources */,
 				90759C192632946C0052FFAB /* UIStoryboard+Helpers.swift in Sources */,
@@ -1039,7 +1043,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = IHMA/IHMA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_ASSET_PATHS = IHMA/Assets.xcassets;
 				DEVELOPMENT_TEAM = BFMSJ4LG2S;
 				INFOPLIST_FILE = IHMA/Info.plist;
@@ -1064,7 +1068,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = IHMA/IHMA.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.2;
 				DEVELOPMENT_ASSET_PATHS = IHMA/Assets.xcassets;
 				DEVELOPMENT_TEAM = BFMSJ4LG2S;
 				INFOPLIST_FILE = IHMA/Info.plist;

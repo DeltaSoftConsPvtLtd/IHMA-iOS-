@@ -74,7 +74,9 @@ class PaymentViewController: BaseViewController {
     }
  
     @IBAction func paymentTap(_ sender: Any) {
-        showAlertView(heading: "Amount", message: "Amount to be paid is \(lblFee.text!)")
+//        showAlertView(heading: "Amount", message: "Amount to be paid is \(lblFee.text!)")
+        let destinationController = PaymentDetailsViewController.instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
         
     }
     

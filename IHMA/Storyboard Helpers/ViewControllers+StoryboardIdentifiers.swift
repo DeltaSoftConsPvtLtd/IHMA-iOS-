@@ -152,3 +152,12 @@ extension ReturnPolicyViewController: StoryboardIdentifiable
         return "ReturnPolicyViewController"
             }
 }
+
+
+//MARK:- PaymentDetailsViewController
+extension PaymentDetailsViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "PaymentDetailsViewController"
+            }
+}
