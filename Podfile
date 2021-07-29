@@ -17,5 +17,6 @@ target 'IHMA' do
 
   # Add the pod for Firebase Cloud Messaging
   pod 'Firebase/Messaging'
+  pod 'razorpay-pod', '~> 1.1.1'
 
 end

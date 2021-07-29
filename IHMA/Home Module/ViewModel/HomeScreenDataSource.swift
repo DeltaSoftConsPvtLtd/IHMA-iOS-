@@ -97,9 +97,9 @@ extension HomeScreenDataSource:UITableViewDataSource,UITableViewDelegate {
             let cell = (self.parentView?.homeTableView.dequeueReusableCell(withIdentifier: "Title", for: indexPath))! as? TitleTableViewCell
             switch  (indexPath.row) {
             case 0:
-                cell?.titleLabel.text = "Collaborations"
+                cell?.titleLabel.text = "Welcome"
             case 2:
-                cell?.titleLabel.text = "Research Activities"
+                cell?.titleLabel.text = "Explore IHMA"
             default:
                 break
             }

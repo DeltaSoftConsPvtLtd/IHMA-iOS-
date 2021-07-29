@@ -252,8 +252,18 @@ class MenuListController: UITableViewController{
             let destinationController = VideosViewController.instantiateViewControllerFromStoryboard(storyBoardName: "VideoScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
         case 5:
+            if guestUser == "guest" {
+                //alert view
+                DispatchQueue.main.async {
+
+                    let alert = UIAlertController(title: "Error", message: "Please login to access this", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+            } else {
             let destinationController = PaymentViewController.instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
             self.navigationController?.pushViewController(destinationController!, animated: true)
+            }
         default:
             print("ll")
         }
