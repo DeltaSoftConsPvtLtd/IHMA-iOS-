@@ -980,8 +980,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMn-3S-zat">
-                                                            <rect key="frame" x="214" y="116.5" width="95" height="30"/>
+                                                            <rect key="frame" x="194" y="117" width="120" height="29"/>
                                                             <color key="backgroundColor" red="0.094117647060000004" green="0.4941176471" blue="0.87450980389999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <state key="normal" title="Click Here">
                                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
@@ -989,12 +990,12 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="mMn-3S-zat" secondAttribute="trailing" constant="25" id="35e-be-hwi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mMn-3S-zat" secondAttribute="trailing" constant="20" id="35e-be-hwi"/>
                                                         <constraint firstItem="gfR-MJ-6tK" firstAttribute="leading" secondItem="aac-vX-26E" secondAttribute="leading" constant="25" id="4jg-Gx-GDo"/>
                                                         <constraint firstItem="gfR-MJ-6tK" firstAttribute="top" secondItem="aac-vX-26E" secondAttribute="top" constant="25" id="7mq-Mb-9cM"/>
                                                         <constraint firstAttribute="trailing" secondItem="388-rQ-pGG" secondAttribute="trailing" constant="25" id="Mp2-3s-lQm"/>
                                                         <constraint firstItem="388-rQ-pGG" firstAttribute="leading" secondItem="gfR-MJ-6tK" secondAttribute="leading" id="SIQ-k7-6y0"/>
-                                                        <constraint firstItem="mMn-3S-zat" firstAttribute="leading" secondItem="DCx-t9-jaV" secondAttribute="trailing" constant="30" id="UHs-K5-wqF"/>
+                                                        <constraint firstItem="mMn-3S-zat" firstAttribute="leading" secondItem="DCx-t9-jaV" secondAttribute="trailing" constant="10" id="UHs-K5-wqF"/>
                                                         <constraint firstItem="388-rQ-pGG" firstAttribute="top" secondItem="gfR-MJ-6tK" secondAttribute="bottom" id="bzT-H1-1Nu"/>
                                                         <constraint firstItem="mMn-3S-zat" firstAttribute="centerY" secondItem="DCx-t9-jaV" secondAttribute="centerY" id="nyT-Gb-L35"/>
                                                         <constraint firstItem="DCx-t9-jaV" firstAttribute="top" secondItem="388-rQ-pGG" secondAttribute="bottom" id="tW2-kd-G7m"/>
