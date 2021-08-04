@@ -11,9 +11,10 @@ import UIKit
 class RegistrationViewController: BaseViewController {
     
  
-    let fieldNames = ["First Name", "Last Name", "Registration Number","Id No.", "Mobile","Email","Address Home","Username","Password","Confirm Password","","","",""]
-    let textFieldNames = ["", "", "", "","","","","","","","","",""]
-    let fieldArray = ["","","","","","","","","","","State", "District", "Chapter"]
+    let fieldNames = ["First Name", "Last Name", "Registration Number","Id No.", "Mobile","Email","Address Home","Username","Password","Confirm Password","","","","",""]
+    let textFieldNames = ["", "", "", "","","","","","","","","","",""]
+    let fieldArray = ["","","","","","","","","","","State", "District", "Chapter District" ,"Chapter"]
+    var chapter:String = ""//:Int = 1
     @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
     var imagePicker = UIImagePickerController()
     
@@ -35,6 +36,7 @@ class RegistrationViewController: BaseViewController {
         pickedImage.makeRounded()
         gradientColors()
         constraintSettings()
+        parsingChapterData(x: 0)
         
         self.registrationTableDataSource = RegistrationTableDataSource(attachView: self)
         // Do any additional setup after loading the view.
@@ -62,6 +64,38 @@ class RegistrationViewController: BaseViewController {
     @IBAction func segmentedControl(_ sender: Any) {
         self.registrationTableDataSource!.userType = segmentedControlOutlet.titleForSegment(at: segmentedControlOutlet.selectedSegmentIndex)!
         formTableView.reloadData()
+    }
+    
+    //MARK :- to populate chapter districts
+    func parsingChapterData(x:Int) {
+        ChapterParser.shared.parserFile(Chapters_List) { (status,msg,resp) in
+            if status{
+                let response = resp as! ChaptersModel
+                print(response.districts![1].district)
+                
+                if(chapter != "" )
+                {
+                    chapterArray.removeAll()
+                    
+                    for index in 0...((response.districts![x].chapters?.count)!-1)
+                    {
+
+                        chapterArray.append(response.districts![x].chapters![index])
+                    }
+                    self.formTableView.reloadData()
+                } else {
+                    chapterDistrictArray.removeAll()
+                for index in 0...((response.districts?.count)!-1)
+                {
+                    if  ( (response.districts![index].district) != nil)
+                    
+                    {
+                        chapterDistrictArray.append((response.districts![index].district)!)
+                    }
+                }
+                }//Else
+            }//End of if loop for status
+        }//End of parser
     }
     //MARK:- Screen size changes
     func constraintSettings() {

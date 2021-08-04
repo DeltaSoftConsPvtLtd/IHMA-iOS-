@@ -216,7 +216,7 @@ class MenuListController: UITableViewController{
                 }
         case 6:
             let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController
-            destinationController!.image = "logo-removebg-preview"
+            destinationController!.image = "profileImage"
             destinationController!.name = "IHMA"
             destinationController!.contactTitle = "CONTACT INFO"
             destinationController!.positionName = "Public Relationship Officer : Dr. M. Mathews Jo"

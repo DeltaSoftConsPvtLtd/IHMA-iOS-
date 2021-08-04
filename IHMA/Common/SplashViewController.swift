@@ -9,6 +9,7 @@ import UIKit
 
 var memberFeeArray = [String]()
 var chapterid = [Int]()
+var chapterDistrictArray = [String]()
 var chapterArray = [String]()
 var statesArray = [String]()
 var districtsArray = [String]()

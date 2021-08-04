@@ -1379,7 +1379,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8SA-xJ-wsZ" userLabel="LogoView">
                                         <rect key="frame" x="25" y="50" width="364" height="226"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-removebg-preview" translatesAutoresizingMaskIntoConstraints="NO" id="RSM-Dg-raR">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileImage" translatesAutoresizingMaskIntoConstraints="NO" id="RSM-Dg-raR">
                                                 <rect key="frame" x="132" y="25" width="100" height="100"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="100" id="6zT-FZ-tvI"/>
@@ -1986,6 +1986,7 @@ Kozhikode - 673 006, Kerala.</string>
         <image name="logo-removebg-preview" width="500" height="500"/>
         <image name="phone" width="25" height="25"/>
         <image name="profile" width="25" height="25"/>
+        <image name="profileImage" width="390" height="480"/>
         <image name="search-1" width="512" height="512"/>
         <image name="seasonsofthanks" width="500" height="275"/>
         <namedColor name="AccentColor">

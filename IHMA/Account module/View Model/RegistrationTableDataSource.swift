@@ -19,8 +19,7 @@ class RegistrationTableDataSource: NSObject {
     var homeAddress:String = ""
     var clinicAddress:String = ""
     var states:String = ""
-    var district:String = "Thrissur"
-    var chapter:Int = 1
+    var district:String = "Thrissur"    
     var collageName:Int = 1
     var membershipFee:Int = 1
     var status = "pending_approval"
@@ -80,7 +79,7 @@ class RegistrationTableDataSource: NSObject {
         self.parentView?.activityIndicator.isHidden = false
         self.parentView?.activityIndicator.startAnimating()
         
-        if (firstName != nil && lastName != nil && regNumber != nil && mobile != nil && email != nil && userName != nil && chapter != nil && idNo != nil && states != nil && district != nil && homeAddress != nil)  {
+        if (firstName != nil && lastName != nil && regNumber != nil && mobile != nil && email != nil && userName != nil  && idNo != nil && states != nil && district != nil && homeAddress != nil)  {
             
             if (password == password2) {
                                 signupApi()
@@ -130,7 +129,7 @@ class RegistrationTableDataSource: NSObject {
     
     func signupApi() {
         let url = "\(baseUrl)\(userSignup)"
-        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: chapter, username: userName, email: email, password: password, password2: password, id_no: idNo!, blood_group: bloodGroup)
+        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: 2, username: userName, email: email, password: password, password2: password, id_no: idNo!, blood_group: bloodGroup)
         
         ApiClient.shared.getData("POST", url, post, RegistrationModel.self) { (sucess, resp, msg) in
             
@@ -185,7 +184,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row == 13)
+        if (indexPath.row == 14)
         {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Button", for: indexPath))!  as? SubmitTableViewCell)!
             cell.btnSubmit.layer.cornerRadius = 30
@@ -321,11 +320,20 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                     }
                 }
             case 12:
-                cell.dropDown.dataSource = chapterArray
+                cell.dropDown.dataSource = chapterDistrictArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
-                    cell.lblTitle.text = chapterArray[index]
-                    chapter = chapterid[index]
+                    cell.lblTitle.text = chapterDistrictArray[index]
+                    self.parentView?.chapter = cell.lblTitle.text!
+                    self.parentView?.parsingChapterData(x: index)
+//                    chapter = chapterid[index]
+                }
+            case 13:
+                    cell.dropDown.dataSource = chapterArray
+                    cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+                      print("Selected item: \(item) at index: \(index)")
+                        cell.lblTitle.text = chapterArray[index]
+//                        chapter = chapterid[index]
                 }
             default:
                 cell.dropDown.dataSource = cell.districtsArray

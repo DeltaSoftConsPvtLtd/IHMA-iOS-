@@ -50,9 +50,9 @@ class ProfileViewController: BaseViewController {
         addressView.backgroundColor = UIColor.white
         contactDetailsView.backgroundColor = UIColor.white
 //        TabbarView.addShadow(location: .top)
-        lblprofileName.text = profileName!
-        lblEmail.text = email!
-        lblPhoneno.text = phone!
+        lblprofileName.text = "Name : \(profileName!)"
+        lblEmail.text = "Email : \(email!)"
+        lblPhoneno.text = "Mob : \(phone!)"
         lblAboutPayment.text = "Joined on \((joiningDate)!)"
     }
     /*

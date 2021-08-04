@@ -8,7 +8,7 @@
 import UIKit
 import Alamofire
 
-var chapterDistrictArray = [String]()
+//var chapterDistrictArray = [String]()
 var chaptersArray = [String]()
 
 class LoginViewController: BaseViewController {
