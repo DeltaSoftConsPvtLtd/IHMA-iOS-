@@ -139,7 +139,7 @@ class BaseViewController: UIViewController {
         //tab2
         lblTab2.textColor = hexToUiColor().hexStringToUIColor(hex:"6E6E6E")//6E6E6E
         imgtab2.setImageColor(color: hexToUiColor().hexStringToUIColor(hex:"6E6E6E"))
-        
+         
         //tab3
         lblTab3.textColor = hexToUiColor().hexStringToUIColor(hex:"6E6E6E")
         imgTab3.setImageColor(color: hexToUiColor().hexStringToUIColor(hex:"6E6E6E"))

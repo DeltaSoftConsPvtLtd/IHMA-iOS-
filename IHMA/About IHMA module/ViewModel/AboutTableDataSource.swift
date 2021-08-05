@@ -39,9 +39,9 @@ class AboutTableDataSource: NSObject,NavDelegate {
             destinationController!.name = "DR ANWAR RAHMAN T.K"
             destinationController!.contactTitle = "DESIGNATION"
             destinationController!.positionName = "General Secretary"
-            destinationController!.address = "1/4741, Eranjipalam P.O., Kozhikode - 673 006, Kerala"
-            destinationController!.phone = "(+91) 944 412 6169"
-            destinationController!.email = "info@ihma.in"
+            destinationController!.address = "Tk Manzil, Mongam P. O, Malappuram - 673 642, Kerala"
+            destinationController!.phone = "(+91) 984 660 0002"
+            destinationController!.email = "dranwarrahman@gmail.com"
             self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
         case 2:
             let destinationController = ContactUsViewController .instantiateViewControllerFromStoryboard(storyBoardName: "Main") as? ContactUsViewController

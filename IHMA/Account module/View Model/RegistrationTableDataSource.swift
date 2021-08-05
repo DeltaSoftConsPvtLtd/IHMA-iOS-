@@ -13,6 +13,7 @@ class RegistrationTableDataSource: NSObject {
     //MARK:- post parameters for registration call
     var firstName:String = ""
     var lastName:String = ""
+    var medCouncil:String = ""
     var regNumber:Int?
     var mobile:Int?
     var email:String = ""
@@ -24,7 +25,7 @@ class RegistrationTableDataSource: NSObject {
     var membershipFee:Int = 1
     var status = "pending_approval"
     var userType = "student"
-    var idNo:Int?
+    var idNo:String?
     var bloodGroup = "O+ve"
     var userName = ""
     var password = ""
@@ -47,21 +48,23 @@ class RegistrationTableDataSource: NSObject {
             case 1:
                 lastName = sender.text!
             case 2:
-                regNumber = Int(sender.text!)
+                medCouncil = sender.text!
             case 3:
-                idNo = Int(sender.text!)
+                regNumber = Int(sender.text!)
             case 4:
-                mobile = Int(sender.text!)
+                idNo = sender.text!
             case 5:
-                email = sender.text!
+                mobile = Int(sender.text!)
             case 6:
-                homeAddress = sender.text!
+                email = sender.text!
             case 7:
-                userName = sender.text!
+                homeAddress = sender.text!
             case 8:
+                userName = sender.text!
+            case 9:
                 password = sender.text!
                 
-            case 9:
+            case 10:
                 password2 = sender.text!
                 
             default:
@@ -79,7 +82,7 @@ class RegistrationTableDataSource: NSObject {
         self.parentView?.activityIndicator.isHidden = false
         self.parentView?.activityIndicator.startAnimating()
         
-        if (firstName != nil && lastName != nil && regNumber != nil && mobile != nil && email != nil && userName != nil  && idNo != nil && states != nil && district != nil && homeAddress != nil)  {
+        if (firstName != nil && lastName != nil && medCouncil != nil && regNumber != nil && mobile != nil && email != nil && userName != nil  && idNo != nil && states != nil && district != nil && homeAddress != nil && self.parentView?.membershipType != nil)  {
             
             if (password == password2) {
                                 signupApi()
@@ -129,7 +132,7 @@ class RegistrationTableDataSource: NSObject {
     
     func signupApi() {
         let url = "\(baseUrl)\(userSignup)"
-        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: 2, username: userName, email: email, password: password, password2: password, id_no: idNo!, blood_group: bloodGroup)
+        let post = Post_RegistrationModel(first_name: firstName, last_name: lastName, registration_number: regNumber!, phone: mobile!, address: homeAddress, state: states, districts: district, collage_name: collageName, membership_fee: membershipFee, status: status, user_type: userType, chapter: 2, username: userName, email: email, password: password, password2: password, id_no: 23, blood_group: bloodGroup)
         
         ApiClient.shared.getData("POST", url, post, RegistrationModel.self) { (sucess, resp, msg) in
             
@@ -184,7 +187,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if (indexPath.row == 14)
+        if (indexPath.row == 15)
         {
             let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Button", for: indexPath))!  as? SubmitTableViewCell)!
             cell.btnSubmit.layer.cornerRadius = 30
@@ -192,7 +195,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
             cell.btnSubmit.addTarget(self,action:#selector(submitBtnTapped(sender:)), for: .touchUpInside)
             return cell
         }
-        else if (indexPath.row < 10){
+        else if (indexPath.row < 11){
         let cell = ((self.parentView?.formTableView.dequeueReusableCell(withIdentifier: "Registration", for: indexPath))! as? FormTableViewCell)!
 //            if (self.parentView?.segmentedControlOutlet.selectedSegmentIndex == 0)
 //            {
@@ -210,34 +213,38 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                 {
                     cell.fieldTxt.text = lastName
                 }
-                if (regNumber != nil && indexPath.row == 2)
+                if (medCouncil != nil && indexPath.row == 2)
+                {
+                    cell.fieldTxt.text = medCouncil
+                }
+                if (regNumber != nil && indexPath.row == 3)
                 {
                     cell.fieldTxt.text = String(regNumber!)
                 }
-                if (idNo != nil && indexPath.row == 3) {
+                if (idNo != nil && indexPath.row == 4) {
                     cell.fieldTxt.text = String(idNo!)
                 }
-                if (mobile != nil && indexPath.row == 4)
+                if (mobile != nil && indexPath.row == 5)
                 {
                     cell.fieldTxt.text = String(mobile!)
                 }
-                if (email != nil && indexPath.row == 5)
+                if (email != nil && indexPath.row == 6)
                 {
                     cell.fieldTxt.text = email
                 }
-                if (homeAddress != nil && indexPath.row == 6)
+                if (homeAddress != nil && indexPath.row == 7)
                 {
                     cell.fieldTxt.text = homeAddress
                 }
-                if (userName != nil && indexPath.row == 7)
+                if (userName != nil && indexPath.row == 8)
                 {
                     cell.fieldTxt.text = userName
                 }
-                if (password != "" && indexPath.row == 8)
+                if (password != "" && indexPath.row == 9)
                 {
                     cell.fieldTxt.text = password
                 }
-                if (password2 != "" && indexPath.row == 9)
+                if (password2 != "" && indexPath.row == 10)
                 {
                     cell.fieldTxt.text = password2
                 }
@@ -257,26 +264,29 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                     cell.fieldTxt.keyboardType = .alphabet
                 case 2:
                     cell.fieldTxt.isSecureTextEntry = false
-                    cell.fieldTxt.keyboardType = .numberPad
+                    cell.fieldTxt.keyboardType = .alphabet
                 case 3:
                     cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .numberPad
                 case 4:
                     cell.fieldTxt.isSecureTextEntry = false
-                    cell.fieldTxt.keyboardType = .phonePad
+                    cell.fieldTxt.keyboardType = .alphabet
                 case 5:
                     cell.fieldTxt.isSecureTextEntry = false
-                    cell.fieldTxt.keyboardType = .emailAddress
+                    cell.fieldTxt.keyboardType = .phonePad
                 case 6:
                     cell.fieldTxt.isSecureTextEntry = false
-                    cell.fieldTxt.keyboardType = .alphabet
+                    cell.fieldTxt.keyboardType = .emailAddress
                 case 7:
                     cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .alphabet
                 case 8:
-                    cell.fieldTxt.isSecureTextEntry = true
+                    cell.fieldTxt.isSecureTextEntry = false
                     cell.fieldTxt.keyboardType = .alphabet
                 case 9:
+                    cell.fieldTxt.isSecureTextEntry = true
+                    cell.fieldTxt.keyboardType = .alphabet
+                case 10:
                     cell.fieldTxt.isSecureTextEntry = true
                     cell.fieldTxt.keyboardType = .alphabet
                     
@@ -296,7 +306,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
             cell.backgroundColor = UIColor.white
             //MARK:- to populate dropdown lists
             switch indexPath.row {
-            case 10:
+            case 11:
                 cell.dropDown.dataSource = statesArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
@@ -308,7 +318,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                         cell.lblTitle.text = states
                     }
                 }
-            case 11:
+            case 12:
                 cell.dropDown.dataSource = districtsArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
@@ -319,7 +329,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                         cell.lblTitle.text = district
                     }
                 }
-            case 12:
+            case 13:
                 cell.dropDown.dataSource = chapterDistrictArray
                 cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                   print("Selected item: \(item) at index: \(index)")
@@ -328,7 +338,7 @@ extension RegistrationTableDataSource: UITableViewDataSource{
                     self.parentView?.parsingChapterData(x: index)
 //                    chapter = chapterid[index]
                 }
-            case 13:
+            case 14:
                     cell.dropDown.dataSource = chapterArray
                     cell.dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
                       print("Selected item: \(item) at index: \(index)")
@@ -352,3 +362,6 @@ extension RegistrationTableDataSource: UITableViewDataSource{
 
     
 }
+
+//Changes made
+/*idno changed from integer to string. Passed default value. In api passing parameter type has to be changed. Also chapter parameter passing made default value. Chapter district and corresponding chapter dropdown added. Segment control made invisible and membershiptype dropdown added instead*/

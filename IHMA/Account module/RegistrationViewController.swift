@@ -6,14 +6,17 @@
 //
 
 import UIKit
+import DropDown
 
 
 class RegistrationViewController: BaseViewController {
     
- 
-    let fieldNames = ["First Name", "Last Name", "Registration Number","Id No.", "Mobile","Email","Address Home","Username","Password","Confirm Password","","","","",""]
-    let textFieldNames = ["", "", "", "","","","","","","","","","",""]
-    let fieldArray = ["","","","","","","","","","","State", "District", "Chapter District" ,"Chapter"]
+    let dropDown = DropDown()
+    let membershipArray = ["Member", "Non member"]
+    let fieldNames = ["First Name", "Last Name", "Med Council", "Registration Number","Id No.", "Mobile","Email","Address Home","Username","Password","Confirm Password","","","","",""]
+    let textFieldNames = ["", "", "", "","","","","","","","","","","",""]
+    let fieldArray = ["","","","","","","","","","","","State", "District", "Chapter District" ,"Chapter"]
+    var membershipType:String?
     var chapter:String = ""//:Int = 1
     @IBOutlet weak var tabbarHeightConstraint: NSLayoutConstraint!
     var imagePicker = UIImagePickerController()
@@ -28,6 +31,8 @@ class RegistrationViewController: BaseViewController {
     @IBOutlet weak var cameraImage: UIImageView!
     @IBOutlet weak var formTableView: UITableView!
     
+    @IBOutlet weak var membershipView: UIView!
+    @IBOutlet weak var membershipLbl: UILabel!
     var registrationTableDataSource: RegistrationTableDataSource?
     
     override func viewDidLoad() {
@@ -37,6 +42,7 @@ class RegistrationViewController: BaseViewController {
         gradientColors()
         constraintSettings()
         parsingChapterData(x: 0)
+        listDown()
         
         self.registrationTableDataSource = RegistrationTableDataSource(attachView: self)
         // Do any additional setup after loading the view.
@@ -48,7 +54,9 @@ class RegistrationViewController: BaseViewController {
         //MARK:- to change text color of selected text in uisegmented Control
         UISegmentedControl.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white as Any], for: .selected)
         
-        
+        membershipView.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"FF6C5D")
+        membershipView.isHidden = false
+        membershipView.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 30.0)
         formView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
 //        separatorView.dropShadow()
         TabbarView.addShadow(location: .top)
@@ -60,6 +68,26 @@ class RegistrationViewController: BaseViewController {
 //        separatorView.addShadow(location: .bottom)
     }
     
+    func listDown() {
+        
+        dropDown.anchorView = membershipView
+        dropDown.bottomOffset = CGPoint(x: 0, y: (dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.topOffset = CGPoint(x: 0, y: -(dropDown.anchorView?.plainView.bounds.height)!)
+        dropDown.direction = .bottom
+        dropDown.dataSource = membershipArray
+        // Action triggered on selection
+        dropDown.selectionAction = { [unowned self] (index: Int, item: String) in
+          print("Selected item: \(item) at index: \(index)")
+            self.membershipLbl.text = membershipArray[index]
+            membershipType = membershipArray[index]
+//            self.lblTitle.text = fruitsArray[index]
+        }
+    }
+    
+    //Tap action on dropdown
+    @IBAction func dropDownTap(_ sender: Any) {
+        dropDown.show()
+    }
     
     @IBAction func segmentedControl(_ sender: Any) {
         self.registrationTableDataSource!.userType = segmentedControlOutlet.titleForSegment(at: segmentedControlOutlet.selectedSegmentIndex)!
