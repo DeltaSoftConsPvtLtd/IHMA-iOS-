@@ -78,6 +78,7 @@
 		909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F37263BC32100200EE2 /* NotificationDataSource.swift */; };
 		909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */; };
 		909F2F43263BF15600200EE2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F42263BF15600200EE2 /* ProfileViewController.swift */; };
+		90A612CA26BEFB0F00D4CF5F /* GuestBtnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A612C926BEFB0F00D4CF5F /* GuestBtnTableViewCell.swift */; };
 		90B273F226A7129100EE32AF /* ReturnPolicyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90B273F126A7129100EE32AF /* ReturnPolicyViewController.swift */; };
 		90C3144726358EC300EC7192 /* TableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C3144626358EC300EC7192 /* TableDataSource.swift */; };
 		90C681AC266E296B009D022F /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90C681AB266E296B009D022F /* HomeScreenViewController.swift */; };
@@ -92,6 +93,9 @@
 		90D471C32677799600371F16 /* ChapterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D471C22677799600371F16 /* ChapterTableViewCell.swift */; };
 		90D471C62677B56900371F16 /* officeBearerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D471C52677B56900371F16 /* officeBearerTableViewCell.swift */; };
 		90D471C92677C8C300371F16 /* OfficeBearersCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D471C82677C8C300371F16 /* OfficeBearersCollectionViewCell.swift */; };
+		90D5DF9026BCF5DE00EBBEEB /* GuestRegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D5DF8F26BCF5DE00EBBEEB /* GuestRegistrationViewController.swift */; };
+		90D5DF9326BD9C7100EBBEEB /* GuestRegistrationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D5DF9226BD9C7100EBBEEB /* GuestRegistrationTableDataSource.swift */; };
+		90D5DF9826BDA44700EBBEEB /* GuestFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D5DF9726BDA44700EBBEEB /* GuestFormTableViewCell.swift */; };
 		90E3EE17268464D900D0EBD6 /* ResetPassword_Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3EE16268464D900D0EBD6 /* ResetPassword_Model.swift */; };
 		90E3EE1B2684806100D0EBD6 /* otpModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3EE1A2684806100D0EBD6 /* otpModel.swift */; };
 		90E3EE312684BB8A00D0EBD6 /* Post_OTPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E3EE302684BB8A00D0EBD6 /* Post_OTPModel.swift */; };
@@ -189,6 +193,7 @@
 		909F2F37263BC32100200EE2 /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
 		909F2F3A263BC34F00200EE2 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		909F2F42263BF15600200EE2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		90A612C926BEFB0F00D4CF5F /* GuestBtnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestBtnTableViewCell.swift; sourceTree = "<group>"; };
 		90B273F126A7129100EE32AF /* ReturnPolicyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReturnPolicyViewController.swift; sourceTree = "<group>"; };
 		90C3144626358EC300EC7192 /* TableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDataSource.swift; sourceTree = "<group>"; };
 		90C681AB266E296B009D022F /* HomeScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewController.swift; sourceTree = "<group>"; };
@@ -203,6 +208,9 @@
 		90D471C22677799600371F16 /* ChapterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChapterTableViewCell.swift; sourceTree = "<group>"; };
 		90D471C52677B56900371F16 /* officeBearerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = officeBearerTableViewCell.swift; sourceTree = "<group>"; };
 		90D471C82677C8C300371F16 /* OfficeBearersCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfficeBearersCollectionViewCell.swift; sourceTree = "<group>"; };
+		90D5DF8F26BCF5DE00EBBEEB /* GuestRegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestRegistrationViewController.swift; sourceTree = "<group>"; };
+		90D5DF9226BD9C7100EBBEEB /* GuestRegistrationTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestRegistrationTableDataSource.swift; sourceTree = "<group>"; };
+		90D5DF9726BDA44700EBBEEB /* GuestFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuestFormTableViewCell.swift; sourceTree = "<group>"; };
 		90E3EE16268464D900D0EBD6 /* ResetPassword_Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPassword_Model.swift; sourceTree = "<group>"; };
 		90E3EE1A2684806100D0EBD6 /* otpModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otpModel.swift; sourceTree = "<group>"; };
 		90E3EE302684BB8A00D0EBD6 /* Post_OTPModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post_OTPModel.swift; sourceTree = "<group>"; };
@@ -300,6 +308,7 @@
 			children = (
 				902BA58C2641031500411097 /* RegistrationTableDataSource.swift */,
 				9027C31C2636868D00937441 /* Authentication.swift */,
+				90D5DF9226BD9C7100EBBEEB /* GuestRegistrationTableDataSource.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -428,6 +437,7 @@
 		90759C0A26328C490052FFAB /* Account module */ = {
 			isa = PBXGroup;
 			children = (
+				90D5DF9526BDA40E00EBBEEB /* GuestUserCells */,
 				902A85CA26500B2F002380BF /* Registration_Model */,
 				90D4005B264387EA00DC82B9 /* OTP Module */,
 				9027C31B2636867600937441 /* View Model */,
@@ -438,6 +448,7 @@
 				902BA5A926418FFE00411097 /* DropdownTableViewCell.swift */,
 				90D400622643B8CC00DC82B9 /* SubmitTableViewCell.swift */,
 				900CA485266A03E200441A3F /* EmailViewController.swift */,
+				90D5DF8F26BCF5DE00EBBEEB /* GuestRegistrationViewController.swift */,
 			);
 			path = "Account module";
 			sourceTree = "<group>";
@@ -594,6 +605,15 @@
 				90D471C82677C8C300371F16 /* OfficeBearersCollectionViewCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		90D5DF9526BDA40E00EBBEEB /* GuestUserCells */ = {
+			isa = PBXGroup;
+			children = (
+				90D5DF9726BDA44700EBBEEB /* GuestFormTableViewCell.swift */,
+				90A612C926BEFB0F00D4CF5F /* GuestBtnTableViewCell.swift */,
+			);
+			path = GuestUserCells;
 			sourceTree = "<group>";
 		};
 		90E3EE192684803300D0EBD6 /* OTP_Model */ = {
@@ -823,6 +843,7 @@
 			files = (
 				90D400632643B8CC00DC82B9 /* SubmitTableViewCell.swift in Sources */,
 				90C681B5266E36EC009D022F /* CarouselTableViewCell.swift in Sources */,
+				90D5DF9826BDA44700EBBEEB /* GuestFormTableViewCell.swift in Sources */,
 				903C03FE26709E4800D2BA28 /* ActivitiesTableViewCell.swift in Sources */,
 				905B1418266275D600A9BC4D /* Parser.swift in Sources */,
 				90209D23263FB99C00EC8588 /* UIColor+Extension.swift in Sources */,
@@ -830,6 +851,7 @@
 				900CA486266A03E200441A3F /* EmailViewController.swift in Sources */,
 				907022E1267B6AD600D074EE /* ChaptersTableViewCell.swift in Sources */,
 				903E8CC02631A1B000D0AADD /* SideMenuViewController.swift in Sources */,
+				90D5DF9326BD9C7100EBBEEB /* GuestRegistrationTableDataSource.swift in Sources */,
 				909F2F3B263BC34F00200EE2 /* NotificationTableViewCell.swift in Sources */,
 				90759C172632946C0052FFAB /* ViewControllers+StoryboardIdentifiers.swift in Sources */,
 				903C03FB26709CDA00D2BA28 /* ActivitiesCollectionViewCell.swift in Sources */,
@@ -883,8 +905,10 @@
 				902A85D026502724002380BF /* Post_RegistrationModel.swift in Sources */,
 				90150CD12693649B00614C3B /* PhotosTableViewCell.swift in Sources */,
 				907022D1267B614D00D074EE /* ChaptersViewController.swift in Sources */,
+				90A612CA26BEFB0F00D4CF5F /* GuestBtnTableViewCell.swift in Sources */,
 				9026E996264CCC8900381E44 /* Post_Model.swift in Sources */,
 				908484EE26831E3400463BEA /* VideosViewController.swift in Sources */,
+				90D5DF9026BCF5DE00EBBEEB /* GuestRegistrationViewController.swift in Sources */,
 				901B151C2678CEB800ECB22A /* ContactUsViewController.swift in Sources */,
 				9048350C268DAF2400E4E606 /* hyperLinkTableViewCell.swift in Sources */,
 				905B14152662614F00A9BC4D /* StatesModel.swift in Sources */,

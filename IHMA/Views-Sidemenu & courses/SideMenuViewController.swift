@@ -138,6 +138,12 @@ class MenuListController: UITableViewController{
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        if guestUser == "guest"
+//        {
+//        return items.count + 1
+//        } else {
+//            return items.count
+//        }
         return items.count
     }
     
@@ -145,7 +151,7 @@ class MenuListController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         if guestUser == "guest" {
-        items = ["Home","About Us","Courses","View Profile","Gallery","Payment","Contact Us","Login"]
+        items = ["Home","About Us","Courses","View Profile","Gallery","Join Now","Contact Us","Login"]
         images = ["home1","about us","courses-1","profile","Video gallery","payment","contact us","login"]
             
         } else{
@@ -256,9 +262,12 @@ class MenuListController: UITableViewController{
                 //alert view
                 DispatchQueue.main.async {
 
-                    let alert = UIAlertController(title: "Error", message: "Please login to access this", preferredStyle: UIAlertController.Style.alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
-                    self.present(alert, animated: true, completion: nil)
+//                    let alert = UIAlertController(title: "Error", message: "Please login to access this", preferredStyle: UIAlertController.Style.alert)
+//                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+//                    self.present(alert, animated: true, completion: nil)
+                    
+                    let destinationController = GuestRegistrationViewController.instantiateViewControllerFromStoryboard(storyBoardName: "Loginscreens")
+                    self.navigationController?.pushViewController(destinationController!, animated: true)
                 }
             } else {
             let destinationController = PaymentViewController.instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")

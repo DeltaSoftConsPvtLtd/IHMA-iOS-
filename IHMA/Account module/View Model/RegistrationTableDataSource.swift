@@ -201,9 +201,9 @@ extension RegistrationTableDataSource: UITableViewDataSource{
 //            {
                 cell.lblField.text = (self.parentView?.fieldNames[indexPath.row])!
                 cell.fieldTxt.text = (self.parentView?.textFieldNames[indexPath.row])!
-                cell.lblValidation.text = "Please enter valid \((self.parentView?.textFieldNames[indexPath.row])!)"
-                cell.lblValidation.textColor = UIColor.red
-                cell.lblValidation.isHidden = true
+//                cell.lblValidation.text = "Please enter valid \((self.parentView?.textFieldNames[indexPath.row])!)"
+//                cell.lblValidation.textColor = UIColor.red
+//                cell.lblValidation.isHidden = true
                 cell.backgroundColor = UIColor.white
                 if (firstName != nil && indexPath.row == 0)
                 {

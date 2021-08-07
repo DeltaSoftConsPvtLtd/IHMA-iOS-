@@ -161,3 +161,12 @@ extension PaymentDetailsViewController: StoryboardIdentifiable
         return "PaymentDetailsViewController"
             }
 }
+
+
+//MARK:- GuestRegistrationViewController
+extension GuestRegistrationViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "GuestRegistrationViewController"
+            }
+}
