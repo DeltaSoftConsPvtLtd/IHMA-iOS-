@@ -24,7 +24,7 @@ class GuestRegistrationViewController: BaseViewController {
     func setupUI() {
         view.backgroundColor = hexToUiColor().hexStringToUIColor(hex:"1B88F1")
         formView.backgroundColor = UIColor.white
-        formView.roundCorners(corners: [.topLeft, .topRight, .bottomLeft, .bottomRight], radius: 30.0)
+        formView.roundCorners(corners: [.topLeft, .topRight], radius: 30.0)
     }
 
 }

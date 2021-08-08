@@ -24,8 +24,15 @@ class GuestRegistrationTableDataSource: NSObject {
     }
     
     @objc func submitBtnTapped(sender: UIButton) {
+        if (guestName != "" && guestEmail != "" && guestMobile != nil && guestRegNumber != nil && guestState != "")
+        {
+            email = guestEmail
+            phone = String(guestMobile!)
         let destinationController = PaymentViewController.instantiateViewControllerFromStoryboard(storyBoardName: "PaymentScreens")
         self.parentView?.navigationController?.pushViewController(destinationController!, animated: true)
+        } else {
+            self.parentView?.showAlertView(heading: "Error", message: "Please enter all fields")
+        }
     }
     
     //MARK:- to get values typed inside textfields
@@ -33,6 +40,14 @@ class GuestRegistrationTableDataSource: NSObject {
         switch (sender.tag) {
         case 0:
             guestName = sender.text!
+        case 1:
+            guestEmail = sender.text!
+        case 2:
+            guestMobile = Int(sender.text!)
+        case 3:
+            guestRegNumber = Int(sender.text!)
+        case 4:
+            guestState = sender.text!
         default:
             break
         }

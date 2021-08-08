@@ -151,7 +151,7 @@ class MenuListController: UITableViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
         if guestUser == "guest" {
-        items = ["Home","About Us","Courses","View Profile","Gallery","Join Now","Contact Us","Login"]
+        items = ["Home","About Us","Courses","View Profile","Gallery","Join IHMA","Contact Us","Login"]
         images = ["home1","about us","courses-1","profile","Video gallery","payment","contact us","login"]
             
         } else{
