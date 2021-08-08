@@ -225,7 +225,7 @@ class MenuListController: UITableViewController{
             destinationController!.image = "profileImage"
             destinationController!.name = "IHMA"
             destinationController!.contactTitle = "CONTACT INFO"
-            destinationController!.positionName = "Public Relationship Officer : Dr. M. Mathews Jo"
+            destinationController!.positionName = "Public Relationship Officer : Parimal Chatterjee"
             destinationController!.address = "1/4741, Eranjipalam P.O.,Kozhikode - 673 006, Kerala."
             destinationController!.phone = "+91 9444 126 169"
             destinationController!.email = "info@ihma.in"

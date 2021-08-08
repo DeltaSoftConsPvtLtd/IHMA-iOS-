@@ -73,6 +73,7 @@
 		908484FF268366FE00463BEA /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908484FD268366FA00463BEA /* AVKit.framework */; };
 		908507652681AB8800746657 /* Chapters & Districts.json in Resources */ = {isa = PBXBuildFile; fileRef = 908507642681AB8800746657 /* Chapters & Districts.json */; };
 		9085076D2681B79A00746657 /* ChaptersModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9085076C2681B79A00746657 /* ChaptersModel.swift */; };
+		9092E19926C019E500D25FBB /* AboutDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9092E19826C019E500D25FBB /* AboutDetailsViewController.swift */; };
 		909BF98B2642E39D001B73D1 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BF98A2642E39D001B73D1 /* SplashViewController.swift */; };
 		909F2F35263BB4C300200EE2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F34263BB4C300200EE2 /* NotificationViewController.swift */; };
 		909F2F38263BC32100200EE2 /* NotificationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909F2F37263BC32100200EE2 /* NotificationDataSource.swift */; };
@@ -188,6 +189,7 @@
 		908484FD268366FA00463BEA /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		908507642681AB8800746657 /* Chapters & Districts.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Chapters & Districts.json"; sourceTree = "<group>"; };
 		9085076C2681B79A00746657 /* ChaptersModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersModel.swift; sourceTree = "<group>"; };
+		9092E19826C019E500D25FBB /* AboutDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutDetailsViewController.swift; sourceTree = "<group>"; };
 		909BF98A2642E39D001B73D1 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		909F2F34263BB4C300200EE2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		909F2F37263BC32100200EE2 /* NotificationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDataSource.swift; sourceTree = "<group>"; };
@@ -479,6 +481,7 @@
 				90D471C02677797000371F16 /* Cells */,
 				90D471B826776F1000371F16 /* ViewModel */,
 				90806D0E2657B36500F01358 /* AboutUsViewController.swift */,
+				9092E19826C019E500D25FBB /* AboutDetailsViewController.swift */,
 			);
 			path = "About IHMA module";
 			sourceTree = "<group>";
@@ -877,6 +880,7 @@
 				9027C31526367E3A00937441 /* LoginViewController.swift in Sources */,
 				902A85CC26500B58002380BF /* RegistrationModel.swift in Sources */,
 				902BA5A12641147600411097 /* FormTableViewCell.swift in Sources */,
+				9092E19926C019E500D25FBB /* AboutDetailsViewController.swift in Sources */,
 				90D4005D2643880900DC82B9 /* OTPViewController.swift in Sources */,
 				90C681AC266E296B009D022F /* HomeScreenViewController.swift in Sources */,
 				90D471C32677799600371F16 /* ChapterTableViewCell.swift in Sources */,

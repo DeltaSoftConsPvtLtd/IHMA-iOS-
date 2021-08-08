@@ -170,3 +170,13 @@ extension GuestRegistrationViewController: StoryboardIdentifiable
         return "GuestRegistrationViewController"
             }
 }
+
+
+
+//MARK:- AboutDetailsViewController
+extension AboutDetailsViewController: StoryboardIdentifiable
+{
+    static func storyboardIdentifier() -> String {
+        return "AboutDetailsViewController"
+            }
+}

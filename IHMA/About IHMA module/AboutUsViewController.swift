@@ -25,6 +25,7 @@ class AboutUsViewController: BaseViewController {
     @IBOutlet weak var lblIHMA: UILabel!
     @IBOutlet weak var txtDescription: UITextView!
     
+    @IBOutlet weak var aboutBtn: UIButton!
     
     var  aboutTableDataSource: AboutTableDataSource?
     let titles = ["Chapters", "Office Bearers"]
@@ -45,7 +46,13 @@ class AboutUsViewController: BaseViewController {
        
     }
     
-   //MARK:- to set up UI
+    //MARK:- About us button tap
+    @IBAction func aboutBtn(_ sender: Any)
+    {
+        let destinationController = AboutDetailsViewController.instantiateViewControllerFromStoryboard(storyBoardName: "Main")
+        self.navigationController?.pushViewController(destinationController!, animated: true)
+    }
+    //MARK:- to set up UI
     func setupUI() {
         
 //        progressView.setProgress(1000.02, animated: true)
@@ -55,6 +62,7 @@ class AboutUsViewController: BaseViewController {
         self.webView!.isOpaque = false
         self.webView!.backgroundColor = UIColor.clear
         self.webView!.scrollView.backgroundColor = UIColor.clear
+        aboutBtn.layer.cornerRadius = (aboutBtn.frame.size.height)/2
     }
     
     func constraintSettings() {
