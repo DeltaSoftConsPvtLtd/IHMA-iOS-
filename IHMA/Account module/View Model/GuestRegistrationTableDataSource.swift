@@ -111,6 +111,23 @@ extension GuestRegistrationTableDataSource: UITableViewDataSource{
         cell?.TxtField.tag = indexPath.row
         //MARK:- to add target to text field inside cell
         cell?.TxtField.addTarget(self, action: #selector(textFieldDidChange(sender:)), for: .editingChanged)
+            
+            switch  (indexPath.row) {
+            case 0:
+                cell?.TxtField.keyboardType = .alphabet
+            case 1:
+                cell?.TxtField.keyboardType = .alphabet
+            case 2:
+                cell?.TxtField.keyboardType = .numberPad
+            case 3:
+                cell?.TxtField.keyboardType = .numberPad
+            case 4:
+                cell?.TxtField.keyboardType = .alphabet
+            default:
+                break
+                
+            }
+            
         return cell!
         }
         let cell = (self.parentView?.guestFormTableView.dequeueReusableCell(withIdentifier: "Button", for: indexPath))! as? GuestBtnTableViewCell

@@ -9,7 +9,7 @@ import UIKit
 
 class GuestFormTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var GuestFieldView: UIView!
+    
     
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var underlineView: UIView!
